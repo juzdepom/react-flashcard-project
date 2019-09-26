@@ -3,6 +3,8 @@
 }
 
 .card {
+    /* background-color: green; */
+    position: relative;
     height: 400px;
     cursor: pointer;
     width: 380px;
@@ -15,15 +17,7 @@
     /* background-color: rgba(255, 251, 251, 1); */
 }
 
-.last-review-text {
-    position: absolute;
-    bottom: 0;
-    /* background: green; */
-    width: 100%;
-    /* left: 25%; */
-    padding-bottom: 5px;
-    /* margin: 0 auto; */
-}
+
 
 .card-top {
     display: flex;
@@ -67,6 +61,21 @@
     padding-left: 15px;
 }
 
+.edit-mode-row {
+    /* background-color: green; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.edit-mode-row input{
+    height: 40px;
+    font-size: 20px;
+    margin: 5px;
+}
+
 .pronunciation{
     font-style: italic;
     font-size: 25px;
@@ -76,8 +85,20 @@
     padding-top: 10px;
 }
 
+.card-bottom-row {
+    position: absolute;
+    bottom: 0px;
+    /* background-color: purple; */
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /* height: 100%; */
+    padding: 3px;
+}
+
 .last-review {
-    height: 100%;
+    /* height: 100%; */
     /* tex */
     /* background: red;  */
     position: relative;
@@ -87,6 +108,10 @@
 .last-review span {
     color: gray; 
     font-size: 14px;
+}
+
+.edit-button-section {
+    margin-right: 10px;
 }
 
 .fade-out {

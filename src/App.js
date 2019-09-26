@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props)
     this.cardElement = React.createRef();
     this.cardsDataRef = React.createRef();
+    //actually we might not need these
     this.buttonOne = React.createRef();
     this.buttonTwo = React.createRef();
     this.buttonThree = React.createRef();
@@ -19,8 +20,8 @@ class App extends React.Component {
     this.generateRandomIndex = this.generateRandomIndex.bind(this);
     this.handleCardEdit = this.handleCardEdit.bind(this);
     //delete soon editFront and editBack
-    this.editFront = this.editFront.bind(this);
-    this.editBack = this.editBack.bind(this);
+    // this.editFront = this.editFront.bind(this);
+    // this.editBack = this.editBack.bind(this);
     this.copyJsonCardDataToClipboard = this.copyJsonCardDataToClipboard.bind(this);
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
     this.searchEnter = this.searchEnter.bind(this);
@@ -32,8 +33,8 @@ class App extends React.Component {
       currentCardIndex: 0,
       previousCardIndex: 0,
       level: {},
-      editFront: false,
-      editBack: false,
+      // editFront: false,
+      // editBack: false,
       flashcardsRated: 0,
       //temporary
       newDeck: []
@@ -219,23 +220,24 @@ class App extends React.Component {
     })
   }
 
-  //delete soon
-  editFront(){
-    var inverse = !this.state.editFront
-    this.setState({
-      editFront: inverse
-    })
-  }
+  // //delete soon
+  // editFront(){
+  //   var inverse = !this.state.editFront
+  //   this.setState({
+  //     editFront: inverse
+  //   })
+  // }
 
-  //delete soon
-  editBack(){
-    var inverse = !this.state.editBack
-    this.setState({
-      editBack: inverse
-    })
-  }
+  // //delete soon
+  // editBack(){
+  //   var inverse = !this.state.editBack
+  //   this.setState({
+  //     editBack: inverse
+  //   })
+  // }
 
-  goToPreviousCard(){
+  goToPreviousCard(e){
+    e.stopPropagation();
     var cards = this.state.cards
     var currentCardIndex = this.state.previousCardIndex
     var currentCard = cards[currentCardIndex]
@@ -309,6 +311,7 @@ class App extends React.Component {
             ref = {this.cardElement}
             card = {this.state.currentCard}
             goToPreviousCard = {this.goToPreviousCard}
+            handleCardEdit = {this.handleCardEdit}
           />
 
         </div>
@@ -316,7 +319,7 @@ class App extends React.Component {
           <button onClick={this.goToPreviousCard}>Previous Card</button>
         </div>
          */}
-        <div className="edit-row">
+        {/* <div className="edit-row">
           <div className="edit-row-section">
             <button onClick={this.editFront}>Edit Front</button>
             <br/>
@@ -342,20 +345,16 @@ class App extends React.Component {
            
           </div>
           <div className="edit-row-section">
-            {/* <button onClick={this.editBack}>Edit Pronunc.</button> */}
             <br/>
-            {/* { this.state.editBack ? */}
+
                <input 
                type="text" 
                value={this.state.currentCard.textThree}
                onChange={(event) => this.handleCardEdit("textThree", event)}
                /> 
-               {/* : null */}
-            {/* } */}
-           
           </div>
           
-        </div>
+        </div> */}
         <div className="level-card-row">
           <div className="level-card">{one}</div>
           <div className="level-card">{two}</div>

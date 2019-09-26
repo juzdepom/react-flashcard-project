@@ -9,6 +9,7 @@ class Card extends Component {
         this.state = {
             show: false,
             alreadyFlipped: false,
+            editMode: false,
             color: "#xx"
         }
 
@@ -27,6 +28,18 @@ class Card extends Component {
             show: !this.state.show,
             alreadyFlipped: true,
         })
+    }
+
+    editMode(isOn){
+        if(isOn){
+            this.setState({
+                editMode: true,
+            })
+        } else {
+            this.setState({
+                editMode: false,
+            })
+        }
     }
 
     timeConverter(UNIX_timestamp){
@@ -92,42 +105,79 @@ class Card extends Component {
         }
         return(
             <div className="card-container">
-                <div className="card" 
-                    style={{border: `10px solid ${color}`}}
-                    onClick={this.flipCard}>
-                        <div className="card-top">
-                            <div className="back-button">
-                                <button onClick={this.props.goToPreviousCard}>Back</button>
+                    <div className="card" 
+                        style={{border: `10px solid ${color}`}}
+                        onClick={this.flipCard}>
+                            <div className="card-top">
+                                <div className="back-button">
+                                    <button onClick={this.props.goToPreviousCard}>Back</button>
+                                </div>
+                                <div className="date-created">
+                                    {dateCreated}
+                                </div>
+                                <div className="exposure">
+                                    👁{exposure}
+                                </div>
                             </div>
-                            <div className="date-created">
-                                {dateCreated}
+                            {!this.state.editMode ?
+                                <div>
+                                    <div className="front-text">
+                                        {textOne}
+                                    </div>
+                                    {this.state.alreadyFlipped ? 
+                                        <div 
+                                            className={this.state.show ? "back-text fade-in": 'back-text fade-out'}
+                                            // className="back-text fade-in"
+                                            >
+                                            <span className="pronunciation">{textTwo}</span>
+                                            <div className="thai">{textThree}</div>
+                                            
+                                        </div> 
+                                    : ''}
+                                </div> 
+                            : <div className="edit-mode-row">
+                                {/* Edit Mode */}
+                                <div>
+                                    <input
+                                        type="text"
+                                        value={textOne}
+                                        onChange={(event) => this.props.handleCardEdit("textOne", event)}
+                                    />
+                                </div>
+                                <div>
+                                    <input
+                                        type="text"
+                                        value={textTwo}
+                                        onChange={(event) => this.props.handleCardEdit("textTwo", event)}
+                                    />
+                                </div>
+                                <div>
+                                    <input
+                                        type="text"
+                                        value={textThree}
+                                        onChange={(event) => this.props.handleCardEdit("textThree", event)}
+                                    />
+                                </div>
+                                <div>
+                                    <button onClick={() => this.editMode(false)}>Close</button>
+                                </div>
+                            </div> }
+                            <div className="card-bottom-row">
+                                <div className="last-review">
+                                    <div className="last-review-text">
+                                        {/* {elapsed} <br/> */}
+                                        <span>Last Reviewed: </span>{time}
+                                    </div>
+                                </div>
+                                <div className="edit-button-section">
+                                    <button 
+                                        disabled={this.state.editMode}
+                                        onClick={() => this.editMode(true)}>
+                                            Edit
+                                    </button>
+                                </div>
                             </div>
-                            <div className="exposure">
-                                👁{exposure}
-                            </div>
-                        </div>
-                        <div className="front-text">
-                            {textOne}
-                        </div>
-                        {this.state.alreadyFlipped ? 
-                            <div 
-                                className={this.state.show ? "back-text fade-in": 'back-text fade-out'}
-                                // className="back-text fade-in"
-                                >
-                                <span className="pronunciation">{textTwo}</span>
-                                <div className="thai">{textThree}</div>
-                                
-                            </div> 
-                        : ''}
-                        <div className="last-review">
-                            <div className="last-review-text">
-                                {/* {elapsed} <br/> */}
-                                <span>Last Reviewed: </span>{time}
-                            </div>
-                        </div>
-                        
-                    {/* </div> */}
-                </div>
+                    </div> 
             </div>
         )
     }
