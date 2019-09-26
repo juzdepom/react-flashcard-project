@@ -96,6 +96,9 @@ class Card extends Component {
                     style={{border: `10px solid ${color}`}}
                     onClick={this.flipCard}>
                         <div className="card-top">
+                            <div className="back-button">
+                                <button onClick={this.props.goToPreviousCard}>Back</button>
+                            </div>
                             <div className="date-created">
                                 {dateCreated}
                             </div>

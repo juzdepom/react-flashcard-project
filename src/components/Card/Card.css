@@ -16,7 +16,6 @@
 }
 
 .last-review-text {
-    
     position: absolute;
     bottom: 0;
     /* background: green; */
@@ -31,10 +30,15 @@
     align-content: space-between;
 }
 
-.date-created {
-    padding-left: 3px;
+.back-button {
+    width: 100%;
     text-align: left;
-    width: 50%;
+    z-index: 2;
+}
+
+.date-created {
+    text-align: center;
+    width: 100%;
     /* background: blue; */
     color: gray; 
     font-size: 12px;
@@ -42,7 +46,7 @@
 
 .exposure {
     text-align: right;
-    width: 50%;
+    width: 100%;
     /* background: red; */
     padding-right: 5px;
 }

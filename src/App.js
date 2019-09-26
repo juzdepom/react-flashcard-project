@@ -18,6 +18,7 @@ class App extends React.Component {
     this.updateDisplayCardLevels = this.updateDisplayCardLevels.bind(this);
     this.generateRandomIndex = this.generateRandomIndex.bind(this);
     this.handleCardEdit = this.handleCardEdit.bind(this);
+    //delete soon editFront and editBack
     this.editFront = this.editFront.bind(this);
     this.editBack = this.editBack.bind(this);
     this.copyJsonCardDataToClipboard = this.copyJsonCardDataToClipboard.bind(this);
@@ -121,24 +122,24 @@ class App extends React.Component {
       
     }
 
-    var newDeck = currentCards
-    for(var i in newDeck){
-      // const timeStamp = newDeck[i].lastReviewed
-      // newDeck[i].lastReviewed = [timeStamp]
-      var text = newDeck[i].backText
-      text = text.split(" > ")
-      var p1 = text[0].trim()
-      var p2 = text[1].trim()
-      newDeck[i].textOne = newDeck[i].frontText;
-      newDeck[i].textTwo = p1;
-      newDeck[i].textThree = p2;
-      delete newDeck[i].backText;
-      delete newDeck[i].frontText;
-    }
-    console.log(newDeck)
-    this.setState({
-      newDeck
-    })
+    // var newDeck = currentCards
+    // for(var i in newDeck){
+    //   const timeStamp = newDeck[i].lastReviewed
+    //   newDeck[i].lastReviewed = [timeStamp]
+    //   var text = newDeck[i].backText
+    //   text = text.split(" > ")
+    //   var p1 = text[0].trim()
+    //   var p2 = text[1].trim()
+    //   newDeck[i].textOne = newDeck[i].frontText;
+    //   newDeck[i].textTwo = p1;
+    //   newDeck[i].textThree = p2;
+    //   delete newDeck[i].backText;
+    //   delete newDeck[i].frontText;
+    // }
+    // console.log(newDeck)
+    // this.setState({
+    //   newDeck
+    // })
 
     for (var i in currentCards){
       switch(currentCards[i].rating){
@@ -198,13 +199,15 @@ class App extends React.Component {
   }
 
   //update the state because you are editting card
-  handleCardEdit(side, event){
+  handleCardEdit(text, event){
     var currentCard = this.state.currentCard
     var cards = this.state.cards
-    if(side === "front"){
-      currentCard.frontText = event.target.value;
-    } else if (side === "back"){
-      currentCard.backText = event.target.value;
+    if(text === "textOne"){
+      currentCard.textOne = event.target.value;
+    } else if (text === "textTwo"){
+      currentCard.textTwo = event.target.value;
+    } else if (text === "textThree"){
+      currentCard.textThree = event.target.value;
     } else {
       alert("Error! Check handleCardEdit()")
     }
@@ -216,6 +219,7 @@ class App extends React.Component {
     })
   }
 
+  //delete soon
   editFront(){
     var inverse = !this.state.editFront
     this.setState({
@@ -223,6 +227,7 @@ class App extends React.Component {
     })
   }
 
+  //delete soon
   editBack(){
     var inverse = !this.state.editBack
     this.setState({
@@ -252,7 +257,7 @@ class App extends React.Component {
       var cards = this.state.cards
       var foundCard = false;
       for (var i=0; i<cards.length ; i++){
-        if(cards[i].frontText === e.target.value){
+        if(cards[i].textOne === e.target.value){
           foundCard = true;
           var previousCardIndex = this.state.currentCardIndex
           var currentCard = cards[i]
@@ -300,39 +305,53 @@ class App extends React.Component {
 
         <div className="card-row">
           
-          <Card 
+          <Card
             ref = {this.cardElement}
             card = {this.state.currentCard}
+            goToPreviousCard = {this.goToPreviousCard}
           />
 
         </div>
-        <div className="previous-card-row">
+        {/* <div className="previous-card-row">
           <button onClick={this.goToPreviousCard}>Previous Card</button>
         </div>
-        
+         */}
         <div className="edit-row">
-          <div className="edit-row-front">
+          <div className="edit-row-section">
             <button onClick={this.editFront}>Edit Front</button>
             <br/>
             {
               this.state.editFront ? <input 
               type="text" 
-              value={this.state.currentCard.frontText}
-              onChange={(event) => this.handleCardEdit("front", event)} 
+              value={this.state.currentCard.textOne}
+              onChange={(event) => this.handleCardEdit("textOne", event)} 
               /> : null
             }
             
           </div>
-          <div className="edit-row-back">
-            <button onClick={this.editBack}>Edit Back</button>
+          <div className="edit-row-section">
+            <button onClick={this.editBack}>Edit Pronunc.</button>
             <br/>
             { this.state.editBack ?
                <input 
                type="text" 
-               value={this.state.currentCard.backText}
-               onChange={(event) => this.handleCardEdit("back", event)}
+               value={this.state.currentCard.textTwo}
+               onChange={(event) => this.handleCardEdit("textTwo", event)}
                /> : null
             }
+           
+          </div>
+          <div className="edit-row-section">
+            {/* <button onClick={this.editBack}>Edit Pronunc.</button> */}
+            <br/>
+            {/* { this.state.editBack ? */}
+               <input 
+               type="text" 
+               value={this.state.currentCard.textThree}
+               onChange={(event) => this.handleCardEdit("textThree", event)}
+               /> 
+               {/* : null */}
+            {/* } */}
            
           </div>
           
