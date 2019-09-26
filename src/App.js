@@ -84,10 +84,65 @@ class App extends React.Component {
       case 192: //~
         this.goToPreviousCard()
       break;
+      //NOTE: QWERTY are bad letters to choose because when you type something into the the search field, pressing these characters will trigger the function regardless
+      //Better to do press "=" and then press 1, 2, 3, 4, or 5; leave that for later
+      case 81: //Q
+        this.selectRandomCardFromSpecificDeck(1)
+        break;
+      case 87: //W
+        this.selectRandomCardFromSpecificDeck(2)
+      break;
+      case 69: //E
+        this.selectRandomCardFromSpecificDeck(3)
+      break;
+      case 82: //R
+        this.selectRandomCardFromSpecificDeck(4)
+      break;
+      case 84: //T
+        this.selectRandomCardFromSpecificDeck(5)
+      break;
       default:
-        // alert(e.keyCode)
+        // console.log(e.keyCode)
         break;
     }
+  }
+
+  //TODO: create a separate function because I repeat a lot of code in this function that I write in ratingClicked()
+  selectRandomCardFromSpecificDeck(rating){
+    var cards = this.state.cards
+    const previousCardIndex = this.state.currentCardIndex;
+
+    cards[previousCardIndex].exposure += 1;
+
+    var timeStamp = Math.floor(Date.now() / 1000);
+    //TODO: want it to push a dictionary but first want to display the already existing exposure data on the Card
+    cards[previousCardIndex].lastReviewed.push(timeStamp)
+
+    var specificDeck = []
+    //make sure rating is between 1 and 5 in case I make a mistake somewhere
+    if (rating < 1 || rating > 5){
+      alert("A deck with this rating cannot be selected: ", rating)
+      return;
+    }
+    for (var i in cards){
+      if(cards[i].rating == rating){
+        specificDeck.push({"index": parseInt(i), "card": cards[i]})
+      }
+    }
+    const index = Math.floor(Math.random() * specificDeck.length)
+    const currentCard = specificDeck[index].card;
+    
+    const currentCardIndex = specificDeck[index].index;
+    // console.log("selected Card: ", currentCard)
+    this.setState({
+      cards,
+      currentCard,
+      previousCardIndex,
+      currentCardIndex,
+    })
+
+    this.cardElement.current.reset();
+    
   }
 
   //generate random index to select random flashcard
@@ -178,10 +233,10 @@ class App extends React.Component {
 
     var currentCards = this.state.cards
     var oldIndex = this.state.currentCardIndex
-    var timeStamp = Math.floor(Date.now() / 1000);
+   
     currentCards[oldIndex].rating = rating;
     currentCards[oldIndex].exposure += 1;
-    // currentCards[oldIndex].lastReviewed = timeStamp;
+    var timeStamp = Math.floor(Date.now() / 1000);
     currentCards[oldIndex].lastReviewed.push(timeStamp)
 
     var newIndex = this.generateRandomIndex(currentCards)

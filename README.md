@@ -1,6 +1,7 @@
 ## Session 1
 *🗓 Th, Sep 26, 2019* <br>
 
+🕐 3 PM ⬇️
 This will be the first documented session. Have been working on this project for already a week now I believe.
 
 Today, I changed the structure of my hard-coded JSON data a bunch: separated the pronunciation and the Thai characters into two different data objects so that later on if I only want Thai characters to appear, it would be a lot easier to do that. Also made it so that a timestamp was appended to the flashcard object every time we reviewed the flashcard. That way we can go back and see how many times we reviewed a flashcard, AND the time elapsed between each review (might be able to gain personal insight on learning patterns with that data).
