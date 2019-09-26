@@ -1,0 +1,22 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "frontText": "believe",
+            "backText": "cheu-a - เชื่อ",
+            "rating": 1
+        },
+        {
+            "id": 2,
+            "frontText": "blood",
+            "backText": "luyad - เลือด",
+            "rating": 1
+        },
+        {
+            "id": 3,
+            "frontText": "be better",
+            "backText": "dee gwa - ดีกว่า",
+            "rating": 1
+        }
+    ]
+}

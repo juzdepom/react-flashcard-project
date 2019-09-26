@@ -1,0 +1,280 @@
+{
+"frontText":"car",
+"backText":"rokyon - รถยนต์",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"everyday",
+"backText":"tuk wan - ทุกวัน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"protection",
+"backText":"(b)ongkan - ป้องกัน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"start",
+"backText":"rerm ton - เริ่มต้น",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"put",
+"backText":"sai - ใส่",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"throw",
+"backText":"yone - โยน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"calm",
+"backText":"neeyeb - เงียบ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"need",
+"backText":"tongkan - ต้องการ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"hard",
+"backText":"ya(g) - ยาก",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"easy",
+"backText":"ngayy - ง่าย",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"how did you do that?",
+"backText":"khun tamdai yang rai? - คุณทำได้อย่างไร?",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"left",
+"backText":"sái",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"right",
+"backText":"kwá - ขวา",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"gloves (boxing)",
+"backText":"nuom - นวม",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"hip",
+"backText":"sapo(g) - สะโพก",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"turn",
+"backText":"glab - กลับ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"gas",
+"backText":"ga(s) - ก๊าซ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"accident",
+"backText":"ooba(t)eehed - อุบัติเหตุ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"month",
+"backText":"deyern - เดือน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"day",
+"backText":"wan - วัน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"hour",
+"backText":"chawmong - ชั่วโมง",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"minute",
+"backText":"natee - นาที",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"second",
+"backText":"ti song - ที่สอง",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"what do you want?",
+"backText":"khun tongkan arai? - คุณต้องการอะไร?",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"come with me",
+"backText":"ma kab chan - มากับฉัน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"normal",
+"backText":"bogatee - ปกติ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"interesting",
+"backText":"na song chai - น่าสนใจ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"curious",
+"backText":"yagru ya hén - อยากรู้อยากเห็น",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"can",
+"backText":"tamdai - ทำได้",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"with",
+"backText":"gab - กับ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"ice",
+"backText":"nam ken - น้ำแข็ง",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"but",
+"backText":"(t)ehh - แต่",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"plate",
+"backText":"czan - จาน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"i want to see",
+"backText":"chan tongan yag hén - ฉันต้องการอยากเห็น",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},
+{
+"frontText":"if",
+"backText":"(t)aa - ถ้า",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-23",
+"lastReviewed":""
+},

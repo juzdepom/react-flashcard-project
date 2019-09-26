@@ -1,33 +1,138 @@
-.App {
+.top-info-row {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.search-row {
+  text-align: center;
+  /* width: 400px; */
+  margin-bottom: 20px;
+}
+
+.search-row-input {
+  width: 400px;
+}
+
+.json-cards-data {
+  margin-top: 5px;
+  width: 400px;
+  height: 30px;
+}
+
+.spacer {
+  margin-top: 15px;
+}
+
+.previous-card-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-row {
+  width: 400px;
+  display: flex;
+  align-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.edit-row-front {
+  width: 100%;
+}
+
+.edit-row-back {
+  width: 100%;
+}
+
+.level-card-row {
+  display: flex;
+  align-content: space-around;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.level-card {
+  text-align: center;
+  width: 100%;
+}
+
+.number-button-row {
+  display: flex;
+  align-content: space-around;
+  width: 400px;
+  margin: 0 auto;
+  /* width: 400px; */
+}
+
+.number-button {
+  font-size: 1.5em;
+  border: none;
+  height: 50px;
+  width: 100%;
+  /* width: 50px; */
+  text-align: center;
+  text-decoration: none;
+  /* color: #ecf0f1; */
+  color: black;
+  margin: auto;
+  margin-top: 20px;
+  
+  transition: all .2s ease-out;
+  /* animation: rubberband 2s; */
+
+  
+  /* transform: translateY(0rem); */
+}
+
+.number-button span {
+  font-size: 15px;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+/* @keyframes rubberband {
+  0% { transform: translateY(0rem) }
+  50% { transform: translateY(-1.2rem); }
+  100% { transform: translateY(0rem)}
+} */
+
+.number-button:active{
+  transform: translateY(-1.2rem);
+}
+
+.raw-data-row {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.purple {
+  background: #AB3B7F;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.orange {
+  background: #F28945;
 }
 
-.App-link {
-  color: #61dafb;
+.yellow {
+  background: #FEDD33;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.green {
+  background: #7EAE2E;
 }
+
+.blue {
+  background: #40A9D6;
+}
+
+/* .blue {
+  box-shadow: 0px 6px #17619C;
+  background: #2177BB;
+}
+
+.gray {
+  box-shadow: 0px 6px #2c3e50;
+  background: #34495e;
+} */

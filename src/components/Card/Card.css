@@ -1,0 +1,105 @@
+.card-container {
+    padding-bottom: 20px;
+}
+
+.card {
+    height: 400px;
+    cursor: pointer;
+    width: 380px;
+    margin: 0 auto;
+    text-align: center;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    /* background-color: rgba(255, 251, 251, 1); */
+}
+
+.last-review-text {
+    
+    position: absolute;
+    bottom: 0;
+    /* background: green; */
+    width: 100%;
+    /* left: 25%; */
+    padding-bottom: 5px;
+    /* margin: 0 auto; */
+}
+
+.card-top {
+    display: flex;
+    align-content: space-between;
+}
+
+.date-created {
+    padding-left: 3px;
+    text-align: left;
+    width: 50%;
+    /* background: blue; */
+    color: gray; 
+    font-size: 12px;
+}
+
+.exposure {
+    text-align: right;
+    width: 50%;
+    /* background: red; */
+    padding-right: 5px;
+}
+
+.front-text{
+    color: #333;
+    font-size: 2.3em;
+    padding-top: 25%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.back-text{
+    color: #333;
+    font-size: 2.3em;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.pronunciation{
+    font-style: italic;
+    font-size: 25px;
+}
+
+.thai {
+    padding-top: 10px;
+}
+
+.last-review {
+    height: 100%;
+    /* tex */
+    /* background: red;  */
+    position: relative;
+    text-align: center;
+}
+
+.last-review span {
+    color: gray; 
+    font-size: 14px;
+}
+
+.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s;
+}
+
+.fade-in {
+    animation: fade-in 0.5s;
+}
+ 
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1}
+}
+
+@keyframes fade-out {
+    0% { opacity: 1 }
+    100% { opacity: 0}
+  }

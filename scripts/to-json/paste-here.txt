@@ -1,0 +1,35 @@
+1. Car == rokyon - รถยนต์
+2. Everyday == tuk wan - ทุกวัน
+3. Protection == (b)ongkan - ป้องกัน
+4. Start == rerm ton - เริ่มต้น
+5. Put == sai - ใส่
+6. Throw == yone - โยน
+7. Calm == neeyeb - เงียบ
+8. Need == tongkan - ต้องการ
+9. Hard == ya(g) - ยาก
+10. Easy == ngayy - ง่าย
+11. How did you do that? == khun tamdai yang rai? - คุณทำได้อย่างไร?
+12. Left == sái == ซ้าย
+13. Right == kwá - ขวา
+14. Gloves (boxing) == nuom - นวม 
+15. Hip == sapo(g) - สะโพก
+16. Turn == glab - กลับ
+17. Gas == ga(s) - ก๊าซ
+18. Accident == ooba(t)eehed - อุบัติเหตุ
+19. Month == deyern - เดือน
+20. Day == wan - วัน
+21. Hour == chawmong - ชั่วโมง
+22. Minute == natee - นาที
+23. Second == ti song - ที่สอง
+24. What do you want? == khun tongkan arai? - คุณต้องการอะไร?
+25. Come with me == ma kab chan - มากับฉัน
+26. Normal == bogatee - ปกติ
+27. Interesting == na song chai - น่าสนใจ
+28. Curious == yagru ya hén - อยากรู้อยากเห็น
+29. Can == tamdai - ทำได้
+30. With == gab - กับ
+31. Ice == nam ken - น้ำแข็ง
+32. But == (t)ehh - แต่
+33. Plate == czan - จาน
+34. I want to see == chan tongan yag hén - ฉันต้องการอยากเห็น
+35. if == (t)aa - ถ้า

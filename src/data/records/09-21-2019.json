@@ -1,0 +1,20 @@
+[ 
+    { 
+       "frontText":"believe",
+       "backText":"cheu-a - เชื่อ",
+       "rating":2,
+       "exposure":6
+    },
+    { 
+       "frontText":"blood",
+       "backText":"luyad - เลือด",
+       "rating":2,
+       "exposure":7
+    },
+    { 
+       "frontText":"be better",
+       "backText":"dee gwa - ดีกว่า",
+       "rating":5,
+       "exposure":5
+    }
+ ]
