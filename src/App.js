@@ -67,40 +67,50 @@ class App extends React.Component {
         this.cardElement.current.flipCard();
       break;
       case 49: //1
-        this.buttonOne.current.click()
+        if(e.shiftKey) {
+          this.selectRandomCardFromSpecificDeck(1)
+        } else { this.buttonOne.current.click()}
         break;
       case 50: //2
-        this.ratingClicked(2)
+      if(e.shiftKey) {
+        this.selectRandomCardFromSpecificDeck(2)
+      } else { this.ratingClicked(2) }
       break;
       case 51: //3
-        this.ratingClicked(3)
+      if(e.shiftKey) {
+        this.selectRandomCardFromSpecificDeck(3)
+      } else { this.ratingClicked(3) }
       break;
       case 52: //4
-        this.ratingClicked(4)
+      if(e.shiftKey) {
+        this.selectRandomCardFromSpecificDeck(4)
+      } else { this.ratingClicked(4) }
       break;
       case 53: //5
-        this.ratingClicked(5)
+      if(e.shiftKey) {
+        this.selectRandomCardFromSpecificDeck(5)
+      } else { this.ratingClicked(5)}
       break;
       case 192: //~
         this.goToPreviousCard()
       break;
       //NOTE: QWERTY are bad letters to choose because when you type something into the the search field, pressing these characters will trigger the function regardless
       //Better to do press "=" and then press 1, 2, 3, 4, or 5; leave that for later
-      case 81: //Q
-        this.selectRandomCardFromSpecificDeck(1)
-        break;
-      case 87: //W
-        this.selectRandomCardFromSpecificDeck(2)
-      break;
-      case 69: //E
-        this.selectRandomCardFromSpecificDeck(3)
-      break;
-      case 82: //R
-        this.selectRandomCardFromSpecificDeck(4)
-      break;
-      case 84: //T
-        this.selectRandomCardFromSpecificDeck(5)
-      break;
+      // case 81: //Q
+      //   this.selectRandomCardFromSpecificDeck(1)
+      //   break;
+      // case 87: //W
+      //   this.selectRand!omCardFromSpecificDeck(2)
+      // break;
+      // case 69: //E
+      //   this.selectRandomCardFromSpecificDeck(3)
+      // break;
+      // case 82: //R
+      //   this.selectRandomCardFromSpecificDeck(4)
+      // break;
+      // case 84: //T
+      //   this.selectRandomCardFromSpecificDeck(5)
+      // break;
       default:
         // console.log(e.keyCode)
         break;
