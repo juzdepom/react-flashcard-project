@@ -481,6 +481,12 @@ class App extends React.Component {
                 href="https://translate.google.com/#view=home&op=translate&sl=en&tl=th">
                   Google Translate
               </a>
+              <a 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://github.com/juzdepom/react-flashcard-project">
+                  See On Github
+              </a>
             </div>
         </div>
       </div>

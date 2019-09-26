@@ -22,7 +22,9 @@ So yeah, actually still way more that I want to do before I begin implementing F
 <img src="/screenshots/09-26-2019.png" width="500" alt="09/26/2019">
 
 🕐 8:30 PM ⬇️
-#1 can now pick a random card from a specific deck (rating 1-5) by by pressing the key Q, W, E, R, or T.
-#1 changed the keyboard event for picking a random card from a specific deck to Shift + 1, 2, 3, 4, or 5 because QWERTY interferes with the search.
+
+#1 can now pick a random card from a specific deck (rating 1-5) by by pressing the key Q, W, E, R, or T.<br>
+#1 changed the keyboard event for picking a random card from a specific deck to Shift + 1, 2, 3, 4, or 5 because QWERTY interferes with the search.<br>
+#1 added a Github URL to interface
 
 ◽️ add those little buttons to the right side of the deck so I can trigger selecting a random card from a specific deck with a mouse event.
