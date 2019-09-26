@@ -1,280 +1,549 @@
 {
-"frontText":"car",
-"backText":"rokyon - รถยนต์",
+"textOne":"bean",
+"textTwo":"tuwa",
+"textThree":"ถั่ว",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"everyday",
-"backText":"tuk wan - ทุกวัน",
+"textOne":"carrot",
+"textTwo":"carro(d)",
+"textThree":"แครอท",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"protection",
-"backText":"(b)ongkan - ป้องกัน",
+"textOne":"corn",
+"textTwo":"kaowpo(d)",
+"textThree":"ข้าวโพด",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"start",
-"backText":"rerm ton - เริ่มต้น",
+"textOne":"coding",
+"textTwo":"gan kaorahad",
+"textThree":"การเข้ารหัส",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"put",
-"backText":"sai - ใส่",
+"textOne":"clothes",
+"textTwo":"suhh paa",
+"textThree":"เสื้อผ้า",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"throw",
-"backText":"yone - โยน",
+"textOne":"underwear",
+"textTwo":"chud chan nai",
+"textThree":"ชุดชั้นใน",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"calm",
-"backText":"neeyeb - เงียบ",
+"textOne":"betting",
+"textTwo":"deng pang",
+"textThree":"เดิมพัน",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"need",
-"backText":"tongkan - ต้องการ",
+"textOne":"fun",
+"textTwo":"senug",
+"textThree":"สนุก",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"hard",
-"backText":"ya(g) - ยาก",
+"textOne":"cucumber",
+"textTwo":"dteng gua",
+"textThree":"แตงกวา",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"easy",
-"backText":"ngayy - ง่าย",
+"textOne":"yellow",
+"textTwo":"see luh-úng",
+"textThree":"สีเหลือง",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"how did you do that?",
-"backText":"khun tamdai yang rai? - คุณทำได้อย่างไร?",
+"textOne":"boiled egg",
+"textTwo":"kai tom",
+"textThree":"ไข่ต้ม",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"left",
-"backText":"sái",
+"textOne":"half",
+"textTwo":"klung",
+"textThree":"ครึ่ง",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"right",
-"backText":"kwá - ขวา",
+"textOne":"share",
+"textTwo":"huune",
+"textThree":"หุ้น",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"gloves (boxing)",
-"backText":"nuom - นวม",
+"textOne":"joking",
+"textTwo":"kam kán",
+"textThree":"ขำขัน",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"hip",
-"backText":"sapo(g) - สะโพก",
+"textOne":"afterwards",
+"textTwo":"payláng",
+"textThree":"ภายหลัง",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"turn",
-"backText":"glab - กลับ",
+"textOne":"mistake",
+"textTwo":"péed plaad",
+"textThree":"ผิดพลาด",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"gas",
-"backText":"ga(s) - ก๊าซ",
+"textOne":"save (food)",
+"textTwo":"ban tuhhg",
+"textThree":"บันทึก",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"accident",
-"backText":"ooba(t)eehed - อุบัติเหตุ",
+"textOne":"gross (food)",
+"textTwo":"khan (t)on",
+"textThree":"ขั้นต้น",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"month",
-"backText":"deyern - เดือน",
+"textOne":"nevermind",
+"textTwo":"mai pen rai",
+"textThree":"ไม่เป็นไร",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"day",
-"backText":"wan - วัน",
+"textOne":"you’re welcome",
+"textTwo":"gindee donrap khun",
+"textThree":"ยินดีต้อนรับคุณ",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"hour",
-"backText":"chawmong - ชั่วโมง",
+"textOne":"too (much)",
+"textTwo":"(mag) gun (p)ai",
+"textThree":"(มา) กเกินไป",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"minute",
-"backText":"natee - นาที",
+"textOne":"bird",
+"textTwo":"nó(k)",
+"textThree":"นก",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"second",
-"backText":"ti song - ที่สอง",
+"textOne":"baby (human)",
+"textTwo":"taro(g)",
+"textThree":"ทารก",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"what do you want?",
-"backText":"khun tongkan arai? - คุณต้องการอะไร?",
+"textOne":"i don’t care",
+"textTwo":"chan mai son jzai",
+"textThree":"ฉันไม่สนใจ",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"come with me",
-"backText":"ma kab chan - มากับฉัน",
+"textOne":"be careful",
+"textTwo":"rawang",
+"textThree":"ระวัง",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"normal",
-"backText":"bogatee - ปกติ",
+"textOne":"ferry",
+"textTwo":"reux kam pha(g)",
+"textThree":"เรือข้ามฟาก",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"interesting",
-"backText":"na song chai - น่าสนใจ",
+"textOne":"you are early",
+"textTwo":"khun pen khun rei(g)",
+"textThree":"คุณเป็นคนแรก",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"curious",
-"backText":"yagru ya hén - อยากรู้อยากเห็น",
+"textOne":"you are late",
+"textTwo":"khun ma saí",
+"textThree":"คุณมาสาย",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"can",
-"backText":"tamdai - ทำได้",
+"textOne":"stretch",
+"textTwo":"yeuxd",
+"textThree":"ยืด",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"with",
-"backText":"gab - กับ",
+"textOne":"boat",
+"textTwo":"re (like hot in chinese)",
+"textThree":"เรือ",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"ice",
-"backText":"nam ken - น้ำแข็ง",
+"textOne":"year",
+"textTwo":"(p)i",
+"textThree":"ปี",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"but",
-"backText":"(t)ehh - แต่",
+"textOne":"for sure",
+"textTwo":"nei non",
+"textThree":"แน่นอน",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"plate",
-"backText":"czan - จาน",
+"textOne":"head",
+"textTwo":"húa",
+"textThree":"หัว",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"i want to see",
-"backText":"chan tongan yag hén - ฉันต้องการอยากเห็น",
+"textOne":"maybe",
+"textTwo":"a cza",
+"textThree":"อาจจะ",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
 {
-"frontText":"if",
-"backText":"(t)aa - ถ้า",
+"textOne":"weird",
+"textTwo":"pleeh(g)",
+"textThree":"แปลก",
 "rating":1,
 "exposure":0,
-"dateCreated":"2019-09-23",
-"lastReviewed":""
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
 },
+{
+"textOne":"eat first",
+"textTwo":"gin gone",
+"textThree":"กินก่อน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"talk",
+"textTwo":"gan pood kuyi",
+"textThree":"การพูดคุย",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"sound",
+"textTwo":"seeyang",
+"textThree":"เสียง",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"here",
+"textTwo":"teenee",
+"textThree":"ที่นี่",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"long time",
+"textTwo":"wela nan",
+"textThree":"เวลานาน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"family",
+"textTwo":"krob krua",
+"textThree":"ครอบครัว",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"puppy",
+"textTwo":"lu(g) suna(g)",
+"textThree":"ลูกสุนัข",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"alone",
+"textTwo":"kon neeyo",
+"textThree":"คนเดียว",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"together",
+"textTwo":"dui gàn",
+"textThree":"ด้วยกัน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"separate",
+"textTwo":"yaii(g)",
+"textThree":"แยก",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"also",
+"textTwo":"dooay",
+"textThree":"ด้วย",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"pay",
+"textTwo":"czai reng",
+"textThree":"จ่ายเงิน",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"use",
+"textTwo":"chai",
+"textThree":"ใช้",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"i am interested",
+"textTwo":"chan son czai",
+"textThree":"ฉันสนใจ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"are",
+"textTwo":"(p)en",
+"textThree":"เป็น",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"not like you",
+"textTwo":"mi muong khun",
+"textThree":"ไม่เหมือนคุณ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"try",
+"textTwo":"long",
+"textThree":"ลอง",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"tickle",
+"textTwo":"chi",
+"textThree":"จี้",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"how do you pronounce",
+"textTwo":"khun og seeyang yangrai",
+"textThree":"คุณออกเสียงอย่างไร",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"quickly",
+"textTwo":"yang rude reio",
+"textThree":"อย่างรวดเร็ว",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"or",
+"textTwo":"reux",
+"textThree":"หรือ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"smell",
+"textTwo":"gleem",
+"textThree":"กลิ่น",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"what does that mean",
+"textTwo":"na mai kwam wa yangrai",
+"textThree":"นั่นหมายความว่าอย่างไร",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"touch",
+"textTwo":"(t)ai",
+"textThree":"แตะ",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"brown",
+"textTwo":"see nam(t)an",
+"textThree":"สีน้ำตาล",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+},
+{
+"textOne":"better",
+"textTwo":"deegwa",
+"textThree":"ดีกว่า",
+"rating":1,
+"exposure":0,
+"dateCreated":"2019-09-26",
+"lastReviewed":[]
+}

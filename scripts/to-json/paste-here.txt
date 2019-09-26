@@ -1,35 +1,61 @@
-1. Car == rokyon - รถยนต์
-2. Everyday == tuk wan - ทุกวัน
-3. Protection == (b)ongkan - ป้องกัน
-4. Start == rerm ton - เริ่มต้น
-5. Put == sai - ใส่
-6. Throw == yone - โยน
-7. Calm == neeyeb - เงียบ
-8. Need == tongkan - ต้องการ
-9. Hard == ya(g) - ยาก
-10. Easy == ngayy - ง่าย
-11. How did you do that? == khun tamdai yang rai? - คุณทำได้อย่างไร?
-12. Left == sái == ซ้าย
-13. Right == kwá - ขวา
-14. Gloves (boxing) == nuom - นวม 
-15. Hip == sapo(g) - สะโพก
-16. Turn == glab - กลับ
-17. Gas == ga(s) - ก๊าซ
-18. Accident == ooba(t)eehed - อุบัติเหตุ
-19. Month == deyern - เดือน
-20. Day == wan - วัน
-21. Hour == chawmong - ชั่วโมง
-22. Minute == natee - นาที
-23. Second == ti song - ที่สอง
-24. What do you want? == khun tongkan arai? - คุณต้องการอะไร?
-25. Come with me == ma kab chan - มากับฉัน
-26. Normal == bogatee - ปกติ
-27. Interesting == na song chai - น่าสนใจ
-28. Curious == yagru ya hén - อยากรู้อยากเห็น
-29. Can == tamdai - ทำได้
-30. With == gab - กับ
-31. Ice == nam ken - น้ำแข็ง
-32. But == (t)ehh - แต่
-33. Plate == czan - จาน
-34. I want to see == chan tongan yag hén - ฉันต้องการอยากเห็น
-35. if == (t)aa - ถ้า
+Bean == Tuwa > ถั่ว
+Carrot == carro(d) > แครอท
+Corn == kaowpo(d) > ข้าวโพด
+Coding == gan kaorahad > การเข้ารหัส
+Clothes == suhh paa > เสื้อผ้า
+Underwear == chud chan nai > ชุดชั้นใน
+Betting == deng pang > เดิมพัน
+Fun == senug > สนุก
+Cucumber == dteng gua > แตงกวา
+Yellow == see luh-úng > สีเหลือง
+Boiled egg == kai Tom > ไข่ต้ม
+Half == klung > ครึ่ง
+Share == huune > หุ้น
+Joking == kam kán > ขำขัน
+Afterwards == payláng > ภายหลัง
+Mistake == péed plaad > ผิดพลาด
+Save (food) == ban tuhhg > บันทึก
+Gross (food) == khan (t)on > ขั้นต้น
+Nevermind == mai pen rai > ไม่เป็นไร
+You’re welcome == gindee donrap khun > ยินดีต้อนรับคุณ
+Too (much) == (mag) gun (p)ai > (มา) กเกินไป
+Bird == nó(k) > นก
+Baby (human) == taro(g) > ทารก
+I don’t care == chan mai son jzai > ฉันไม่สนใจ
+Be careful == rawang > ระวัง
+Ferry == reux kam pha(g) > เรือข้ามฟาก
+You are early == khun pen khun rei(g) > คุณเป็นคนแรก
+You are late == khun ma saí > คุณมาสาย
+Stretch == yeuxd > ยืด
+Boat == re (like hot in chinese) > เรือ
+Year == (p)i > ปี
+For sure == nei non > แน่นอน
+Head == húa > หัว
+Maybe == a cza > อาจจะ
+Weird == pleeh(g) > แปลก
+Eat first == gin gone > กินก่อน
+Talk == gan pood kuyi > การพูดคุย
+Sound == seeyang > เสียง
+Here == teenee > ที่นี่
+Long time == wela nan > เวลานาน
+Family == krob krua > ครอบครัว
+Puppy == lu(g) suna(g) > ลูกสุนัข
+Alone == kon neeyo > คนเดียว
+Together == dui gàn > ด้วยกัน
+Separate == yaii(g) > แยก
+Also == dooay > ด้วย
+Pay == czai reng > จ่ายเงิน
+Use == chai > ใช้
+I am interested == chan son czai > ฉันสนใจ
+are == (p)en > เป็น
+not like you == mi muong khun > ไม่เหมือนคุณ
+try == long > ลอง
+tickle == chi > จี้
+how do you pronounce == khun og seeyang yangrai > คุณออกเสียงอย่างไร
+quickly == yang rude reio > อย่างรวดเร็ว
+or == reux > หรือ
+smell == gleem > กลิ่น
+what does that mean == na mai kwam wa yangrai > นั่นหมายความว่าอย่างไร
+touch == (t)ai > แตะ
+brown == see nam(t)an > สีน้ำตาล
+better == deegwa > ดีกว่า

@@ -31,18 +31,28 @@ lines.each do |line|
   # line.sub!('-', '==')
 
   parts = line.split('==')
-  part0 = parts[0].strip
-  part1 = parts[1].strip
+  textOne = parts[0].strip
+  
+  parts = parts[1].split(">")
+  textTwo = parts[0].strip
+  textThree = parts[1].strip
+
+  # puts textOne
+  # puts textTwo
+  # puts textThree
+
   date = Date.today.to_s
 
   # puts "{\"" + part0 + "\":\"" + part1 + "\"},"
+
   puts "{"
-  puts "\"frontText\":\"" + part0 + "\","
-  puts "\"backText\":\"" + part1 + "\","
+  puts "\"textOne\":\"" + textOne + "\","
+  puts "\"textTwo\":\"" + textTwo + "\","
+  puts "\"textThree\":\"" + textThree + "\","
   puts "\"rating\":1,"
   puts "\"exposure\":0,"
   puts "\"dateCreated\":\"" + date + "\","
-  puts "\"lastReviewed\":\"\""
+  puts "\"lastReviewed\":[]"
   puts "},"
    
 end

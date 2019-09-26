@@ -1,233 +1,294 @@
-1. accident == ooba(t)eehed - อุบัติเหตุ
-2. afternoon == ton yen - ตอนบ่าย
-3. ago == gawn (  minutes ago, ha nati gawn) 
-4. almost == clai 
-5. already == leyo 
-6. angry == glod - โกรธ
-7. animal == sa(t) - สัตว์
-8. annoyed == rankan - รำคาญ
-9. ant == mot
-10. are you sure? == khun nai czai mai - คุณแน่ใจไหม?
-11. attitude == ta tee - ท่าที
-12. bad == mai dee
-13. balance == somdon - สมดุล
-14. be better == dee gwa - ดีกว่า 
-15. because == praw - เพราะ
-16. begin == rerm - เริ่ม
-17. believe == cheu-a - เชื่อ
-18. big == yay - ใหญ่
-19. bite == kad (no air k) - กัด
-20. black == dam - ดำ
-21. blanket == paahawm - ผ้าห่ม
-22. blood == luyad - เลือด
-23. blue == see namon - สีน้ำเงิน
-24. both == tang sóng - ทั้งสอง
-25. break composure (muay thai term) == seeya - เสีย
-26. breasts == na og - หน้าอก
-27. breathe == hai czai - หายใจ
-28. broken == dehhg (silent g) - แตก
-29. broom == mai kwad - ไม้กวาด
-30. brush teeth == praeng fan - แปรงฟัน
-31. but == (t)ehh - แต่
-32. butt == chon - ชน
-33. buy == su(g) - ซื้อ
-34. calm == neeyeb - เงียบ
-35. can == tamdai - ทำได้
-36. can you? == dai mai - ได้ไม่
-37. car == rokyon - รถยนต์
-38. chili == met pree(g) == พริก
-39. clean == sayad - สะอาด
-40. cold (i feel cold) == naow - หนาว
-41. cold (water) == yen - เย็น
-42. come here == ma ni 
-43. come on == ma
-44. come with me == ma kab chan - มากับฉัน
-45. comfortable == sadug sabai - สะดวกสบาย
-46. complain == bon - บ่น
-47. confused == sabsón - สับสน
-48. cook (verb) == prung ahan - ปรุงอาหาร
-49. crazy == ba - บ้า
-50. cry == rong hai - ร้องไห้
-51. cuddle == god - กอด
-52. curious == yagru ya hén - อยากรู้อยากเห็น
-53. cute == na (high a) rag - น่ารัก
-54. dance == dem ram  - เต้นรำ
-55. day == wan - วัน
-56. dessert/candy == kanom - ขนม
-57. dick == kuay
-58. different == dang - ต่าง
-59. dirty == sogabrog - สกปรก
-60. disappointed == peedwang - ผิดหวัง
-61. door == pratu (t has tono air)
-62. drive == kab - ขับรถ
-63. easy == ngayy - ง่าย
-64. elbow == kaosog (silent g) 
-65. energy == palang (พลัง) or ren
-66. enjoy == senug - สนุก
-67. everyday == tuk wan - ทุกวัน
-68. excited == (t)ern (t)en - ตื่นเต้น
-69. excuse me == tod dee ka (south thailand) kau tod ka
-70. explore == samrua(c) - สำรวจ
-71. eye == ta (t has no air)
-72. fan == palom
-73. fart == pie lom - ผายลม 
-74. fast == reio - เร็ว
-75. fat == ooan - อ้วน
-76. feather == kén - ขน
-77. feed (the chicken) == lee-uhn (gai) - เลี้ยงไก่
-78. feel == rusug - ฉันรู้สึก
-79. feel better == dee kuhn - ดีขึ้น
-80. fight == soo - สู้
-81. finger == niew
-82. flower == do(g) mai - ดอกไม้
-83. fly == been - บิน
-84. foot == tao 
-85. fork == sawm - ส้อม
-86. funny == talog - ตลก
-87. gas == ga(s) - ก๊าซ
-88. gloves (boxing) == nuom - นวม 
-89. good == dee
-90. green == keeyo - เขียว
-91. habit == nee sai - นิสัย
-92. hair == pom
-93. hand == meuu 
-94. happy == mi kwam suk - มีความสุข
-95. hard == ya(g) - ยาก
-96. hear == daiyeen - ได้ยิน
-97. heavy == gnag- หนัก
-98. help == chuay - ช่วย
-99. hip == sapo(g) - สะโพก
-100. home == ban - บ้าน
-101. hour == chawmong - ชั่วโมง
-102. how did you do that? == khun tamdai yang rai? - คุณทำได้อย่างไร?
-103. how do you feel? == khun rusug yang rai - คุณรู้สึกอย่างไร
-104. hug == ragon - ตระกอง (can also be กอด - god)
-105. hurt == czeb - เจ็บ
-106. i feel hot == chan rusug ron - ฉันรู้สึกร้อน
-107. i want to see == chan tongan yag hén - ฉันต้องการอยากเห็น
-108. ice == nam ken - น้ำแข็ง
-109. idea == kwam keed - ความคิด
-110. if == (t)aa - ถ้า
-111. inside == pai nai - ภายใน
-112. interesting == na song chai - น่าสนใจ
-113. itchy == kan - คัน
-114. keys == khun zhae 
-115. knee == kaow 
-116. laugh == wo rao - หัวเราะ
-117. learn == rii-en - เรียน
-118. left == sái == ซ้าย
-119. left kick == (how the announcers say) - tai (no air t) sai 
-120. leg == kaa
-121. less == noy - น้อย
-122. long == yaow - ยาว
-123. look for == muong há - มองหา
-124. lose == pehh - แพ้
-125. loud == (da)ang - ดัง
-126. make == tam - ทำ
-127. market == talat
-128. memory == kwam cham
-129. minute == natee - นาที
-130. month == deyern - เดือน
-131. more == magwa - มากกว่า
-132. mosquito == yung -  ยุง
-133. mouth == pag (silent g) 
-134. muay thai fight == doi muay
-135. music == pleng - เพลง
-136. neck == kaw - คอ
-137. need == tongkan - ต้องการ
-138. new == mai (down accent) - ใหม่
-139. news == khao - news
-140. next time == krang na - ครั้งหน้า
-141. normal == bogatee - ปกติ
-142. nose == chamug - จมูก
-143. old == gao - เก่า
-144. our == kong raow
-145. pee == chee - ฉี่
-146. pillow == món
-147. plate == czan - จาน
-148. play (video games) == len - เล่น
-149. poop == kee
-150. protection == (b)ongkan - ป้องกัน
-151. proud == pume chai - ภูมิใจ 
-152. punch == mad - หมัด
-153. put == sai - ใส่
-154. question == kam (t)ám - คำถาม
-155. quiet == neeyeb - เงียบ
-156. rain == fon (up accent, short)
-157. read == an - อ่าน
-158. ready == prawm leyo - พร้อมแล้ว
-159. red == see deng - สีแดง
-160. relationship == kwam sampan - ความสัมพันธ์
-161. remember == czam - จำ
-162. right == kwá - ขวา
-163. right now == ton nee
-164. sad == cié czai - เสียใจ
-165. same == muong gan - เหมือนกัน 
-166. scared == glua - กลัว
-167. scratch == gaow - เกา
-168. second == ti song - ที่สอง
-169. see == doo - ดู
-170. sell == káy - ขาย
-171. shirt == suhh-a - เสื้อ
-172. shoe == ron tao - รองเท้า
-173. short == san - สั้น
-174. shorts == kang geing - กางเกง
-175. sick == puay
-176. sing == rong pleing - ร้องเพลง
-177. sky == tong fa - ท้องฟ้า
-178. sleep == non - นอน
-179. sleepy == won non
-180. slow == cha - ช้า
-181. small == leg (silent g) - เล็ก
-182. smell bad == min
-183. smell good == hom
-184. smile == yím - ยิ้ม
-185. smoke == kwan - ควัน
-186. spring roll == po pia - ปอเปี๊ยะ 
-187. start == rerm ton - เริ่มต้น
-188. still == yang
-189. stomach == krapow ahan
-190. store == gheb - เก็บ
-191. stress == kriyeg - เครียด
-192. stupid == gno - โง่
-193. suck == dude - ดูด
-194. sweaty == piag heu-a
-195. tall == sung - สูง
-196. teeth == fan
-197. thirsty == krahay nam - กระหายน้ำ
-198. throw == yone - โยน
-199. throw away == ting - ทิ้ง
-200. throw up == a jien - อาเจียน
-201. today == wan nee - ในวันนี้
-202. tomorrow == plung nee - พรุ่งนี้
-203. tongue == léen
-204. tonight == kune nee - คืนนี้
-205. towel == pa chet doa - ผ้าเช็ดตัว
-206. train hard == fug nag - ฝึกหนัก
-207. training == gan fug had - การฝึกหัด
-208. translate == (p)lehh - แปล
-209. trash == kaya - ขยะ 
-210. turn == glab - กลับ
-211. turn off the light == peed fye - ปิดไฟ
-212. turn on the light == ped fye - เปิดไฟ
-213. vegetables == pag - ผัก
-214. wait == raw - รอ
-215. walk == durn - เดิน
-216. wash == lang
-217. wet == peeyag (no air p) - เปียก 
-218. what do you want? == khun tongkan arai? - คุณต้องการอะไร?
-219. what time is it? == wela gee mong - เวลากี่โมง
-220. white == kao - ขาว
-221. why == kamay - ทำไม
-222. win == chana - ชนะ
-223. with == gab - กับ
-224. word == kahm - คำ
-225. working == taman
-226. write == keeyen - เขียน
-227. yell == tagawn - ตะโกน
-228. you == khun - คุณ
-229. you are correct == khun tug - คุณถูก
-230. you are nice == khun czai dee -  ดคุณใจดี
-231. you are wrong == khun peed - คุณผิด
-232. young girl ( and younger) == deg sao -  เด็กสาว
-233. young woman ( to ) == nume sao - หนุ่มสาว
+accident == ooba(t)eehed - อุบัติเหตุ
+afternoon == ton yen - ตอนบ่าย
+ago == gawn (  minutes ago, ha nati gawn) 
+almost == clai 
+already == leyo 
+angry == glod - โกรธ
+animal == sa(t) - สัตว์
+annoyed == rankan - รำคาญ
+ant == mot
+are you sure? == khun nai czai mai - คุณแน่ใจไหม?
+attitude == ta tee - ท่าที
+bad == mai dee
+balance == somdon - สมดุล
+be better == dee gwa - ดีกว่า 
+because == praw - เพราะ
+begin == rerm - เริ่ม
+believe == cheu-a - เชื่อ
+big == yay - ใหญ่
+bite == kad (no air k) - กัด
+black == dam - ดำ
+blanket == paahawm - ผ้าห่ม
+blood == luyad - เลือด
+blue == see namon - สีน้ำเงิน
+both == tang sóng - ทั้งสอง
+break composure (muay thai term) == seeya - เสีย
+breasts == na og - หน้าอก
+breathe == hai czai - หายใจ
+broken == dehhg (silent g) - แตก
+broom == mai kwad - ไม้กวาด
+brush teeth == praeng fan - แปรงฟัน
+but == (t)ehh - แต่
+butt == chon - ชน
+buy == su(g) - ซื้อ
+calm == neeyeb - เงียบ
+can == tamdai - ทำได้
+can you? == dai mai - ได้ไม่
+car == rokyon - รถยนต์
+chili == met pree(g) == พริก
+clean == sayad - สะอาด
+cold (i feel cold) == naow - หนาว
+cold (water) == yen - เย็น
+come here == ma ni 
+come on == ma
+come with me == ma kab chan - มากับฉัน
+comfortable == sadug sabai - สะดวกสบาย
+complain == bon - บ่น
+confused == sabsón - สับสน
+cook (verb) == prung ahan - ปรุงอาหาร
+crazy == ba - บ้า
+cry == rong hai - ร้องไห้
+cuddle == god - กอด
+curious == yagru ya hén - อยากรู้อยากเห็น
+cute == na (high a) rag - น่ารัก
+dance == dem ram  - เต้นรำ
+day == wan - วัน
+dessert/candy == kanom - ขนม
+dick == kuay
+different == dang - ต่าง
+dirty == sogabrog - สกปรก
+disappointed == peedwang - ผิดหวัง
+door == pratu (t has tono air)
+drive == kab - ขับรถ
+easy == ngayy - ง่าย
+elbow == kaosog (silent g) 
+energy == palang (พลัง) or ren
+enjoy == senug - สนุก
+everyday == tuk wan - ทุกวัน
+excited == (t)ern (t)en - ตื่นเต้น
+excuse me == tod dee ka (south thailand) kau tod ka
+explore == samrua(c) - สำรวจ
+eye == ta (t has no air)
+fan == palom
+fart == pie lom - ผายลม 
+fast == reio - เร็ว
+fat == ooan - อ้วน
+feather == kén - ขน
+feed (the chicken) == lee-uhn (gai) - เลี้ยงไก่
+feel == rusug - ฉันรู้สึก
+feel better == dee kuhn - ดีขึ้น
+fight == soo - สู้
+finger == niew
+flower == do(g) mai - ดอกไม้
+fly == been - บิน
+foot == tao 
+fork == sawm - ส้อม
+funny == talog - ตลก
+gas == ga(s) - ก๊าซ
+gloves (boxing) == nuom - นวม 
+good == dee
+green == keeyo - เขียว
+habit == nee sai - นิสัย
+hair == pom
+hand == meuu 
+happy == mi kwam suk - มีความสุข
+hard == ya(g) - ยาก
+hear == daiyeen - ได้ยิน
+heavy == gnag- หนัก
+help == chuay - ช่วย
+hip == sapo(g) - สะโพก
+home == ban - บ้าน
+hour == chawmong - ชั่วโมง
+how did you do that? == khun tamdai yang rai? - คุณทำได้อย่างไร?
+how do you feel? == khun rusug yang rai - คุณรู้สึกอย่างไร
+hug == ragon - ตระกอง (can also be กอด - god)
+hurt == czeb - เจ็บ
+i feel hot == chan rusug ron - ฉันรู้สึกร้อน
+i want to see == chan tongan yag hén - ฉันต้องการอยากเห็น
+ice == nam ken - น้ำแข็ง
+idea == kwam keed - ความคิด
+if == (t)aa - ถ้า
+inside == pai nai - ภายใน
+interesting == na song chai - น่าสนใจ
+itchy == kan - คัน
+keys == khun zhae 
+knee == kaow 
+laugh == wo rao - หัวเราะ
+learn == rii-en - เรียน
+left == sái == ซ้าย
+left kick == (how the announcers say) - tai (no air t) sai 
+leg == kaa
+less == noy - น้อย
+long == yaow - ยาว
+look for == muong há - มองหา
+lose == pehh - แพ้
+loud == (da)ang - ดัง
+make == tam - ทำ
+market == talat
+memory == kwam cham
+minute == natee - นาที
+month == deyern - เดือน
+more == magwa - มากกว่า
+mosquito == yung -  ยุง
+mouth == pag (silent g) 
+muay thai fight == doi muay
+music == pleng - เพลง
+neck == kaw - คอ
+need == tongkan - ต้องการ
+new == mai (down accent) - ใหม่
+news == khao - news
+next time == krang na - ครั้งหน้า
+normal == bogatee - ปกติ
+nose == chamug - จมูก
+old == gao - เก่า
+our == kong raow
+pee == chee - ฉี่
+pillow == món
+plate == czan - จาน
+play (video games) == len - เล่น
+poop == kee
+protection == (b)ongkan - ป้องกัน
+proud == pume chai - ภูมิใจ 
+punch == mad - หมัด
+put == sai - ใส่
+question == kam (t)ám - คำถาม
+quiet == neeyeb - เงียบ
+rain == fon (up accent, short)
+read == an - อ่าน
+ready == prawm leyo - พร้อมแล้ว
+red == see deng - สีแดง
+relationship == kwam sampan - ความสัมพันธ์
+remember == czam - จำ
+right == kwá - ขวา
+right now == ton nee
+sad == cié czai - เสียใจ
+same == muong gan - เหมือนกัน 
+scared == glua - กลัว
+scratch == gaow - เกา
+second == ti song - ที่สอง
+see == doo - ดู
+sell == káy - ขาย
+shirt == suhh-a - เสื้อ
+shoe == ron tao - รองเท้า
+short == san - สั้น
+shorts == kang geing - กางเกง
+sick == puay
+sing == rong pleing - ร้องเพลง
+sky == tong fa - ท้องฟ้า
+sleep == non - นอน
+sleepy == won non
+slow == cha - ช้า
+small == leg (silent g) - เล็ก
+smell bad == min
+smell good == hom
+smile == yím - ยิ้ม
+smoke == kwan - ควัน
+spring roll == po pia - ปอเปี๊ยะ 
+start == rerm ton - เริ่มต้น
+still == yang
+stomach == krapow ahan
+store == gheb - เก็บ
+stress == kriyeg - เครียด
+stupid == gno - โง่
+suck == dude - ดูด
+sweaty == piag heu-a
+tall == sung - สูง
+teeth == fan
+thirsty == krahay nam - กระหายน้ำ
+throw == yone - โยน
+throw away == ting - ทิ้ง
+throw up == a jien - อาเจียน
+today == wan nee - ในวันนี้
+tomorrow == plung nee - พรุ่งนี้
+tongue == léen
+tonight == kune nee - คืนนี้
+towel == pa chet doa - ผ้าเช็ดตัว
+train hard == fug nag - ฝึกหนัก
+training == gan fug had - การฝึกหัด
+translate == (p)lehh - แปล
+trash == kaya - ขยะ 
+turn == glab - กลับ
+turn off the light == peed fye - ปิดไฟ
+turn on the light == ped fye - เปิดไฟ
+vegetables == pag - ผัก
+wait == raw - รอ
+walk == durn - เดิน
+wash == lang
+wet == peeyag (no air p) - เปียก 
+what do you want? == khun tongkan arai? - คุณต้องการอะไร?
+what time is it? == wela gee mong - เวลากี่โมง
+white == kao - ขาว
+why == kamay - ทำไม
+win == chana - ชนะ
+with == gab - กับ
+word == kahm - คำ
+working == taman
+write == keeyen - เขียน
+yell == tagawn - ตะโกน
+you == khun - คุณ
+you are correct == khun tug - คุณถูก
+you are nice == khun czai dee -  ดคุณใจดี
+you are wrong == khun peed - คุณผิด
+young girl ( and younger) == deg sao -  เด็กสาว
+young woman ( to ) == nume sao - หนุ่มสาว
+Bean == Tuwa > ถั่ว
+Carrot == carro(d) > แครอท
+Corn == kaowpo(d) > ข้าวโพด
+Coding == gan kaorahad > การเข้ารหัส
+Clothes == suhh paa > เสื้อผ้า
+Underwear == chud chan nai > ชุดชั้นใน
+Betting == deng pang > เดิมพัน
+Fun == senug > สนุก
+Cucumber == dteng gua > แตงกวา
+Yellow == see luh-úng > สีเหลือง
+Boiled egg == kai Tom > ไข่ต้ม
+Half == klung > ครึ่ง
+Share == huune > หุ้น
+Joking == kam kán > ขำขัน
+Afterwards == payláng > ภายหลัง
+Mistake == péed plaad > ผิดพลาด
+Save (food) == ban tuhhg > บันทึก
+Gross (food) == khan (t)on > ขั้นต้น
+Nevermind == mai pen rai > ไม่เป็นไร
+You’re welcome == gindee donrap khun > ยินดีต้อนรับคุณ
+Too (much) == (mag) gun (p)ai > (มา) กเกินไป
+Bird == nó(k) > นก
+Baby (human) == taro(g) > ทารก
+I don’t care == chan mai son jzai > ฉันไม่สนใจ
+Be careful == rawang > ระวัง
+Ferry == reux kam pha(g) > เรือข้ามฟาก
+You are early == khun pen khun rei(g) > คุณเป็นคนแรก
+You are late == khun ma saí > คุณมาสาย
+Stretch == yeuxd > ยืด
+Boat == re (like hot in chinese) > เรือ
+Year == (p)i > ปี
+For sure == nei non > แน่นอน
+Head == húa > หัว
+Maybe == a cza > อาจจะ
+Weird == pleeh(g) > แปลก
+Eat first == gin gone > กินก่อน
+Talk == gan pood kuyi > การพูดคุย
+Sound == seeyang > เสียง
+Here == teenee > ที่นี่
+Long time == wela nan > เวลานาน
+Family == krob krua > ครอบครัว
+Puppy == lu(g) suna(g) > ลูกสุนัข
+Alone == kon neeyo > คนเดียว
+Together == dui gàn > ด้วยกัน
+Separate == yaii(g) > แยก
+Also == dooay > ด้วย
+Pay == czai reng > จ่ายเงิน
+Use == chai > ใช้
+I am interested == chan son czai > ฉันสนใจ
+are == (p)en > เป็น
+not like you == mi muong khun > ไม่เหมือนคุณ
+try == long > ลอง
+tickle == chi > จี้
+how do you pronounce == khun og seeyang yangrai > คุณออกเสียงอย่างไร
+quickly == yang rude reio > อย่างรวดเร็ว
+or == reux > หรือ
+smell == gleem > กลิ่น
+what does that mean == na mai kwam wa yangrai > นั่นหมายความว่าอย่างไร
+touch == (t)ai > แตะ
+brown == see nam(t)an > สีน้ำตาล
+better == deegwa > ดีกว่า
