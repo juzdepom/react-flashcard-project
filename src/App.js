@@ -24,17 +24,13 @@ class App extends React.Component {
     this.searchEnter = this.searchEnter.bind(this);
     // this.ratingClicked = this.ratingClicked.bind(this);
 
-    // if (!firebase.apps.length) {
       firebase.initializeApp(DB_CONFIG);
       const database = firebase.database()
       database.ref('flashcards').on("value", (snapshot) => {
+        //fuck yes, found the data. Super tired now.
         console.log(snapshot.val())
       })
- 
-      // this.database = this.app.database().ref().child('flashcards');
-      // const data = this.app.database().ref().child('flashcards');
-      // console.log(data);
-    // }
+
 
     
     

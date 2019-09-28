@@ -12,7 +12,7 @@
 /build
 
 #firebase access credentials
-/config/config.js
+src/config/config.js
 
 # misc
 .DS_Store
