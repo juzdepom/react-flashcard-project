@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import Card from './components/Card/Card';
 import data from './data/cards.json';
+import { DB_CONFIG } from './config/config';
+import firebase from 'firebase/app';
+import 'firebase/database'; 
 
 class App extends React.Component {
 
@@ -9,23 +12,33 @@ class App extends React.Component {
     super(props)
     this.cardElement = React.createRef();
     this.cardsDataRef = React.createRef();
-    //actually we might not need these
+    //let's remove soon
     this.buttonOne = React.createRef();
-    this.buttonTwo = React.createRef();
-    this.buttonThree = React.createRef();
-    this.buttonFour = React.createRef();
-    this.buttonFive = React.createRef();
 
     this.updateDisplayCardLevels = this.updateDisplayCardLevels.bind(this);
     this.generateRandomIndex = this.generateRandomIndex.bind(this);
     this.handleCardEdit = this.handleCardEdit.bind(this);
-    //delete soon editFront and editBack
-    // this.editFront = this.editFront.bind(this);
-    // this.editBack = this.editBack.bind(this);
+
     this.copyJsonCardDataToClipboard = this.copyJsonCardDataToClipboard.bind(this);
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
     this.searchEnter = this.searchEnter.bind(this);
     // this.ratingClicked = this.ratingClicked.bind(this);
+
+    // if (!firebase.apps.length) {
+      firebase.initializeApp(DB_CONFIG);
+      const database = firebase.database()
+      database.ref('flashcards').on("value", (snapshot) => {
+        console.log(snapshot.val())
+      })
+ 
+      // this.database = this.app.database().ref().child('flashcards');
+      // const data = this.app.database().ref().child('flashcards');
+      // console.log(data);
+    // }
+
+    
+    
+    
 
     this.state = {
       cards: [],
@@ -33,8 +46,6 @@ class App extends React.Component {
       currentCardIndex: 0,
       previousCardIndex: 0,
       level: {},
-      // editFront: false,
-      // editBack: false,
       flashcardsRated: 0,
       //temporary
       newDeck: []
@@ -44,7 +55,7 @@ class App extends React.Component {
   componentWillMount(){
 
     this.setState({
-      cards: data,
+      cards: data["flashcards"],
     })
     
   }
@@ -61,6 +72,8 @@ class App extends React.Component {
     document.addEventListener("keydown", this._handleKeyDown);
   }
 
+  //keyboard keys 1-5 help you rate the card; 0 flips the card;
+  //SHIFT + 1-5 doesn't rate the card and picks a card from a specific deck.
   _handleKeyDown = (e) => {
     switch(e.keyCode) {
       case 48: //0
@@ -238,7 +251,7 @@ class App extends React.Component {
     })
   }
 
-  //you just rated one of the flashcards
+  //you just rated one of the flashcards from 1-5
   ratingClicked(rating){
 
     var currentCards = this.state.cards
@@ -285,22 +298,7 @@ class App extends React.Component {
     })
   }
 
-  // //delete soon
-  // editFront(){
-  //   var inverse = !this.state.editFront
-  //   this.setState({
-  //     editFront: inverse
-  //   })
-  // }
-
-  // //delete soon
-  // editBack(){
-  //   var inverse = !this.state.editBack
-  //   this.setState({
-  //     editBack: inverse
-  //   })
-  // }
-
+  //navigate to previous card
   goToPreviousCard(e){
     e.stopPropagation();
     var cards = this.state.cards
@@ -312,6 +310,7 @@ class App extends React.Component {
     })
   }
 
+  //this is how I save my data currently hehehehehe
   copyJsonCardDataToClipboard(e){
     this.cardsDataRef.current.select();
     document.execCommand('copy');
@@ -319,6 +318,7 @@ class App extends React.Component {
     alert("copied to clipboard!")
   }
 
+  //run this method when users presses enter on search
   searchEnter(e){
     if(e.key === 'Enter') {
       var cards = this.state.cards

@@ -28,3 +28,8 @@ So yeah, actually still way more that I want to do before I begin implementing F
 #1 added a Github URL to interface
 
 ◽️ add those little buttons to the right side of the deck so I can trigger selecting a random card from a specific deck with a mouse event.
+
+Note to self: I think the "go to previous card" option is broken when I navigate back from a card from a preselected deck.
+
+IDEA: 
+◽️ create a never looked at deck. Starting giving rating 0.

@@ -11,6 +11,9 @@
 # production
 /build
 
+#firebase access credentials
+/config/config.js
+
 # misc
 .DS_Store
 .env.local
