@@ -28,6 +28,7 @@ class App extends React.Component {
     this.handleCardEdit = this.handleCardEdit.bind(this);
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
     this.searchEnter = this.searchEnter.bind(this);
+    this.saveDataInFirebase = this.saveDataInFirebase.bind(this);
     // this.ratingClicked = this.ratingClicked.bind(this);
     
     this.state = {
@@ -136,9 +137,6 @@ class App extends React.Component {
 
   //you just rated one of the flashcards from 1-5
   ratingClicked(rating){
-  
-    var newIndex = this.generateRandomIndex(this.state.cards)
-    this.updateFlashcards(newIndex, rating)
 
     //number of flashcards we have rated during this study session
     var flashcardsRated = this.state.flashcardsRated + 1
@@ -146,6 +144,11 @@ class App extends React.Component {
     this.setState({
       flashcardsRated,
     })
+  
+    var newIndex = this.generateRandomIndex(this.state.cards)
+    this.updateFlashcards(newIndex, rating)
+
+    
 
     this.updateDisplayCardLevels();
   }
@@ -182,6 +185,11 @@ class App extends React.Component {
     })
     
     this.cardElement.current.reset();
+
+    //if we have rated more 5 cards already, then save to Firebase.
+    if(this.state.flashcardsRated > 5) {
+      this.saveDataInFirebase();
+    }
   }
 
   //if the user 
@@ -331,18 +339,10 @@ class App extends React.Component {
     })
   }
 
-  //this is how I save my data currently hehehehehe
-  // copyJsonCardDataToClipboard(e){
-  //   this.cardsDataRef.current.select();
-  //   document.execCommand('copy');
-  //   e.target.focus();
-  //   this.saveDataInFirebase();
-  //   alert("copied to clipboard!")
-  // }
-
   saveDataInFirebase(){
     const cards = this.state.cards;
     firebase.database().ref('flashcards').set(cards);
+    this.setState({flashcardsRated: 0})
   }
 
   //run this method when users presses enter on search
@@ -384,7 +384,7 @@ class App extends React.Component {
         </div>
 
         <div className="top-info-row">
-            Total: {this.state.cards.length}<br/>
+            Total Cards: {this.state.cards.length}<br/>
         </div>
 
         <div className="level-card-row">

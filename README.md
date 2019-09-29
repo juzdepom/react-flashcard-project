@@ -47,3 +47,5 @@ It's currently midnight. Am pretty pooped. Just managed to connect firebase to t
 Cleaned up the code a bunch! Going to study the cards a bit and then build the React Native application! 
 
 <img src="/screenshots/09-29-2019.png" width="400" alt="09/29/2019">
+
+◽️ everytime we rate 5 flashcards, update the JSON date in firebase.
