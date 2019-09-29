@@ -37,11 +37,13 @@ IDEA:
 ## Session 2
 *🗓 Sat, Sep 28, 2019* <br>
 
-It's currently midnight. Am pretty pooped. Was learning how to use MERN the whole day but have decided to stick off of that for now. Just managed to connect firebase to the app. It's currently logging to the console but I think it's time to make everything on the Flashcard App load from Firebase now. Tired
+Spend a good portion of today learning the MERN stack in case I wanted to build a more robust backend for the flashcard app. Built [this project](https://github.com/juzdepom/mern-exercise-tracker) 
+
+It's currently midnight. Am pretty pooped. Just managed to connect firebase to the app. It's currently logging to the console but I think it's time to make everything on the Flashcard App load from Firebase now. Tired
 
 ## Session 3
 *🗓 Sat, Sep 28, 2019* <br>
 
-Cleaned up the code a bunch!
+Cleaned up the code a bunch! Going to study the cards a bit and then build the React Native application! 
 
 <img src="/screenshots/09-29-2019.png" width="400" alt="09/29/2019">
