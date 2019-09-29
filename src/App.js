@@ -1,41 +1,35 @@
 import React from 'react';
 import './App.css';
 import Card from './components/Card/Card';
-import data from './data/cards.json';
+
+//firebase
 import { DB_CONFIG } from './config/config';
 import firebase from 'firebase/app';
 import 'firebase/database'; 
+
+// hard-coded data
+// import data from './data/cards.json';
 
 class App extends React.Component {
 
   constructor(props){
     super(props)
+
+    //if you don't include the "if statement" an error might occur!
+    if (!firebase.apps.length) {
+      firebase.initializeApp(DB_CONFIG);
+  }
+
+    //reference to our Card component so we can call the flip() method as well as other methods
     this.cardElement = React.createRef();
-    this.cardsDataRef = React.createRef();
-    //let's remove soon
-    this.buttonOne = React.createRef();
 
     this.updateDisplayCardLevels = this.updateDisplayCardLevels.bind(this);
     this.generateRandomIndex = this.generateRandomIndex.bind(this);
     this.handleCardEdit = this.handleCardEdit.bind(this);
-
-    this.copyJsonCardDataToClipboard = this.copyJsonCardDataToClipboard.bind(this);
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
     this.searchEnter = this.searchEnter.bind(this);
     // this.ratingClicked = this.ratingClicked.bind(this);
-
-      firebase.initializeApp(DB_CONFIG);
-      const database = firebase.database()
-      database.ref('flashcards').on("value", (snapshot) => {
-        //fuck yes, found the data. Super tired now.
-        console.log(snapshot.val())
-      })
-
-
     
-    
-    
-
     this.state = {
       cards: [],
       currentCard: {},
@@ -43,29 +37,43 @@ class App extends React.Component {
       previousCardIndex: 0,
       level: {},
       flashcardsRated: 0,
-      //temporary
       newDeck: []
     }
   }
 
-  componentWillMount(){
-
-    this.setState({
-      cards: data["flashcards"],
-    })
-    
-  }
-
   componentDidMount(){
-    var cards = this.state.cards
-    this.updateDisplayCardLevels();
-    var index = this.generateRandomIndex(cards)
-    
-    this.setState({
-      index,
-      currentCard: cards[index]
+
+    //uncomment below to to set data to hardcoded JSON data
+
+    // this.setState({
+    //   cards: data["flashcards"],
+    // })
+
+    //retrieving the data from firebase
+    const database = firebase.database()
+    database.ref('flashcards').on("value", (snapshot) => {
+      // console.log(snapshot.val())
+      const firebaseData = snapshot.val()
+
+      this.setState({
+        cards: firebaseData
+      })
+
+      const cards = this.state.cards
+
+      //show how many cards are in each ratings deck
+      this.updateDisplayCardLevels();
+
+      //chose a random card to display
+      var index = this.generateRandomIndex(cards)
+      
+      this.setState({
+        index,
+        currentCard: cards[index]
+      })
+      //handle when keyboard is pressed to manually rate and flip cards
+      document.addEventListener("keydown", this._handleKeyDown);
     })
-    document.addEventListener("keydown", this._handleKeyDown);
   }
 
   //keyboard keys 1-5 help you rate the card; 0 flips the card;
@@ -78,7 +86,7 @@ class App extends React.Component {
       case 49: //1
         if(e.shiftKey) {
           this.selectRandomCardFromSpecificDeck(1)
-        } else { this.buttonOne.current.click()}
+        } else { this.ratingClicked(1) }
         break;
       case 50: //2
       if(e.shiftKey) {
@@ -126,47 +134,90 @@ class App extends React.Component {
     }
   }
 
-  //TODO: create a separate function because I repeat a lot of code in this function that I write in ratingClicked()
-  selectRandomCardFromSpecificDeck(rating){
-    var cards = this.state.cards
-    const previousCardIndex = this.state.currentCardIndex;
+  //you just rated one of the flashcards from 1-5
+  ratingClicked(rating){
+  
+    var newIndex = this.generateRandomIndex(this.state.cards)
+    this.updateFlashcards(newIndex, rating)
 
-    cards[previousCardIndex].exposure += 1;
+    //number of flashcards we have rated during this study session
+    var flashcardsRated = this.state.flashcardsRated + 1
+   
+    this.setState({
+      flashcardsRated,
+    })
 
+    this.updateDisplayCardLevels();
+  }
+
+  //update the flashcard we just looked at, and set state to newly selected flashcard!
+  updateFlashcards(newIndex, rating){
+    var currentCards = this.state.cards
+    var oldIndex = this.state.currentCardIndex
+
+    //if card has been rated, update the rating
+    if(rating !== undefined){
+      currentCards[oldIndex].rating = rating;
+    }
+    
+    //increasing the exposure
+    currentCards[oldIndex].exposure += 1;
+
+    //logging the time this flashcard was reviewed
     var timeStamp = Math.floor(Date.now() / 1000);
-    //TODO: want it to push a dictionary but first want to display the already existing exposure data on the Card
-    cards[previousCardIndex].lastReviewed.push(timeStamp)
+    
+    //some of the flashcards don't have the "lastReviewed" key
+    if(currentCards[oldIndex].lastReviewed !== undefined){
+      currentCards[oldIndex].lastReviewed.push(timeStamp)
+    } else {
+      currentCards[oldIndex]["lastReviewed"] = [timeStamp];
+    }
 
-    var specificDeck = []
+    this.setState({
+      cards: currentCards,
+      //so that we can navigate to previous card
+      previousCardIndex: oldIndex,
+      currentCardIndex: newIndex,
+      currentCard: currentCards[newIndex],
+    })
+    
+    this.cardElement.current.reset();
+  }
+
+  //if the user 
+  selectRandomCardFromSpecificDeck(rating){
+  
     //make sure rating is between 1 and 5 in case I make a mistake somewhere
     if (rating < 1 || rating > 5){
       alert("A deck with this rating cannot be selected: ", rating)
       return;
     }
+    var specificDeck = []
+    const cards = this.state.cards
+    // const test = this.state.cards.filter(card => card.rating == rating)
     for (var i in cards){
-      if(cards[i].rating == rating){
-        specificDeck.push({"index": parseInt(i), "card": cards[i]})
+      //create a deck with only cards with that rating
+      if(cards[i].rating === rating){
+        //we're also adding the index of the master card array so that if we select "previous card:
+        specificDeck.push({
+          "index": parseInt(i), 
+          "card": cards[i]})
       }
     }
-    const index = Math.floor(Math.random() * specificDeck.length)
-    const currentCard = specificDeck[index].card;
-    
-    const currentCardIndex = specificDeck[index].index;
-    // console.log("selected Card: ", currentCard)
-    this.setState({
-      cards,
-      currentCard,
-      previousCardIndex,
-      currentCardIndex,
-    })
 
-    this.cardElement.current.reset();
+    //choose a random card from that deck with the specific rating
+    const index = Math.floor(Math.random() * specificDeck.length)
     
+    //get the index of the card in the this.state.cards array
+    const newIndex = specificDeck[index].index;
+
+    this.updateFlashcards(newIndex)
   }
 
   //generate random index to select random flashcard
   generateRandomIndex(currentCards){
-
+    //this is a bit more complicated because I wanted to the likelihood
+    //of selecting a level 1 card to be a lot higher than 
     var indexDeck = this.state.level.indexDeck
     var index = 0;
     if(indexDeck == null) {
@@ -247,32 +298,6 @@ class App extends React.Component {
     })
   }
 
-  //you just rated one of the flashcards from 1-5
-  ratingClicked(rating){
-
-    var currentCards = this.state.cards
-    var oldIndex = this.state.currentCardIndex
-   
-    currentCards[oldIndex].rating = rating;
-    currentCards[oldIndex].exposure += 1;
-    var timeStamp = Math.floor(Date.now() / 1000);
-    currentCards[oldIndex].lastReviewed.push(timeStamp)
-
-    var newIndex = this.generateRandomIndex(currentCards)
-    var flashcardsRated = this.state.flashcardsRated + 1
-   
-    this.setState({
-      cards: currentCards,
-      previousCardIndex: oldIndex,
-      currentCardIndex: newIndex,
-      currentCard: currentCards[newIndex],
-      flashcardsRated,
-    })
-
-    this.updateDisplayCardLevels();
-    this.cardElement.current.reset();
-  }
-
   //update the state because you are editting card
   handleCardEdit(text, event){
     var currentCard = this.state.currentCard
@@ -307,11 +332,17 @@ class App extends React.Component {
   }
 
   //this is how I save my data currently hehehehehe
-  copyJsonCardDataToClipboard(e){
-    this.cardsDataRef.current.select();
-    document.execCommand('copy');
-    e.target.focus();
-    alert("copied to clipboard!")
+  // copyJsonCardDataToClipboard(e){
+  //   this.cardsDataRef.current.select();
+  //   document.execCommand('copy');
+  //   e.target.focus();
+  //   this.saveDataInFirebase();
+  //   alert("copied to clipboard!")
+  // }
+
+  saveDataInFirebase(){
+    const cards = this.state.cards;
+    firebase.database().ref('flashcards').set(cards);
   }
 
   //run this method when users presses enter on search
@@ -338,151 +369,56 @@ class App extends React.Component {
   }
 
   render() {
-    // console.log("this.state.cards: ", this.state.cards)
     var { five, four, three, two, one } = this.state.level;
 
     return (
       <div className="App">
         
-        <div className="top-info-row">
-            Number of cards in deck: {this.state.cards.length}
-            <br/><br/>
-            <strong>This Session</strong>
-            <br/>
-            Number of flashcards rated: {this.state.flashcardsRated}
-            <br/>
-            Number of terms studied:
-            <br/>
-            Timer:
-            {/* Current card index: {this.state.currentCardIndex} */}
-        </div>
-
         <div className="search-row">
           <input
             className="search-row-input"
              type="text"
-             placeholder="Search..."
+             placeholder="Search English terms..."
              onKeyDown={this.searchEnter}
            />
         </div>
 
+        <div className="top-info-row">
+            Total: {this.state.cards.length}<br/>
+        </div>
+
+        <div className="level-card-row">
+          <div className="level-card purple">{one}</div>
+          <div className="level-card orange">{two}</div>
+          <div className="level-card yellow">{three}</div>
+          <div className="level-card green">{four}</div>
+          <div className="level-card blue">{five}</div>
+        </div>
+
         <div className="card-row">
-          
           <Card
             ref = {this.cardElement}
             card = {this.state.currentCard}
             goToPreviousCard = {this.goToPreviousCard}
             handleCardEdit = {this.handleCardEdit}
           />
-
         </div>
-        {/* <div className="previous-card-row">
-          <button onClick={this.goToPreviousCard}>Previous Card</button>
-        </div>
-         */}
-        {/* <div className="edit-row">
-          <div className="edit-row-section">
-            <button onClick={this.editFront}>Edit Front</button>
-            <br/>
-            {
-              this.state.editFront ? <input 
-              type="text" 
-              value={this.state.currentCard.textOne}
-              onChange={(event) => this.handleCardEdit("textOne", event)} 
-              /> : null
-            }
-            
-          </div>
-          <div className="edit-row-section">
-            <button onClick={this.editBack}>Edit Pronunc.</button>
-            <br/>
-            { this.state.editBack ?
-               <input 
-               type="text" 
-               value={this.state.currentCard.textTwo}
-               onChange={(event) => this.handleCardEdit("textTwo", event)}
-               /> : null
-            }
-           
-          </div>
-          <div className="edit-row-section">
-            <br/>
-
-               <input 
-               type="text" 
-               value={this.state.currentCard.textThree}
-               onChange={(event) => this.handleCardEdit("textThree", event)}
-               /> 
-          </div>
-          
-        </div> */}
-        <div className="level-card-row">
-          <div className="level-card">{one}</div>
-          <div className="level-card">{two}</div>
-          <div className="level-card">{three}</div>
-          <div className="level-card">{four}</div>
-          <div className="level-card">{five}</div>
-        </div>
-
+ 
         <div className="button-row">
           <div className="number-button-row"> 
-            <button ref={this.buttonOne} className="number-button purple" onClick={() => this.ratingClicked(1)}>
-              1 
-              {/* <span>D</span> */}
-              </button>
-            {/* <button className="number-button purple">1</button> */}
-            <button ref={this.buttonTwo} className="number-button orange" onClick={() => this.ratingClicked(2)}>
-              2 
-              {/* <span>F</span> */}
-              </button>
-            <button ref={this.buttonThree} className="number-button yellow" onClick={() => this.ratingClicked(3)}>
-              3 
-              {/* <span>J</span> */}
-              </button>
-            <button ref={this.buttonFour} className="number-button green" onClick={() => this.ratingClicked(4)}>
-              4 
-              {/* <span>K</span> */}
-              </button>
-            <button ref={this.buttonFive} className="number-button blue" onClick={() => this.ratingClicked(5)}>
-              5 
-              {/* <span>L</span> */}
-              </button>
+            <button className="number-button purple" onClick={() => this.ratingClicked(1)}>1 </button>
+            <button className="number-button orange" onClick={() => this.ratingClicked(2)}>2 </button>
+            <button className="number-button yellow" onClick={() => this.ratingClicked(3)}>3</button>
+            <button className="number-button green" onClick={() => this.ratingClicked(4)}>4 </button>
+            <button className="number-button blue" onClick={() => this.ratingClicked(5)}>5</button>
           </div>
 
           <div className="raw-data-row spacer">
-              {/* {JSON.stringify(this.state.cards)} */}
-              JSON Cards Data
-              <br/>
-              <button onClick={this.copyJsonCardDataToClipboard}>Copy to Clipboard</button>
-              <br/>
-              <textarea 
-                ref={this.cardsDataRef}
-                readOnly
-                className="json-cards-data" 
-                type="text" 
-                value={JSON.stringify(this.state.cards)} 
-                // value={JSON.stringify(this.state.newDeck)} 
-                />
-              <br/><br/>
-              <a 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                href="https://jsonformatter.curiousconcept.com/">
-                  JSON Formatter
-              </a>
-              <br/><br/>
-              <a 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                href="https://translate.google.com/#view=home&op=translate&sl=en&tl=th">
-                  Google Translate
-              </a>
-              <a 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                href="https://github.com/juzdepom/react-flashcard-project">
-                  See On Github
-              </a>
+              <div>Number of flashcards rated this session: {this.state.flashcardsRated}</div>
+              <button onClick={this.saveDataInFirebase}>Save Data in Firebase!</button>
+              <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
+              <LinkButton url="https://translate.google.com/#view=home&op=translate&sl=en&tl=th" title="Google Translate" />
+              <LinkButton url="https://github.com/juzdepom/react-flashcard-project" title="See On Github" />
             </div>
         </div>
       </div>
@@ -492,3 +428,14 @@ class App extends React.Component {
 }
 
 export default App;
+
+const LinkButton = props => (
+  <div style={{margin: "10px"}}>
+      <a 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        href={props.url}>
+          {props.title}
+      </a>
+  </div>
+)

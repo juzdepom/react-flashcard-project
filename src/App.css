@@ -1,13 +1,11 @@
 .top-info-row {
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  padding: 5px 0 5px 0;
 }
 
 .search-row {
   text-align: center;
-  /* width: 400px; */
-  margin-bottom: 20px;
+  padding: 10px 0 0 0;
 }
 
 .search-row-input {
@@ -42,10 +40,6 @@
   width: 100%;
 }
 
-/* .edit-row-back {
-  width: 100%;
-} */
-
 .level-card-row {
   display: flex;
   align-content: space-around;
@@ -56,6 +50,7 @@
 .level-card {
   text-align: center;
   width: 100%;
+  padding: 5px 0 5px 0;
 }
 
 .number-button-row {
@@ -63,7 +58,6 @@
   align-content: space-around;
   width: 400px;
   margin: 0 auto;
-  /* width: 400px; */
 }
 
 .number-button {
@@ -71,19 +65,11 @@
   border: none;
   height: 50px;
   width: 100%;
-  /* width: 50px; */
   text-align: center;
   text-decoration: none;
-  /* color: #ecf0f1; */
   color: black;
   margin: auto;
-  margin-top: 20px;
-  
-  transition: all .2s ease-out;
-  /* animation: rubberband 2s; */
-
-  
-  /* transform: translateY(0rem); */
+  /* transition: all .2s ease-out; */
 }
 
 .number-button span {
@@ -93,15 +79,9 @@
   margin-left: 10px;
 }
 
-/* @keyframes rubberband {
-  0% { transform: translateY(0rem) }
-  50% { transform: translateY(-1.2rem); }
-  100% { transform: translateY(0rem)}
-} */
-
-.number-button:active{
+/* .number-button:active{
   transform: translateY(-1.2rem);
-}
+} */
 
 .raw-data-row {
   text-align: center;
@@ -126,13 +106,3 @@
 .blue {
   background: #40A9D6;
 }
-
-/* .blue {
-  box-shadow: 0px 6px #17619C;
-  background: #2177BB;
-}
-
-.gray {
-  box-shadow: 0px 6px #2c3e50;
-  background: #34495e;
-} */

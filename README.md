@@ -38,3 +38,10 @@ IDEA:
 *🗓 Sat, Sep 28, 2019* <br>
 
 It's currently midnight. Am pretty pooped. Was learning how to use MERN the whole day but have decided to stick off of that for now. Just managed to connect firebase to the app. It's currently logging to the console but I think it's time to make everything on the Flashcard App load from Firebase now. Tired
+
+## Session 3
+*🗓 Sat, Sep 28, 2019* <br>
+
+Cleaned up the code a bunch!
+
+<img src="/screenshots/09-29-2019.png" width="400" alt="09/29/2019">
