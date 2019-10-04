@@ -93,12 +93,14 @@ class Card extends Component {
         var color = colors[rating-1]
         var time = "First Time"
         var elapsed = ""
+        var reviewCount = 0
 
         if(lastReviewed == undefined) {
             console.log('this one is undefined: ' + textOne)
         }
         
         if(lastReviewed != undefined && lastReviewed.length != 0){
+            reviewCount = lastReviewed.length
             lastReviewed = lastReviewed[lastReviewed.length - 1]
             time = this.calculateElapsedTime(lastReviewed)
             elapsed = this.timeConverter(lastReviewed)
@@ -116,7 +118,7 @@ class Card extends Component {
                                     {dateCreated}
                                 </div>
                                 <div className="exposure">
-                                    👁{exposure}
+                                    👁{reviewCount}
                                 </div>
                             </div>
                             {!this.state.editMode ?

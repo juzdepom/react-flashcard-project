@@ -45,7 +45,6 @@ class App extends React.Component {
   componentDidMount(){
 
     //uncomment below to to set data to hardcoded JSON data
-
     // this.setState({
     //   cards: data["flashcards"],
     // })
@@ -148,8 +147,6 @@ class App extends React.Component {
     var newIndex = this.generateRandomIndex(this.state.cards)
     this.updateFlashcards(newIndex, rating)
 
-    
-
     this.updateDisplayCardLevels();
   }
 
@@ -162,9 +159,6 @@ class App extends React.Component {
     if(rating !== undefined){
       currentCards[oldIndex].rating = rating;
     }
-    
-    //increasing the exposure
-    currentCards[oldIndex].exposure += 1;
 
     //logging the time this flashcard was reviewed
     var timeStamp = Math.floor(Date.now() / 1000);
@@ -248,55 +242,31 @@ class App extends React.Component {
       three: 0,
       four: 0, 
       five: 0,
-      // oneDeck: [],
-      // twoDeck: [],
-      // threeDeck: [],
-      // fourDeck: [],
-      // fiveDeck: []
-      
+      totalPoints: 0,
     }
-
-    // var newDeck = currentCards
-    // for(var i in newDeck){
-    //   const timeStamp = newDeck[i].lastReviewed
-    //   newDeck[i].lastReviewed = [timeStamp]
-    //   var text = newDeck[i].backText
-    //   text = text.split(" > ")
-    //   var p1 = text[0].trim()
-    //   var p2 = text[1].trim()
-    //   newDeck[i].textOne = newDeck[i].frontText;
-    //   newDeck[i].textTwo = p1;
-    //   newDeck[i].textThree = p2;
-    //   delete newDeck[i].backText;
-    //   delete newDeck[i].frontText;
-    // }
-    // console.log(newDeck)
-    // this.setState({
-    //   newDeck
-    // })
 
     for (var i in currentCards){
       switch(currentCards[i].rating){
         case 1: 
           level.one += 1
           level.indexDeck.push(i,i,i,i,i,i,i,i,i,i)
-          // level.oneDeck.push(currentCards[i])
+          level.totalPoints += 1
         break;
         case 2: level.two += 1
           level.indexDeck.push(i,i,i,i,i,i)
-        // level.twoDeck.push(currentCards[i])
+          level.totalPoints += 2
         break;
         case 3: level.three += 1
           level.indexDeck.push(i,i,i)
-        // level.threeDeck.push(currentCards[i])
+          level.totalPoints += 3
         break;
         case 4: level.four += 1
         level.indexDeck.push(i,i)
-        // level.fourDeck.push(currentCards[i])
+        level.totalPoints += 4
         break;
         case 5: level.five += 1
         level.indexDeck.push(i)
-        // level.fiveDeck.push(currentCards[i])
+        level.totalPoints += 5
         break;
         default: //
       }
@@ -384,7 +354,10 @@ class App extends React.Component {
         </div>
 
         <div className="top-info-row">
-            Total Cards: {this.state.cards.length}<br/>
+            Total Cards: {this.state.cards.length} <br/>
+            Goal: 1000 mastered cards - Progress: <span style={{color: "green"}}>{this.state.level.totalPoints}</span>/5000 
+            ({Math.floor(this.state.level.totalPoints / 5000 * 100)}%)
+            <br/>
         </div>
 
         <div className="level-card-row">
@@ -416,8 +389,10 @@ class App extends React.Component {
           <div className="raw-data-row spacer">
               <div>Number of flashcards rated this session: {this.state.flashcardsRated}</div>
               <button onClick={this.saveDataInFirebase}>Save Data in Firebase!</button>
-              <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
+              
               <LinkButton url="https://translate.google.com/#view=home&op=translate&sl=en&tl=th" title="Google Translate" />
+              <LinkButton url="https://console.firebase.google.com/u/0/project/flashcard-project-5ee54/database/flashcard-project-5ee54/data" title="Firebase" />
+              <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
               <LinkButton url="https://github.com/juzdepom/react-flashcard-project" title="See On Github" />
             </div>
         </div>

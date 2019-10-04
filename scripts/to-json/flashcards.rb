@@ -1,12 +1,4 @@
-#!/usr/bin/env ruby
-
-# type 
-# ruby flashcards.rb paste-here.txt 
-# into terminal to see text output in terminal
-
-# type 
 # ruby flashcards.rb paste-here.txt > new.txt 
-# into terminal to 'put' into file
 
 require 'date'
 
@@ -50,7 +42,7 @@ lines.each do |line|
   puts "\"textTwo\":\"" + textTwo + "\","
   puts "\"textThree\":\"" + textThree + "\","
   puts "\"rating\":1,"
-  puts "\"exposure\":0,"
+  # puts "\"exposure\":0,"
   puts "\"dateCreated\":\"" + date + "\","
   puts "\"lastReviewed\":[]"
   puts "},"

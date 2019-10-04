@@ -1,61 +1,94 @@
-Bean == Tuwa > ถั่ว
-Carrot == carro(d) > แครอท
-Corn == kaowpo(d) > ข้าวโพด
-Coding == gan kaorahad > การเข้ารหัส
-Clothes == suhh paa > เสื้อผ้า
-Underwear == chud chan nai > ชุดชั้นใน
-Betting == deng pang > เดิมพัน
-Fun == senug > สนุก
-Cucumber == dteng gua > แตงกวา
-Yellow == see luh-úng > สีเหลือง
-Boiled egg == kai Tom > ไข่ต้ม
-Half == klung > ครึ่ง
-Share == huune > หุ้น
-Joking == kam kán > ขำขัน
-Afterwards == payláng > ภายหลัง
-Mistake == péed plaad > ผิดพลาด
-Save (food) == ban tuhhg > บันทึก
-Gross (food) == khan (t)on > ขั้นต้น
-Nevermind == mai pen rai > ไม่เป็นไร
-You’re welcome == gindee donrap khun > ยินดีต้อนรับคุณ
-Too (much) == (mag) gun (p)ai > (มา) กเกินไป
-Bird == nó(k) > นก
-Baby (human) == taro(g) > ทารก
-I don’t care == chan mai son jzai > ฉันไม่สนใจ
-Be careful == rawang > ระวัง
-Ferry == reux kam pha(g) > เรือข้ามฟาก
-You are early == khun pen khun rei(g) > คุณเป็นคนแรก
-You are late == khun ma saí > คุณมาสาย
-Stretch == yeuxd > ยืด
-Boat == re (like hot in chinese) > เรือ
-Year == (p)i > ปี
-For sure == nei non > แน่นอน
-Head == húa > หัว
-Maybe == a cza > อาจจะ
-Weird == pleeh(g) > แปลก
-Eat first == gin gone > กินก่อน
-Talk == gan pood kuyi > การพูดคุย
-Sound == seeyang > เสียง
-Here == teenee > ที่นี่
-Long time == wela nan > เวลานาน
-Family == krob krua > ครอบครัว
-Puppy == lu(g) suna(g) > ลูกสุนัข
-Alone == kon neeyo > คนเดียว
-Together == dui gàn > ด้วยกัน
-Separate == yaii(g) > แยก
-Also == dooay > ด้วย
-Pay == czai reng > จ่ายเงิน
-Use == chai > ใช้
-I am interested == chan son czai > ฉันสนใจ
-are == (p)en > เป็น
-not like you == mi muong khun > ไม่เหมือนคุณ
-try == long > ลอง
-tickle == chi > จี้
-how do you pronounce == khun og seeyang yangrai > คุณออกเสียงอย่างไร
-quickly == yang rude reio > อย่างรวดเร็ว
-or == reux > หรือ
-smell == gleem > กลิ่น
-what does that mean == na mai kwam wa yangrai > นั่นหมายความว่าอย่างไร
-touch == (t)ai > แตะ
-brown == see nam(t)an > สีน้ำตาล
-better == deegwa > ดีกว่า
+arm == kén > แขน
+airplane == krung been > เครื่องบิน
+allergic == péhh > แพ้
+air == ahgahd > อากาศ
+admire == chom > ชม
+australia == Australia > ออสเตรเลีย
+my back == lang kong chan > หลังของฉัน
+I’ll be back == cha jza glab ma > ฉันจะกลับมา
+book == nan seux > หนังสือ
+bread == khanon (p)ang > ขนมปัง
+beginner == poo rerm > ผู้เริ่ม
+bright (light) == sod sái > สดใส
+brain == somóng > สมอง
+carry == pog pah > พกพา
+city == muh-ung > เมือง
+call == ton > โทร
+chair == gao ee > เก้าอี้
+class == chán > ชั้น
+change == (p)leeyen (p)leing > เปลี่ยนแปลง
+China == cheen > จีน
+close by == glay glaii > ใกล้ ๆ
+consistent == kong sen kong waa > คงเส้นคงวา
+concentrate == (t)ang somatee > ตั้งสมาธิ
+dirt == foon > ฝุ่น
+diving == gan dan nam > การดำน้ำ
+determined == nei non > แน่นอน
+dress == (t)en(t)ooa > แต่งตัว
+dizzy == wingweeyen > วิงเวียน
+Europe == euro > ยุโรป
+every time == tug wela > ทุกเวลา
+English language == kasa angree > ภาษาอังกฤษ
+experienced == mee (p)rasogaan > มีประสบการณ์
+expensive == pong > เเพง
+far == pang glai > ห่างไกล
+flashcards == ba(t) kam sa(p) > บัตรคำศัพท์
+father == paw > พ่อ
+fresh == sod > สด
+for example == (t)aw yang chen > ตัวอย่างเช่น
+fruit == po lamai > ผลไม้
+great == mahá > มหา
+good morning == swadee ton chaow ka > สวัสดีตอนเช้าค่ะ
+handwrap == pa pan > ผ้าพัน
+hang (clothes) == kwen suh pa > แขวนเสื้อผ้า
+healthy == keng ren > แข็งแรง
+heart == pwa zhai > หัวใจ
+how much is it? == raka kaow rai? > ราคาเท่าไหร่?
+how long? == nan kai nai? > นานแค่ไหน
+how do you say in Thai? == khun pood Thai dai yang rai? > คุณพูดไทยได้อย่างไร
+how do you know? == khun ru dai yang rai > คุณรู้ได้อย่างไร
+how ==dai yang rai > ได้อย่างไร
+hospital == rong payaban > โรงพยาบาล
+I think == chan keed > ฉันคิด
+I like == chan chob > ฉันชอบ
+job == han > งาน
+leaf == bai mái > ใบไม้
+language == pasá > ภาษา
+long (time) == (wela) nan > (เวลา) นาน
+muscle == glam nu-úh > กล้ามเนื้อ
+that means something bad == nan mái (t)ung sing tee mai dee > นั่นหมายถึงสิ่งที่ไม่ดี
+memorize == jzod jzam > จดจำ
+(that) means == nan mái > (นั่น)หมาย
+noodles == gway deeyo > ก๋วยเตี๋ยว
+negative (attitude) == (tasanakadee) chung lob > ทัศนคติเชิงลบ
+no problem ==mai mi (p)on háa > ไม่มีปัญหา
+potato == manfarang > มันฝรั่ง
+price == raka > ราคา
+phonecall == sai kaow > สายเข้า
+tree == (t)on mái > ต้นไม้
+that is not good == tee mai dee > ที่ไม่ดี
+rent == hei chaow > ให้เช่า
+respect == kaoró > เคารพ
+return == glab > กลับ
+shin == na keing > หน้าแข้ง
+sometimes == bangkráng > บางครั้ง
+sun == dong ateet > ดวงอาทิตย์
+shrimp == gung > กุ้ง
+seafood == ahan talei > อาหารทะเล
+stay == pag yuu > พักอยู่
+school == rong reeyen > โรงเรียน
+study == sug sá > ศึกษา
+strong == ken reng > แข็งแรง
+surfing == tong > ท่อง
+table == dó > โต๊ะ
+trust == wang jzai > วางใจ
+tell me == bog chan > บอกฉัน
+university == (maha) (weetee) yalai > มหาวิทยาลัย
+weak == on ehh > อ่อนแอ
+work hard == tamhan nag > ทำงานหนัก
+weight == nam na(g) > น้ำหนัก
+wind == lom > ลม
+windy == lom ren > ลมแรง
+what are you doing? == (khun gamlang) tam arai? > (คุณกำลัง)ทำอะไร?
+when == meux-ah? > เมื่อ?
+wood == mái > ไม้

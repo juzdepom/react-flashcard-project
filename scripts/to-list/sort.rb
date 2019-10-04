@@ -1,5 +1,4 @@
-# ruby sort.rb paste-here.txt 
-# ruby sort.rb paste-here.txt > new.txt 
+# ruby sort.rb paste-here.txt > masterlist.txt 
 
 if ARGV.size > 0
   data = File.read(ARGV[0])

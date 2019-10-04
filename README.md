@@ -48,4 +48,4 @@ Cleaned up the code a bunch! Going to study the cards a bit and then build the R
 
 <img src="/screenshots/09-29-2019.png" width="400" alt="09/29/2019">
 
-◽️ everytime we rate 5 flashcards, update the JSON date in firebase.
+New: everytime we rate 5 flashcards, update the JSON date in firebase.
