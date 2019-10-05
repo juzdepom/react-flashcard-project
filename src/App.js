@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Card from './components/Card/Card';
 import AddFlashcards from './components/AddFlashcards/AddFlashcards';
+import SelectFromDeck from './components/SelectFromDeck/SelectFromDeck';
 
 //firebase
 import { DB_CONFIG } from './config/config';
@@ -366,12 +367,12 @@ class App extends React.Component {
         </div>
 
         <div className="level-card-row">
-          <div className="level-card gray">{zero}</div>
-          <div className="level-card purple">{one}</div>
-          <div className="level-card orange">{two}</div>
-          <div className="level-card yellow">{three}</div>
-          <div className="level-card green">{four}</div>
-          <div className="level-card blue">{five}</div>
+          <button className="level-card gray">{zero}</button>
+          <button className="level-card purple">{one}</button>
+          <button className="level-card orange">{two}</button>
+          <button className="level-card yellow">{three}</button>
+          <button className="level-card green">{four}</button>
+          <button className="level-card blue">{five}</button>
         </div>
 
         <div className="card-row">
@@ -381,6 +382,7 @@ class App extends React.Component {
             goToPreviousCard = {this.goToPreviousCard}
             handleCardEdit = {this.handleCardEdit}
           />
+          <SelectFromDeck/>
         </div>
  
         <div className="button-row">

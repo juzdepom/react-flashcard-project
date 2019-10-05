@@ -55,14 +55,20 @@ New: everytime we rate 5 flashcards, update the JSON date in firebase.
 Last time I updated this README I mentioned that I wanted to build the React Native application. Well instead I decided to build the app in Swift and spent two days building it out on my old macbook which then crashed lol. For now will be keeping the app as a Web app.
 Figured out how to open my project through localhost on my phone so that's a handy workaround.
 
-Commit: "#4 added more flashcards, added a button at the bottom and added the goals text of 1000 mastered cards."
+```Commit: "#4 added more flashcards, added a button at the bottom and added the goals text of 1000 mastered cards."```
 
 ## Session 5
 *🗓 Sat, Oct 5, 2019* <br>
 Building out the Add Flashcards component
 
-Commit: "#5 built out the add flashcards component and added a level 0 card deck for cards that have never been reviewed before"
+```Commit: "#5 built out the add flashcards component and added a level 0 card deck for cards that have never been reviewed before"```
 
 The add flashcards component also checks the string to make sure that it can be turned into accurate flashcard data! 
 
 <img src="/screenshots/10-05-2019.png" width="400" alt="10-05-2019">
+
+Next task: add the buttons on the side for rating.
+
+```Commit: "#5 added some CSS shading effects. Not entired satisfied but will do for now"```
+
+<img src="/screenshots/10-05-2019--shading.png" width="400" alt="10-05-2019">

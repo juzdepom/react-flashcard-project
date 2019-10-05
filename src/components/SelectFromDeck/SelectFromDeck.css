@@ -1,0 +1,53 @@
+.background {
+    /* background: linear-gradient(black, #505050); */
+    background: #505050;
+    height: 40px;
+    border-width: 10px 0 10px 10px;
+    border-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: darkgrey;
+    height: 340px;
+    /* padding: 40px 0 40px 0; */
+    /* height: 100%; */
+}
+
+.button {
+
+    border-width: 0 0 0 10px;
+    border-color: rgba(0, 0, 0, 0.2);
+    margin: 0px;
+    height: 100%;
+    width: 40px;
+}
+
+.gray {
+    background: lightgray;
+}
+
+.purple {
+    background: #AB3B7F;
+  }
+  
+.orange {
+    background: #F28945;
+}
+
+.yellow {
+    background: #FEDD33;
+}
+
+.green {
+    background: #7EAE2E;
+}
+
+.blue-right-btn {
+    background: #40A9D6;
+    border-width: 0 0 10px 10px;
+}
