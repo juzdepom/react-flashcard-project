@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Card from './components/Card/Card';
+import AddFlashcards from './components/AddFlashcards/AddFlashcards';
 
 //firebase
 import { DB_CONFIG } from './config/config';
@@ -29,6 +30,7 @@ class App extends React.Component {
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
     this.searchEnter = this.searchEnter.bind(this);
     this.saveDataInFirebase = this.saveDataInFirebase.bind(this);
+    this.addNewFlashcardsToDeck = this.addNewFlashcardsToDeck.bind(this);
     // this.ratingClicked = this.ratingClicked.bind(this);
     
     this.state = {
@@ -81,7 +83,11 @@ class App extends React.Component {
   _handleKeyDown = (e) => {
     switch(e.keyCode) {
       case 48: //0
-        this.cardElement.current.flipCard();
+        if(e.shiftKey){
+          this.selectRandomCardFromSpecificDeck(0)
+        } else {
+          this.cardElement.current.flipCard();
+        }
       break;
       case 49: //1
         if(e.shiftKey) {
@@ -111,23 +117,6 @@ class App extends React.Component {
       case 192: //~
         this.goToPreviousCard()
       break;
-      //NOTE: QWERTY are bad letters to choose because when you type something into the the search field, pressing these characters will trigger the function regardless
-      //Better to do press "=" and then press 1, 2, 3, 4, or 5; leave that for later
-      // case 81: //Q
-      //   this.selectRandomCardFromSpecificDeck(1)
-      //   break;
-      // case 87: //W
-      //   this.selectRand!omCardFromSpecificDeck(2)
-      // break;
-      // case 69: //E
-      //   this.selectRandomCardFromSpecificDeck(3)
-      // break;
-      // case 82: //R
-      //   this.selectRandomCardFromSpecificDeck(4)
-      // break;
-      // case 84: //T
-      //   this.selectRandomCardFromSpecificDeck(5)
-      // break;
       default:
         // console.log(e.keyCode)
         break;
@@ -190,7 +179,7 @@ class App extends React.Component {
   selectRandomCardFromSpecificDeck(rating){
   
     //make sure rating is between 1 and 5 in case I make a mistake somewhere
-    if (rating < 1 || rating > 5){
+    if (rating < 0 || rating > 5){
       alert("A deck with this rating cannot be selected: ", rating)
       return;
     }
@@ -233,10 +222,10 @@ class App extends React.Component {
 
   //display the number of cards in each rating category (1-5)
   updateDisplayCardLevels(){
-    
     const currentCards = this.state.cards;
     var level = {
       indexDeck: [],
+      zero: 0,
       one: 0, 
       two: 0,
       three: 0,
@@ -247,6 +236,10 @@ class App extends React.Component {
 
     for (var i in currentCards){
       switch(currentCards[i].rating){
+        case 0: 
+          level.zero += 1
+          level.indexDeck.push(i,i,i,i,i,i,i,i,i,i)
+          level.totalPoints += 1
         case 1: 
           level.one += 1
           level.indexDeck.push(i,i,i,i,i,i,i,i,i,i)
@@ -338,8 +331,20 @@ class App extends React.Component {
     }
   }
 
+  addNewFlashcardsToDeck(cards){
+    let length = cards.length
+    let newDeck = this.state.cards.concat(cards)
+    this.setState({cards: newDeck}, () => {
+      this.updateDisplayCardLevels();
+      this.saveDataInFirebase();
+    })
+    
+    alert(`Adding ${length} new cards to deck!`)
+        
+  }
+
   render() {
-    var { five, four, three, two, one } = this.state.level;
+    var { five, four, three, two, one, zero } = this.state.level;
 
     return (
       <div className="App">
@@ -361,6 +366,7 @@ class App extends React.Component {
         </div>
 
         <div className="level-card-row">
+          <div className="level-card gray">{zero}</div>
           <div className="level-card purple">{one}</div>
           <div className="level-card orange">{two}</div>
           <div className="level-card yellow">{three}</div>
@@ -386,15 +392,25 @@ class App extends React.Component {
             <button className="number-button blue" onClick={() => this.ratingClicked(5)}>5</button>
           </div>
 
-          <div className="raw-data-row spacer">
+          <div className="row">
               <div>Number of flashcards rated this session: {this.state.flashcardsRated}</div>
               <button onClick={this.saveDataInFirebase}>Save Data in Firebase!</button>
-              
-              <LinkButton url="https://translate.google.com/#view=home&op=translate&sl=en&tl=th" title="Google Translate" />
-              <LinkButton url="https://console.firebase.google.com/u/0/project/flashcard-project-5ee54/database/flashcard-project-5ee54/data" title="Firebase" />
-              <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
-              <LinkButton url="https://github.com/juzdepom/react-flashcard-project" title="See On Github" />
-            </div>
+          </div>
+
+          <div className="row">
+            <AddFlashcards 
+              originalDeck={this.state.cards}
+              addNewFlashcardsToDeck={this.addNewFlashcardsToDeck}
+              />
+          </div>
+
+          <div className="row">
+            <LinkButton url="https://translate.google.com/#view=home&op=translate&sl=en&tl=th" title="Google Translate" />
+            <LinkButton url="https://console.firebase.google.com/u/0/project/flashcard-project-5ee54/database/flashcard-project-5ee54/data" title="Firebase" />
+            <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
+            <LinkButton url="https://github.com/juzdepom/react-flashcard-project" title="See On Github" />
+          </div>
+
         </div>
       </div>
     );

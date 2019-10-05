@@ -88,9 +88,9 @@ class Card extends Component {
     }
 
     render(props){
-        var colors = ["#AB3B7F", "#F28945", "#FEDD33", "#7EAE2E", "#40A9D6"]
+        var colors = ["lightgray", "#AB3B7F", "#F28945", "#FEDD33", "#7EAE2E", "#40A9D6"]
         var {rating, textOne, textTwo, textThree, exposure, dateCreated, lastReviewed} = this.props.card;
-        var color = colors[rating-1]
+        var color = colors[rating]
         var time = "First Time"
         var elapsed = ""
         var reviewCount = 0
