@@ -1,23 +1,14 @@
-.card-container {
-    /* padding-bottom: 20px; */
-}
-
 .card {
-    /* background-color: green; */
     position: relative;
     height: 400px;
     cursor: pointer;
     width: 340px;
     margin: 0 auto;
     text-align: center;
-    /* background: blue; */
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    /* background-color: rgba(255, 251, 251, 1); */
 }
-
-
 
 .card-top {
     display: flex;
@@ -25,6 +16,7 @@
 }
 
 .back-button {
+    cursor: pointer;
     width: 100%;
     text-align: left;
     z-index: 2;
@@ -33,7 +25,6 @@
 .date-created {
     text-align: center;
     width: 100%;
-    /* background: blue; */
     color: gray; 
     font-size: 12px;
 }
@@ -41,14 +32,13 @@
 .exposure {
     text-align: right;
     width: 100%;
-    /* background: red; */
     padding-right: 5px;
 }
 
 .front-text{
     color: #333;
     font-size: 2.3em;
-    padding-top: 25%;
+    padding-top: 15%;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -56,7 +46,7 @@
 .back-text{
     color: #333;
     font-size: 2.3em;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -78,7 +68,7 @@
 
 .pronunciation{
     font-style: italic;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .thai {

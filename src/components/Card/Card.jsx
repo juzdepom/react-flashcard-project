@@ -106,7 +106,7 @@ class Card extends Component {
             elapsed = this.timeConverter(lastReviewed)
         }
         return(
-            <div className="card-container">
+            <div>
                     <div className="card" 
                         style={{border: `10px solid ${color}`}}
                         onClick={this.flipCard}>

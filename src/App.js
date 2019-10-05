@@ -32,11 +32,13 @@ class App extends React.Component {
     this.searchEnter = this.searchEnter.bind(this);
     this.saveDataInFirebase = this.saveDataInFirebase.bind(this);
     this.addNewFlashcardsToDeck = this.addNewFlashcardsToDeck.bind(this);
+    this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
     // this.ratingClicked = this.ratingClicked.bind(this);
     
     this.state = {
       cards: [],
       currentCard: {},
+      previousCard: {},
       currentCardIndex: 0,
       previousCardIndex: 0,
       level: {},
@@ -160,9 +162,12 @@ class App extends React.Component {
       currentCards[oldIndex]["lastReviewed"] = [timeStamp];
     }
 
+    let previousCard = this.state.currentCard
+
     this.setState({
       cards: currentCards,
       //so that we can navigate to previous card
+      previousCard,
       previousCardIndex: oldIndex,
       currentCardIndex: newIndex,
       currentCard: currentCards[newIndex],
@@ -185,7 +190,7 @@ class App extends React.Component {
       return;
     }
     var specificDeck = []
-    const cards = this.state.cards
+    let cards = this.state.cards
     // const test = this.state.cards.filter(card => card.rating == rating)
     for (var i in cards){
       //create a deck with only cards with that rating
@@ -294,13 +299,21 @@ class App extends React.Component {
   //navigate to previous card
   goToPreviousCard(e){
     e.stopPropagation();
-    var cards = this.state.cards
+    let cards = this.state.cards
+    let textOne = this.state.previousCard["textOne"]
     var currentCardIndex = this.state.previousCardIndex
-    var currentCard = cards[currentCardIndex]
-    this.setState({
-      currentCardIndex,
-      currentCard,
-    })
+    for(var i in cards){
+      if(textOne == cards[i]["textOne"]){
+        this.setState({
+          currentCardIndex: i,
+          currentCard: cards[i],
+        })
+        return;
+      }
+    }
+    
+    // var currentCard = cards[currentCardIndex]
+    
   }
 
   saveDataInFirebase(){
@@ -317,9 +330,11 @@ class App extends React.Component {
       for (var i=0; i<cards.length ; i++){
         if(cards[i].textOne === e.target.value){
           foundCard = true;
+          let previousCard = this.state.currentCard
           var previousCardIndex = this.state.currentCardIndex
           var currentCard = cards[i]
           this.setState({
+            previousCard,
             previousCardIndex,
             currentCardIndex: i,
             currentCard,
@@ -382,7 +397,7 @@ class App extends React.Component {
             goToPreviousCard = {this.goToPreviousCard}
             handleCardEdit = {this.handleCardEdit}
           />
-          <SelectFromDeck/>
+          <SelectFromDeck selectRandomCardFromSpecificDeck = {this.selectRandomCardFromSpecificDeck} />
         </div>
  
         <div className="button-row">

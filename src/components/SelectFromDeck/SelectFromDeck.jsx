@@ -11,7 +11,8 @@ class SelectFromDeck extends Component {
     }
     
     ratingClicked(i){
-        alert(`rating clicked: ${i}`)
+        this.props.selectRandomCardFromSpecificDeck(i)
+        // alert(`rating clicked: ${i}`)
     }
 
 
@@ -19,16 +20,16 @@ class SelectFromDeck extends Component {
     render(props){
         return(
                 <div>
-                    <button disabled className="background"/>
+                    <div className="background"/>
                     <div className="container">
-                        <button className="button gray" onClick={() => this.ratingClicked(0)}/>
-                        <button className="button purple" onClick={() => this.ratingClicked(1)}/>
-                        <button className="button orange" onClick={() => this.ratingClicked(2)}/>
-                        <button className="button yellow" onClick={() => this.ratingClicked(3)}/>
-                        <button className="button green" onClick={() => this.ratingClicked(4)}/>
-                        <button className="button blue-right-btn" onClick={() => this.ratingClicked(5)}/>
+                        <button className="select-deck-button gray" onClick={() => this.ratingClicked(0)}>0</button>
+                        <button className="select-deck-button purple" onClick={() => this.ratingClicked(1)}>1</button>
+                        <button className="select-deck-button orange" onClick={() => this.ratingClicked(2)}>2</button>
+                        <button className="select-deck-button yellow" onClick={() => this.ratingClicked(3)}>3</button>
+                        <button className="select-deck-button green" onClick={() => this.ratingClicked(4)}>4</button>
+                        <button className="select-deck-button blue" onClick={() => this.ratingClicked(5)}>5</button>
                     </div>
-                    <button disabled className="background"/>
+                    <div className="background"/>
                 </div>
             
             
