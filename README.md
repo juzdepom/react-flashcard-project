@@ -85,3 +85,7 @@ Next task: add the buttons on the side for rating.
 Used this tutorial: [ReactJS - Build a Responsive Navigation Bar & Side Drawer Tutoria](https://www.youtube.com/watch?v=l6nmysZKHFU)
 
 <img src="/screenshots/10-06-2019--drawers.png" width="400" alt="10-06-2019 drawer">
+
+```Commit: #6 Altered the aesthetics of the card because I didn't like the way it was looking before```
+
+<img src="/screenshots/10-06-2019--css.png" width="400" alt="10-06-2019 css">

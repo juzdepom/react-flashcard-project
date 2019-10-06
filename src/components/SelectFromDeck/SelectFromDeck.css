@@ -1,27 +1,26 @@
 .background {
-    background: #666363;
+    background: transparent;
     height: 40px;
-    border-width: 10px 0 10px 10px;
-    border-color: rgba(0, 0, 0, 0.3);
+    border: none;
     width: 100%;
 }
 
 .container {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    color: darkgrey;
-    height: 340px;
+    height: 370px;
 }
 
 .select-deck-button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 10px;
     cursor: pointer;
     font-size: 15px;
     font-style: oblique;
-    /* color: rgba(0, 0, 0, 0.8); */
-    border-width: 0 0 0 10px;
-    border-color: rgba(0, 0, 0, 0.2);
-    margin: 0px;
+    border: none;
     height: 100%;
-    width: 40px;
+    width: 30px;
 }

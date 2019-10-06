@@ -20,7 +20,7 @@ class SelectFromDeck extends Component {
     render(props){
         return(
                 <div>
-                    <div className="background"/>
+                    {/* <div className="background"/> */}
                     <div className="container">
                         <button className="select-deck-button gray" onClick={() => this.ratingClicked(0)}>0</button>
                         <button className="select-deck-button purple" onClick={() => this.ratingClicked(1)}>1</button>
@@ -29,7 +29,7 @@ class SelectFromDeck extends Component {
                         <button className="select-deck-button green" onClick={() => this.ratingClicked(4)}>4</button>
                         <button className="select-deck-button blue" onClick={() => this.ratingClicked(5)}>5</button>
                     </div>
-                    <div className="background"/>
+                    {/* <div className="background"/> */}
                 </div>
             
             

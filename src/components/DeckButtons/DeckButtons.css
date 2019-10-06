@@ -1,17 +1,27 @@
+.deckbuttons--container {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+
+}
+
 .deckbuttons--row {
     display: flex;
-    align-content: space-around;
-    width: 400px;
-    margin: 0 auto;
+    left: 0;
+    justify-content: space-between;
+    width: 360px;
   }
 
 .deckbutton {
     cursor: pointer;
-    border-width: 0 0 10px 0;
-    border-color: rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
     text-align: center;
-    width: 100%;
+    width: 50px;
     font-size: 15px;
     padding: 5px 0 5px 0;
+    box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.5);
 }
   
