@@ -7,6 +7,10 @@
 
 .button {
     margin: 10px;
+    /* color: white; */
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .results {

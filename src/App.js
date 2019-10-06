@@ -413,7 +413,7 @@ class App extends React.Component {
           {/* TODO: create a component for this */}
           <div className="row" style={{color: 'white'}}>
               <div>Number of flashcards rated this session: {this.state.flashcardsRated}</div>
-              <button onClick={this.saveDataInFirebase}>Save Data in Firebase!</button>
+              <button className="button" onClick={this.saveDataInFirebase}>Save Data in Firebase!</button>
           </div>
 
           <div className="row">
@@ -442,6 +442,7 @@ export default App;
 const LinkButton = props => (
   <div style={{margin: "10px"}}>
       <a 
+        style={{color: 'white'}}
         target="_blank" 
         rel="noopener noreferrer" 
         href={props.url}>
