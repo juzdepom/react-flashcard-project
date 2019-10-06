@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import DrawerToggleButton from './components/SideDrawer/DrawerToggleButton';
+import SideDrawer from './components/SideDrawer/SideDrawer';
 import Card from './components/Card/Card';
 import AddFlashcards from './components/AddFlashcards/AddFlashcards';
 import SelectFromDeck from './components/SelectFromDeck/SelectFromDeck';
@@ -46,7 +48,8 @@ class App extends React.Component {
       previousCardIndex: 0,
       level: {},
       flashcardsRated: 0,
-      newDeck: []
+      newDeck: [],
+      sideDrawerOpen: false,
     }
   }
 
@@ -362,11 +365,18 @@ class App extends React.Component {
         
   }
 
-  render() {
-    let { five, four, three, two, one, zero } = this.state.level;
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen }
+    })
+  }
 
+  render() {
+   
     return (
       <div className="App">
+        <DrawerToggleButton click={this.drawerToggleClickHandler}/>
+        <SideDrawer show={this.state.sideDrawerOpen}/>
         
         <div className="search-row">
           <input
@@ -378,7 +388,7 @@ class App extends React.Component {
         </div>
 
         {/* TODO: create a component for this */}
-        <div className="top-info-row">
+        <div className="top-info-row" style={{color: 'white'}}>
             Total Cards: {this.state.cards.length} <br/>
             Goal: 1000 mastered cards - Progress: <span style={{color: "green"}}>{this.state.level.totalPoints}</span>/5000 
             ({Math.floor(this.state.level.totalPoints / 5000 * 100)}%)
@@ -401,7 +411,7 @@ class App extends React.Component {
           <RatingButtons ratingClicked = {this.ratingClicked}/>
 
           {/* TODO: create a component for this */}
-          <div className="row">
+          <div className="row" style={{color: 'white'}}>
               <div>Number of flashcards rated this session: {this.state.flashcardsRated}</div>
               <button onClick={this.saveDataInFirebase}>Save Data in Firebase!</button>
           </div>

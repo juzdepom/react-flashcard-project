@@ -1,4 +1,5 @@
 .card {
+    background: white;
     position: relative;
     height: 400px;
     cursor: pointer;

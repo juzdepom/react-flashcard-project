@@ -74,3 +74,14 @@ Next task: add the buttons on the side for rating.
 <img src="/screenshots/10-05-2019--shading.png" width="400" alt="10-05-2019">
 
 ```Commit: "#5 Connected the buttons on the right hand side to select a random card from a specific deck"```
+
+## Session 6
+*🗓 Sat, Oct 5, 2019* <br>
+
+```Commit: #6 took some of the code from App.js and migrated to components and installed node-sass```
+
+```Commit: #6 added a sidedrawer component```
+
+Used this tutorial: [ReactJS - Build a Responsive Navigation Bar & Side Drawer Tutoria](https://www.youtube.com/watch?v=l6nmysZKHFU)
+
+<img src="/screenshots/10-06-2019--drawers.png" width="400" alt="10-06-2019 drawer">

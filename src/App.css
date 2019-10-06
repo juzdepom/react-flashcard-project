@@ -1,11 +1,17 @@
+.App {
+  /* background:#161B42; */
+  height: 100%;
+}
+
 .top-info-row {
   text-align: center;
   padding: 5px 0 5px 0;
 }
 
 .search-row {
+  /* padding-top: 30px; */
   text-align: center;
-  padding: 10px 0 0 0;
+  padding: 60px 0 0 0;
 }
 
 .search-row-input {
