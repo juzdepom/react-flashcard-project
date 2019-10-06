@@ -3,6 +3,8 @@ import './App.css';
 import Card from './components/Card/Card';
 import AddFlashcards from './components/AddFlashcards/AddFlashcards';
 import SelectFromDeck from './components/SelectFromDeck/SelectFromDeck';
+import DeckButtons from './components/DeckButtons/DeckButtons';
+import RatingButtons from './components/RatingButtons/RatingButtons';
 
 //firebase
 import { DB_CONFIG } from './config/config';
@@ -33,6 +35,7 @@ class App extends React.Component {
     this.saveDataInFirebase = this.saveDataInFirebase.bind(this);
     this.addNewFlashcardsToDeck = this.addNewFlashcardsToDeck.bind(this);
     this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
+    this.ratingClicked = this.ratingClicked.bind(this);
     // this.ratingClicked = this.ratingClicked.bind(this);
     
     this.state = {
@@ -181,7 +184,7 @@ class App extends React.Component {
     }
   }
 
-  //if the user 
+  //if the user clicks on a specific key or the button
   selectRandomCardFromSpecificDeck(rating){
   
     //make sure rating is between 1 and 5 in case I make a mistake somewhere
@@ -360,7 +363,7 @@ class App extends React.Component {
   }
 
   render() {
-    var { five, four, three, two, one, zero } = this.state.level;
+    let { five, four, three, two, one, zero } = this.state.level;
 
     return (
       <div className="App">
@@ -374,6 +377,7 @@ class App extends React.Component {
            />
         </div>
 
+        {/* TODO: create a component for this */}
         <div className="top-info-row">
             Total Cards: {this.state.cards.length} <br/>
             Goal: 1000 mastered cards - Progress: <span style={{color: "green"}}>{this.state.level.totalPoints}</span>/5000 
@@ -381,14 +385,7 @@ class App extends React.Component {
             <br/>
         </div>
 
-        <div className="level-card-row">
-          <button className="level-card gray">{zero}</button>
-          <button className="level-card purple">{one}</button>
-          <button className="level-card orange">{two}</button>
-          <button className="level-card yellow">{three}</button>
-          <button className="level-card green">{four}</button>
-          <button className="level-card blue">{five}</button>
-        </div>
+        <DeckButtons level={this.state.level} />
 
         <div className="card-row">
           <Card
@@ -401,14 +398,9 @@ class App extends React.Component {
         </div>
  
         <div className="button-row">
-          <div className="number-button-row"> 
-            <button className="number-button purple" onClick={() => this.ratingClicked(1)}>1 </button>
-            <button className="number-button orange" onClick={() => this.ratingClicked(2)}>2 </button>
-            <button className="number-button yellow" onClick={() => this.ratingClicked(3)}>3</button>
-            <button className="number-button green" onClick={() => this.ratingClicked(4)}>4 </button>
-            <button className="number-button blue" onClick={() => this.ratingClicked(5)}>5</button>
-          </div>
+          <RatingButtons ratingClicked = {this.ratingClicked}/>
 
+          {/* TODO: create a component for this */}
           <div className="row">
               <div>Number of flashcards rated this session: {this.state.flashcardsRated}</div>
               <button onClick={this.saveDataInFirebase}>Save Data in Firebase!</button>

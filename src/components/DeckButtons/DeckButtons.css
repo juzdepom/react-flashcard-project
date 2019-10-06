@@ -1,0 +1,17 @@
+.deckbuttons--row {
+    display: flex;
+    align-content: space-around;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+.deckbutton {
+    cursor: pointer;
+    border-width: 0 0 10px 0;
+    border-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 0 5px 0;
+}
+  

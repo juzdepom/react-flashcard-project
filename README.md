@@ -72,3 +72,5 @@ Next task: add the buttons on the side for rating.
 ```Commit: "#5 added some CSS shading effects. Not entired satisfied but will do for now"```
 
 <img src="/screenshots/10-05-2019--shading.png" width="400" alt="10-05-2019">
+
+```Commit: "#5 Connected the buttons on the right hand side to select a random card from a specific deck"```
