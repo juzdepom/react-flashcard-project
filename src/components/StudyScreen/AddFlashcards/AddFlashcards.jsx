@@ -12,7 +12,7 @@ class AddFlashcards extends Component {
             splitOne: "\n",
             splitTwo: "==",
             splitThree: ">",
-            addingCards: false
+            addingCards: false,
         }
 
         this.checkForDuplicatesWithOriginalDeck = this.checkForDuplicatesWithOriginalDeck.bind(this);
@@ -69,7 +69,8 @@ class AddFlashcards extends Component {
     turnStringIntoFlashcard(text, splitTwo, splitThree){
         var dict = {}
         let frontBack = text.split(splitTwo)
-        let textOne = frontBack[0].trim().toLowerCase()
+        let textOne = frontBack[0].trim()
+        // let textOne = frontBack[0].trim().toLowerCase()
         let back = frontBack[1].split(splitThree)
         let textTwo = back[0].trim()
         let textThree = back[1].trim()

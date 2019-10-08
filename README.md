@@ -76,7 +76,7 @@ Next task: add the buttons on the side for rating.
 ```Commit: "#5 Connected the buttons on the right hand side to select a random card from a specific deck"```
 
 ## Session 6
-*🗓 Sat, Oct 5, 2019* <br>
+*🗓 Su, Oct 6, 2019* <br>
 
 ```Commit: #6 took some of the code from App.js and migrated to components and installed node-sass```
 
@@ -89,3 +89,10 @@ Used this tutorial: [ReactJS - Build a Responsive Navigation Bar & Side Drawer T
 ```Commit: #6 Altered the aesthetics of the card because I didn't like the way it was looking before```
 
 <img src="/screenshots/10-06-2019--css.png" width="400" alt="10-06-2019 css">
+
+## Session 7
+*🗓 W, Oct 9, 2019* <br>
+
+Starting to prepare my project so I can install the routers for different pages.
+
+```Commit: #7 migrated the majority of code to StudyScreen.js and installed react-router-dom```

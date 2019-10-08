@@ -9,7 +9,9 @@ const sideDrawer = props => {
     return (
         <nav className={drawerClass}>
             <ul>
+                <li><a href="/">Home</a></li>
                 <li><a href="/">My Profile</a></li>
+                <li><a href="/">My Progress</a></li>
                 <li><a href="/">Add Cards</a></li>
             </ul>
         </nav>
