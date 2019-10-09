@@ -110,8 +110,8 @@ Formatting
 Finished but having trouble figuring out how to easily renavigate back to StudyScreen while passing one of the Flashcards as props.
 <img src="/screenshots/10-09-2019--4.png" width="300" alt="10-09-2019--4">
 Decided finally to just incorporate code I wrote for SearchScreen directly into StudyScreen to reduce the number the steps the user has to go through to Search. 
-
-Potential future todos:
-◻️ get font awesome installed and create custom button components with fontawesome
-◻️ add ability to see list of cards in each deck
-◻️ create "progress screen and log points earned for each day"
+<br/>
+Potential future todos:<br/>
+◻️ get font awesome installed and create custom button components with fontawesome <br/>
+◻️ add ability to see list of cards in each deck <br/>
+◻️ create "progress screen and log points earned for each day" <br/>
