@@ -54,7 +54,6 @@ class App extends React.Component {
   }
 
   render() {
-    // let searchScreen = <SearchScreen cards={this.state.cards}/>
     return (
       <Router>
         <div className="App">
@@ -65,18 +64,12 @@ class App extends React.Component {
             path="/" 
             exact 
             render={(props) => <StudyScreen {...props} cards={this.state.cards} />}
-            // component={StudyScreen}
           />
           <Route 
             path="/search" 
             render={(props) => <SearchScreen {...props} cards={this.state.cards} />}
-            // component={SearchScreen} 
           />
-          {/* <Route path="/create" component={CreateExercise} />
-          <Route path="/user" component={CreateUser} /> */}
-          {/* <StudyScreen/> */}
-          {/* <SearchScreen cards={this.state.cards}/> */}
-
+  
         </div>
       </Router>
     );

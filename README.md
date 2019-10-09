@@ -92,9 +92,9 @@ Used this tutorial: [ReactJS - Build a Responsive Navigation Bar & Side Drawer T
 
 ## Session 7
 *🗓 W, Oct 9, 2019* <br>
-*6AM-12:30PM (5h30min + 1h break)
+*🕐 6AM-12:30PM (5h30min + 1h break)
 
-Starting to prepare my project so I can install the routers for different pages.
+Starting to prepare project for Router installation.
 
 ```Commit: #7 migrated the majority of code to StudyScreen.js and installed react-router-dom```
 
@@ -103,6 +103,15 @@ Starting to prepare my project so I can install the routers for different pages.
 ```Commit: #7 added Search component to the study screen. Decided am going to remove SearchScreen in the future```
 
 <img src="/screenshots/10-09-2019--1.png" width="300" alt="10-09-2019--1">
+React Router installed successfully. Creating a separate screen.
 <img src="/screenshots/10-09-2019--2.png" width="300" alt="10-09-2019--2">
+Formatting
 <img src="/screenshots/10-09-2019--3.png" width="300" alt="10-09-2019--3">
+Finished but having trouble figuring out how to easily renavigate back to StudyScreen while passing one of the Flashcards as props.
 <img src="/screenshots/10-09-2019--4.png" width="300" alt="10-09-2019--4">
+Decided finally to just incorporate code I wrote for SearchScreen directly into StudyScreen to reduce the number the steps the user has to go through to Search. 
+
+Potential future todos:
+◻️ get font awesome installed and create custom button components with fontawesome
+◻️ add ability to see list of cards in each deck
+◻️ create "progress screen and log points earned for each day"
