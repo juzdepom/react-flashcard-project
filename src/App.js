@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import './App.css';
 import DrawerToggleButton from './components/SideDrawer/DrawerToggleButton';
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -53,15 +54,31 @@ class App extends React.Component {
   }
 
   render() {
-   
+    // let searchScreen = <SearchScreen cards={this.state.cards}/>
     return (
-      <div className="App">
-        <DrawerToggleButton click={this.drawerToggleClickHandler}/>
-        <SideDrawer show={this.state.sideDrawerOpen}/>
-        {/* <StudyScreen/> */}
-        <SearchScreen cards={this.state.cards}/>
+      <Router>
+        <div className="App">
+          <DrawerToggleButton click={this.drawerToggleClickHandler}/>
+          <SideDrawer show={this.state.sideDrawerOpen}/>
 
-      </div>
+          <Route 
+            path="/" 
+            exact 
+            render={(props) => <StudyScreen {...props} cards={this.state.cards} />}
+            // component={StudyScreen}
+          />
+          <Route 
+            path="/search" 
+            render={(props) => <SearchScreen {...props} cards={this.state.cards} />}
+            // component={SearchScreen} 
+          />
+          {/* <Route path="/create" component={CreateExercise} />
+          <Route path="/user" component={CreateUser} /> */}
+          {/* <StudyScreen/> */}
+          {/* <SearchScreen cards={this.state.cards}/> */}
+
+        </div>
+      </Router>
     );
   };
   

@@ -1,5 +1,37 @@
-.search-screen{
-    height: 100%;
-    background: grey;
-    width: 100%;
+
+
+.search {
+    margin: 10px;
+    // width: 100%;
+
+    &--title {
+        color: white;
+        text-align: center;
+    }
+    &--input {
+        width: 90%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: none;
+    }
+    &--card-body {
+        display: flex;
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        // background: white;
+        height: 80vh; 
+        overflow-y: scroll;
+        
+    }
+    &--card-result {
+        background: white;
+        color: black;
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+        
+    }
 }

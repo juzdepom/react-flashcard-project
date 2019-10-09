@@ -33,7 +33,7 @@ class StudyScreen extends React.Component {
     this.generateRandomIndex = this.generateRandomIndex.bind(this);
     this.handleCardEdit = this.handleCardEdit.bind(this);
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
-    this.searchEnter = this.searchEnter.bind(this);
+    // this.searchEnter = this.searchEnter.bind(this);
     this.saveDataInFirebase = this.saveDataInFirebase.bind(this);
     this.addNewFlashcardsToDeck = this.addNewFlashcardsToDeck.bind(this);
     this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
@@ -41,7 +41,7 @@ class StudyScreen extends React.Component {
     // this.ratingClicked = this.ratingClicked.bind(this);
     
     this.state = {
-      cards: [],
+      cards: this.props.cards,
       currentCard: {},
       previousCard: {},
       currentCardIndex: 0,
@@ -51,6 +51,7 @@ class StudyScreen extends React.Component {
       newDeck: [],
       sideDrawerOpen: false,
     }
+
   }
 
   componentDidMount(){
@@ -60,7 +61,7 @@ class StudyScreen extends React.Component {
     //   cards: data["flashcards"],
     // })
 
-    //retrieving the data from firebase
+    // retrieving the data from firebase
     const database = firebase.database()
     database.ref('flashcards').on("value", (snapshot) => {
       // console.log(snapshot.val())
@@ -85,6 +86,7 @@ class StudyScreen extends React.Component {
       //handle when keyboard is pressed to manually rate and flip cards
       document.addEventListener("keydown", this._handleKeyDown);
     })
+
   }
 
   //keyboard keys 1-5 help you rate the card; 0 flips the card;
@@ -224,11 +226,19 @@ class StudyScreen extends React.Component {
     var indexDeck = this.state.level.indexDeck
     var index = 0;
     if(indexDeck == null) {
+      if(currentCards.length < 1){
+        alert("Error! currentCards.length < 1!")
+        return;
+      }
       index = Math.floor(Math.random() * currentCards.length)
     } else {
+      if(indexDeck.length < 1) {
+        alert("Error! indexDeck.length < 1!")
+      }
       var i = Math.floor(Math.random() * indexDeck.length)
       index = indexDeck[i]
     }
+    //make sure you don't choose the same card as before
     return (index === this.state.currentCardIndex ) ? this.generateRandomIndex(currentCards) : index;
   }
 
@@ -330,30 +340,30 @@ class StudyScreen extends React.Component {
   }
 
   //run this method when users presses enter on search
-  searchEnter(e){
-    if(e.key === 'Enter') {
-      var cards = this.state.cards
-      var foundCard = false;
-      for (var i=0; i<cards.length ; i++){
-        //toLowerCase makes it "case insensitive"
-        if(cards[i].textOne.toLowerCase() === e.target.value.toLowerCase()){
-          foundCard = true;
-          let previousCard = this.state.currentCard
-          var previousCardIndex = this.state.currentCardIndex
-          var currentCard = cards[i]
-          this.setState({
-            previousCard,
-            previousCardIndex,
-            currentCardIndex: i,
-            currentCard,
-          })
-        }
-      }
-      if (!foundCard){
-        alert("Could not find card. Would you like to add this to our new card creation list?")
-      }
-    }
-  }
+  // searchEnter(e){
+  //   if(e.key === 'Enter') {
+  //     var cards = this.state.cards
+  //     var foundCard = false;
+  //     for (var i=0; i<cards.length ; i++){
+  //       //toLowerCase makes it "case insensitive"
+  //       if(cards[i].textOne.toLowerCase() === e.target.value.toLowerCase()){
+  //         foundCard = true;
+  //         let previousCard = this.state.currentCard
+  //         var previousCardIndex = this.state.currentCardIndex
+  //         var currentCard = cards[i]
+  //         this.setState({
+  //           previousCard,
+  //           previousCardIndex,
+  //           currentCardIndex: i,
+  //           currentCard,
+  //         })
+  //       }
+  //     }
+  //     if (!foundCard){
+  //       alert("Could not find card. Would you like to add this to our new card creation list?")
+  //     }
+  //   }
+  // }
 
   addNewFlashcardsToDeck(cards){
     let length = cards.length
@@ -377,17 +387,16 @@ class StudyScreen extends React.Component {
    
     return (
       <div className="StudyScreen">
-        {/* <DrawerToggleButton click={this.drawerToggleClickHandler}/>
-        <SideDrawer show={this.state.sideDrawerOpen}/> */}
+        {/* TO DO: add a loading screen: Loading Cards from Database... */}
         
-        <div className="search-row">
+        {/* <div className="search-row">
           <input
             className="search-row-input"
              type="text"
              placeholder="Search English terms..."
              onKeyDown={this.searchEnter}
            />
-        </div>
+        </div> */}
 
         {/* TODO: create a component for this */}
         <div className="top-info-row" style={{color: 'white'}}>
