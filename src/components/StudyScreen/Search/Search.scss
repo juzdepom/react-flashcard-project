@@ -1,28 +1,29 @@
 
 
-.searchscreen {
-    margin: 10px;
-    // width: 100%;
+.search {
+    margin: 0 auto ;
+    width: 400px;
+    padding: 10px;
 
     &--title {
         color: white;
         text-align: center;
     }
     &--input {
-        width: 90%;
-        padding: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        width: 300px;
+        padding: 5px 10px 5px 10px;
         border-radius: 10px;
         border: none;
     }
+    &--button {
+        margin-left: 10px;
+    }
     &--card-body {
-        display: flex;
         padding-top: 10px;
         flex-direction: column;
         align-items: center;
-        // background: white;
-        height: 80vh; 
+        height: 100px;
+        background: rgba(0, 0, 0, 0.5);
         overflow-y: scroll;
         
     }
@@ -32,6 +33,12 @@
         width: 70%;
         padding: 10px;
         margin-bottom: 10px;
-        
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &--card-button {
+        // right: 0;
+        // padding: 10px;
     }
 }

@@ -46,7 +46,7 @@ class SearchScreen extends React.Component {
             let color = colors[card["rating"]]
             return <div className="search--card-result" style={{border: `8px solid ${color}`}}>
                     {card["textOne"]}
-                    <button>
+                    <button className="search--card-button" >
                         Click Here
                     </button>
                 </div>
@@ -55,19 +55,19 @@ class SearchScreen extends React.Component {
 
     render(){
         return (
-            <div className="search">
+            <div className="searchscreen">
 
-                <div className="search--title">
+                <div className="searchscreen--title">
                     {this.state.foundText} {this.props.cards.length} Flashcards 
                 </div>
 
                 <input
-                    className="search--input"
+                    className="searchscreen--input"
                     type="text"
                     placeholder="Search English Terms..."
                     onKeyDown={this.searchEnter.bind(this)}
                 />
-                <div className="search--card-body">
+                <div className="searchscreen--card-body">
                     {
                         this.foundCardList()
                     }

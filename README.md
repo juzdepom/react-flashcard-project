@@ -92,7 +92,17 @@ Used this tutorial: [ReactJS - Build a Responsive Navigation Bar & Side Drawer T
 
 ## Session 7
 *🗓 W, Oct 9, 2019* <br>
+*6AM-12:30PM (5h30min + 1h break)
 
 Starting to prepare my project so I can install the routers for different pages.
 
 ```Commit: #7 migrated the majority of code to StudyScreen.js and installed react-router-dom```
+
+```Commit: #7 Search screen is complete. ```
+
+```Commit: #7 added Search component to the study screen. Decided am going to remove SearchScreen in the future```
+
+<img src="/screenshots/10-09-2019--1.png" width="300" alt="10-09-2019--1">
+<img src="/screenshots/10-09-2019--2.png" width="300" alt="10-09-2019--2">
+<img src="/screenshots/10-09-2019--3.png" width="300" alt="10-09-2019--3">
+<img src="/screenshots/10-09-2019--4.png" width="300" alt="10-09-2019--4">

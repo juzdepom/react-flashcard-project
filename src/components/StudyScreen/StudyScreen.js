@@ -3,6 +3,7 @@ import './StudyScreen.css';
 
 //components
 import Card from './Card/Card';
+import Search from './Search/Search';
 import AddFlashcards from './AddFlashcards/AddFlashcards';
 import SelectFromDeck from './SelectFromDeck/SelectFromDeck';
 import DeckButtons from './DeckButtons/DeckButtons';
@@ -38,6 +39,7 @@ class StudyScreen extends React.Component {
     this.addNewFlashcardsToDeck = this.addNewFlashcardsToDeck.bind(this);
     this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
     this.ratingClicked = this.ratingClicked.bind(this);
+    this.loadCard = this.loadCard.bind(this);
     // this.ratingClicked = this.ratingClicked.bind(this);
     
     this.state = {
@@ -339,7 +341,18 @@ class StudyScreen extends React.Component {
     this.setState({flashcardsRated: 0})
   }
 
-  //run this method when users presses enter on search
+  loadCard(card){
+    // alert('loading card!')
+    // console.log('card: ', card)
+    let previousCard = this.state.currentCard
+    var currentCard = card
+    this.setState({
+      previousCard,
+      currentCard,
+    })
+  }
+
+  // run this method when users presses enter on search
   // searchEnter(e){
   //   if(e.key === 'Enter') {
   //     var cards = this.state.cards
@@ -397,6 +410,7 @@ class StudyScreen extends React.Component {
              onKeyDown={this.searchEnter}
            />
         </div> */}
+        
 
         {/* TODO: create a component for this */}
         <div className="top-info-row" style={{color: 'white'}}>
@@ -405,6 +419,10 @@ class StudyScreen extends React.Component {
             ({Math.floor(this.state.level.totalPoints / 5000 * 100)}%)
             <br/>
         </div>
+
+        <Search 
+          cards={this.state.cards} 
+          loadCard={this.loadCard} />
 
         <DeckButtons level={this.state.level} />
 
