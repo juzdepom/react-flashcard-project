@@ -4,6 +4,7 @@ import './StudyScreen.css';
 //components
 import Card from './Card/Card';
 import Search from './Search/Search';
+import DeckList from './DeckList/DeckList';
 import AddFlashcards from './AddFlashcards/AddFlashcards';
 import SelectFromDeck from './SelectFromDeck/SelectFromDeck';
 import DeckButtons from './DeckButtons/DeckButtons';
@@ -34,13 +35,14 @@ class StudyScreen extends React.Component {
     this.generateRandomIndex = this.generateRandomIndex.bind(this);
     this.handleCardEdit = this.handleCardEdit.bind(this);
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
-    // this.searchEnter = this.searchEnter.bind(this);
     this.saveDataInFirebase = this.saveDataInFirebase.bind(this);
     this.addNewFlashcardsToDeck = this.addNewFlashcardsToDeck.bind(this);
     this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
     this.ratingClicked = this.ratingClicked.bind(this);
     this.loadCard = this.loadCard.bind(this);
-    // this.ratingClicked = this.ratingClicked.bind(this);
+    this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
+    this.selectDeckButton = this.selectDeckButton.bind(this);
+    this.closeDeckList = this.closeDeckList.bind(this);
     
     this.state = {
       cards: this.props.cards,
@@ -52,6 +54,9 @@ class StudyScreen extends React.Component {
       flashcardsRated: 0,
       newDeck: [],
       sideDrawerOpen: false,
+      //
+      deckListDisplay: "none",
+      deckListClassname: "decklist",
     }
 
   }
@@ -352,32 +357,6 @@ class StudyScreen extends React.Component {
     })
   }
 
-  // run this method when users presses enter on search
-  // searchEnter(e){
-  //   if(e.key === 'Enter') {
-  //     var cards = this.state.cards
-  //     var foundCard = false;
-  //     for (var i=0; i<cards.length ; i++){
-  //       //toLowerCase makes it "case insensitive"
-  //       if(cards[i].textOne.toLowerCase() === e.target.value.toLowerCase()){
-  //         foundCard = true;
-  //         let previousCard = this.state.currentCard
-  //         var previousCardIndex = this.state.currentCardIndex
-  //         var currentCard = cards[i]
-  //         this.setState({
-  //           previousCard,
-  //           previousCardIndex,
-  //           currentCardIndex: i,
-  //           currentCard,
-  //         })
-  //       }
-  //     }
-  //     if (!foundCard){
-  //       alert("Could not find card. Would you like to add this to our new card creation list?")
-  //     }
-  //   }
-  // }
-
   addNewFlashcardsToDeck(cards){
     let length = cards.length
     let newDeck = this.state.cards.concat(cards)
@@ -396,22 +375,27 @@ class StudyScreen extends React.Component {
     })
   }
 
+  selectDeckButton(deckIndex){
+    console.log('deck index:', deckIndex)
+    // alert(`tapped deck: ${deckIndex}`)
+    let deckListClassname = "decklist decklist--" + deckIndex
+    this.setState({
+      deckListClassname,
+      deckListDisplay: "block"
+    })
+  }
+
+  closeDeckList(){
+    // alert('closing')
+    this.setState({deckListDisplay: "none"})
+  }
+
   render() {
    
     return (
       <div className="StudyScreen">
         {/* TO DO: add a loading screen: Loading Cards from Database... */}
         
-        {/* <div className="search-row">
-          <input
-            className="search-row-input"
-             type="text"
-             placeholder="Search English terms..."
-             onKeyDown={this.searchEnter}
-           />
-        </div> */}
-        
-
         {/* TODO: create a component for this */}
         <div className="top-info-row" style={{color: 'white'}}>
             Total Cards: {this.state.cards.length} <br/>
@@ -422,9 +406,19 @@ class StudyScreen extends React.Component {
 
         <Search 
           cards={this.state.cards} 
-          loadCard={this.loadCard} />
+          loadCard={this.loadCard}
+        />
 
-        <DeckButtons level={this.state.level} />
+        <DeckButtons 
+          level={this.state.level} 
+          selectDeckButton={this.selectDeckButton}
+        />
+
+        <DeckList 
+          deckListDisplay={this.state.deckListDisplay} 
+          deckListClassname={this.state.deckListClassname}
+          close={this.closeDeckList}
+          />
 
         <div className="card-row">
           <Card
