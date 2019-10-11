@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AddFlashcards.css';
+import './AddFlashcards.scss';
 
 class AddFlashcards extends Component {
 
@@ -59,10 +59,12 @@ class AddFlashcards extends Component {
             }
         }
         this.checkForDuplicatesWithOriginalDeck(flashcardArray)
+        
         console.log(`New Flashcard Array: `, flashcardArray)
         this.setState({
             cards: flashcardArray,
         })
+        alert("Everything is correct! Ready for upload!")
 
     }
 
@@ -130,16 +132,16 @@ class AddFlashcards extends Component {
     render(props){
        
         return(
-            <div>
+            <div class="addflashcards">
                 { !this.state.addingCards ? <button 
-                    className="button"
+                    className="addflashcards--button"
                     onClick={this.addNewCards.bind(this)}>
                         Add New Cards
                 </button> : '' } 
                 { this.state.addingCards ? <div>
                     <div>
                         <textarea
-                            className="input"
+                            className="addflashcards--input"
                             placeholder="Add new cards..."
                             type="text"
                             value={this.state.text}
@@ -147,25 +149,25 @@ class AddFlashcards extends Component {
                         />
                     </div>
                     <button 
-                        className="button"
+                        className="addflashcards--button"
                         onClick={this.cancel.bind(this)}>
                             Cancel
                     </button>
                     <button 
-                        className="button"
+                        className="addflashcards--button"
                         onClick={this.parseText.bind(this)}>
                             Check For Errors
                     </button>
 
                     {/* only shows up after we submit text strings for review */}
                     { (this.state.cards.length > 0) ?
-                        <div className="results">
-                            <div>
-                            Number of Cards Created: {this.state.cards.length}
+                        <div>
+                            <div className="addflashcards--text">
+                            Number of Cards: {this.state.cards.length}
                             </div>
 
                             <button 
-                                className="button"
+                                className="addflashcards--button"
                                 onClick={this.addFlashCards.bind(this)}>
                                     Upload To Firebase
                             </button>

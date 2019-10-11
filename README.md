@@ -92,7 +92,7 @@ Used this tutorial: [ReactJS - Build a Responsive Navigation Bar & Side Drawer T
 
 ## Session 7
 *🗓 W, Oct 9, 2019* <br>
-*🕐 6AM-12:50PM (5h50min + 1h break)
+🕐 6AM-12:50PM (5h50min + 1h break)
 
 Starting to prepare project for Router installation.
 
@@ -118,8 +118,8 @@ Potential future todos: <br/>
 
 ## Session 8
 *🗓 Th, Oct 10, 2019* <br>
-*🕐 5:30AM-7:08AM (Total: 1h38min = 1h24min + 14min break) 
+🕐 5:30AM-7:08AM (Total: 1h38min = 1h24min + 14min break) 
 
-```Commit 8: Building out a bunch of components. Build out the DeckList component the most. Still a work in progress.```
+```Commit: #8 Building out a bunch of components. Build out the DeckList component the most. Still a work in progress.```
 
 <img src="/screenshots/10-10-2019--decklist.gif" width="400" alt="10-10-2019 decklist">

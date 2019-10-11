@@ -52,7 +52,7 @@ class Search extends React.Component {
         }
         //could not find card
         if (foundCards.length === 0){
-            alert(`Could not find card including "${e.target.value} in your ${cards.length} cards.`)
+            alert(`Could not find card: "${e}"`)
         } else {
             let foundText = `${foundCards.length} matches out of `
             this.setState({
