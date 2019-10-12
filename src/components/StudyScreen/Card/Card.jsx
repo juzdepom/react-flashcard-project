@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Card.css';
+import './Card.scss';
 
 class Card extends Component {
 
@@ -110,34 +110,34 @@ class Card extends Component {
                     <div className="card" 
                         style={{border: `10px solid ${color}`}}
                         onClick={this.flipCard}>
-                            <div className="card-top">
-                                <div className="back-button">
+                            <div className="card--top-container">
+                                <div className="card--top-container--back-button">
                                     <button onClick={this.props.goToPreviousCard}>Back</button>
                                 </div>
-                                <div className="date-created">
+                                <div className="card--top-container--date-created">
                                     {dateCreated}
                                 </div>
-                                <div className="exposure">
+                                <div className="card--top-container--exposure">
                                     👁{reviewCount}
                                 </div>
                             </div>
                             {!this.state.editMode ?
                                 <div>
-                                    <div className="front-text">
+                                    <div className="card--front-text-container">
                                         {textOne}
                                     </div>
                                     {this.state.alreadyFlipped ? 
                                         <div 
-                                            className={this.state.show ? "back-text fade-in": 'back-text fade-out'}
+                                            className={this.state.show ? "card--back-text-container fade-in": 'card--back-text-container fade-out'}
                                             // className="back-text fade-in"
                                             >
-                                            <span className="pronunciation">{textTwo}</span>
-                                            <div className="thai">{textThree}</div>
+                                            <span className="card--back-text-container--pronunciation">{textTwo}</span>
+                                            <div className="card--back-text-container--thai">{textThree}</div>
                                             
                                         </div> 
                                     : ''}
                                 </div> 
-                            : <div className="edit-mode-row">
+                            : <div className="card--edit-mode-container">
                                 {/* Edit Mode */}
                                 <div>
                                     <input
@@ -164,14 +164,14 @@ class Card extends Component {
                                     <button onClick={() => this.editMode(false)}>Close</button>
                                 </div>
                             </div> }
-                            <div className="card-bottom-row">
-                                <div className="last-review">
-                                    <div className="last-review-text">
+                            <div className="card--bottom-container">
+                                <div className="card--bottom-container--last-review">
+                                    <div className="card--bottom-container--text">
                                         {/* {elapsed} <br/> */}
                                         <span>Last Reviewed: </span>{time}
                                     </div>
                                 </div>
-                                <div className="edit-button-section">
+                                <div className="card--bottom-container--edit-button">
                                     <button 
                                         disabled={this.state.editMode}
                                         onClick={() => this.editMode(true)}>

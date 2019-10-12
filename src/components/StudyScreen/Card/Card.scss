@@ -1,0 +1,119 @@
+.card {
+    background: white;
+    position: relative;
+    height: 400px;
+    cursor: pointer;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.5);
+
+    &--top-container {
+        display: flex;
+        align-content: space-between;
+
+        &--back-button {
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            z-index: 2;
+        }
+
+        &--date-created {
+            text-align: center;
+            width: 100%;
+            color: gray; 
+            font-size: 12px;
+        }
+
+        &--exposure {
+            text-align: right;
+            width: 100%;
+            padding-right: 5px;
+        }
+    }
+
+    &--front-text-container {
+        color: #333;
+        font-size: 2.3em;
+        padding-top: 15%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    &--back-text-container {
+        color: #333;
+        font-size: 2.3em;
+        padding-top: 30px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        &--pronunciation {
+            font-style: italic;
+            font-size: 20px;
+        }
+        
+        &--thai {
+            padding-top: 10px;
+        }
+    }
+
+    &--edit-mode-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        & input {
+            height: 40px;
+            font-size: 20px;
+            margin: 5px;
+        }
+    }
+
+    &--bottom-container {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 3px;
+
+        &--last-review {
+            position: relative;
+            text-align: center;
+            & span {
+                color: gray; 
+                font-size: 14px;
+            }
+        }
+
+        &--edit-button {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+.fade-out {
+    opacity: 0;
+    animation: fade-out 0.5s;
+}
+
+.fade-in {
+    animation: fade-in 0.5s;
+}
+ 
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1}
+}
+
+@keyframes fade-out {
+    0% { opacity: 1 }
+    100% { opacity: 0}
+  }

@@ -123,3 +123,9 @@ Potential future todos: <br/>
 ```Commit: #8 Building out a bunch of components. Build out the DeckList component the most. Still a work in progress.```
 
 <img src="/screenshots/10-10-2019--decklist.gif" width="400" alt="10-10-2019 decklist">
+
+## Session 9
+*🗓 S, Oct 11, 2019* <br>
+🕐 6:40AM-
+
+``` Commit: #9 updated addflashcards component a bit```
