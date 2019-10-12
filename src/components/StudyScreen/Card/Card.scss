@@ -55,7 +55,7 @@
             font-style: italic;
             font-size: 20px;
         }
-        
+
         &--thai {
             padding-top: 10px;
         }
@@ -96,6 +96,10 @@
             margin-right: 10px;
         }
     }
+}
+
+.opacity-zero {
+    opacity: 0;
 }
 
 

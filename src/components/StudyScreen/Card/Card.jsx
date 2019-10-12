@@ -7,7 +7,8 @@ class Card extends Component {
         super(props);
 
         this.state = {
-            show: false,
+            show: 0,
+            //we need "alreadyFlipped" so that the first time the card appears, the back of the card doesn't fade out
             alreadyFlipped: false,
             editMode: false,
             color: "#xx"
@@ -19,13 +20,20 @@ class Card extends Component {
     reset(){
         this.setState({
             alreadyFlipped: false,
-            show: false,
+            show: 0,
         })
     }
 
     flipCard(){
+        var show = this.state.show;
+        //if everything on the card is showing
+        if(show >= 2){
+            show = 0;
+        } else {
+            show = show + 1;
+        }
         this.setState({
-            show: !this.state.show,
+            show,
             alreadyFlipped: true,
         })
     }
@@ -127,13 +135,13 @@ class Card extends Component {
                                         {textOne}
                                     </div>
                                     {this.state.alreadyFlipped ? 
-                                        <div 
-                                            className={this.state.show ? "card--back-text-container fade-in": 'card--back-text-container fade-out'}
-                                            // className="back-text fade-in"
-                                            >
-                                            <span className="card--back-text-container--pronunciation">{textTwo}</span>
-                                            <div className="card--back-text-container--thai">{textThree}</div>
-                                            
+                                        <div className="card--back-text-container">
+                                            <span 
+                                                className={this.state.show >= 2 ? "card--back-text-container--pronunciation fade-in" : "card--back-text-container--pronunciation opacity-zero"}>
+                                                {textTwo}</span>
+                                            <div 
+                                                className={this.state.show >= 1 ? "card--back-text-container--thai fade-in" : "card--back-text-container--thai opacity-zero"}>
+                                                {textThree}</div>
                                         </div> 
                                     : ''}
                                 </div> 
@@ -167,7 +175,6 @@ class Card extends Component {
                             <div className="card--bottom-container">
                                 <div className="card--bottom-container--last-review">
                                     <div className="card--bottom-container--text">
-                                        {/* {elapsed} <br/> */}
                                         <span>Last Reviewed: </span>{time}
                                     </div>
                                 </div>
