@@ -2,9 +2,10 @@ import React from 'react';
 import './StudyScreen.css';
 
 //components
-import Card from './Card/Card';
+import Progress from './Progress/Progress';
 import Search from './Search/Search';
 import DeckList from './DeckList/DeckList';
+import Card from './Card/Card';
 import AddFlashcards from './AddFlashcards/AddFlashcards';
 import SelectFromDeck from './SelectFromDeck/SelectFromDeck';
 import DeckButtons from './DeckButtons/DeckButtons';
@@ -35,7 +36,7 @@ class StudyScreen extends React.Component {
     this.generateRandomIndex = this.generateRandomIndex.bind(this);
     this.handleCardEdit = this.handleCardEdit.bind(this);
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
-    this.saveDataInFirebase = this.saveDataInFirebase.bind(this);
+    this.saveFlashcardDataInFirebase = this.saveFlashcardDataInFirebase.bind(this);
     this.addNewFlashcardsToDeck = this.addNewFlashcardsToDeck.bind(this);
     this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
     this.ratingClicked = this.ratingClicked.bind(this);
@@ -51,12 +52,18 @@ class StudyScreen extends React.Component {
       currentCardIndex: 0,
       previousCardIndex: 0,
       level: {},
+      //this variable resets to zero every time we upload to firebase
       flashcardsRated: 0,
       newDeck: [],
+      //
       sideDrawerOpen: false,
       //
       deckListDisplay: "none",
       deckListClassname: "decklist",
+      //
+      progressLogData: [],
+      cardsRated: 0,
+      // progressLogEntry: {},
     }
 
   }
@@ -93,7 +100,22 @@ class StudyScreen extends React.Component {
       //handle when keyboard is pressed to manually rate and flip cards
       document.addEventListener("keydown", this._handleKeyDown);
     })
+    
+    database.ref('progressLog').on("value", (snapshot) => {
+      let progressLogData = snapshot.val()
 
+      var cardsRated = 0;
+      let currentDate = this.getCurrentDate()
+      if(currentDate === progressLogData[0]["date"]){
+        cardsRated = progressLogData[0]["cardsRated"]
+      } else {
+        alert("today is a new day!")
+      }
+      this.setState({
+        progressLogData,
+        cardsRated,
+      })
+    })
   }
 
   //keyboard keys 1-5 help you rate the card; 0 flips the card;
@@ -144,8 +166,9 @@ class StudyScreen extends React.Component {
   //you just rated one of the flashcards from 1-5
   ratingClicked(rating){
 
-    //number of flashcards we have rated during this study session
+    //number of flashcards that haven't been uploaded to FB yet
     var flashcardsRated = this.state.flashcardsRated + 1
+    //total cards rated during a session
    
     this.setState({
       flashcardsRated,
@@ -155,10 +178,53 @@ class StudyScreen extends React.Component {
     this.updateFlashcards(newIndex, rating)
 
     this.updateDisplayCardLevels();
+    
   }
+
+  updateProgressLog(){
+    let date = "date"
+    let cardsRated = "cardsRated"
+    let deckNumbers = "deckNumbers"
+
+    //all entries
+    var progressLogData = this.state.progressLogData;
+    var entry = {}
+
+    //save the date
+    let currentDate = this.getCurrentDate()
+    entry[date] = currentDate
+
+    //save the deck numbers
+    let { five, four, three, two, one, zero } = this.state.level; 
+    entry[deckNumbers] = [zero, one, two, three, four, five]
+    entry[cardsRated] = this.state.cardsRated
+    
+    //no entry has been made today yet
+    if(progressLogData[0][date] !== currentDate){
+      progressLogData.unshift(entry) // add to beginning of array
+    } else { //entry has already been made today
+      progressLogData[0] = entry
+    }
+
+    this.setState({progressLogData})
+
+    firebase.database().ref('progressLog').set(progressLogData);
+
+  }
+
+  
+  getCurrentDate(){
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = dd + '-' + mm + '-' + yyyy;
+    return today
+}
 
   //update the flashcard we just looked at, and set state to newly selected flashcard!
   updateFlashcards(newIndex, rating){
+    var cardsRated = this.state.cardsRated + 1
     var currentCards = this.state.cards
     var oldIndex = this.state.currentCardIndex
 
@@ -186,19 +252,22 @@ class StudyScreen extends React.Component {
       previousCardIndex: oldIndex,
       currentCardIndex: newIndex,
       currentCard: currentCards[newIndex],
+      cardsRated,
+    }, () => {
+      this.updateProgressLog()
     })
     
     this.cardElement.current.reset();
 
     //if we have rated more 5 cards already, then save to Firebase.
     if(this.state.flashcardsRated > 5) {
-      this.saveDataInFirebase();
+      this.saveFlashcardDataInFirebase();
     }
   }
 
   //if the user clicks on a specific key or the button
   selectRandomCardFromSpecificDeck(rating){
-  
+
     //make sure rating is between 1 and 5 in case I make a mistake somewhere
     if (rating < 0 || rating > 5){
       alert("A deck with this rating cannot be selected: ", rating)
@@ -216,6 +285,8 @@ class StudyScreen extends React.Component {
           "card": cards[i]})
       }
     }
+
+    if (specificDeck.length === 0 ) { return } //later one we can make the button inactive
 
     //choose a random card from that deck with the specific rating
     const index = Math.floor(Math.random() * specificDeck.length)
@@ -273,24 +344,24 @@ class StudyScreen extends React.Component {
         case 1: 
           level.one += 1
           level.indexDeck.push(i,i,i,i,i,i,i,i,i,i)
-          level.totalPoints += 1
-        break;
+          level.totalPoints += 2
+          break;
         case 2: level.two += 1
           level.indexDeck.push(i,i,i,i,i,i)
-          level.totalPoints += 2
-        break;
+          level.totalPoints += 3
+          break;
         case 3: level.three += 1
           level.indexDeck.push(i,i,i)
-          level.totalPoints += 3
-        break;
+          level.totalPoints += 4
+          break;
         case 4: level.four += 1
-        level.indexDeck.push(i,i)
-        level.totalPoints += 4
-        break;
+          level.indexDeck.push(i,i)
+          level.totalPoints += 5
+          break;
         case 5: level.five += 1
-        level.indexDeck.push(i)
-        level.totalPoints += 5
-        break;
+          level.indexDeck.push(i)
+          level.totalPoints += 6
+          break;
         default: //
       }
     }
@@ -340,7 +411,7 @@ class StudyScreen extends React.Component {
     
   }
 
-  saveDataInFirebase(){
+  saveFlashcardDataInFirebase(){
     const cards = this.state.cards;
     firebase.database().ref('flashcards').set(cards);
     this.setState({flashcardsRated: 0})
@@ -362,7 +433,7 @@ class StudyScreen extends React.Component {
     let newDeck = this.state.cards.concat(cards)
     this.setState({cards: newDeck}, () => {
       this.updateDisplayCardLevels();
-      this.saveDataInFirebase();
+      this.saveFlashcardDataInFirebase();
     })
     
     alert(`Adding ${length} new cards to deck!`)
@@ -396,13 +467,7 @@ class StudyScreen extends React.Component {
       <div className="StudyScreen">
         {/* TO DO: add a loading screen: Loading Cards from Database... */}
         
-        {/* TODO: create a component for this */}
-        <div className="top-info-row" style={{color: 'white'}}>
-            Total Cards: {this.state.cards.length} <br/>
-            Goal: 1000 mastered cards - Progress: <span style={{color: "green"}}>{this.state.level.totalPoints}</span>/5000 
-            ({Math.floor(this.state.level.totalPoints / 5000 * 100)}%)
-            <br/>
-        </div>
+        <Progress cards={this.state.cards} totalPoints={this.state.level.totalPoints} progressLogData={this.state.progressLogData} />
 
         <Search 
           cards={this.state.cards} 
@@ -435,8 +500,8 @@ class StudyScreen extends React.Component {
 
           {/* TODO: create a component for this */}
           <div className="row" style={{color: 'white'}}>
-              <div>Number of flashcards rated this session: {this.state.flashcardsRated}</div>
-              <button className="button" onClick={this.saveDataInFirebase}>Save Data in Firebase!</button>
+              <div>Number of flashcards rated: {this.state.flashcardsRated} | {this.state.cardsRated}</div>
+              <button className="button" onClick={this.saveFlashcardDataInFirebase}>Save Data in Firebase!</button>
           </div>
 
           <div className="row">

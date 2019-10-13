@@ -1,3 +1,141 @@
 .progress {
-    background: red;
+    text-align: center;
+    padding: 10px 30px 0 0;
+    color: white;
+
+    &--button {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: white;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    &-log{
+
+        &--container {
+            margin-top: 10px;
+
+            background: #e8d8bd; //parchment paper color
+            height: 520px;
+            width: 400px;
+
+            border-width: 5px;
+            border-color: #b99566;
+            border-style: solid;
+
+            //this positions the card on top and in front
+            z-index: 3;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+        }
+
+        &--top-row{
+            display: flex;
+            color: black;
+            margin-top: 3px;
+            &--title {
+                flex: 1;
+            }
+            &--close-button {
+                margin-right: 5px;
+                color: #b99566;
+                font-size: 20px;
+                font-weight: 800;
+            }
+        }
+
+        &--body {
+            // background: #b99566;
+            height: 460px;
+            padding: 0 20px 0 20px;
+            //no overflow, scrolls instead 
+            overflow-y: scroll;
+        }
+
+        &--entry {
+            background: white;
+            color: black;
+            margin: 10px;
+
+            &--info {
+                padding-top: 5px;
+                text-align: center;
+                font-size: 12px;
+                & span {
+                    color: green;
+                    
+                }
+            }
+
+            &--exp {
+                color: green;
+                font-size: 15px;
+                
+            }
+
+            &--deck-numbers {
+                padding-top: 5px;
+                text-align: center;
+                font-size: 12px;
+                & span {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    &.rating{
+                        &-0 {
+                            background: darkgrey;
+                        }
+                        &-1{
+                            background: #AB3B7F;
+                        } 
+                        &-2{
+                            background: #F28945;
+                        }
+                        &-3{
+                            background: #FEDD33;
+                        }
+                        &-4{
+                            background: #7EAE2E;
+                        }
+                        &-5{
+                            background: #40A9D6;
+                        }
+                    }
+                    
+                }
+            }
+
+            &--cards-reviewed {
+                padding: 0 5px 10px 10px;
+                font-size: 15px;
+                & span {
+                    font-size: 12px;
+                    color: green;
+                }
+            }
+        }
+    }
 }
+
+.fade-in {
+    animation: fade-in 0.5s;
+}
+ 
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1}
+}
+
+// .fade-out {
+//     opacity: 0;
+//     animation: fade-out 0.5s;
+// }
+
+// @keyframes fade-out {
+//     0% { opacity: 1 }
+//     100% { opacity: 0}
+//   }

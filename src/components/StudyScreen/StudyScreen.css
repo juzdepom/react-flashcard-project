@@ -1,19 +1,4 @@
-.top-info-row {
-    text-align: center;
-    padding: 5px 30px 5px 0;
-  }
-  
-  .search-row {
-    /* padding-top: 30px; */
-    text-align: center;
-    padding: 60px 0 0 0;
-  }
-  
-  .search-row-input {
-    width: 400px;
-  }
-  
-  .json-cards-data {
+    .json-cards-data {
     margin-top: 5px;
     width: 400px;
     height: 30px;

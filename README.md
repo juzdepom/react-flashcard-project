@@ -129,3 +129,5 @@ Potential future todos: <br/>
 🕐 6:40AM-
 
 ``` Commit: #9 updated addflashcards component a bit```
+``` Commit: #9 convered Card.css to Card.scss```
+``` Commit: #9 when flipping card, reveals Thai characters first, then reveals pronunciation```

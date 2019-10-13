@@ -1,0 +1,4923 @@
+{
+  "flashcards" : [ {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 51,
+    "lastReviewed" : [ 1569416333, 1569456753, 1569505218, 1569513149, 1569513665, 1569515233, 1569696376, 1569696554, 1569725933, 1569736677, 1569736932, 1569737102, 1569738764, 1569817370, 1569979225, 1569999725, 1570003685, 1570023087, 1570023173, 1570026358, 1570072969, 1570161311, 1570278364, 1570287822, 1570288974, 1570319735, 1570320735, 1570324704, 1570337948, 1570340434, 1570361504, 1570363182, 1570363187, 1570402520, 1570538505, 1570539108, 1570576919, 1570580472, 1570580864, 1570600458, 1570660754, 1570796473, 1570863786 ],
+    "rating" : 1,
+    "textOne" : "next time",
+    "textThree" : "ครั้งหน้า",
+    "textTwo" : "krang na"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414800, 1570002502, 1570025921, 1570320830, 1570338273, 1570404033 ],
+    "rating" : 5,
+    "textOne" : "angry",
+    "textThree" : "โกรธ",
+    "textTwo" : "glod"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 12,
+    "lastReviewed" : [ 1569415365, 1569737631, 1569739669, 1569741964, 1570001824, 1570025820, 1570541134 ],
+    "rating" : 4,
+    "textOne" : "afternoon",
+    "textThree" : "ตอนบ่าย",
+    "textTwo" : "ton yen"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 15,
+    "lastReviewed" : [ 1569245554, 1569737394, 1570026119, 1570161356, 1570161922, 1570338071, 1570362273, 1570404897, 1570405742, 1570406003 ],
+    "rating" : 2,
+    "textOne" : "almost",
+    "textThree" : "เกือบ",
+    "textTwo" : "guh-ub"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569415156, 1569513580, 1569737323, 1570025818 ],
+    "rating" : 5,
+    "textOne" : "attitude",
+    "textThree" : "ท่าที",
+    "textTwo" : "ta tee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569245206, 1569999952, 1570406103, 1570601000 ],
+    "rating" : 1,
+    "textOne" : "already",
+    "textThree" : "?",
+    "textTwo" : "leyo"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513367, 1569737327, 1570402977 ],
+    "rating" : 5,
+    "textOne" : "annoyed",
+    "textThree" : "รำคาญ",
+    "textTwo" : "ramkan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569215226, 1569739147, 1570320323 ],
+    "rating" : 5,
+    "textOne" : "ago",
+    "textThree" : "?",
+    "textTwo" : "gawn (five minutes ago, ha nati gawn"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569242715 ],
+    "rating" : 5,
+    "textOne" : "blanket",
+    "textThree" : "ผ้าห่ม",
+    "textTwo" : "paahawm"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569817407, 1570161404, 1570363705, 1570605237 ],
+    "rating" : 5,
+    "textOne" : "believe",
+    "textThree" : "เชื่อ",
+    "textTwo" : "cheu-a"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414596, 1569515142, 1569737603, 1569742233, 1570002141, 1570024933, 1570025511, 1570073319, 1570367076, 1570404903, 1570540773 ],
+    "rating" : 5,
+    "textOne" : "blue",
+    "textThree" : "สีน้ำเงิน",
+    "textTwo" : "see namon"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569242822, 1569817773, 1570403850 ],
+    "rating" : 5,
+    "textOne" : "broom",
+    "textThree" : "ไม้กวาด",
+    "textTwo" : "mai kwad"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 2,
+    "lastReviewed" : [ 1569245346, 1570001271, 1570002919, 1570338244, 1570405217 ],
+    "rating" : 5,
+    "textOne" : "butt",
+    "textThree" : "ชน",
+    "textTwo" : "kon"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1570001973 ],
+    "rating" : 5,
+    "textOne" : "bad",
+    "textThree" : "?",
+    "textTwo" : "mai dee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 11,
+    "lastReviewed" : [ 1569414781, 1569513156 ],
+    "rating" : 4,
+    "textOne" : "black",
+    "textThree" : "ดำ",
+    "textTwo" : "dam"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569416400, 1569737666, 1570004292, 1570403165, 1570403841, 1570403848, 1570404031 ],
+    "rating" : 2,
+    "textOne" : "bite",
+    "textThree" : "กัด",
+    "textTwo" : "kad (no air k)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569415321, 1569514984, 1570001771, 1570002878, 1570162123 ],
+    "rating" : 4,
+    "textOne" : "balance",
+    "textThree" : "สมดุล",
+    "textTwo" : "somdon"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569414476, 1569505269, 1570001552, 1570288695, 1570289474, 1570289800, 1570605838 ],
+    "rating" : 4,
+    "textOne" : "begin",
+    "textThree" : "เริ่ม",
+    "textTwo" : "rerm"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569415103, 1569515155, 1569739985 ],
+    "rating" : 5,
+    "textOne" : "blood",
+    "textThree" : "เลือด",
+    "textTwo" : "luyad"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569414555, 1569817539, 1570002560, 1570605730 ],
+    "rating" : 5,
+    "textOne" : "breasts",
+    "textThree" : "หน้าอก",
+    "textTwo" : "na og"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569245740, 1570002084, 1570023321, 1570605484 ],
+    "rating" : 4,
+    "textOne" : "because",
+    "textThree" : "เพราะ",
+    "textTwo" : "praw"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 10,
+    "lastReviewed" : [ 1569416337, 1569738824, 1569739835, 1569817447, 1570025186, 1570025872, 1570026248, 1570404265 ],
+    "rating" : 4,
+    "textOne" : "broken",
+    "textThree" : "แตก",
+    "textTwo" : "dehhg (silent g)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569737728, 1570366902, 1570405255 ],
+    "rating" : 5,
+    "textOne" : "break composure (muay thai term)",
+    "textThree" : "เสีย",
+    "textTwo" : "seeya"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414409, 1569513173, 1569817637, 1569999765, 1570002735, 1570321089 ],
+    "rating" : 4,
+    "textOne" : "be better",
+    "textThree" : "ดีกว่า",
+    "textTwo" : "dee gwa"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569415282, 1570540575 ],
+    "rating" : 5,
+    "textOne" : "brush teeth",
+    "textThree" : "แปรงฟัน",
+    "textTwo" : "praeng fan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569414695 ],
+    "rating" : 4,
+    "textOne" : "big",
+    "textThree" : "ใหญ่",
+    "textTwo" : "yay"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569242665, 1569737409, 1569742128 ],
+    "rating" : 4,
+    "textOne" : "comfortable",
+    "textThree" : "สะดวกสบาย",
+    "textTwo" : "sadug sabai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569245561, 1569737414, 1569737688, 1570000326, 1570404834 ],
+    "rating" : 4,
+    "textOne" : "crazy",
+    "textThree" : "บ้า",
+    "textTwo" : "ba"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414440, 1569696655, 1570073300, 1570540511 ],
+    "rating" : 5,
+    "textOne" : "cook (verb)",
+    "textThree" : "ปรุงอาหาร",
+    "textTwo" : "prung ahan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569214867, 1570026336, 1570320989, 1570321024 ],
+    "rating" : 5,
+    "textOne" : "clean",
+    "textThree" : "สะอาด",
+    "textTwo" : "sayad"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569414660, 1569817817, 1570320822, 1570321403 ],
+    "rating" : 4,
+    "textOne" : "cry",
+    "textThree" : "ร้องไห้",
+    "textTwo" : "rong hai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569415137, 1569456913, 1569513595, 1570405413, 1570405419 ],
+    "rating" : 2,
+    "textOne" : "complain",
+    "textThree" : "บ่น",
+    "textTwo" : "bon"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415207, 1570024974 ],
+    "rating" : 5,
+    "textOne" : "cuddle",
+    "textThree" : "กอด",
+    "textTwo" : "god"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 10,
+    "lastReviewed" : [ 1569415174, 1569456928, 1569513310, 1569739934, 1570001639, 1570003064, 1570025318, 1570026138, 1570541088 ],
+    "rating" : 3,
+    "textOne" : "confused",
+    "textThree" : "สับสน",
+    "textTwo" : "sabsón"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414549, 1569817524, 1570003775, 1570025920, 1570361924 ],
+    "rating" : 4,
+    "textOne" : "cute",
+    "textThree" : "น่ารัก",
+    "textTwo" : "na (high a) rag"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569741967 ],
+    "rating" : 4,
+    "textOne" : "come here",
+    "textThree" : "มานี่",
+    "textTwo" : "ma ni"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569414813, 1569513853, 1570001992 ],
+    "rating" : 5,
+    "textOne" : "come on",
+    "textThree" : "มา",
+    "textTwo" : "ma"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569242733, 1569513720, 1569737366 ],
+    "rating" : 5,
+    "textOne" : "cold (i feel cold)",
+    "textThree" : "หนาว",
+    "textTwo" : "naow"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569214472, 1569739107, 1569742212 ],
+    "rating" : 5,
+    "textOne" : "cold (water)",
+    "textThree" : "เย็น",
+    "textTwo" : "yen"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 2,
+    "lastReviewed" : [ 1569738854, 1570025209 ],
+    "rating" : 5,
+    "textOne" : "dirty",
+    "textThree" : "สกปรก",
+    "textTwo" : "sogabrog"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1570363176 ],
+    "rating" : 5,
+    "textOne" : "dick",
+    "textThree" : "?",
+    "textTwo" : "kuay"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414337, 1569505244, 1569739693, 1570024969, 1570025478, 1570320393 ],
+    "rating" : 3,
+    "textOne" : "dance",
+    "textThree" : "เต้นรำ",
+    "textTwo" : "dem ram"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569214644, 1569739021, 1570002572, 1570161632 ],
+    "rating" : 4,
+    "textOne" : "different",
+    "textThree" : "ต่าง",
+    "textTwo" : "dang"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569416379, 1569514845, 1570023115 ],
+    "rating" : 5,
+    "textOne" : "door",
+    "textThree" : "ประตู",
+    "textTwo" : "pra(t)u"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569244910, 1569817804, 1570003247, 1570023090 ],
+    "rating" : 5,
+    "textOne" : "dessert/candy",
+    "textThree" : "ขนม",
+    "textTwo" : "kanom"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569245303, 1569513355, 1569514367, 1570002883 ],
+    "rating" : 5,
+    "textOne" : "disappointed",
+    "textThree" : "ผิดหวัง",
+    "textTwo" : "peedwang"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569414592, 1570003333, 1570025610 ],
+    "rating" : 3,
+    "textOne" : "elbow",
+    "textThree" : "ข้อศอก",
+    "textTwo" : "kaoso(g)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1570161766 ],
+    "rating" : 5,
+    "textOne" : "energy",
+    "textThree" : "พลัง",
+    "textTwo" : "palang (or ren)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569244794, 1569737590, 1569739114, 1569817590, 1569979236 ],
+    "rating" : 4,
+    "textOne" : "excited",
+    "textThree" : "ตื่นเต้น",
+    "textTwo" : "(t)ern (t)en"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569416383, 1570363531 ],
+    "rating" : 5,
+    "textOne" : "excuse me",
+    "textThree" : "?",
+    "textTwo" : "tod dee ka (south thailand) kau tod ka"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1570338287 ],
+    "rating" : 5,
+    "textOne" : "eye",
+    "textThree" : "ตา",
+    "textTwo" : "(t)a"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569415330 ],
+    "rating" : 4,
+    "textOne" : "feel better",
+    "textThree" : "ดีขึ้น",
+    "textTwo" : "dee kuhn"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569245386, 1569513215, 1570003286, 1570406049, 1570604236 ],
+    "rating" : 5,
+    "textOne" : "fast",
+    "textThree" : "เร็ว",
+    "textTwo" : "reio"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569245654, 1570364275, 1570540767 ],
+    "rating" : 5,
+    "textOne" : "fan",
+    "textThree" : "พัดลม",
+    "textTwo" : "palom"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569245541, 1569999770 ],
+    "rating" : 5,
+    "textOne" : "fat",
+    "textThree" : "อ้วน",
+    "textTwo" : "ooan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569414696, 1570003337, 1570024935, 1570024975, 1570161764, 1570541055, 1570576933 ],
+    "rating" : 5,
+    "textOne" : "finger",
+    "textThree" : "นิ้ว",
+    "textTwo" : "niew"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "rating" : 5,
+    "textOne" : "fart",
+    "textThree" : "ผายลม",
+    "textTwo" : "pie lom"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "rating" : 5,
+    "textOne" : "feel",
+    "textThree" : "ฉันรู้สึก",
+    "textTwo" : "rusug"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569215270, 1569514746, 1569737273, 1570320850, 1570405084 ],
+    "rating" : 5,
+    "textOne" : "flower",
+    "textThree" : "ดอกไม้",
+    "textTwo" : "do(g) mai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569416335, 1570025253, 1570362700, 1570540279 ],
+    "rating" : 3,
+    "textOne" : "fight",
+    "textThree" : "สู้",
+    "textTwo" : "soo"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569415252, 1569737181 ],
+    "rating" : 4,
+    "textOne" : "foot",
+    "textThree" : "เท้า",
+    "textTwo" : "tao"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569215294, 1569514936, 1569817426, 1570320359, 1570320589, 1570338119 ],
+    "rating" : 5,
+    "textOne" : "fork",
+    "textThree" : "ส้อม",
+    "textTwo" : "sawm"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569214971, 1569737432, 1570000424, 1570001257, 1570001910, 1570002818, 1570002831, 1570023450 ],
+    "rating" : 4,
+    "textOne" : "funny",
+    "textThree" : "ตลก",
+    "textTwo" : "talog"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569214914, 1569739880, 1570025836 ],
+    "rating" : 5,
+    "textOne" : "good",
+    "textThree" : "ดี",
+    "textTwo" : "dee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569416404, 1570320881, 1570403811 ],
+    "rating" : 5,
+    "textOne" : "hand",
+    "textThree" : "มือ",
+    "textTwo" : "meuu"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569245570, 1569817815, 1570003111, 1570338073 ],
+    "rating" : 5,
+    "textOne" : "habit",
+    "textThree" : "นิสัย",
+    "textTwo" : "nee sai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1570540979 ],
+    "rating" : 5,
+    "textOne" : "hurt",
+    "textThree" : "เจ็บ",
+    "textTwo" : "czeb"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569414830, 1570023167, 1570024944, 1570321326 ],
+    "rating" : 5,
+    "textOne" : "help",
+    "textThree" : "ช่วย",
+    "textTwo" : "chuay"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "rating" : 5,
+    "textOne" : "hair",
+    "textThree" : "ผม",
+    "textTwo" : "pom"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569737594, 1570002462, 1570003139, 1570025212 ],
+    "rating" : 5,
+    "textOne" : "heavy",
+    "textThree" : "หนัก",
+    "textTwo" : "gnag"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569214911, 1569737228, 1570002536, 1570003879, 1570321354, 1570540049 ],
+    "rating" : 5,
+    "textOne" : "happy",
+    "textThree" : "มีความสุข",
+    "textTwo" : "mi kwam suk"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569414560, 1569513317, 1569817531 ],
+    "rating" : 4,
+    "textOne" : "how do you feel?",
+    "textThree" : "คุณรู้สึกอย่างไร",
+    "textTwo" : "khun rusug yang rai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569415215, 1570002730 ],
+    "rating" : 4,
+    "textOne" : "hug",
+    "textThree" : "กอด",
+    "textTwo" : "gawd"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414686, 1569515509, 1569979265, 1570025105, 1570025173, 1570025188, 1570321042, 1570404514 ],
+    "rating" : 4,
+    "textOne" : "idea",
+    "textThree" : "ความคิด",
+    "textTwo" : "kwam keed"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 11,
+    "lastReviewed" : [ 1569414615, 1569513469, 1569740065, 1569742209, 1569817584, 1569817800, 1570003040 ],
+    "rating" : 3,
+    "textOne" : "itchy",
+    "textThree" : "คัน",
+    "textTwo" : "kan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1570361872, 1570604226 ],
+    "rating" : 5,
+    "textOne" : "I feel hot",
+    "textThree" : "ฉันรู้สึกร้อน",
+    "textTwo" : "chan rusug ron"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569415224, 1569739792, 1570002649, 1570161698, 1570338185 ],
+    "rating" : 5,
+    "textOne" : "breathe",
+    "textThree" : "หายใจ",
+    "textTwo" : "hai czai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569738903, 1569739542, 1570338076, 1570540780 ],
+    "rating" : 5,
+    "textOne" : "left kick",
+    "textThree" : "เตะซ้าย",
+    "textTwo" : "(t)ai sai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414430, 1569514857, 1570025912, 1570073105, 1570363906, 1570363938 ],
+    "rating" : 3,
+    "textOne" : "less",
+    "textThree" : "น้อย",
+    "textTwo" : "noy"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414524, 1569737718, 1569739154, 1569817411, 1570000589, 1570002211, 1570002908, 1570161812 ],
+    "rating" : 3,
+    "textOne" : "lose",
+    "textThree" : "แพ้",
+    "textTwo" : "pehh"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569515204, 1570363041, 1570365656, 1570576950 ],
+    "rating" : 3,
+    "textOne" : "laugh",
+    "textThree" : "หัวเราะ",
+    "textTwo" : "wo roe"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569415304, 1569741909, 1570361769 ],
+    "rating" : 5,
+    "textOne" : "learn",
+    "textThree" : "เรียน",
+    "textTwo" : "rii-en"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414714, 1569515503, 1569739555, 1570004252, 1570023139, 1570025919, 1570072978, 1570320395, 1570361564 ],
+    "rating" : 3,
+    "textOne" : "leg",
+    "textThree" : "ขา",
+    "textTwo" : "kaa"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569214712, 1569737690, 1569739836, 1570003889, 1570320908 ],
+    "rating" : 5,
+    "textOne" : "keys",
+    "textThree" : "กุญแจ",
+    "textTwo" : "khun zhae"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569415360, 1570002870, 1570023454 ],
+    "rating" : 5,
+    "textOne" : "knee",
+    "textThree" : "เข่า",
+    "textTwo" : "kaow"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569215274, 1569514722 ],
+    "rating" : 5,
+    "textOne" : "mouth",
+    "textThree" : "ปาก",
+    "textTwo" : "(b)aag"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1570026334 ],
+    "rating" : 5,
+    "textOne" : "market",
+    "textThree" : "ตลาด",
+    "textTwo" : "tala(d)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569415167, 1569513346, 1569515280, 1570003157, 1570161474, 1570405082, 1570540331, 1570605638 ],
+    "rating" : 3,
+    "textOne" : "memory",
+    "textThree" : "ความจำ",
+    "textTwo" : "kwam czam"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569415357, 1570161777, 1570320879 ],
+    "rating" : 4,
+    "textOne" : "more",
+    "textThree" : "มากกว่า",
+    "textTwo" : "magwa"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569416365, 1570000080, 1570002991, 1570320668, 1570605825 ],
+    "rating" : 5,
+    "textOne" : "muay thai fight",
+    "textThree" : "?",
+    "textTwo" : "doi muay"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569415332 ],
+    "rating" : 5,
+    "textOne" : "mosquito",
+    "textThree" : "ยุง",
+    "textTwo" : "yung"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569245183, 1569696653 ],
+    "rating" : 5,
+    "textOne" : "next time",
+    "textThree" : "ครั้งหน้า",
+    "textTwo" : "krang na"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569738909, 1569739926, 1570320479 ],
+    "rating" : 4,
+    "textOne" : "nose",
+    "textThree" : "จมูก",
+    "textTwo" : "chamug"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569215075, 1569741925, 1569742033 ],
+    "rating" : 5,
+    "textOne" : "news",
+    "textThree" : "ข่าว",
+    "textTwo" : "khao"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414802, 1569505257, 1569513319 ],
+    "rating" : 5,
+    "textOne" : "new",
+    "textThree" : "ใหม่",
+    "textTwo" : "mai (down accent)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414613, 1569696574, 1570000225, 1570002253, 1570002942, 1570320168 ],
+    "rating" : 3,
+    "textOne" : "our",
+    "textThree" : "ของเรา",
+    "textTwo" : "kong raow"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569414672, 1569514925, 1570321086 ],
+    "rating" : 4,
+    "textOne" : "old",
+    "textThree" : "เก่า",
+    "textTwo" : "gao"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569513695 ],
+    "rating" : 5,
+    "textOne" : "proud",
+    "textThree" : "ภูมิใจ",
+    "textTwo" : "pume chai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 2,
+    "lastReviewed" : [ 1569414424, 1570001839 ],
+    "rating" : 4,
+    "textOne" : "pillow",
+    "textThree" : "หมอน",
+    "textTwo" : "món"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 2,
+    "lastReviewed" : [ 1569215227, 1570000579 ],
+    "rating" : 5,
+    "textOne" : "poop",
+    "textThree" : "?",
+    "textTwo" : "kee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "rating" : 5,
+    "textOne" : "pee",
+    "textThree" : "ฉี่",
+    "textTwo" : "chee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414442, 1569696584, 1569736992, 1569738833, 1570002626 ],
+    "rating" : 5,
+    "textOne" : "play (video games)",
+    "textThree" : "เล่น",
+    "textTwo" : "len"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 15,
+    "lastReviewed" : [ 1569416353, 1569737119, 1569738945, 1570002829, 1570073427, 1570321517 ],
+    "rating" : 3,
+    "textOne" : "question",
+    "textThree" : "คำถาม",
+    "textTwo" : "kam (t)ám"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414417, 1570000150, 1570025002, 1570321630 ],
+    "rating" : 4,
+    "textOne" : "ready",
+    "textThree" : "พร้อมแล้ว",
+    "textTwo" : "prawm leyo"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569245681, 1570363688 ],
+    "rating" : 5,
+    "textOne" : "rain",
+    "textThree" : "ฝน",
+    "textTwo" : "fón"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569741905, 1569742046, 1570002142, 1570003998, 1570539111 ],
+    "rating" : 4,
+    "textOne" : "relationship",
+    "textThree" : "ความสัมพันธ์",
+    "textTwo" : "kwam sampan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569214378, 1569514355, 1569514947, 1569739957, 1570363171 ],
+    "rating" : 4,
+    "textOne" : "red",
+    "textThree" : "สีแดง",
+    "textTwo" : "see deng"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1570003143, 1570338200 ],
+    "rating" : 5,
+    "textOne" : "right now",
+    "textThree" : "ตอนนี้",
+    "textTwo" : "ton níi"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569245548, 1569739055, 1570363897, 1570405383 ],
+    "rating" : 4,
+    "textOne" : "read",
+    "textThree" : "อ่าน",
+    "textTwo" : "an"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415276, 1570003116, 1570321467, 1570338162, 1570366887, 1570405648 ],
+    "rating" : 4,
+    "textOne" : "still",
+    "textThree" : "ยัง",
+    "textTwo" : "yang"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 11,
+    "lastReviewed" : [ 1569414608, 1569515318, 1570003305, 1570003968 ],
+    "rating" : 4,
+    "textOne" : "stress",
+    "textThree" : "เครียด",
+    "textTwo" : "kriyeg"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 10,
+    "lastReviewed" : [ 1569415255, 1569513714, 1569513815, 1569737381, 1569817528, 1570161810, 1570320848, 1570361932, 1570365488 ],
+    "rating" : 3,
+    "textOne" : "scratch",
+    "textThree" : "เกา",
+    "textTwo" : "gaow"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414578, 1569513276, 1569740086, 1570001465 ],
+    "rating" : 5,
+    "textOne" : "shorts",
+    "textThree" : "กางเกง",
+    "textTwo" : "kang geing"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569244809, 1570002076, 1570406051 ],
+    "rating" : 5,
+    "textOne" : "stomach",
+    "textThree" : "กระเพาะอาหาร",
+    "textTwo" : "krapow ahan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 10,
+    "lastReviewed" : [ 1569739042, 1569739666, 1569739719, 1569740081, 1570003985, 1570162105, 1570321273, 1570321636, 1570361875, 1570362692, 1570364007, 1570404511, 1570540690, 1570541227, 1570541243 ],
+    "rating" : 4,
+    "textOne" : "same",
+    "textThree" : "เหมือนกัน",
+    "textTwo" : "muong gan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569415131, 1569725949 ],
+    "rating" : 5,
+    "textOne" : "small",
+    "textThree" : "เล็ก",
+    "textTwo" : "le(g)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569215143, 1570161630, 1570404120, 1570405871 ],
+    "rating" : 4,
+    "textOne" : "spring roll",
+    "textThree" : "ปอเปี๊ยะ",
+    "textTwo" : "po pia"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569414536, 1570026132, 1570366464 ],
+    "rating" : 5,
+    "textOne" : "smell good",
+    "textThree" : "?",
+    "textTwo" : "hom"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569245568, 1569999887, 1570000449, 1570290002 ],
+    "rating" : 5,
+    "textOne" : "sleepy",
+    "textThree" : "ง่วงนอน",
+    "textTwo" : "whon néng"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569414670, 1570023375, 1570338118, 1570366883 ],
+    "rating" : 4,
+    "textOne" : "sing",
+    "textThree" : "ร้องเพลง",
+    "textTwo" : "rong pleing"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415143, 1569739910, 1570002810, 1570003982 ],
+    "rating" : 5,
+    "textOne" : "sleep",
+    "textThree" : "นอน",
+    "textTwo" : "néng"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 2,
+    "lastReviewed" : [ 1570001913, 1570002365 ],
+    "rating" : 5,
+    "textOne" : "sweaty",
+    "textThree" : "?",
+    "textTwo" : "piag heu-a"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414673, 1569513680, 1569514283, 1570604224 ],
+    "rating" : 4,
+    "textOne" : "stupid",
+    "textThree" : "โง่",
+    "textTwo" : "gno"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "rating" : 5,
+    "textOne" : "sick",
+    "textThree" : "ป่วย",
+    "textTwo" : "puay"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 11,
+    "lastReviewed" : [ 1569414751, 1569696380, 1569696385, 1569741921, 1570025098, 1570026200, 1570541271 ],
+    "rating" : 3,
+    "textOne" : "shirt",
+    "textThree" : "เสื้อ",
+    "textTwo" : "suhh-a"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414306, 1569739149, 1569741904, 1570026136, 1570073409, 1570321705 ],
+    "rating" : 5,
+    "textOne" : "slow",
+    "textThree" : "ช้า",
+    "textTwo" : "cha"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 11,
+    "lastReviewed" : [ 1569414644, 1569513385, 1569741956, 1570000355 ],
+    "rating" : 4,
+    "textOne" : "short",
+    "textThree" : "สั้น",
+    "textTwo" : "san"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569414506 ],
+    "rating" : 3,
+    "textOne" : "shoe",
+    "textThree" : "รองเท้า",
+    "textTwo" : "ron tao"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414703, 1570002216, 1570003277, 1570321632, 1570361802 ],
+    "rating" : 5,
+    "textOne" : "suck",
+    "textThree" : "ดูด",
+    "textTwo" : "dude"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414762 ],
+    "rating" : 5,
+    "textOne" : "smell bad",
+    "textThree" : "?",
+    "textTwo" : "min"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569244880, 1569513716, 1569741958, 1569999809, 1569999814, 1570404953 ],
+    "rating" : 5,
+    "textOne" : "smile",
+    "textThree" : "ยิ้ม",
+    "textTwo" : "yím"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569244855, 1569740009, 1570320572 ],
+    "rating" : 4,
+    "textOne" : "see",
+    "textThree" : "ดู",
+    "textTwo" : "doo"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414604, 1569513193 ],
+    "rating" : 5,
+    "textOne" : "towel",
+    "textThree" : "ผ้าเช็ดตัว",
+    "textTwo" : "pa chet doa"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569414792, 1569514705, 1570025079, 1570362349, 1570404747 ],
+    "rating" : 5,
+    "textOne" : "turn off the light",
+    "textThree" : "ปิดไฟ",
+    "textTwo" : "peed fye"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569415349, 1570002240, 1570003292, 1570289366, 1570289821, 1570605001 ],
+    "rating" : 5,
+    "textOne" : "turn on the light",
+    "textThree" : "เปิดไฟ",
+    "textTwo" : "ped fye"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569415274 ],
+    "rating" : 4,
+    "textOne" : "train hard",
+    "textThree" : "ฝึกหนัก",
+    "textTwo" : "fug nag"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1570002990, 1570338136 ],
+    "rating" : 4,
+    "textOne" : "thirsty",
+    "textThree" : "กระหายน้ำ",
+    "textTwo" : "krahay nam"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569245512, 1569737266, 1570002263, 1570004342, 1570023453, 1570025390 ],
+    "rating" : 5,
+    "textOne" : "trash",
+    "textThree" : "ขยะ",
+    "textTwo" : "kaya"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569416388, 1569739949, 1570540699 ],
+    "rating" : 5,
+    "textOne" : "today",
+    "textThree" : "ในวันนี้",
+    "textTwo" : "wan nee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569737682, 1569737726, 1569817772, 1570001776, 1570321578, 1570540616, 1570603991, 1570605842 ],
+    "rating" : 3,
+    "textOne" : "tomorrow",
+    "textThree" : "พรุ่งนี้",
+    "textTwo" : "plung nee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415145, 1569513560, 1570002467, 1570023121, 1570024960 ],
+    "rating" : 5,
+    "textOne" : "tongue",
+    "textThree" : "ลิ้น",
+    "textTwo" : "léen"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569416357, 1569737310, 1569739951, 1569999962, 1570004347 ],
+    "rating" : 4,
+    "textOne" : "he is tall",
+    "textThree" : "เขาสูง",
+    "textTwo" : "khao sung"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 12,
+    "lastReviewed" : [ 1569414811, 1569513363, 1569515594, 1569738870, 1570002797, 1570023198, 1570073070 ],
+    "rating" : 3,
+    "textOne" : "translate",
+    "textThree" : "แปลความ",
+    "textTwo" : "(p)leh kwam"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569415205, 1569739907, 1570025005, 1570362080, 1570364060, 1570364271, 1570406046 ],
+    "rating" : 3,
+    "textOne" : "tonight",
+    "textThree" : "คืนนี้",
+    "textTwo" : "kune nee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569245701, 1569514921, 1570002712, 1570405591 ],
+    "rating" : 5,
+    "textOne" : "teeth",
+    "textThree" : "ฟัน",
+    "textTwo" : "fan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569817634, 1570002035, 1570321356 ],
+    "rating" : 5,
+    "textOne" : "throw away",
+    "textThree" : "ทิ้ง",
+    "textTwo" : "ting"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569741949, 1569742028, 1570002144, 1570320536 ],
+    "rating" : 5,
+    "textOne" : "throw up",
+    "textThree" : "อาเจียน",
+    "textTwo" : "a jien"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569245423, 1570320539, 1570405180 ],
+    "rating" : 5,
+    "textOne" : "vegetables",
+    "textThree" : "ผัก",
+    "textTwo" : "pag"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569513732, 1570405671 ],
+    "rating" : 5,
+    "textOne" : "wet",
+    "textThree" : "เปียก",
+    "textTwo" : "peeyag (no air p)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569738855, 1569741789, 1570540748 ],
+    "rating" : 4,
+    "textOne" : "working",
+    "textThree" : "ทำงาน",
+    "textTwo" : "taman"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569415040, 1570002872 ],
+    "rating" : 5,
+    "textOne" : "win",
+    "textThree" : "ชนะ",
+    "textTwo" : "chana"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569245484, 1569515251, 1570002807 ],
+    "rating" : 4,
+    "textOne" : "white",
+    "textThree" : "ขาว",
+    "textTwo" : "kao"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569242930, 1570002976, 1570004011 ],
+    "rating" : 4,
+    "textOne" : "write",
+    "textThree" : "เขียน",
+    "textTwo" : "keeyen"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569245633, 1569739722, 1570001807, 1570321123, 1570403285 ],
+    "rating" : 5,
+    "textOne" : "word",
+    "textThree" : "คำ",
+    "textTwo" : "kahm"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414463, 1569740072, 1570003104, 1570003255, 1570025636, 1570161759, 1570362296, 1570405755, 1570605305, 1570605702 ],
+    "rating" : 5,
+    "textOne" : "why",
+    "textThree" : "ทำไม",
+    "textTwo" : "tamay"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569245252, 1569740055, 1569742044, 1570367050 ],
+    "rating" : 4,
+    "textOne" : "wash",
+    "textThree" : "ล้าง",
+    "textTwo" : "láng"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569414509, 1570540030 ],
+    "rating" : 2,
+    "textOne" : "what time is it?",
+    "textThree" : "เวลากี่โมง",
+    "textTwo" : "wela gee mong"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569416402, 1570320065, 1570363598 ],
+    "rating" : 5,
+    "textOne" : "you",
+    "textThree" : "คุณ",
+    "textTwo" : "khun"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000346, 1570001657, 1570002183, 1570161942, 1570289667, 1570321280, 1570321281, 1570321765, 1570338134, 1570405766, 1570539339, 1570540560, 1570600923, 1570796769 ],
+    "rating" : 3,
+    "textOne" : "I’ll be back",
+    "textThree" : "ฉันจะกลับมา",
+    "textTwo" : "chan jza glab ma"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569215157, 1569999841, 1570001779, 1570320839, 1570338172, 1570363788, 1570403158 ],
+    "rating" : 5,
+    "textOne" : "young girl",
+    "textThree" : "เด็กสาว",
+    "textTwo" : "deg sao"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569414412, 1569514359, 1570289208, 1570321476 ],
+    "rating" : 5,
+    "textOne" : "young woman",
+    "textThree" : "หนุ่มสาว",
+    "textTwo" : "nume sao"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569414309, 1570023127, 1570025260, 1570025393, 1570025592, 1570025849, 1570073384 ],
+    "rating" : 4,
+    "textOne" : "you are wrong",
+    "textThree" : "คุณผิด",
+    "textTwo" : "khun peed"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569416359, 1569514329, 1570003342, 1570365782 ],
+    "rating" : 4,
+    "textOne" : "you are correct",
+    "textThree" : "คุณถูก",
+    "textTwo" : "khun tug"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415270, 1569738993, 1569739711, 1570002899, 1570404371, 1570605512 ],
+    "rating" : 5,
+    "textOne" : "you are nice",
+    "textThree" : "ดคุณใจดี",
+    "textTwo" : "khun czai dee"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569415287, 1569515145, 1569736983, 1570320837, 1570321195 ],
+    "rating" : 4,
+    "textOne" : "animal",
+    "textThree" : "สัตว์",
+    "textTwo" : "sa(t)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414314, 1569515523, 1569515526, 1569737149, 1569737599, 1569741908, 1570025068, 1570405058, 1570405313, 1570405341 ],
+    "rating" : 2,
+    "textOne" : "are you sure?",
+    "textThree" : "คุณแน่ใจไหม?",
+    "textTwo" : "khun nai czai mai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 13,
+    "lastReviewed" : [ 1569415316, 1569514559, 1569515189, 1569739745, 1569999834, 1570405416 ],
+    "rating" : 3,
+    "textOne" : "buy",
+    "textThree" : "ซื้อ",
+    "textTwo" : "su(g)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569245656, 1569513341, 1569739663, 1569742137, 1569742247, 1570001680, 1570003108, 1570003973, 1570320071, 1570405844 ],
+    "rating" : 3,
+    "textOne" : "both",
+    "textThree" : "ทั้งสอง",
+    "textTwo" : "tang sóng"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414343, 1569513846, 1569514919, 1569740000, 1570361891, 1570364030, 1570404764, 1570540859 ],
+    "rating" : 3,
+    "textOne" : "can you?",
+    "textThree" : "ได้ไม่",
+    "textTwo" : "dai mai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414819, 1569739075, 1570025577, 1570161315 ],
+    "rating" : 3,
+    "textOne" : "chili",
+    "textThree" : "พริก",
+    "textTwo" : "met pree(g)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415187, 1569513876, 1569514326, 1569515413, 1569696392, 1569740075, 1570000368, 1570023460, 1570072975, 1570361522 ],
+    "rating" : 4,
+    "textOne" : "drive",
+    "textThree" : "ขับรถ",
+    "textTwo" : "kab"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569245689, 1570000602, 1570003175, 1570162127 ],
+    "rating" : 4,
+    "textOne" : "enjoy",
+    "textThree" : "สนุก",
+    "textTwo" : "senug"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414535, 1569513693, 1569514749, 1569514974, 1569737389, 1570001469 ],
+    "rating" : 4,
+    "textOne" : "explore",
+    "textThree" : "สำรวจ",
+    "textTwo" : "samrua(c)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569244792, 1569740052, 1569741914, 1569742123, 1569742249, 1569979273, 1570002721, 1570321654, 1570403304 ],
+    "rating" : 5,
+    "textOne" : "feed (the chicken)",
+    "textThree" : "เลี้ยงไก่",
+    "textTwo" : "lee-uhn (gai)"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 10,
+    "lastReviewed" : [ 1569415154, 1569513514, 1569514300, 1569514976, 1569738931, 1569740079, 1570026139 ],
+    "rating" : 4,
+    "textOne" : "fly",
+    "textThree" : "บิน",
+    "textTwo" : "been"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 10,
+    "lastReviewed" : [ 1569416399, 1569513178, 1569817373, 1569817777 ],
+    "rating" : 5,
+    "textOne" : "green",
+    "textThree" : "เขียว",
+    "textTwo" : "keeyo"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569416370, 1569515387, 1570023171, 1570025923, 1570025925, 1570161443, 1570161926, 1570320720, 1570338072 ],
+    "rating" : 4,
+    "textOne" : "feather",
+    "textThree" : "ขน",
+    "textTwo" : "kén"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569416341, 1569738897, 1569738942, 1569739714, 1570004263, 1570025357, 1570321567, 1570404069, 1570404074 ],
+    "rating" : 3,
+    "textOne" : "hear",
+    "textThree" : "ได้ยิน",
+    "textTwo" : "daiyeen"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414795, 1569739457, 1570002711, 1570073142, 1570320882 ],
+    "rating" : 5,
+    "textOne" : "home",
+    "textThree" : "บ้าน",
+    "textTwo" : "ban"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569245636, 1569513281, 1569513690, 1569739978, 1570026130, 1570540644 ],
+    "rating" : 4,
+    "textOne" : "inside",
+    "textThree" : "ภายใน",
+    "textTwo" : "pai nai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569244914, 1569513233, 1569515393, 1569696577, 1569737184, 1569742101, 1570002133, 1570002799, 1570025931, 1570319992, 1570338174, 1570540599, 1570540734, 1570605696 ],
+    "rating" : 4,
+    "textOne" : "loud",
+    "textThree" : "ดัง",
+    "textTwo" : "(d)ang"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513209, 1569737322, 1569739063, 1569739105, 1569817659, 1570003067, 1570004358, 1570025352, 1570026321, 1570287828, 1570289237 ],
+    "rating" : 3,
+    "textOne" : "betting",
+    "textThree" : "เดิมพัน",
+    "textTwo" : "derm pan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 13,
+    "lastReviewed" : [ 1569416376, 1569505287, 1569515546, 1569696650, 1569737271, 1569739473, 1569740006, 1569817484, 1569817807, 1570002623, 1570003881 ],
+    "rating" : 3,
+    "textOne" : "long",
+    "textThree" : "ยาว",
+    "textTwo" : "yaow"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569415095, 1569456915, 1569513432 ],
+    "rating" : 3,
+    "textOne" : "music",
+    "textThree" : "เพลง",
+    "textTwo" : "pleng"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569245602, 1569515256, 1569739059, 1570002528, 1570003128, 1570023190, 1570023233, 1570405454 ],
+    "rating" : 3,
+    "textOne" : "make",
+    "textThree" : "ทำ",
+    "textTwo" : "tam"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569245444, 1569740002 ],
+    "rating" : 4,
+    "textOne" : "neck",
+    "textThree" : "คอ",
+    "textTwo" : "kaw"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569415158, 1570002265, 1570023125 ],
+    "rating" : 3,
+    "textOne" : "punch",
+    "textThree" : "หมัด",
+    "textTwo" : "mad"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569414699, 1569738910, 1569738915, 1570001489, 1570161445, 1570538372, 1570538393, 1570540323, 1570540537 ],
+    "rating" : 3,
+    "textOne" : "store (v.)",
+    "textThree" : "เก็บ",
+    "textTwo" : "gheb"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569415290, 1569739938, 1570361849, 1570580475 ],
+    "rating" : 4,
+    "textOne" : "sky",
+    "textThree" : "ท้องฟ้า",
+    "textTwo" : "tong fa"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569415262, 1569514739, 1569515421, 1570001822, 1570026259, 1570320173, 1570540092, 1570540593 ],
+    "rating" : 4,
+    "textOne" : "training",
+    "textThree" : "การฝึกหัด",
+    "textTwo" : "gan fug had"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569414665, 1569999954, 1570023126, 1570161757, 1570321336, 1570340513 ],
+    "rating" : 5,
+    "textOne" : "quiet",
+    "textThree" : "เงียบ",
+    "textTwo" : "neeyeb"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 13,
+    "lastReviewed" : [ 1569416347, 1569513163, 1569513170, 1569737287, 1569737293, 1569740084, 1570000316, 1570002753, 1570073075, 1570161925, 1570405206, 1570541066 ],
+    "rating" : 3,
+    "textOne" : "remember",
+    "textThree" : "จำ",
+    "textTwo" : "czam"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569415200, 1569514711, 1569742216, 1569817819, 1570025910, 1570289197, 1570320508, 1570320955, 1570362945, 1570863877 ],
+    "rating" : 3,
+    "textOne" : "sell",
+    "textThree" : "ขาย",
+    "textTwo" : "káiie"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569415340, 1569456850, 1569456907, 1569505232, 1569742092, 1569999957, 1570366998, 1570406091, 1570796762 ],
+    "rating" : 4,
+    "textOne" : "sad",
+    "textThree" : "เสียใจ",
+    "textTwo" : "cié czai"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569245665, 1569739679, 1570002742, 1570025588, 1570290028, 1570320917, 1570363797 ],
+    "rating" : 3,
+    "textOne" : "smoke",
+    "textThree" : "ควัน",
+    "textTwo" : "kwan"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414609, 1569515417, 1569739453, 1570025681, 1570073243, 1570404754 ],
+    "rating" : 5,
+    "textOne" : "scared",
+    "textThree" : "กลัว",
+    "textTwo" : "glua"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414729, 1569739946, 1569817432, 1569817785, 1569817798, 1570001518, 1570001595, 1570001862, 1570002895, 1570161803, 1570363085 ],
+    "rating" : 3,
+    "textOne" : "wait",
+    "textThree" : "รอ",
+    "textTwo" : "raw"
+  }, {
+    "dateCreated" : "2019-09-22",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569415203, 1569513273, 1570362949, 1570363520, 1570404318 ],
+    "rating" : 4,
+    "textOne" : "walk",
+    "textThree" : "เดิน",
+    "textTwo" : "durn"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569415337, 1569513159, 1569515109, 1569742244 ],
+    "rating" : 3,
+    "textOne" : "car",
+    "textThree" : "รถยนต์",
+    "textTwo" : "rogyon"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569245396, 1569515561, 1569736979, 1570000596, 1570002079 ],
+    "rating" : 4,
+    "textOne" : "everyday",
+    "textThree" : "ทุกวัน",
+    "textTwo" : "tuk wan"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569414516, 1569505239, 1569513567, 1569741820, 1569742024, 1570000231 ],
+    "rating" : 3,
+    "textOne" : "protection",
+    "textThree" : "ป้องกัน",
+    "textTwo" : "(b)ongkan"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414760, 1569513669, 1569738861, 1569739077, 1570023180 ],
+    "rating" : 3,
+    "textOne" : "start",
+    "textThree" : "เริ่มต้น",
+    "textTwo" : "rerm ton"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 10,
+    "lastReviewed" : [ 1569245578, 1569513676, 1569513868, 1569515137, 1569737636, 1569737736, 1569738949, 1569817463, 1570004275, 1570073144, 1570406069, 1570605489 ],
+    "rating" : 4,
+    "textOne" : "put",
+    "textThree" : "ใส่",
+    "textTwo" : "sai"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569245581, 1569515001, 1569515249, 1569739833 ],
+    "rating" : 5,
+    "textOne" : "throw",
+    "textThree" : "โยน",
+    "textTwo" : "yone"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569414326, 1569515500, 1569738920, 1569741903, 1570363466 ],
+    "rating" : 5,
+    "textOne" : "calm",
+    "textThree" : "เงียบ",
+    "textTwo" : "neeyeb"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569245476, 1569513352, 1569515201, 1570003887, 1570073102, 1570605591 ],
+    "rating" : 4,
+    "textOne" : "need",
+    "textThree" : "ต้องการ",
+    "textTwo" : "tongkan"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415212, 1569505223, 1569505280, 1569737232, 1569738940, 1569740069, 1570321392, 1570321703, 1570363265, 1570603981 ],
+    "rating" : 3,
+    "textOne" : "hard (not easy)",
+    "textThree" : "ยาก",
+    "textTwo" : "ya(g)"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569416396, 1569739098, 1569739108, 1569739750, 1569741952, 1570002933, 1570073290 ],
+    "rating" : 3,
+    "textOne" : "easy",
+    "textThree" : "ง่าย",
+    "textTwo" : "ngayy"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569416386, 1569513203, 1569737225, 1569739160, 1569739998, 1570001482, 1570025688, 1570025706 ],
+    "rating" : 5,
+    "textOne" : "how did you do that?",
+    "textThree" : "คุณทำได้อย่างไร?",
+    "textTwo" : "khun tamdai yang rai?"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569245285, 1569505237, 1570006455, 1570025108, 1570026142, 1570026152, 1570161334, 1570405607, 1570796778 ],
+    "rating" : 3,
+    "textOne" : "left",
+    "textThree" : "?",
+    "textTwo" : "sái"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569245733, 1569737732, 1569739706, 1569741774, 1570001936, 1570002709, 1570025585, 1570540839 ],
+    "rating" : 2,
+    "textOne" : "right",
+    "textThree" : "ขวา",
+    "textTwo" : "kwá"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569416349, 1569696561, 1569737591 ],
+    "rating" : 4,
+    "textOne" : "gloves (boxing)",
+    "textThree" : "นวม",
+    "textTwo" : "nuom"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414304, 1569737400, 1570338284, 1570404384, 1570405564, 1570405651 ],
+    "rating" : 2,
+    "textOne" : "hip",
+    "textThree" : "สะโพก",
+    "textTwo" : "sapo(g)"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414546, 1569514570, 1569737657, 1569742218, 1570161928, 1570603847 ],
+    "rating" : 5,
+    "textOne" : "turn",
+    "textThree" : "กลับ",
+    "textTwo" : "glab"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569416378, 1569725942, 1569739682, 1570605491 ],
+    "rating" : 5,
+    "textOne" : "gas",
+    "textThree" : "ก๊าซ",
+    "textTwo" : "ga(s)"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569414280, 1569505227, 1569737248, 1569739982, 1569742113, 1570002937, 1570361538, 1570405960, 1570406094, 1570605847 ],
+    "rating" : 3,
+    "textOne" : "accident",
+    "textThree" : "อุบัติเหตุ",
+    "textTwo" : "ooba(t)eehed"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 11,
+    "lastReviewed" : [ 1569416363, 1569513482, 1569513590, 1569514579, 1569737141, 1569737418, 1569739737, 1569742037, 1569742043, 1569999837 ],
+    "rating" : 3,
+    "textOne" : "month",
+    "textThree" : "เดือน",
+    "textTwo" : "duuh-an"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415161, 1569515515, 1569737700, 1570002257, 1570025294, 1570025813, 1570025916, 1570161395, 1570405664 ],
+    "rating" : 4,
+    "textOne" : "day",
+    "textThree" : "วัน",
+    "textTwo" : "wan"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569244892, 1569505277, 1570025579, 1570539280 ],
+    "rating" : 4,
+    "textOne" : "hour",
+    "textThree" : "ชั่วโมง",
+    "textTwo" : "chawmong"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569415127, 1569515106, 1570362301 ],
+    "rating" : 4,
+    "textOne" : "minute",
+    "textThree" : "นาที",
+    "textTwo" : "natee"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569415345, 1569513380, 1569742124, 1570001694, 1570001773, 1570002632, 1570025658, 1570025702, 1570073177, 1570321422 ],
+    "rating" : 4,
+    "textOne" : "second",
+    "textThree" : "ที่สอง",
+    "textTwo" : "ti song"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415354, 1569514343, 1569742221, 1569817425, 1570161656, 1570367011, 1570405067, 1570605517 ],
+    "rating" : 4,
+    "textOne" : "what do you want?",
+    "textThree" : "คุณต้องการอะไร?",
+    "textTwo" : "khun tongkan arai?"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569415280, 1569513420, 1569514414, 1569514582, 1569515126, 1569737654, 1570003346, 1570338167 ],
+    "rating" : 4,
+    "textOne" : "come with me",
+    "textThree" : "มากับฉัน",
+    "textTwo" : "ma gab chan"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569416368, 1569515285, 1569515288, 1570002973, 1570023626, 1570405448, 1570580902 ],
+    "rating" : 4,
+    "textOne" : "normal",
+    "textThree" : "ปกติ",
+    "textTwo" : "bogatee"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569414739, 1569513154, 1569739127, 1569739142, 1569739924, 1570023229, 1570023231, 1570023248, 1570362933, 1570366044 ],
+    "rating" : 4,
+    "textOne" : "interesting",
+    "textThree" : "น่าสนใจ",
+    "textTwo" : "na song jzai"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569415184, 1569514867, 1569737780, 1569739112, 1570000162, 1570604990 ],
+    "rating" : 3,
+    "textOne" : "curious",
+    "textThree" : "อยากรู้อยากเห็น",
+    "textTwo" : "yag ru yag hén"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569416394, 1569514981, 1569515144, 1569739899, 1569742225, 1569742235, 1570000445, 1570002103, 1570002567, 1570003021, 1570006452, 1570023317, 1570024921, 1570324792, 1570363373, 1570366616, 1570539242, 1570540917, 1570540936 ],
+    "rating" : 3,
+    "textOne" : "(I) can",
+    "textThree" : "ทำได้",
+    "textTwo" : "tamdai"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569416344, 1569505273, 1569514350, 1570025116, 1570604819 ],
+    "rating" : 4,
+    "textOne" : "with",
+    "textThree" : "กับ",
+    "textTwo" : "gab"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569414486, 1569736937, 1569739551, 1570026313 ],
+    "rating" : 4,
+    "textOne" : "ice",
+    "textThree" : "น้ำแข็ง",
+    "textTwo" : "nam ken"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569415098, 1569514951, 1569742096, 1569817419, 1570002269, 1570320719, 1570321739, 1570362280, 1570403570, 1570601114 ],
+    "rating" : 4,
+    "textOne" : "but",
+    "textThree" : "แต่",
+    "textTwo" : "(t)ehh"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569415226, 1570023312, 1570338103, 1570340511 ],
+    "rating" : 5,
+    "textOne" : "plate",
+    "textThree" : "จาน",
+    "textTwo" : "czan"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569414749, 1569505254, 1569737650, 1569817405, 1570289246, 1570404700 ],
+    "rating" : 2,
+    "textOne" : "I want to see",
+    "textThree" : "ฉันต้องการอยากเห็น",
+    "textTwo" : "chan tongan yag hén"
+  }, {
+    "dateCreated" : "2019-09-23",
+    "exposure" : 7,
+    "lastReviewed" : [ 1569415101, 1569513873, 1569514888, 1569515048, 1569515276, 1569737277, 1570001525, 1570002215, 1570025575, 1570026133 ],
+    "rating" : 5,
+    "textOne" : "if",
+    "textThree" : "ถ้า",
+    "textTwo" : "(t)aa"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513757, 1569514832, 1569696660, 1569737219, 1569739045, 1570000371, 1570023089, 1570161490, 1570405972 ],
+    "rating" : 3,
+    "textOne" : "bean",
+    "textThree" : "ถั่ว",
+    "textTwo" : "tuwa"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513287, 1569515050, 1569515153, 1569696383, 1569739455 ],
+    "rating" : 5,
+    "textOne" : "carrot",
+    "textThree" : "แครอท",
+    "textTwo" : "carro(d)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569513460, 1569515159, 1569737300, 1569817587, 1570000448, 1570003996, 1570025072, 1570025377, 1570026143, 1570605545 ],
+    "rating" : 5,
+    "textOne" : "corn",
+    "textThree" : "ข้าวโพด",
+    "textTwo" : "kaowpo(d)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569514566, 1569514941, 1569737680, 1569737742, 1569739087, 1570001696 ],
+    "rating" : 4,
+    "textOne" : "coding",
+    "textThree" : "การเข้ารหัส",
+    "textTwo" : "gan kaorahad"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569514336, 1569515532, 1569736946, 1569738851, 1569741917, 1570002186, 1570025709, 1570320887 ],
+    "rating" : 5,
+    "textOne" : "clothes",
+    "textThree" : "เสื้อผ้า",
+    "textTwo" : "suhh paa"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569514839, 1569515063, 1569739003, 1569739992, 1569742019, 1569742041, 1570003341, 1570023165, 1570023373, 1570288314, 1570363284 ],
+    "rating" : 5,
+    "textOne" : "underwear",
+    "textThree" : "ชุดชั้นใน",
+    "textTwo" : "chud chan nai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513209, 1569737322, 1569739063, 1569739105, 1569817659, 1570003067, 1570004358, 1570362313, 1570863818 ],
+    "rating" : 3,
+    "textOne" : "betting",
+    "textThree" : "เดิมพัน",
+    "textTwo" : "deng pang"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513182, 1569513185, 1569513698, 1569736976, 1569738838, 1570023279, 1570023449 ],
+    "rating" : 4,
+    "textOne" : "fun",
+    "textThree" : "สนุก",
+    "textTwo" : "senug"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 0,
+    "lastReviewed" : [ 1569979240, 1570002996, 1570319966, 1570540567 ],
+    "rating" : 4,
+    "textOne" : "cucumber",
+    "textThree" : "แตงกวา",
+    "textTwo" : "dteng gua"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513425, 1569514934, 1569738820, 1569738875, 1569817416, 1570023145, 1570073170 ],
+    "rating" : 4,
+    "textOne" : "yellow",
+    "textThree" : "สีเหลือง",
+    "textTwo" : "see luh-úng"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513268, 1569513504, 1569515581, 1569737403, 1569741926, 1570000587, 1570540040 ],
+    "rating" : 3,
+    "textOne" : "boiled egg",
+    "textThree" : "ไข่ต้ม",
+    "textTwo" : "kai tom"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513565, 1569515151, 1569515600, 1569739838, 1569742236, 1570001497, 1570025825, 1570025990, 1570363736, 1570405165 ],
+    "rating" : 2,
+    "textOne" : "half",
+    "textThree" : "ครึ่ง",
+    "textTwo" : "klung"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569513228, 1569513740, 1569513829, 1569515056, 1569515182, 1569738891, 1570001571, 1570001578, 1570023206, 1570025355, 1570073304 ],
+    "rating" : 4,
+    "textOne" : "share",
+    "textThree" : "หุ้น",
+    "textTwo" : "huune"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513213, 1569514306, 1569514769, 1569515555, 1569742240, 1570000087, 1570000348, 1570001632, 1570004261, 1570321268, 1570321324, 1570405657 ],
+    "rating" : 2,
+    "textOne" : "joking",
+    "textThree" : "ขำขัน",
+    "textTwo" : "kam kán"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569514795, 1569514986, 1569739537, 1569817671, 1570002100, 1570320845, 1570321031, 1570605822 ],
+    "rating" : 5,
+    "textOne" : "afterwards/later",
+    "textThree" : "ภายหลัง",
+    "textTwo" : "payláng"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 9,
+    "lastReviewed" : [ 1569514994, 1569515102, 1569515148, 1569696664, 1569737215, 1569737583, 1569737697, 1569739955, 1569817377 ],
+    "rating" : 3,
+    "textOne" : "mistake",
+    "textThree" : "ผิดพลาด",
+    "textTwo" : "péed plaad"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569513754, 1569515431, 1569696667, 1569737177, 1569737703, 1569739090, 1570006233, 1570025402, 1570026315, 1570320682, 1570405457, 1570600759 ],
+    "rating" : 4,
+    "textOne" : "save (food)",
+    "textThree" : "เก็บอาการ",
+    "textTwo" : "geb ahan"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569513804, 1569515293, 1569515537, 1569742231, 1570320207, 1570405589 ],
+    "rating" : 4,
+    "textOne" : "gross (food)",
+    "textThree" : "ขั้นต้น",
+    "textTwo" : "khan (t)on"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569513577, 1569514699, 1569515270, 1570023144 ],
+    "rating" : 4,
+    "textOne" : "nevermind",
+    "textThree" : "ไม่เป็นไร",
+    "textTwo" : "mai pen rai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569514730, 1569515174, 1569737317, 1569737673, 1569741915, 1570026149, 1570404750 ],
+    "rating" : 4,
+    "textOne" : "you’re welcome",
+    "textThree" : "ยินดีต้อนรับคุณ",
+    "textTwo" : "gindee donrap khun"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569513798, 1569514321, 1569737351, 1569737723, 1570003297, 1570003311, 1570025644, 1570073329, 1570338272 ],
+    "rating" : 3,
+    "textOne" : "too (much)",
+    "textThree" : "(มาก)เกินไป",
+    "textTwo" : "(mag) gun (p)ai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513573, 1569513833, 1569737144, 1569739060, 1569742213, 1570023627 ],
+    "rating" : 5,
+    "textOne" : "bird",
+    "textThree" : "นก",
+    "textTwo" : "nó(k)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569514969, 1569515184, 1569739673, 1569739684, 1569742122, 1570002803 ],
+    "rating" : 3,
+    "textOne" : "baby (human)",
+    "textThree" : "ทารก",
+    "textTwo" : "taro(g)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569513863, 1569514394, 1569515196, 1569515242, 1569999799, 1570001504, 1570361516, 1570363114, 1570540411 ],
+    "rating" : 3,
+    "textOne" : "I don’t care",
+    "textThree" : "ฉันไม่สนใจ",
+    "textTwo" : "chan mai son jzai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569515299, 1569739568, 1569742228, 1570289938, 1570364335 ],
+    "rating" : 3,
+    "textOne" : "be careful",
+    "textThree" : "ระวัง",
+    "textTwo" : "rawang"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569513308, 1569514551, 1569514854, 1569515167, 1569739806, 1569740043, 1569741785, 1569817665, 1570002882, 1570023258, 1570363944 ],
+    "rating" : 3,
+    "textOne" : "ferry",
+    "textThree" : "เรือข้ามฟาก",
+    "textTwo" : "reux kam pha(g)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1570025017, 1570161393, 1570289814, 1570320733, 1570403317 ],
+    "rating" : 3,
+    "textOne" : "you are early",
+    "textThree" : "คุณเป็นคนแรก",
+    "textTwo" : "khun pen khun rei(g)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569513327, 1569513511, 1569514694, 1569514915, 1569515325, 1569738883, 1570001832, 1570002249, 1570002971, 1570073078, 1570320511 ],
+    "rating" : 4,
+    "textOne" : "you are late",
+    "textThree" : "คุณมาสาย",
+    "textTwo" : "khun ma saí"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513399, 1569513466, 1569514904, 1569514928, 1569515464, 1570023201, 1570024999 ],
+    "rating" : 2,
+    "textOne" : "stretch",
+    "textThree" : "ยืด",
+    "textTwo" : "yeuxd"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 2,
+    "lastReviewed" : [ 1569513175, 1569514743, 1570023176, 1570540632, 1570604903 ],
+    "rating" : 5,
+    "textOne" : "boat",
+    "textThree" : "เรือ",
+    "textTwo" : "re (like hot in chinese)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513396, 1569515592, 1569739678, 1569739892, 1569817641, 1570000439, 1570001499, 1570001669, 1570002024, 1570024930, 1570540782 ],
+    "rating" : 4,
+    "textOne" : "year",
+    "textThree" : "ปี",
+    "textTwo" : "(p)i"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569513491, 1569513728, 1569515039, 1569737424, 1570362286 ],
+    "rating" : 3,
+    "textOne" : "for sure",
+    "textThree" : "แน่นอน",
+    "textTwo" : "nei non"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 2,
+    "lastReviewed" : [ 1569513724, 1569738827, 1570025487, 1570321292 ],
+    "rating" : 3,
+    "textOne" : "head",
+    "textThree" : "หัว",
+    "textTwo" : "húa"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999753, 1570000237, 1570000334, 1570000509, 1570000524, 1570025626, 1570026015, 1570026220, 1570026348, 1570320527, 1570580491, 1570605111, 1570605258 ],
+    "rating" : 2,
+    "textOne" : "university",
+    "textThree" : "มหาวิทยาลัย",
+    "textTwo" : "(maha) (weetee) yalaie"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569514872, 1569515070, 1569736981, 1570004258, 1570025071, 1570321695, 1570362268 ],
+    "rating" : 3,
+    "textOne" : "weird",
+    "textThree" : "แปลก",
+    "textTwo" : "pleeh(g)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569513412, 1569513427, 1569739883, 1570001507, 1570405578, 1570605560, 1570605582 ],
+    "rating" : 4,
+    "textOne" : "eat first",
+    "textThree" : "กินก่อน",
+    "textTwo" : "gin gone"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513688, 1569514276, 1569515268, 1569817579, 1569817679, 1570000558, 1570001963, 1570023153, 1570073091, 1570073394 ],
+    "rating" : 3,
+    "textOne" : "talk",
+    "textThree" : "การพูดคุย",
+    "textTwo" : "gan pood kuyi"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569513285, 1569513475, 1569515131, 1569739902, 1570540993 ],
+    "rating" : 3,
+    "textOne" : "sound",
+    "textThree" : "เสียง",
+    "textTwo" : "seeyang"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513435, 1569513711, 1569514842, 1569739120, 1569740046, 1570025612, 1570404642 ],
+    "rating" : 3,
+    "textOne" : "here",
+    "textThree" : "ที่นี่",
+    "textTwo" : "teenee"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569513388, 1569514776, 1569514825, 1569738830, 1569739015, 1569739481, 1570321386, 1570405297 ],
+    "rating" : 4,
+    "textOne" : "long time",
+    "textThree" : "เวลานาน",
+    "textTwo" : "wela nan"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 2,
+    "lastReviewed" : [ 1569513671, 1569514855, 1570364418, 1570366868, 1570605213 ],
+    "rating" : 4,
+    "textOne" : "family",
+    "textThree" : "ครอบครัว",
+    "textTwo" : "krob krua"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569514991, 1569736973, 1569737363, 1569739970, 1569740036, 1569741901, 1569817813, 1569817824, 1569999981, 1570002015, 1570023305, 1570289619, 1570321411, 1570403828, 1570605231 ],
+    "rating" : 5,
+    "textOne" : "puppy",
+    "textThree" : "ลูกสุนัข",
+    "textTwo" : "lu(g) suna(g)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569737661, 1569739701, 1569739799, 1569741799, 1569817632, 1569817840, 1570001511, 1570002108, 1570025058, 1570289595, 1570320452, 1570320460, 1570404155 ],
+    "rating" : 3,
+    "textOne" : "alone",
+    "textThree" : "คนเดียว",
+    "textTwo" : "kon deeyo"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569513302, 1569513708, 1569740124, 1569742022, 1570002510, 1570002646, 1570002750, 1570003977, 1570025557, 1570073359, 1570321315, 1570340495, 1570540440, 1570540540 ],
+    "rating" : 3,
+    "textOne" : "together",
+    "textThree" : "ด้วยกัน",
+    "textTwo" : "dui gàn"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569514364, 1569514972, 1569515511, 1569725939, 1569738842, 1569739995, 1570003056, 1570003302, 1570025120, 1570288322, 1570288392, 1570363463 ],
+    "rating" : 3,
+    "textOne" : "separate (v.)",
+    "textThree" : "แยก",
+    "textTwo" : "yaii(g)"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569513222, 1569737045, 1569737129, 1569739477, 1569739565, 1569739877, 1570002174, 1570002219, 1570003299, 1570338242, 1570363548, 1570363882, 1570363893, 1570540429 ],
+    "rating" : 3,
+    "textOne" : "also",
+    "textThree" : "ด้วย",
+    "textTwo" : "dooay"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 8,
+    "lastReviewed" : [ 1569513641, 1569514298, 1569514764, 1569515012, 1569696581, 1569737329, 1569737706, 1569741911, 1570320777 ],
+    "rating" : 3,
+    "textOne" : "pay",
+    "textThree" : "จ่ายเงิน",
+    "textTwo" : "czai reng"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513600, 1569514944, 1569737664, 1569739070, 1569739919, 1570025062, 1570025110 ],
+    "rating" : 3,
+    "textOne" : "use",
+    "textThree" : "ใช้",
+    "textTwo" : "chai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569514810, 1569514892, 1569738996, 1570362924, 1570366984 ],
+    "rating" : 3,
+    "textOne" : "I am interested",
+    "textThree" : "ฉันสนใจ",
+    "textTwo" : "chan son czai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569515470, 1569515540, 1569515549, 1569737638, 1570001675, 1570025727, 1570289279, 1570320875, 1570601057 ],
+    "rating" : 3,
+    "textOne" : "are",
+    "textThree" : "เป็น",
+    "textTwo" : "(p)en"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569513456, 1569513838, 1569514280, 1569739690, 1569741923, 1570001288, 1570002594, 1570002876, 1570003254, 1570073294, 1570405752 ],
+    "rating" : 5,
+    "textOne" : "not like you",
+    "textThree" : "ไม่เหมือนคุณ",
+    "textTwo" : "mai muong khun"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569515330, 1569515573, 1569737206, 1569738926, 1570002244, 1570321491 ],
+    "rating" : 3,
+    "textOne" : "try",
+    "textThree" : "ลอง",
+    "textTwo" : "long"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569513587, 1569696558, 1569738858, 1570023462, 1570073103, 1570363287, 1570363303 ],
+    "rating" : 5,
+    "textOne" : "tickle",
+    "textThree" : "จี้",
+    "textTwo" : "czi"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569514719, 1569514965, 1569515408, 1569737051, 1569737378, 1569737686, 1570002011, 1570289972, 1570337961, 1570362717, 1570405558 ],
+    "rating" : 3,
+    "textOne" : "how do you pronounce",
+    "textThree" : "คุณออกเสียงอย่างไร",
+    "textTwo" : "khun og seeyang yangrai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569513375, 1569514822, 1569696639, 1569737198, 1569739785, 1569739930, 1570025103, 1570363686 ],
+    "rating" : 4,
+    "textOne" : "quickly",
+    "textThree" : "อย่างรวดเร็ว",
+    "textTwo" : "yang rude reio"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 5,
+    "lastReviewed" : [ 1569515425, 1569737239, 1569737575, 1569738865, 1569817535, 1570000513, 1570002135 ],
+    "rating" : 3,
+    "textOne" : "or",
+    "textThree" : "หรือ",
+    "textTwo" : "reux"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 4,
+    "lastReviewed" : [ 1569513497, 1569737179, 1569737404, 1569738856, 1570025693, 1570025987, 1570161345, 1570161658, 1570161761, 1570539135 ],
+    "rating" : 3,
+    "textOne" : "smell",
+    "textThree" : "กลิ่น",
+    "textTwo" : "gleem"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569515098, 1569515315, 1569738862, 1570025968, 1570161433, 1570289255, 1570289987, 1570363126, 1570405333, 1570406086 ],
+    "rating" : 2,
+    "textOne" : "what does that mean",
+    "textThree" : "นั่นหมายความว่าอย่างไร",
+    "textTwo" : "na mai kwam wa yangrai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 3,
+    "lastReviewed" : [ 1569513191, 1569514741, 1569737264, 1570003121, 1570025198, 1570025700, 1570073395, 1570366818, 1570600460 ],
+    "rating" : 4,
+    "textOne" : "touch",
+    "textThree" : "แตะ",
+    "textTwo" : "(t)ai"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 6,
+    "lastReviewed" : [ 1569514878, 1569515261, 1569725947, 1569737112, 1569737253, 1569741934, 1570023337 ],
+    "rating" : 4,
+    "textOne" : "brown",
+    "textThree" : "สีน้ำตาล",
+    "textTwo" : "see nam(t)an"
+  }, {
+    "dateCreated" : "2019-09-26",
+    "exposure" : 2,
+    "lastReviewed" : [ 1569513289, 1569513357, 1570362269 ],
+    "rating" : 4,
+    "textOne" : "better",
+    "textThree" : "ดีกว่า",
+    "textTwo" : "deegwa"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000337, 1570002037, 1570003144, 1570023133, 1570321504, 1570324713, 1570540921 ],
+    "rating" : 3,
+    "textOne" : "arm",
+    "textThree" : "แขน",
+    "textTwo" : "kén"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001493, 1570002284, 1570002815, 1570004352, 1570024995, 1570025634, 1570321758, 1570361805, 1570363141 ],
+    "rating" : 2,
+    "textOne" : "airplane",
+    "textThree" : "เครื่องบิน",
+    "textTwo" : "krung been"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999775, 1570001766, 1570002104 ],
+    "rating" : 5,
+    "textOne" : "allergic",
+    "textThree" : "แพ้",
+    "textTwo" : "péhh"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570025652, 1570319981, 1570403289 ],
+    "rating" : 3,
+    "textOne" : "air",
+    "textThree" : "อากาศ",
+    "textTwo" : "ahgahd"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000307, 1570000526, 1570001513, 1570025596, 1570025615, 1570289883, 1570324716, 1570601080 ],
+    "rating" : 3,
+    "textOne" : "admire",
+    "textThree" : "ชม",
+    "textTwo" : "chom"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001929, 1570003058, 1570025572, 1570025679, 1570289630 ],
+    "rating" : 5,
+    "textOne" : "australia",
+    "textThree" : "ออสเตรเลีย",
+    "textTwo" : "australia"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002864, 1570003012, 1570003965, 1570289471, 1570320759, 1570362966, 1570367073, 1570540035, 1570604835 ],
+    "rating" : 2,
+    "textOne" : "(my) back",
+    "textThree" : "หลังของ(ฉัน)",
+    "textTwo" : "lang kong (chan)"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000346, 1570001657, 1570002183, 1570161942, 1570289667, 1570321280, 1570321281, 1570321765, 1570338134, 1570405766, 1570540378, 1570603974 ],
+    "rating" : 3,
+    "textOne" : "I’ll be back",
+    "textThree" : "ฉันจะกลับมา",
+    "textTwo" : "cha jza glab ma"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002415, 1570025974, 1570026263, 1570321709, 1570321733, 1570324758, 1570324784 ],
+    "rating" : 2,
+    "textOne" : "book",
+    "textThree" : "หนังสือ",
+    "textTwo" : "nan seux"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001740, 1570002041, 1570002825, 1570003874, 1570321512 ],
+    "rating" : 3,
+    "textOne" : "bread",
+    "textThree" : "ขนมปัง",
+    "textTwo" : "khanom (p)ang"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000422, 1570025662, 1570025915, 1570338181, 1570338298, 1570361845, 1570363268, 1570364212, 1570540925, 1570541095 ],
+    "rating" : 2,
+    "textOne" : "beginner",
+    "textThree" : "ผู้เริ่ม",
+    "textTwo" : "poo rerm"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001684, 1570003817, 1570073504, 1570289374, 1570321238, 1570321547, 1570363482, 1570363710, 1570405328 ],
+    "rating" : 3,
+    "textOne" : "bright (light)",
+    "textThree" : "สดใส",
+    "textTwo" : "sod sái"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002839, 1570002967, 1570023253, 1570161467 ],
+    "rating" : 2,
+    "textOne" : "brain",
+    "textThree" : "สมอง",
+    "textTwo" : "somóng"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000580, 1570324709, 1570338208, 1570363593, 1570364289, 1570366602, 1570366748, 1570405838, 1570405847, 1570405850, 1570540731, 1570541220 ],
+    "rating" : 2,
+    "textOne" : "carry",
+    "textThree" : "พกพา",
+    "textTwo" : "pog pah"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000421, 1570001782, 1570002082, 1570161398, 1570324796, 1570363088, 1570405366 ],
+    "rating" : 4,
+    "textOne" : "city",
+    "textThree" : "เมือง",
+    "textTwo" : "muh-ung"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001836, 1570002291, 1570073434, 1570161436, 1570289997, 1570320762, 1570321523, 1570363485 ],
+    "rating" : 3,
+    "textOne" : "call",
+    "textThree" : "โทร",
+    "textTwo" : "ton"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001501, 1570001747, 1570001942, 1570002289, 1570023512, 1570405393, 1570405567 ],
+    "rating" : 2,
+    "textOne" : "chair",
+    "textThree" : "เก้าอี้",
+    "textTwo" : "gao ee"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001997, 1570002098, 1570025291 ],
+    "rating" : 3,
+    "textOne" : "class",
+    "textThree" : "ชั้น",
+    "textTwo" : "chán"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999849, 1570001488, 1570025283, 1570073002, 1570338249, 1570361853, 1570363273, 1570404681, 1570605015 ],
+    "rating" : 4,
+    "textOne" : "change",
+    "textThree" : "เปลี่ยนแปลง",
+    "textTwo" : "(p)leeyen (p)leing"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000577, 1570001667, 1570004281, 1570023178 ],
+    "rating" : 3,
+    "textOne" : "china",
+    "textThree" : "จีน",
+    "textTwo" : "cheen"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000247, 1570000432, 1570026235, 1570073160, 1570321063, 1570540507, 1570605290, 1570605685, 1570605862 ],
+    "rating" : 3,
+    "textOne" : "close by",
+    "textThree" : "ใกล้ ๆ",
+    "textTwo" : "glay glaii"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001624, 1570002427, 1570002761 ],
+    "rating" : 3,
+    "textOne" : "consistent",
+    "textThree" : "คงเส้นคงวา",
+    "textTwo" : "kong sen kong waa"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999868, 1570002115, 1570002157, 1570002548, 1570003136, 1570024939, 1570025463, 1570025546, 1570363204, 1570363209, 1570363640 ],
+    "rating" : 2,
+    "textOne" : "concentrate",
+    "textThree" : "ตั้งสมาธิ",
+    "textTwo" : "(t)ang somatee"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002411, 1570002790, 1570003335, 1570073288, 1570073308, 1570321318, 1570540778 ],
+    "rating" : 4,
+    "textOne" : "dirt",
+    "textThree" : "ฝุ่น",
+    "textTwo" : "foon"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000402, 1570001984, 1570002335, 1570023309, 1570025853, 1570025950, 1570289942, 1570405489, 1570540590, 1570600838 ],
+    "rating" : 3,
+    "textOne" : "diving",
+    "textThree" : "การดำน้ำ",
+    "textTwo" : "gan dan nam"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002190, 1570002617, 1570025552, 1570025839, 1570321083, 1570321177 ],
+    "rating" : 4,
+    "textOne" : "determined",
+    "textThree" : "แน่นอน",
+    "textTwo" : "nei non"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999965, 1570025629, 1570025930, 1570073355, 1570320518, 1570320885, 1570363038, 1570540776 ],
+    "rating" : 4,
+    "textOne" : "dress",
+    "textThree" : "แต่งตัว",
+    "textTwo" : "(t)en(t)ooa"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999779, 1570002745, 1570025793, 1570161317, 1570320825, 1570320998, 1570321639, 1570338115 ],
+    "rating" : 3,
+    "textOne" : "dizzy",
+    "textThree" : "วิงเวียน",
+    "textTwo" : "wingweeyen"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999949, 1570001699, 1570023113 ],
+    "rating" : 3,
+    "textOne" : "europe",
+    "textThree" : "ยุโรป",
+    "textTwo" : "euro"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002223, 1570002727, 1570025613, 1570073097, 1570161695, 1570324805, 1570362976 ],
+    "rating" : 3,
+    "textOne" : "every time",
+    "textThree" : "ทุกเวลา",
+    "textTwo" : "tug wela"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002784, 1570003688, 1570003875, 1570289479 ],
+    "rating" : 3,
+    "textOne" : "english language",
+    "textThree" : "ภาษาอังกฤษ",
+    "textTwo" : "pasa angree"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570025468, 1570025678, 1570026190, 1570073285, 1570320928, 1570540973, 1570576958 ],
+    "rating" : 2,
+    "textOne" : "experienced",
+    "textThree" : "มีประสบการณ์",
+    "textTwo" : "mee (p)rasogaan"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000177, 1570002345, 1570026311, 1570161487, 1570289890, 1570319988, 1570321487, 1570364001, 1570366782, 1570366785, 1570369319, 1570403156, 1570605658 ],
+    "rating" : 2,
+    "textOne" : "expensive",
+    "textThree" : "เเพง",
+    "textTwo" : "pang"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002488, 1570023520, 1570025272, 1570025515, 1570025983, 1570340491 ],
+    "rating" : 2,
+    "textOne" : "far",
+    "textThree" : "ห่างไกล",
+    "textTwo" : "hang glai"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000571, 1570002556, 1570025216, 1570025375, 1570025456, 1570025870, 1570026247, 1570073129, 1570073315, 1570161732 ],
+    "rating" : 3,
+    "textOne" : "flashcards",
+    "textThree" : "บัตรคำศัพท์",
+    "textTwo" : "ba(t) kam sa(p)"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570024923, 1570025080, 1570404065, 1570405303 ],
+    "rating" : 4,
+    "textOne" : "father",
+    "textThree" : "พ่อ",
+    "textTwo" : "paw"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001585, 1570002940, 1570320358, 1570338238, 1570365784, 1570405431, 1570580493 ],
+    "rating" : 3,
+    "textOne" : "fresh",
+    "textThree" : "สด",
+    "textTwo" : "sod"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002170, 1570003075, 1570023278, 1570025571, 1570025722, 1570026113, 1570073200, 1570289930, 1570340483, 1570363676, 1570539262 ],
+    "rating" : 3,
+    "textOne" : "for example",
+    "textThree" : "ตัวอย่างเช่น",
+    "textTwo" : "(t)aw yang chen"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000072, 1570001956, 1570002197, 1570003877, 1570541210, 1570605262 ],
+    "rating" : 4,
+    "textOne" : "fruit",
+    "textThree" : "ผลไม้",
+    "textTwo" : "po lamai"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570004355, 1570026360, 1570320828, 1570338285, 1570540293 ],
+    "rating" : 4,
+    "textOne" : "great",
+    "textThree" : "มหา",
+    "textTwo" : "mahá"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999938, 1570000063, 1570001278, 1570001988, 1570002260, 1570406075 ],
+    "rating" : 4,
+    "textOne" : "good morning",
+    "textThree" : "สวัสดีตอนเช้าค่ะ",
+    "textTwo" : "swadee ton chaow ka"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002494, 1570023130, 1570023237, 1570289876, 1570321160, 1570321401 ],
+    "rating" : 5,
+    "textOne" : "handwrap",
+    "textThree" : "ผ้าพัน",
+    "textTwo" : "pa pan"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000560, 1570004291, 1570025535, 1570026226, 1570072986, 1570321215, 1570405430 ],
+    "rating" : 4,
+    "textOne" : "hang (clothes)",
+    "textThree" : "แขวนเสื้อผ้า",
+    "textTwo" : "kwen suh pa"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001798, 1570002206, 1570026212, 1570073060, 1570338144, 1570600977, 1570600986 ],
+    "rating" : 3,
+    "textOne" : "healthy",
+    "textThree" : "แข็งแรง",
+    "textTwo" : "ken ren"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001627, 1570025656, 1570026332, 1570073019, 1570073115, 1570321226, 1570321495, 1570366040, 1570366712, 1570402945, 1570403793, 1570404664, 1570539246 ],
+    "rating" : 3,
+    "textOne" : "heart",
+    "textThree" : "หัวใจ",
+    "textTwo" : "pwa zhai"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999803, 1570000147, 1570002589, 1570023333 ],
+    "rating" : 3,
+    "textOne" : "how much is it?",
+    "textThree" : "ราคาเท่าไหร่?",
+    "textTwo" : "raka kaow rai?"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002962, 1570003034, 1570003149, 1570023247, 1570023508, 1570026164, 1570026305, 1570073346, 1570320597, 1570320971, 1570321350, 1570600976 ],
+    "rating" : 2,
+    "textOne" : "how long?",
+    "textThree" : "นานแค่ไหน",
+    "textTwo" : "nan kai nai?"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289612, 1570289935, 1570320785, 1570321038, 1570363344, 1570363518, 1570366693, 1570367065, 1570403292 ],
+    "rating" : 3,
+    "textOne" : "spider",
+    "textThree" : "แมงมุม",
+    "textTwo" : "meing moom"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570025245, 1570025484, 1570338252, 1570363035, 1570366744, 1570404632, 1570605617, 1570605632 ],
+    "rating" : 3,
+    "textOne" : "how do you know?",
+    "textThree" : "คุณรู้ได้อย่างไร",
+    "textTwo" : "khun ru dai yang rai"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999827, 1570001815, 1570002905, 1570023184, 1570025490, 1570863853 ],
+    "rating" : 2,
+    "textOne" : "how",
+    "textThree" : "ได้อย่างไร",
+    "textTwo" : "dai yang rai"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570003281, 1570025807, 1570161722, 1570321502 ],
+    "rating" : 3,
+    "textOne" : "hospital",
+    "textThree" : "โรงพยาบาล",
+    "textTwo" : "rong payaban"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000575, 1570000582, 1570002067, 1570024916, 1570320083, 1570320179 ],
+    "rating" : 3,
+    "textOne" : "I think",
+    "textThree" : "ฉันคิด",
+    "textTwo" : "chan keed"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002596, 1570361575, 1570404921 ],
+    "rating" : 5,
+    "textOne" : "I like",
+    "textThree" : "ฉันชอบ",
+    "textTwo" : "chan chob"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001916, 1570002231, 1570023345, 1570320843, 1570321413 ],
+    "rating" : 2,
+    "textOne" : "job",
+    "textThree" : "งาน",
+    "textTwo" : "han"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002151, 1570002422, 1570321562, 1570539115 ],
+    "rating" : 4,
+    "textOne" : "leaf",
+    "textThree" : "ใบไม้",
+    "textTwo" : "bai mái"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999792, 1570002148 ],
+    "rating" : 3,
+    "textOne" : "language",
+    "textThree" : "ภาษา",
+    "textTwo" : "pasá"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001554, 1570001829, 1570361897 ],
+    "rating" : 3,
+    "textOne" : "long (time)",
+    "textThree" : "(เวลา) นาน",
+    "textTwo" : "(wela) nan"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999830, 1570002637, 1570024972, 1570025191, 1570319964, 1570321286, 1570321473, 1570405253, 1570405645, 1570405794 ],
+    "rating" : 2,
+    "textOne" : "muscle",
+    "textThree" : "กล้ามเนื้อ",
+    "textTwo" : "glam nu-úh"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001569, 1570002695, 1570025047, 1570161628, 1570405786, 1570406032, 1570406033, 1570576947 ],
+    "rating" : 1,
+    "textOne" : "that means something bad",
+    "textThree" : "นั่นหมายถึงสิ่งที่ไม่ดี",
+    "textTwo" : "nan mái (t)ung sing tee mai dee"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000340, 1570002059, 1570004249, 1570025207, 1570025736, 1570162106, 1570321345, 1570361510, 1570361903, 1570362546, 1570363312, 1570366875, 1570403546 ],
+    "rating" : 3,
+    "textOne" : "memorize",
+    "textThree" : "จดจำ",
+    "textTwo" : "jzod jzam"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000418, 1570001254, 1570002093, 1570002706, 1570002720, 1570003992, 1570026357, 1570073140, 1570321715, 1570405862, 1570538574 ],
+    "rating" : 3,
+    "textOne" : "(that) means",
+    "textThree" : "(นั่น)หมาย",
+    "textTwo" : "nan mái"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001556, 1570003007, 1570289805, 1570403079, 1570403152, 1570403515, 1570405637, 1570405992, 1570605520 ],
+    "rating" : 2,
+    "textOne" : "noodles",
+    "textThree" : "ก๋วยเตี๋ยว",
+    "textTwo" : "gway deeyo"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001795, 1570003044, 1570003091, 1570003171, 1570003769, 1570023105, 1570025905, 1570321671, 1570338280, 1570363119 ],
+    "rating" : 3,
+    "textOne" : "negative (attitude)",
+    "textThree" : "ทัศนคติเชิงลบ",
+    "textTwo" : "(tasanakadee) chung lob"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000518, 1570001898, 1570002279, 1570025387, 1570025507, 1570025531, 1570161641, 1570320568, 1570321076, 1570338129, 1570605636 ],
+    "rating" : 3,
+    "textOne" : "no problem",
+    "textThree" : "ไม่มีปัญหา",
+    "textTwo" : "mai mi (p)un háa"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002003, 1570002246, 1570003330, 1570026306, 1570073236, 1570321080, 1570405221, 1570604234 ],
+    "rating" : 5,
+    "textOne" : "potato",
+    "textThree" : "มันฝรั่ง",
+    "textTwo" : "manfarang"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002034, 1570002964, 1570025406, 1570319939, 1570320436, 1570363536, 1570403146, 1570403518 ],
+    "rating" : 2,
+    "textOne" : "price",
+    "textThree" : "ราคา",
+    "textTwo" : "raka"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999970 ],
+    "rating" : 5,
+    "textOne" : "phonecall",
+    "textThree" : "สายเข้า",
+    "textTwo" : "sai kaow"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999734, 1570000564, 1570003027, 1570025501, 1570073435, 1570073440, 1570161799, 1570540353, 1570604027 ],
+    "rating" : 3,
+    "textOne" : "tree",
+    "textThree" : "ต้นไม้",
+    "textTwo" : "(t)on mái"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999945, 1570002032, 1570002915, 1570004272, 1570025699 ],
+    "rating" : 3,
+    "textOne" : "that is not good",
+    "textThree" : "ที่ไม่ดี",
+    "textTwo" : "tee mai dee"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000428, 1570002552, 1570025495, 1570289536, 1570320914, 1570320920, 1570604893 ],
+    "rating" : 3,
+    "textOne" : "rent",
+    "textThree" : "ให้เช่า",
+    "textTwo" : "hei chaow"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570003832, 1570024959, 1570025093, 1570025829, 1570161476, 1570366871, 1570404840 ],
+    "rating" : 3,
+    "textOne" : "respect",
+    "textThree" : "เคารพ",
+    "textTwo" : "kaoró"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001580, 1570001858, 1570003046, 1570023339, 1570024979 ],
+    "rating" : 4,
+    "textOne" : "return",
+    "textThree" : "กลับ",
+    "textTwo" : "glab"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999767, 1570000567, 1570002129, 1570002924, 1570003159, 1570023324, 1570025834, 1570073222, 1570073241, 1570161481, 1570324788 ],
+    "rating" : 3,
+    "textOne" : "shin",
+    "textThree" : "หน้าแข้ง",
+    "textTwo" : "na keing"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000152, 1570001649, 1570026230, 1570319944, 1570320601, 1570321222, 1570540547 ],
+    "rating" : 3,
+    "textOne" : "sometimes",
+    "textThree" : "บางครั้ง",
+    "textTwo" : "bangkráng"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999935, 1570001805, 1570002349, 1570025256, 1570073367, 1570541075, 1570576952 ],
+    "rating" : 4,
+    "textOne" : "sun",
+    "textThree" : "ดวงอาทิตย์",
+    "textTwo" : "dong ateet"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002892, 1570003276, 1570023447, 1570025846, 1570161330, 1570540605 ],
+    "rating" : 3,
+    "textOne" : "shrimp",
+    "textThree" : "กุ้ง",
+    "textTwo" : "gung"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000185, 1570002226, 1570024943 ],
+    "rating" : 4,
+    "textOne" : "seafood",
+    "textThree" : "อาหารทะเล",
+    "textTwo" : "ahan talei"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999877, 1570002716, 1570004268, 1570023632, 1570025672, 1570025786, 1570025796, 1570161342, 1570289154, 1570289384 ],
+    "rating" : 2,
+    "textOne" : "stay",
+    "textThree" : "พักอยู่",
+    "textTwo" : "pag yuu"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001643, 1570002001, 1570023188, 1570023343, 1570024992, 1570025050, 1570338124 ],
+    "rating" : 2,
+    "textOne" : "school",
+    "textThree" : "โรงเรียน",
+    "textTwo" : "rong reeyen"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002293, 1570003017, 1570025586, 1570402892, 1570403133, 1570404686, 1570404827, 1570404957, 1570796755, 1570863864 ],
+    "rating" : 1,
+    "textOne" : "study",
+    "textThree" : "ศึกษา",
+    "textTwo" : "sug sá"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002578, 1570004302, 1570025268, 1570025607, 1570025731, 1570402966, 1570404141, 1570580508 ],
+    "rating" : 3,
+    "textOne" : "strong",
+    "textThree" : "แข็งแรง",
+    "textTwo" : "ken reng"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001283, 1570003005, 1570003307, 1570004245, 1570023159, 1570073461, 1570161458, 1570320964, 1570321021, 1570321208, 1570338197, 1570406012, 1570605728 ],
+    "rating" : 2,
+    "textOne" : "surfing",
+    "textThree" : "ท่อง",
+    "textTwo" : "tong"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570001901, 1570002119 ],
+    "rating" : 3,
+    "textOne" : "table",
+    "textThree" : "โต๊ะ",
+    "textTwo" : "dó"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570161564, 1570161908 ],
+    "rating" : 3,
+    "textOne" : "trust",
+    "textThree" : "วางใจ",
+    "textTwo" : "wang jzai"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999967, 1569999972, 1570321642, 1570405381, 1570405548, 1570540448 ],
+    "rating" : 3,
+    "textOne" : "tell me",
+    "textThree" : "บอกฉัน",
+    "textTwo" : "bog chan"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999753, 1570000237, 1570000334, 1570000509, 1570000524, 1570025626, 1570026015, 1570026220, 1570026348, 1570320527, 1570580491, 1570605111 ],
+    "rating" : 1,
+    "textOne" : "university",
+    "textThree" : "มหาวิทยาลัย",
+    "textTwo" : "(maha) (weetee) yalai"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999730, 1570000228, 1570002837, 1570003206, 1570003723, 1570025844, 1570026127, 1570321066, 1570321677, 1570363167 ],
+    "rating" : 2,
+    "textOne" : "weak",
+    "textThree" : "อ่อนแอ",
+    "textTwo" : "on ehh"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000319, 1570003273, 1570023213, 1570024927, 1570073026, 1570073381, 1570073405 ],
+    "rating" : 3,
+    "textOne" : "work hard",
+    "textThree" : "ทำงานหนัก",
+    "textTwo" : "tamhan nag"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570003071, 1570003712, 1570025087, 1570025184, 1570025648, 1570073023, 1570161683, 1570321146, 1570338261, 1570405986, 1570540470 ],
+    "rating" : 3,
+    "textOne" : "weight",
+    "textThree" : "น้ำหนัก",
+    "textTwo" : "nam na(g)"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570002980, 1570025398, 1570026261, 1570338183, 1570406063, 1570601166 ],
+    "rating" : 4,
+    "textOne" : "wind",
+    "textThree" : "ลม",
+    "textTwo" : "lom"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000397, 1570001749, 1570001946, 1570026253, 1570320726, 1570321054, 1570321646, 1570404637 ],
+    "rating" : 3,
+    "textOne" : "windy",
+    "textThree" : "ลมแรง",
+    "textTwo" : "lom ren"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1570000078, 1570004330, 1570006447, 1570023226, 1570024954, 1570025528 ],
+    "rating" : 2,
+    "textOne" : "what are you doing?",
+    "textThree" : "(คุณกำลัง)ทำอะไร?",
+    "textTwo" : "(khun gamlang) tam arai?"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999773, 1570001664, 1570002021, 1570024940, 1570321690, 1570321768, 1570540710, 1570605503 ],
+    "rating" : 1,
+    "textOne" : "when",
+    "textThree" : "เมื่อ?",
+    "textTwo" : "meux-ah?"
+  }, {
+    "dateCreated" : "2019-10-02",
+    "lastReviewed" : [ 1569999872, 1570002193, 1570002805, 1570003301 ],
+    "rating" : 3,
+    "textOne" : "wood",
+    "textThree" : "ไม้",
+    "textTwo" : "mái"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570338231, 1570361797, 1570362870, 1570362871, 1570364326, 1570402926, 1570405295, 1570405469 ],
+    "rating" : 2,
+    "textOne" : "I will show you",
+    "textThree" : "ฉันจะแสดงให้คุณเห็น",
+    "textTwo" : "chan jza sadeing hai khun hén"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320906, 1570362307, 1570363162, 1570363858, 1570405997 ],
+    "rating" : 3,
+    "textOne" : "soap",
+    "textThree" : "สบู่",
+    "textTwo" : "saboo"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289391, 1570321617, 1570338190, 1570362007, 1570362332, 1570362336, 1570364095 ],
+    "rating" : 3,
+    "textOne" : "give",
+    "textThree" : "ให้",
+    "textTwo" : "haì"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320476, 1570321368, 1570321574, 1570364037, 1570402950 ],
+    "rating" : 2,
+    "textOne" : "show",
+    "textThree" : "แสดง",
+    "textTwo" : "sadeing"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289430, 1570404062, 1570404536, 1570405736, 1570406041, 1570406054, 1570540439 ],
+    "rating" : 3,
+    "textOne" : "toilet paper",
+    "textThree" : "กระดาษชำระ",
+    "textTwo" : "kradat chamra"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570321554, 1570363053, 1570363793, 1570404947 ],
+    "rating" : 3,
+    "textOne" : "I will",
+    "textThree" : "ฉันจะ",
+    "textTwo" : "chan cza"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289856, 1570321583, 1570321742, 1570338140, 1570364048, 1570366896, 1570405437, 1570580888 ],
+    "rating" : 3,
+    "textOne" : "sink (for washing)",
+    "textThree" : "อ่างล้าง",
+    "textTwo" : "ang lang"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289352, 1570320457, 1570320903, 1570366722, 1570540289 ],
+    "rating" : 2,
+    "textOne" : "paper",
+    "textThree" : "กระดาษ",
+    "textTwo" : "kradat"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289377, 1570320975, 1570321431, 1570321735, 1570366971 ],
+    "rating" : 2,
+    "textOne" : "kitchen",
+    "textThree" : "ครัว",
+    "textTwo" : "krua"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320410, 1570403283, 1570405869 ],
+    "rating" : 2,
+    "textOne" : "shampoo",
+    "textThree" : "แชมพูสระผม",
+    "textTwo" : "champu sa pom"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320580, 1570321259, 1570324781, 1570362673, 1570363764, 1570404848, 1570541158 ],
+    "rating" : 2,
+    "textOne" : "body wash",
+    "textThree" : "ล้างร่างกาย",
+    "textTwo" : "lang rang gaie"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570288306, 1570289271, 1570363942 ],
+    "rating" : 3,
+    "textOne" : "full (vs. empty)",
+    "textThree" : "เต็ม",
+    "textTwo" : "(t)em"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289628, 1570320666, 1570540629, 1570541241, 1570796625 ],
+    "rating" : 3,
+    "textOne" : "full (vs. hungry)",
+    "textThree" : "อิ่ม",
+    "textTwo" : "eem"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289369, 1570320371, 1570320810, 1570321199 ],
+    "rating" : 2,
+    "textOne" : "empty",
+    "textThree" : "ว่างเปล่า",
+    "textTwo" : "wang plaow"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570321353, 1570321378, 1570367013, 1570404157, 1570604442 ],
+    "rating" : 3,
+    "textOne" : "oil",
+    "textThree" : "น้ำมัน",
+    "textTwo" : "naman"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570290018, 1570321330, 1570321593, 1570366070, 1570404940, 1570405178, 1570405231, 1570541035 ],
+    "rating" : 3,
+    "textOne" : "headphones",
+    "textThree" : "หูฟัง",
+    "textTwo" : "hoo fang"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289268, 1570289380, 1570320833, 1570321134, 1570321580 ],
+    "rating" : 3,
+    "textOne" : "answer",
+    "textThree" : "ตอบ",
+    "textTwo" : "(t)awb"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570288302, 1570321417 ],
+    "rating" : 2,
+    "textOne" : "chin",
+    "textThree" : "คาง",
+    "textTwo" : "kang"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289166, 1570319949, 1570320496, 1570320544, 1570320803, 1570364407, 1570366056 ],
+    "rating" : 2,
+    "textOne" : "face",
+    "textThree" : "ใบหน้า",
+    "textTwo" : "bai naa"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320468, 1570361879 ],
+    "rating" : 3,
+    "textOne" : "hair tie",
+    "textThree" : "ผูกผม",
+    "textTwo" : "pug pom"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320175, 1570321750, 1570361768, 1570363875, 1570404368, 1570405940 ],
+    "rating" : 2,
+    "textOne" : "ponytail",
+    "textThree" : "ผมหางม้า",
+    "textTwo" : "pom ha maa"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320329, 1570320345, 1570320588 ],
+    "rating" : 3,
+    "textOne" : "tie (the hair)",
+    "textThree" : "ผูก",
+    "textTwo" : "pug"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570338105, 1570363327, 1570363460, 1570540648, 1570540975 ],
+    "rating" : 2,
+    "textOne" : "cough",
+    "textThree" : "ไอ",
+    "textTwo" : "aie"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320995, 1570321138 ],
+    "rating" : 2,
+    "textOne" : "fly (insect)",
+    "textThree" : "แมลงวัน",
+    "textTwo" : "maleing wan"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289612, 1570289935, 1570320785, 1570321038, 1570363344, 1570363831, 1570366877, 1570405610, 1570540413 ],
+    "rating" : 2,
+    "textOne" : "spider",
+    "textThree" : "แมงมุม",
+    "textTwo" : "meing mum"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289199, 1570320349, 1570321056, 1570405968 ],
+    "rating" : 3,
+    "textOne" : "sharp",
+    "textThree" : "คม",
+    "textTwo" : "kom"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570338153, 1570362970, 1570362981 ],
+    "rating" : 2,
+    "textOne" : "ear",
+    "textThree" : "หู",
+    "textTwo" : "hú"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320865, 1570321194, 1570363065, 1570541258, 1570604809, 1570605601 ],
+    "rating" : 2,
+    "textOne" : "someone",
+    "textThree" : "บางคน",
+    "textTwo" : "bang kon"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570340498, 1570361543, 1570362876, 1570362906, 1570538597, 1570604518 ],
+    "rating" : 3,
+    "textOne" : "fingernail",
+    "textThree" : "เล็บมือ",
+    "textTwo" : "leb meux"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320196, 1570320204, 1570321542, 1570540367, 1570541196, 1570541295, 1570604805 ],
+    "rating" : 2,
+    "textOne" : "(dog) hair",
+    "textThree" : "ขน(สุนัข)",
+    "textTwo" : "kon (sunag)"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320444, 1570321156, 1570321415, 1570364306, 1570541110 ],
+    "rating" : 3,
+    "textOne" : "plants",
+    "textThree" : "พืช",
+    "textTwo" : "peuu(d)"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320155, 1570320440, 1570321188, 1570321681, 1570340517 ],
+    "rating" : 3,
+    "textOne" : "bag",
+    "textThree" : "ถุง",
+    "textTwo" : "túng"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570288686, 1570320676, 1570321484, 1570540851 ],
+    "rating" : 2,
+    "textOne" : "play with the dog",
+    "textThree" : "เล่นกับสุนัข",
+    "textTwo" : "len gab sunag"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289203, 1570321609, 1570404733 ],
+    "rating" : 2,
+    "textOne" : "what did you see?",
+    "textThree" : "คุณเห็นอะไร",
+    "textTwo" : "khun hen arai?"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570321537, 1570361560, 1570405963, 1570540393 ],
+    "rating" : 3,
+    "textOne" : "beautiful day",
+    "textThree" : "วันที่ดี",
+    "textTwo" : "wan tee dee"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570319984, 1570320552, 1570321091, 1570365779, 1570404853, 1570540018 ],
+    "rating" : 3,
+    "textOne" : "nobody",
+    "textThree" : "ไม่มีใคร",
+    "textTwo" : "mai mi crai"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289945, 1570320397, 1570320872, 1570320902, 1570321638, 1570403839, 1570601076 ],
+    "rating" : 4,
+    "textOne" : "gym",
+    "textThree" : "ยิม",
+    "textTwo" : "yim"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289467, 1570289903, 1570320772, 1570320987, 1570405816 ],
+    "rating" : 2,
+    "textOne" : "story",
+    "textThree" : "เรื่องราว",
+    "textTwo" : "ruh-ung raow"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289319, 1570319975, 1570321622, 1570363453, 1570403274, 1570404020, 1570604982 ],
+    "rating" : 2,
+    "textOne" : "shade",
+    "textThree" : "ร่มเงา",
+    "textTwo" : "rum naow"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289885, 1570320813, 1570405799, 1570406044, 1570540531, 1570601052, 1570601093 ],
+    "rating" : 2,
+    "textOne" : "shy",
+    "textThree" : "อาย",
+    "textTwo" : "aie"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570290012, 1570320325, 1570321299, 1570363138, 1570405133 ],
+    "rating" : 3,
+    "textOne" : "burn",
+    "textThree" : "เผา",
+    "textTwo" : "páow"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320413, 1570320433, 1570324813, 1570403853, 1570541067, 1570604949 ],
+    "rating" : 4,
+    "textOne" : "skin",
+    "textThree" : "ผิว",
+    "textTwo" : "peeyu"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289873, 1570320541, 1570363684, 1570603976 ],
+    "rating" : 4,
+    "textOne" : "container",
+    "textThree" : "พลาสติก",
+    "textTwo" : "plastik"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570319741, 1570320402 ],
+    "rating" : 2,
+    "textOne" : "how to say",
+    "textThree" : "คุณพูดอย่างไร",
+    "textTwo" : "khun pood yang rai"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289684, 1570320000, 1570320003, 1570321650, 1570404571, 1570405446, 1570405954, 1570540045, 1570605681 ],
+    "rating" : 4,
+    "textOne" : "before",
+    "textThree" : "ก่อน",
+    "textTwo" : "gawn"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570288682, 1570320014, 1570321598, 1570362322, 1570362326, 1570362705, 1570405951, 1570540795 ],
+    "rating" : 1,
+    "textOne" : "embarrassed",
+    "textThree" : "อึดอัดใจ",
+    "textTwo" : "euxd aad jzai"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570288299, 1570289162, 1570338109, 1570338113, 1570405893, 1570538589 ],
+    "rating" : 3,
+    "textOne" : "worried",
+    "textThree" : "กลุ้มใจ",
+    "textTwo" : "glume jzai"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320352, 1570361841, 1570601316 ],
+    "rating" : 3,
+    "textOne" : "yesterday",
+    "textThree" : "เมือวาน",
+    "textTwo" : "meux wan"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570288288, 1570320062, 1570363021, 1570404557, 1570605808 ],
+    "rating" : 2,
+    "textOne" : "what does that mean?",
+    "textThree" : "นั่นหมายความว่าอย่างไร?",
+    "textTwo" : "nan mai kwam wa yang rai?"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570321003, 1570321028, 1570321202, 1570321333, 1570338177, 1570404027, 1570405209 ],
+    "rating" : 3,
+    "textOne" : "knowledge",
+    "textThree" : "หมายความ",
+    "textTwo" : "mai kwam"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570362351, 1570605226 ],
+    "rating" : 3,
+    "textOne" : "that",
+    "textThree" : "นั่น",
+    "textTwo" : "nan"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570366900, 1570405278, 1570405633, 1570405714, 1570405715, 1570405728, 1570539285, 1570604448, 1570605032, 1570605523 ],
+    "rating" : 2,
+    "textOne" : "lie (not tell the truth)",
+    "textThree" : "โกหก",
+    "textTwo" : "gohog"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570320818, 1570320897, 1570321729, 1570361558, 1570363443, 1570366626, 1570404002, 1570404527 ],
+    "rating" : 3,
+    "textOne" : "that is not true",
+    "textThree" : "นั่นไม่เป็นความจริง",
+    "textTwo" : "nan mai pen kwam jzin"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570290015, 1570321242, 1570321427, 1570362001, 1570366945, 1570366946, 1570403346, 1570404016, 1570405139, 1570405669 ],
+    "rating" : 2,
+    "textOne" : "adjective",
+    "textThree" : "คำคุณศัพท์",
+    "textTwo" : "kam khun nasap"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289991, 1570361909, 1570405229, 1570405348 ],
+    "rating" : 3,
+    "textOne" : "how to say",
+    "textThree" : "คุณพูดอย่างไร",
+    "textTwo" : "khun pood yang rai"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570321558, 1570324810, 1570338151 ],
+    "rating" : 2,
+    "textOne" : "noun",
+    "textThree" : "คำนาม",
+    "textTwo" : "kam nam"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289264, 1570321131, 1570321464, 1570403837, 1570405214 ],
+    "rating" : 3,
+    "textOne" : "truth",
+    "textThree" : "ความจริง",
+    "textTwo" : "kwam jzin"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289276, 1570289387, 1570405989 ],
+    "rating" : 3,
+    "textOne" : "lock the door",
+    "textThree" : "ล็อคประตู",
+    "textTwo" : "lo(k) pratu"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289860, 1570289867, 1570321185, 1570321248, 1570321626 ],
+    "rating" : 2,
+    "textOne" : "the door is locked",
+    "textThree" : "ประตูถูกล็อค",
+    "textTwo" : "pratu tug lo(k)"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289622, 1570289671, 1570321070, 1570321532, 1570324721, 1570366925, 1570605510, 1570796560 ],
+    "rating" : 3,
+    "textOne" : "grow",
+    "textThree" : "เจริญ",
+    "textTwo" : "jza rern"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570290007, 1570321407, 1570404893, 1570405425 ],
+    "rating" : 3,
+    "textOne" : "one (piece)",
+    "textThree" : "อันเดียว",
+    "textTwo" : "(an) diao"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289156, 1570289920, 1570289983, 1570363540, 1570405433 ],
+    "rating" : 4,
+    "textOne" : "guitar",
+    "textThree" : "กีตาร์",
+    "textTwo" : "gee(t)aah"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289995, 1570321152, 1570321175, 1570321376, 1570361822, 1570362346, 1570404951, 1570605240 ],
+    "rating" : 4,
+    "textOne" : "over there",
+    "textThree" : "อยู่ที่นั่น",
+    "textTwo" : "yu tee nan"
+  }, {
+    "dateCreated" : "2019-10-05",
+    "lastReviewed" : [ 1570289258, 1570320557, 1570541062 ],
+    "rating" : 3,
+    "textOne" : "over here",
+    "textThree" : "อยู่ที่นี่",
+    "textTwo" : "yu tee nee"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363164, 1570403137, 1570403325, 1570404125, 1570404562, 1570404890, 1570540372 ],
+    "rating" : 1,
+    "textOne" : "shave",
+    "textThree" : "โกน",
+    "textTwo" : "gohn"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570403194, 1570404347, 1570405192, 1570538586, 1570540106, 1570600863, 1570604928 ],
+    "rating" : 1,
+    "textOne" : "yawn",
+    "textThree" : "อ้าปากค้าง",
+    "textTwo" : "ahh bag káng"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362291, 1570362881, 1570404280, 1570405156, 1570405174, 1570540123, 1570605086, 1570605467, 1570605793 ],
+    "rating" : 2,
+    "textOne" : "can I have",
+    "textThree" : "ฉันสามารถมี",
+    "textTwo" : "chan sama(t) mi"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361828, 1570366893, 1570660761 ],
+    "rating" : 2,
+    "textOne" : "can (v.)",
+    "textThree" : "สามารถ",
+    "textTwo" : "sama(t)"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363913, 1570365278, 1570366476, 1570403061, 1570403802, 1570404670, 1570404744 ],
+    "rating" : 3,
+    "textOne" : "take a nap",
+    "textThree" : "งีบหลับ",
+    "textTwo" : "neeb lab"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363158, 1570404068, 1570405219, 1570540977, 1570605675, 1570605812 ],
+    "rating" : 4,
+    "textOne" : "on",
+    "textThree" : "บน",
+    "textTwo" : "bon"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570403278, 1570403860, 1570605541 ],
+    "rating" : 3,
+    "textOne" : "outside",
+    "textThree" : "ด้านนอก",
+    "textTwo" : "dan nog"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363785, 1570403300, 1570404137, 1570404506, 1570404538, 1570405216 ],
+    "rating" : 3,
+    "textOne" : "soft",
+    "textThree" : "อ่อนนุ่ม",
+    "textTwo" : "on nume"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362097, 1570363026, 1570540789 ],
+    "rating" : 3,
+    "textOne" : "hard (vs. soft)",
+    "textThree" : "แข็ง",
+    "textTwo" : "kéng"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570405299, 1570405362, 1570405442 ],
+    "rating" : 2,
+    "textOne" : "travel (v.)",
+    "textThree" : "เที่ยว",
+    "textTwo" : "teeyo"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361929, 1570362683, 1570362728, 1570362940, 1570363891, 1570540685, 1570601108 ],
+    "rating" : 1,
+    "textOne" : "I want to travel",
+    "textThree" : "ฉันอยากไปเที่ยว",
+    "textTwo" : "chan ya(g) (p)eh teeyo"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361868, 1570404375, 1570404830 ],
+    "rating" : 2,
+    "textOne" : "want",
+    "textThree" : "อยาก",
+    "textTwo" : "yag"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363457, 1570363725, 1570405194 ],
+    "rating" : 3,
+    "textOne" : "go",
+    "textThree" : "ไป",
+    "textTwo" : "(p)aie"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362004, 1570366698, 1570402938, 1570403799, 1570403855, 1570403858 ],
+    "rating" : 2,
+    "textOne" : "imagine",
+    "textThree" : "จินตนาการ",
+    "textTwo" : "czin (t)anagan"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362520, 1570367038, 1570403824, 1570404502, 1570405122, 1570405598, 1570604940, 1570796550 ],
+    "rating" : 2,
+    "textOne" : "creative",
+    "textThree" : "สร้างสรรค์",
+    "textTwo" : "sang sán"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361922, 1570366460, 1570601305 ],
+    "rating" : 3,
+    "textOne" : "thought (n.)",
+    "textThree" : "ความคิด",
+    "textTwo" : "kwam keed"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570540514 ],
+    "rating" : 1,
+    "textOne" : "draw",
+    "textThree" : "วาด",
+    "textTwo" : "wa(d)"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363281, 1570363863, 1570364070 ],
+    "rating" : 2,
+    "textOne" : "get up early",
+    "textThree" : "ตื่นเช้า",
+    "textTwo" : "(t)un chaow"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570364080, 1570364282, 1570403833, 1570404912 ],
+    "rating" : 2,
+    "textOne" : "show you",
+    "textThree" : "แสดงให้คุณเห็น",
+    "textTwo" : "sadeing hei khun hén"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361507, 1570404165 ],
+    "rating" : 3,
+    "textOne" : "go to bed",
+    "textThree" : "ไปนอน",
+    "textTwo" : "bai non"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361526, 1570363746, 1570365265, 1570366779, 1570367007, 1570405451 ],
+    "rating" : 3,
+    "textOne" : "calendar",
+    "textThree" : "ปฏิทิน",
+    "textTwo" : "pateiteen"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570796759 ],
+    "rating" : 1,
+    "textOne" : "plan (v.)",
+    "textThree" : "วางแผน",
+    "textTwo" : "wang péhhn"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570366814, 1570404038, 1570404531, 1570540868, 1570600818, 1570601176, 1570601202, 1570605136 ],
+    "rating" : 1,
+    "textOne" : "let’s do it",
+    "textThree" : "มาทำกันเถอะ",
+    "textTwo" : "ma tam gan teux"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570364263, 1570540680 ],
+    "rating" : 3,
+    "textOne" : "Monday",
+    "textThree" : "วันจันทร์",
+    "textTwo" : "wan czan"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362712, 1570363324, 1570366910, 1570404044, 1570405641, 1570580881 ],
+    "rating" : 3,
+    "textOne" : "Tuesday",
+    "textThree" : "วันอังคาร",
+    "textTwo" : "wan ankan"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363842, 1570366755, 1570404112, 1570404519, 1570405887 ],
+    "rating" : 3,
+    "textOne" : "Wednesday",
+    "textThree" : "วันพุธ",
+    "textTwo" : "wan poo(t)"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362696, 1570364295, 1570366455, 1570403358, 1570404615, 1570404703 ],
+    "rating" : 3,
+    "textOne" : "Thursday",
+    "textThree" : "วันพฤหัสบดี",
+    "textTwo" : "wan paruhad"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363934, 1570364299, 1570364302, 1570540944, 1570541419, 1570605222 ],
+    "rating" : 3,
+    "textOne" : "Friday",
+    "textThree" : "วันศุกร์",
+    "textTwo" : "wan soo(g)"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570405970 ],
+    "rating" : 3,
+    "textOne" : "Saturday",
+    "textThree" : "วันเสาร์",
+    "textTwo" : "wan saow"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361800, 1570404675 ],
+    "rating" : 3,
+    "textOne" : "Sunday",
+    "textThree" : "วันอาทิตย์",
+    "textTwo" : "wan ateet"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570405903, 1570405993 ],
+    "rating" : 3,
+    "textOne" : "What day is it?",
+    "textThree" : "วันนี้วันอะไร?",
+    "textTwo" : "wan nee wan arai?"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363650, 1570403143, 1570404058, 1570405201, 1570605555 ],
+    "rating" : 2,
+    "textOne" : "October",
+    "textThree" : "ตุลาคม",
+    "textTwo" : "tulakom"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570364252, 1570403035, 1570404289, 1570404484, 1570404608, 1570404652 ],
+    "rating" : 2,
+    "textOne" : "November",
+    "textThree" : "พฤศจิกายน",
+    "textTwo" : "prusaczeegayoon"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570364025, 1570364257, 1570366962, 1570403039, 1570403050, 1570404944 ],
+    "rating" : 2,
+    "textOne" : "December",
+    "textThree" : "ธันวาคม",
+    "textTwo" : "tanwakom"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362709, 1570362755, 1570363223, 1570405423 ],
+    "rating" : 3,
+    "textOne" : "mobile app",
+    "textThree" : "แอพมือถือ",
+    "textTwo" : "app meux téux"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362264, 1570362890, 1570363049, 1570363473, 1570404717, 1570540466, 1570576964, 1570601309 ],
+    "rating" : 3,
+    "textOne" : "mirror",
+    "textThree" : "กระจก",
+    "textTwo" : "kray jo(g)"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363350, 1570366859, 1570404586, 1570405612, 1570405663, 1570405897 ],
+    "rating" : 3,
+    "textOne" : "hairbrush",
+    "textThree" : "หวี",
+    "textTwo" : "wée"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361918, 1570363643 ],
+    "rating" : 3,
+    "textOne" : "pussy",
+    "textThree" : "หี",
+    "textTwo" : "hee (up)"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362258, 1570362750, 1570363702 ],
+    "rating" : 2,
+    "textOne" : "client",
+    "textThree" : "ลูกค้า",
+    "textTwo" : "lu(g) káhh"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363835, 1570363989, 1570366851, 1570404118, 1570404380, 1570405128, 1570405375, 1570405585 ],
+    "rating" : 2,
+    "textOne" : "student",
+    "textThree" : "นักเรียน",
+    "textTwo" : "na(g) reeyen"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363544, 1570366830, 1570366968, 1570403338, 1570403522, 1570540443 ],
+    "rating" : 3,
+    "textOne" : "be patient",
+    "textThree" : "อด ทน",
+    "textTwo" : "od ton"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361815, 1570363774, 1570364013, 1570405745, 1570405748, 1570601216, 1570604381, 1570604815 ],
+    "rating" : 4,
+    "textOne" : "meditate",
+    "textThree" : "รำพึง",
+    "textTwo" : "rampung"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362283, 1570363694, 1570364017 ],
+    "rating" : 2,
+    "textOne" : "pet the cat",
+    "textThree" : "สัตว์เลี้ยงแมว",
+    "textTwo" : "sa(d) leeyun meh-ow"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361812, 1570363131, 1570604460, 1570605325 ],
+    "rating" : 3,
+    "textOne" : "lift weights",
+    "textThree" : "ยกน้ำหนัก",
+    "textTwo" : "yo(g) nam nag"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570364051, 1570365262, 1570404159, 1570404640, 1570404661 ],
+    "rating" : 3,
+    "textOne" : "cut (noun)",
+    "textThree" : "แผล",
+    "textTwo" : "pléhh"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570403198, 1570404542, 1570405141 ],
+    "rating" : 2,
+    "textOne" : "jump",
+    "textThree" : "กระโดด",
+    "textTwo" : "kradod"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362929, 1570363192, 1570405877, 1570405943 ],
+    "rating" : 2,
+    "textOne" : "point (v.)",
+    "textThree" : "ชี้",
+    "textTwo" : "chee"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362093, 1570362896, 1570364401, 1570604900 ],
+    "rating" : 2,
+    "textOne" : "lie down",
+    "textThree" : "นอนลง",
+    "textTwo" : "non long"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363174, 1570404168, 1570405874 ],
+    "rating" : 3,
+    "textOne" : "listen to her",
+    "textThree" : "ฟังเธอ",
+    "textTwo" : "fang teux"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363751, 1570363951, 1570364034, 1570405149 ],
+    "rating" : 3,
+    "textOne" : "listen",
+    "textThree" : "เธอ",
+    "textTwo" : "fang"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570403161 ],
+    "rating" : 2,
+    "textOne" : "her",
+    "textThree" : "เธอ",
+    "textTwo" : "teux"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361520, 1570363910, 1570406000 ],
+    "rating" : 3,
+    "textOne" : "him",
+    "textThree" : "เขา",
+    "textTwo" : "khao"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570405758, 1570406061, 1570540361, 1570540928, 1570605699 ],
+    "rating" : 2,
+    "textOne" : "boss",
+    "textThree" : "นาย",
+    "textTwo" : "naie"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362979, 1570366993, 1570539237, 1570605693, 1570605811, 1570605823 ],
+    "rating" : 4,
+    "textOne" : "should",
+    "textThree" : "ควร",
+    "textTwo" : "kuan"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362510, 1570404721 ],
+    "rating" : 2,
+    "textOne" : "relax",
+    "textThree" : "พักผ่อน",
+    "textTwo" : "pag pon"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362277, 1570366707, 1570367063, 1570540672, 1570541166, 1570605152 ],
+    "rating" : 2,
+    "textOne" : "I have a cut on my arm",
+    "textThree" : "ฉันมีแผลที่แขน",
+    "textTwo" : "chan mi pleh tee kén"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361937, 1570362742, 1570363790, 1570366843, 1570404930 ],
+    "rating" : 2,
+    "textOne" : "you should rest",
+    "textThree" : "คุณควรพักผ่อน",
+    "textTwo" : "khun kon pag pon"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570367028, 1570403017, 1570403809, 1570404739 ],
+    "rating" : 2,
+    "textOne" : "environment",
+    "textThree" : "สิ่งแวดล้อม",
+    "textTwo" : "singwedlón"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570404316, 1570404492, 1570405325, 1570541106, 1570580503, 1570604156, 1570605270 ],
+    "rating" : 3,
+    "textOne" : "good for the environment",
+    "textThree" : "ดีต่อสิ่งแวดล้อม",
+    "textTwo" : "dee (t)aw singwedlón"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570366879, 1570604478 ],
+    "rating" : 1,
+    "textOne" : "trash can",
+    "textThree" : "ถังขยะ",
+    "textTwo" : "táng kaya"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570362915, 1570363634, 1570363822, 1570366773, 1570366931, 1570367020, 1570367089, 1570604335 ],
+    "rating" : 4,
+    "textOne" : "charger",
+    "textThree" : "ที่ชาร์จ",
+    "textTwo" : "tee cha(k)"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361866, 1570363338, 1570366067, 1570604973, 1570604993 ],
+    "rating" : 2,
+    "textOne" : "bad mood",
+    "textThree" : "อารมณ์เสีย",
+    "textTwo" : "arom seeya"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363645, 1570405428 ],
+    "rating" : 3,
+    "textOne" : "emotion",
+    "textThree" : "อารม",
+    "textTwo" : "arom"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363947, 1570367047, 1570405389, 1570405723, 1570405724, 1570405725, 1570539118, 1570539122, 1570541279, 1570605044, 1570605147, 1570796622 ],
+    "rating" : 1,
+    "textOne" : "pay attention",
+    "textThree" : "ใส่ใจ",
+    "textTwo" : "sai czai"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361834, 1570363490, 1570363780, 1570863831 ],
+    "rating" : 1,
+    "textOne" : "childish",
+    "textThree" : "หน่อมแน้ม",
+    "textTwo" : "nom nem"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363729, 1570364331, 1570580511 ],
+    "rating" : 3,
+    "textOne" : "toothbrush",
+    "textThree" : "แปรงสีฟัน",
+    "textTwo" : "praeing see fan"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570361859, 1570404354, 1570404598, 1570405160 ],
+    "rating" : 2,
+    "textOne" : "toothpaste",
+    "textThree" : "ยาสีฟัน",
+    "textTwo" : "yaseefan"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363908, 1570364063, 1570366480, 1570404002, 1570404175, 1570406058, 1570540432, 1570540622 ],
+    "rating" : 3,
+    "textOne" : "close your eyes",
+    "textThree" : "ปิดตา",
+    "textTwo" : "bee ta"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363151, 1570404312, 1570404402, 1570404404, 1570405075 ],
+    "rating" : 2,
+    "textOne" : "orange (adj.)",
+    "textThree" : "สีส้ม",
+    "textTwo" : "see som"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363546, 1570364057 ],
+    "rating" : 2,
+    "textOne" : "don’t do it",
+    "textThree" : "อย่าทำมัน",
+    "textTwo" : "ya taman"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570363756, 1570365269, 1570403813, 1570405900 ],
+    "rating" : 3,
+    "textOne" : "do not",
+    "textThree" : "อย่า",
+    "textTwo" : "yaa"
+  }, {
+    "dateCreated" : "2019-10-06",
+    "lastReviewed" : [ 1570405224, 1570405243 ],
+    "rating" : 3,
+    "textOne" : "surprise",
+    "textThree" : "แปลกใจ",
+    "textTwo" : "pleg czai"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540102, 1570540556, 1570580874, 1570601111, 1570605047 ],
+    "rating" : 3,
+    "textOne" : "for me",
+    "textThree" : "สำหรับฉัน",
+    "textTwo" : "samrab chan"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570604947, 1570796681 ],
+    "rating" : 1,
+    "textOne" : "is for",
+    "textThree" : "สำหรับ",
+    "textTwo" : "samrab"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570604373, 1570604503, 1570604509 ],
+    "rating" : 1,
+    "textOne" : "teenager",
+    "textThree" : "วัยโจ๋",
+    "textTwo" : "wai jó"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540283, 1570540724, 1570576931, 1570604454 ],
+    "rating" : 2,
+    "textOne" : "you scare me",
+    "textThree" : "คุณทำให้ฉันกลัว",
+    "textTwo" : "khun tamhai chan glua"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540635 ],
+    "rating" : 0,
+    "textOne" : "make (e.g. make him happy)",
+    "textThree" : "ทำให้",
+    "textTwo" : "tamhai"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538510, 1570541020, 1570600896, 1570601119, 1570604322 ],
+    "rating" : 2,
+    "textOne" : "taste (v.)",
+    "textThree" : "ลิ้มรส",
+    "textTwo" : "leemrod"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540624, 1570605666 ],
+    "rating" : 3,
+    "textOne" : "remote",
+    "textThree" : "รีโมท",
+    "textTwo" : "reemo(t)"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540988, 1570600890, 1570600893, 1570601300, 1570604361, 1570605914 ],
+    "rating" : 1,
+    "textOne" : "air conditioning",
+    "textThree" : "เครื่องปรับอากาศ",
+    "textTwo" : "kluh-ung plab agad"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538508, 1570796805 ],
+    "rating" : 1,
+    "textOne" : "box",
+    "textThree" : "กล่อง",
+    "textTwo" : "glawng"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540099, 1570580909, 1570605714 ],
+    "rating" : 4,
+    "textOne" : "put in a box",
+    "textThree" : "ใส่ในกล่อง",
+    "textTwo" : "sai nai glawng"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570601320, 1570796509, 1570796510 ],
+    "rating" : 1,
+    "textOne" : "in",
+    "textThree" : "ใน",
+    "textTwo" : "nai"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540358, 1570601150, 1570604797 ],
+    "rating" : 2,
+    "textOne" : "store (noun)",
+    "textThree" : "ร้านค้า",
+    "textTwo" : "rankah"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570539140, 1570541204, 1570601070, 1570605609 ],
+    "rating" : 2,
+    "textOne" : "Look at me",
+    "textThree" : "มองมาที่ฉัน",
+    "textTwo" : "mong ma tee chan"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540424, 1570541273, 1570604332 ],
+    "rating" : 3,
+    "textOne" : "Look at",
+    "textThree" : "มองมา",
+    "textTwo" : "mong ma"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540607, 1570600736 ],
+    "rating" : 2,
+    "textOne" : "at",
+    "textThree" : "ที่",
+    "textTwo" : "tee"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570541044, 1570541306 ],
+    "rating" : 2,
+    "textOne" : "Not for you",
+    "textThree" : "ไม่ใช่สำหรับคุณ",
+    "textTwo" : "mai chai samrab khun"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540980, 1570541147, 1570541225 ],
+    "rating" : 2,
+    "textOne" : "What are you watching?",
+    "textThree" : "คุณกำลังดูอะไร",
+    "textTwo" : "khun gamlang du arai"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540296, 1570540565 ],
+    "rating" : 2,
+    "textOne" : "are watching",
+    "textThree" : "กำลังดู",
+    "textTwo" : "gamlang du"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540745 ],
+    "rating" : 2,
+    "textOne" : "you love him",
+    "textThree" : "คุณรักเขา",
+    "textTwo" : "khun rak khao"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "rating" : 0,
+    "textOne" : "drop it",
+    "textThree" : "ทำมันตก",
+    "textTwo" : "taman (t)o(g)"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "rating" : 0,
+    "textOne" : "move",
+    "textThree" : "ย้าย",
+    "textTwo" : "yaie"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540765, 1570580912, 1570604888 ],
+    "rating" : 3,
+    "textOne" : "next to me",
+    "textThree" : "ข้างๆฉัน",
+    "textTwo" : "kang kang chan"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540770, 1570605586 ],
+    "rating" : 2,
+    "textOne" : "this moment",
+    "textThree" : "ช่วงเวลานี้",
+    "textTwo" : "chung wela nee"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540534, 1570601100, 1570601212 ],
+    "rating" : 2,
+    "textOne" : "gecko",
+    "textThree" : "ตุ๊กแก",
+    "textTwo" : "tookay"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570541053, 1570580483 ],
+    "rating" : 2,
+    "textOne" : "lizard",
+    "textThree" : "จิ้งจก",
+    "textTwo" : "czin czo(g)"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540675, 1570600916, 1570605211, 1570796792 ],
+    "rating" : 1,
+    "textOne" : "window",
+    "textThree" : "หน้าต่าง",
+    "textTwo" : "nadaang"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540596, 1570605354, 1570605766 ],
+    "rating" : 1,
+    "textOne" : "night",
+    "textThree" : "กลางคืน",
+    "textTwo" : "glang keuxn"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540650, 1570600990, 1570604418, 1570605145 ],
+    "rating" : 2,
+    "textOne" : "dark",
+    "textThree" : "มืด",
+    "textTwo" : "meuxd"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538526, 1570541214, 1570605010, 1570605950 ],
+    "rating" : 2,
+    "textOne" : "moon",
+    "textThree" : "ดวงจันทร์",
+    "textTwo" : "duong czan"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540620, 1570580893, 1570605330 ],
+    "rating" : 1,
+    "textOne" : "star",
+    "textThree" : "ดาว",
+    "textTwo" : "daow"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540510, 1570541216, 1570604364 ],
+    "rating" : 2,
+    "textOne" : "squeeze",
+    "textThree" : "บีบ",
+    "textTwo" : "beeb"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540577, 1570540601, 1570604822 ],
+    "rating" : 3,
+    "textOne" : "handsome",
+    "textThree" : "หล่อ",
+    "textTwo" : "law"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540291, 1570580884, 1570605758 ],
+    "rating" : 1,
+    "textOne" : "makeup",
+    "textThree" : "แต่งหน้า",
+    "textTwo" : "(t)ang naah"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540117, 1570541343, 1570576979 ],
+    "rating" : 1,
+    "textOne" : "his body",
+    "textThree" : "ร่างของเขา",
+    "textTwo" : "rang kong khao"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570541079, 1570580480, 1570604523, 1570604996 ],
+    "rating" : 2,
+    "textOne" : "massage",
+    "textThree" : "นวด",
+    "textTwo" : "nuod"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540089, 1570541093, 1570605470 ],
+    "rating" : 5,
+    "textOne" : "addicted",
+    "textThree" : "ติดยา",
+    "textTwo" : "teed ya"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540020, 1570540558 ],
+    "rating" : 3,
+    "textOne" : "drug",
+    "textThree" : "ยา",
+    "textTwo" : "ya"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570539347, 1570600857 ],
+    "rating" : 1,
+    "textOne" : "I’m so sorry",
+    "textThree" : "เสียใจ",
+    "textTwo" : "see ad jai"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570539129, 1570605204, 1570605594, 1570660778 ],
+    "rating" : 3,
+    "textOne" : "can’t speak",
+    "textThree" : "พูดไม่ได้",
+    "textTwo" : "pood mai dai"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540954, 1570604801, 1570605819 ],
+    "rating" : 2,
+    "textOne" : "you are safe",
+    "textThree" : "คุณปลอดภัย",
+    "textTwo" : "khun plod paie"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538576, 1570540938 ],
+    "rating" : 3,
+    "textOne" : "drink",
+    "textThree" : "ดื่ม",
+    "textTwo" : "derm"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540997, 1570541051, 1570541250, 1570541437 ],
+    "rating" : 1,
+    "textOne" : "stand up",
+    "textThree" : "ลุกขึ้น",
+    "textTwo" : "lug keuxn"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540542, 1570541029 ],
+    "rating" : 3,
+    "textOne" : "lick",
+    "textThree" : "เลีย",
+    "textTwo" : "leeya"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540827, 1570600866, 1570604932 ],
+    "rating" : 2,
+    "textOne" : "swollen",
+    "textThree" : "ปูด",
+    "textTwo" : "(p)ood"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538513, 1570540818, 1570580900, 1570601139 ],
+    "rating" : 2,
+    "textOne" : "Is it correct?",
+    "textThree" : "ถูกต้องหรือไม่",
+    "textTwo" : "tug (t)ong reux mai?"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570796591 ],
+    "rating" : 2,
+    "textOne" : "or not?",
+    "textThree" : "หรือไม่",
+    "textTwo" : "reux mai"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538528, 1570604424, 1570605796 ],
+    "rating" : 2,
+    "textOne" : "correct",
+    "textThree" : "ถูกต้อง",
+    "textTwo" : "teuxg (t)ong"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540549, 1570541083 ],
+    "rating" : 2,
+    "textOne" : "ask",
+    "textThree" : "ถาม",
+    "textTwo" : "tám"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570605672, 1570796537 ],
+    "rating" : 1,
+    "textOne" : "pharmacy",
+    "textThree" : "ร้านขายยา",
+    "textTwo" : "ran kaie ya"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570539290, 1570601090, 1570601160 ],
+    "rating" : 2,
+    "textOne" : "employee",
+    "textThree" : "ลูกจ้าง",
+    "textTwo" : "lug czang"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538579, 1570541253, 1570580513 ],
+    "rating" : 3,
+    "textOne" : "mouse",
+    "textThree" : "เม้าส์",
+    "textTwo" : "maow"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540249, 1570605026, 1570796585 ],
+    "rating" : 1,
+    "textOne" : "rat",
+    "textThree" : "หนู",
+    "textTwo" : "nu (up)"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540573 ],
+    "rating" : 2,
+    "textOne" : "insect",
+    "textThree" : "แมลง",
+    "textTwo" : "maleing"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540639, 1570540947, 1570601209, 1570605565 ],
+    "rating" : 1,
+    "textOne" : "cut (hair)",
+    "textThree" : "ตัด(ผม)",
+    "textTwo" : "tad (pom)"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570604231, 1570660769 ],
+    "rating" : 1,
+    "textOne" : "scissors",
+    "textThree" : "กรรไกร",
+    "textTwo" : "gang graiie"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570539264, 1570540421, 1570605336 ],
+    "rating" : 1,
+    "textOne" : "human",
+    "textThree" : "เป็นมนุษย์",
+    "textTwo" : "(p)en manood"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570541032, 1570603964, 1570604429 ],
+    "rating" : 2,
+    "textOne" : "bed",
+    "textThree" : "เตียง",
+    "textTwo" : "(t)eeyung"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540461, 1570660773 ],
+    "rating" : 1,
+    "textOne" : "under (the bed)",
+    "textThree" : "ใต้เตียง",
+    "textTwo" : "(t)ai (t)eeyung"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570541058 ],
+    "rating" : 2,
+    "textOne" : "on the table",
+    "textThree" : "บนโต๊ะ",
+    "textTwo" : "bon (t)aw"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538507, 1570600462, 1570604249, 1570605833 ],
+    "rating" : 2,
+    "textOne" : "fall (v.)",
+    "textThree" : "ตก",
+    "textTwo" : "taw(g)"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570604015 ],
+    "rating" : 1,
+    "textOne" : "nipple",
+    "textThree" : "หัวนม",
+    "textTwo" : "wa nom"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570541069 ],
+    "rating" : 1,
+    "textOne" : "serious",
+    "textThree" : "จริงจัง",
+    "textTwo" : "czin czang"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "rating" : 0,
+    "textOne" : "top",
+    "textThree" : "ด้านบน",
+    "textTwo" : "dan bon"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540047, 1570541131, 1570580904, 1570604167 ],
+    "rating" : 2,
+    "textOne" : "middle",
+    "textThree" : "กลาง",
+    "textTwo" : "glang"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "rating" : 0,
+    "textOne" : "bottom",
+    "textThree" : "ด้านล่าง",
+    "textTwo" : "dang lang"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570539125, 1570540119 ],
+    "rating" : 3,
+    "textOne" : "team",
+    "textThree" : "ทีม",
+    "textTwo" : "teem"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540037 ],
+    "rating" : 2,
+    "textOne" : "fighter",
+    "textThree" : "นักมวย",
+    "textTwo" : "nak muay"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540475 ],
+    "rating" : 1,
+    "textOne" : "opponent",
+    "textThree" : "คู่แข่ง",
+    "textTwo" : "ku keng"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570539341 ],
+    "rating" : 2,
+    "textOne" : "kill",
+    "textThree" : "ฆ่า",
+    "textTwo" : "kaa"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570796517 ],
+    "rating" : 2,
+    "textOne" : "how many?",
+    "textThree" : "เท่าไหร่",
+    "textTwo" : "tao rai?"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540397, 1570541124, 1570604813 ],
+    "rating" : 2,
+    "textOne" : "again",
+    "textThree" : "อีกครั้ง",
+    "textTwo" : "eeg krang"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540026, 1570540806, 1570604406 ],
+    "rating" : 1,
+    "textOne" : "the store is closed",
+    "textThree" : "ร้านค้าถูกปิด",
+    "textTwo" : "rankahh tug (p)eed"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570540358, 1570601150, 1570604797, 1570796786 ],
+    "rating" : 3,
+    "textOne" : "store (noun)",
+    "textThree" : "ร้านค้า",
+    "textTwo" : "rankah"
+  }, {
+    "dateCreated" : "2019-10-08",
+    "lastReviewed" : [ 1570538593, 1570539278 ],
+    "rating" : 2,
+    "textOne" : "the store is open",
+    "textThree" : "ร้านค้าเปิด",
+    "textTwo" : "ranka peux(d)"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "fried sweet potato balls",
+    "textThree" : "ไข่นกกะทา",
+    "textTwo" : "kai nok katta"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "tapioca balls",
+    "textThree" : "มุก",
+    "textTwo" : "mooc"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "straw",
+    "textThree" : "หลอด",
+    "textTwo" : "lod"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "good (not dee)",
+    "textThree" : "เก่ง",
+    "textTwo" : "geing"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "can you set an alarm?",
+    "textThree" : "คุณสามารถตั้งเวลาได้หรือไม่",
+    "textTwo" : "khun samat (t)ang wela dai reux mai?"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "boyfriend",
+    "textThree" : "แฟนผู้ชาย",
+    "textTwo" : "fen pu chai"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "girlfriend",
+    "textThree" : "แฟนผู้หญิง",
+    "textTwo" : "fen puying"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "morning glory",
+    "textThree" : "ผักบุ้ง",
+    "textTwo" : "(p)ag (b)ung"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "grateful",
+    "textThree" : "ขอบคุณ",
+    "textTwo" : "kob khun"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "onion",
+    "textThree" : "หัวหอม",
+    "textTwo" : "hua hom"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "garden",
+    "textThree" : "สวน",
+    "textTwo" : "suan"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "swallow",
+    "textThree" : "กลืน",
+    "textTwo" : "gleuxn"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "hiccups",
+    "textThree" : "สะอึก",
+    "textTwo" : "sa oo(g)"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "vocabulary",
+    "textThree" : "ศัพท์",
+    "textTwo" : "sa(p)"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "thing",
+    "textThree" : "สิ่ง",
+    "textTwo" : "sing"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "weekend",
+    "textThree" : "สุดสัปดาห์",
+    "textTwo" : "sud sabdahh"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "try new things",
+    "textThree" : "ลองสิ่งใหม่ ๆ",
+    "textTwo" : "long sing mai mai"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "(clock) alarm",
+    "textThree" : "นาฬิกาปลุก",
+    "textTwo" : "(naleega) (b)loog"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "watch",
+    "textThree" : "นาฬิกา",
+    "textTwo" : "naleega"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "move your hand",
+    "textThree" : "ขยับมือคุณ",
+    "textTwo" : "keeya meux khun"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "move (not yaie)",
+    "textThree" : "ขยับ",
+    "textTwo" : "keeya"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "timer",
+    "textThree" : "เครื่องจับเวลา",
+    "textTwo" : "keung czab wela"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "machine",
+    "textThree" : "จับเวลา",
+    "textTwo" : "keung"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "catch",
+    "textThree" : "จับ",
+    "textTwo" : "czab"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "farm",
+    "textThree" : "ฟาร์ม",
+    "textTwo" : "faahm"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "ceiling",
+    "textThree" : "เพดาน",
+    "textTwo" : "pedan"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "wall",
+    "textThree" : "ผนัง THIS NEEDS UP ACCENT",
+    "textTwo" : "panang"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "floor",
+    "textThree" : "ชั้น",
+    "textTwo" : "chan"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "tight",
+    "textThree" : "แน่น",
+    "textTwo" : "nen"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "tense",
+    "textThree" : "เครียด",
+    "textTwo" : "kreeyed"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "abs",
+    "textThree" : "กล้ามเนื้อหน้าท้อง",
+    "textTwo" : "glam neuah na tong"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "belly",
+    "textThree" : "หน้าท้อง",
+    "textTwo" : "na tóng"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "spit",
+    "textThree" : "น้ำลาย",
+    "textTwo" : "namlaie"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "wipe",
+    "textThree" : "เช็ด",
+    "textTwo" : "ched"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "messy",
+    "textThree" : "ยุ่ง",
+    "textTwo" : "yung"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "lotion",
+    "textThree" : "โลชั่น",
+    "textTwo" : "lochan"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "dry",
+    "textThree" : "แห้ง",
+    "textTwo" : "hang"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "headache",
+    "textThree" : "ปวดหัว",
+    "textTwo" : "(b)ua(d) hua"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "pain",
+    "textThree" : "ปวด",
+    "textTwo" : "(b)ua(d)"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "sauce",
+    "textThree" : "ซอส",
+    "textTwo" : "sau(s)"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "fried food",
+    "textThree" : "อาหารทอด",
+    "textTwo" : "ahan to(d)"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "bone",
+    "textThree" : "กระดูก",
+    "textTwo" : "kradoo(g)"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "round",
+    "textThree" : "รอบ",
+    "textTwo" : "rob"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "meat",
+    "textThree" : "เนื้อ",
+    "textTwo" : "neu-ah"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "arrive",
+    "textThree" : "มาถึง",
+    "textTwo" : "ma tung"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "has he arrived yet?",
+    "textThree" : "เขามาถึงหรือยัง",
+    "textTwo" : "khao ma tung reux yang?"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "celebrate",
+    "textThree" : "ฉลอง",
+    "textTwo" : "chalong"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "birthday",
+    "textThree" : "วันเกิด",
+    "textTwo" : "wan geux(d)"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "wife",
+    "textThree" : "ภรรยา",
+    "textTwo" : "pan rea"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "husband",
+    "textThree" : "สามี",
+    "textTwo" : "samee"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "marry",
+    "textThree" : "แต่งงาน",
+    "textTwo" : "taing aan"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "Muslim",
+    "textThree" : "มุสลิม",
+    "textTwo" : "Musleem"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "woman",
+    "textThree" : "หญิง",
+    "textTwo" : "yíng"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "man",
+    "textThree" : "ชาย",
+    "textTwo" : "chai"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "son",
+    "textThree" : "ลูกชาย",
+    "textTwo" : "lug chai"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "daughter",
+    "textThree" : "ลูกสาว",
+    "textTwo" : "lug sao"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "honest",
+    "textThree" : "ซื่อสัตย์",
+    "textTwo" : "seux sat"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "independent",
+    "textThree" : "อิสระ",
+    "textTwo" : "ee sara"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "take a photo",
+    "textThree" : "ถ่ายรูป",
+    "textTwo" : "taie ru"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "photo",
+    "textThree" : "รูปถ่าย",
+    "textTwo" : "ru taie"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "gentle",
+    "textThree" : "อ่อนโยน",
+    "textTwo" : "on yon"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "buffalo",
+    "textThree" : "ควาย",
+    "textTwo" : "kway"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "confidence",
+    "textThree" : "ความมั่นใจ",
+    "textTwo" : "kwam man czai"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "who",
+    "textThree" : "ใคร",
+    "textTwo" : "kray"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "who lives here?",
+    "textThree" : "ใครอยู่ที่นี่",
+    "textTwo" : "kray yu tee nee"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "snake",
+    "textThree" : "งู",
+    "textTwo" : "huu"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "you are fast like a snake",
+    "textThree" : "คุณเร็วเหมือนงู",
+    "textTwo" : "khun reio mung huy"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "like (similar to)",
+    "textThree" : "เหมือน",
+    "textTwo" : "mung"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "practice",
+    "textThree" : "การปฏิบัติ",
+    "textTwo" : "gan pateeba"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "I feel guilty",
+    "textThree" : "ฉันรู้สึกผิด",
+    "textTwo" : "chan rusug peed"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "lastReviewed" : [ 1570863896 ],
+    "rating" : 1,
+    "textOne" : "she is brave",
+    "textThree" : "เธอกล้าหาญ",
+    "textTwo" : "teux glahan"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "only",
+    "textThree" : "เท่านั้น",
+    "textTwo" : "tao nan"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "comment",
+    "textThree" : "คอมเม้น",
+    "textTwo" : "commen"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "phone number",
+    "textThree" : "หมายเลขโทรศัพท์",
+    "textTwo" : "maie leh torasap"
+  }, {
+    "dateCreated" : "2019-10-12",
+    "rating" : 0,
+    "textOne" : "number",
+    "textThree" : "หมายเลข",
+    "textTwo" : "mai leh"
+  } ]
+}
