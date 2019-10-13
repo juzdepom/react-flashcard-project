@@ -8,16 +8,27 @@ class Progress extends React.Component {
 
         this.state = {
             progressLogShowing: false,
+            moreCardsNeeded: 0,
+            masteredCardsGoal: 0,
+            cardReviewExp: 0,
+            averageCardExpPerDay: 0,
+            numberOfDaysToMastery: 0
         }
+
+        // this.handleInputEdit = this.handleInputEdit.bind(this);
+        // this.displayProgressLog = this.displayProgressLog.bind(this);
+        // this.closeProgressLog = this.closeProgressLog.bind(this);
     }
 
-    displayProgressLog(){
+    displayProgressLog = () => {
         this.setState({progressLogShowing: true})
+        this.props.progressLogIsShowing(true)
         
     }
 
-    closeProgressLog(){
+    closeProgressLog = () => {
         this.setState({progressLogShowing: false})
+        this.props.progressLogIsShowing(false)
     }
 
     convertDate(dateString){
@@ -30,6 +41,7 @@ class Progress extends React.Component {
         let totalExp = array[0] + (array[1] * 2) + (array[2] * 3) + (array[3] * 4) + (array[4] * 5) + (array[5] * 6)
         return totalExp;
     }
+    
     calculateTotalDeckCount(array){
         let count = array.reduce((a, b) => a + b, 0)
         return count;
@@ -105,8 +117,17 @@ class Progress extends React.Component {
         })
     }
 
+    handleInputEdit = (text, event) => {
+        if(text==="moreCardsNeeded"){
+            this.setState({
+                moreCardsNeeded: event.target.value
+            })
+        }
+    }
+
     render(){
         let percentage = Math.floor(this.props.totalPoints / 6000 * 100)
+        let { moreCardsNeeded } = this.state;
         return (
             <div className="progress">
                 Total Cards: {this.props.cards.length} <br/>
@@ -125,6 +146,13 @@ class Progress extends React.Component {
                             className="progress-log--top-row--close-button">
                             X
                         </button>
+                    </div>
+                    <div className="progress-log--predictions">
+                        You need <input
+                                        type="text"
+                                        value={moreCardsNeeded}
+                                        onChange={(event) => this.handleInputEdit("moreCardsNeeded", event)}
+                                    /> more cards to have 1000 mastered cards. You need XX more Card review Exp and XX more new card Exp. Based off of your current Card Exp earning rate (XX per day), we are estimating you will have mastered 1000 cards in XX days.
                     </div>
 
                     <div className="progress-log--body">

@@ -126,8 +126,14 @@ Potential future todos: <br/>
 
 ## Session 9
 *🗓 S, Oct 11, 2019* <br>
-🕐 6:40AM-
+🕐 6:40AM-3:30PM
 
 ``` Commit: #9 updated addflashcards component a bit```
 ``` Commit: #9 convered Card.css to Card.scss```
 ``` Commit: #9 when flipping card, reveals Thai characters first, then reveals pronunciation```
+``` Commit: #9 Finished Progress Component```
+
+<img src="/screenshots/10-11-2019.png" width="400" alt="10-11-2019">
+
+## Session 10
+*🗓 Su, Oct 12, 2019* <br>

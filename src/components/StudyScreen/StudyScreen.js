@@ -63,7 +63,7 @@ class StudyScreen extends React.Component {
       //
       progressLogData: [],
       cardsRated: 0,
-      // progressLogEntry: {},
+      progressLogIsShowing: false
     }
 
   }
@@ -121,6 +121,9 @@ class StudyScreen extends React.Component {
   //keyboard keys 1-5 help you rate the card; 0 flips the card;
   //SHIFT + 1-5 doesn't rate the card and picks a card from a specific deck.
   _handleKeyDown = (e) => {
+
+    if(this.state.progressLogIsShowing){return}
+
     switch(e.keyCode) {
       case 48: //0
         if(e.shiftKey){
@@ -461,13 +464,29 @@ class StudyScreen extends React.Component {
     this.setState({deckListDisplay: "none"})
   }
 
+  progressLogIsShowing = (b) => {
+    if(b===true){
+      this.setState({
+        progressLogIsShowing: true
+      })
+    } else {
+      this.setState({
+        progressLogIsShowing: false
+      })
+    }
+  }
+
   render() {
    
     return (
       <div className="StudyScreen">
         {/* TO DO: add a loading screen: Loading Cards from Database... */}
         
-        <Progress cards={this.state.cards} totalPoints={this.state.level.totalPoints} progressLogData={this.state.progressLogData} />
+        <Progress 
+          progressLogIsShowing={this.progressLogIsShowing} 
+          cards={this.state.cards} 
+          totalPoints={this.state.level.totalPoints} 
+          progressLogData={this.state.progressLogData} />
 
         <Search 
           cards={this.state.cards} 
