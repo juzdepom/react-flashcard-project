@@ -1,5 +1,6 @@
 import React from 'react';
 import './Progress.scss';
+import { convertDate } from '../../../methods/methods'
 
 class Progress extends React.Component {
 
@@ -28,53 +29,45 @@ class Progress extends React.Component {
         this.props.progressLogIsShowing(false)
     }
 
-    convertMonthNumberToString(monthInt){
-        var month = ""
-        switch(monthInt){
-            case 1: month = "Jan"
-            break;
-            case 2: month = "Feb"
-            break;
-            case 3: month = "Mar"
-            break;
-            case 4: month = "Apr"
-            break;
-            case 5: month = "May"
-            break;
-            case 6: month = "June"
-            break;
-            case 7: month = "July"
-            break;
-            case 8: month = "Aug"
-            break;
-            case 9: month = "Sep"
-            break;
-            case 10: month = "Oct"
-            break;
-            case 11: month = "Nov"
-            break;
-            case 12: month = "Dec"
-            break;
-            default:
-                alert(`Error: monthInt out of range: ${monthInt}`)
-                break;
-        }
-        return month
-    }
-
-    //convert from dd-mm-yyyy to mmm dd, yyy
-    convertDate(dateString){
-        var arr = dateString.split("-")
-        let day = arr[0].trim()
-        var month = arr[1].trim()
-        month = this.convertMonthNumberToString(parseInt(month))
-        let year = arr[2].trim()
-        var newString = month + " " + day + ", " + year
-        return newString
-        
-        //we want it to read as Sep 10, 2019
-        // return dateString
-    }
+    // //convert from 14-10-2019 to Oct 14, 2019
+    // convertDate(dateString){
+    //     var arr = dateString.split("-")
+    //     let day = arr[0].trim()
+    //     let year = arr[2].trim()
+    //     let monthInt = parseInt(arr[1].trim())
+    //     var month = ""
+    //     switch(monthInt){
+    //         case 1: month = "Jan"
+    //         break;
+    //         case 2: month = "Feb"
+    //         break;
+    //         case 3: month = "Mar"
+    //         break;
+    //         case 4: month = "Apr"
+    //         break;
+    //         case 5: month = "May"
+    //         break;
+    //         case 6: month = "June"
+    //         break;
+    //         case 7: month = "July"
+    //         break;
+    //         case 8: month = "Aug"
+    //         break;
+    //         case 9: month = "Sep"
+    //         break;
+    //         case 10: month = "Oct"
+    //         break;
+    //         case 11: month = "Nov"
+    //         break;
+    //         case 12: month = "Dec"
+    //         break;
+    //         default:
+    //             alert(`Error: monthInt out of range: ${monthInt}`)
+    //             break;
+    //     }
+    //     var newString = month + " " + day + ", " + year
+    //     return newString
+    // }
 
     calculateTotalExpPoints(array){
         let totalExp = array[0] + (array[1] * 2) + (array[2] * 3) + (array[3] * 4) + (array[4] * 5) + (array[5] * 6)
@@ -104,7 +97,7 @@ class Progress extends React.Component {
             var cardExpEarned = "XX"
 
             var date = entry[dateString]
-            date = this.convertDate(date);
+            date = convertDate(date);
             let deckZero = entry[deckNumbers][0]
             let deckOne = entry[deckNumbers][1]
             let deckTwo = entry[deckNumbers][2]
