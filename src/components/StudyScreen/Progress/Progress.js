@@ -12,7 +12,8 @@ class Progress extends React.Component {
             masteredCardsGoal: 1000,
             cardReviewExp: 0,
             averageTotalExpPerDay: 0,
-            numberOfDaysToMastery: 0
+            numberOfDaysToMastery: 0, 
+            dateOfMastery: "",
         }
     }
 
@@ -27,10 +28,52 @@ class Progress extends React.Component {
         this.props.progressLogIsShowing(false)
     }
 
+    convertMonthNumberToString(monthInt){
+        var month = ""
+        switch(monthInt){
+            case 1: month = "Jan"
+            break;
+            case 2: month = "Feb"
+            break;
+            case 3: month = "Mar"
+            break;
+            case 4: month = "Apr"
+            break;
+            case 5: month = "May"
+            break;
+            case 6: month = "June"
+            break;
+            case 7: month = "July"
+            break;
+            case 8: month = "Aug"
+            break;
+            case 9: month = "Sep"
+            break;
+            case 10: month = "Oct"
+            break;
+            case 11: month = "Nov"
+            break;
+            case 12: month = "Dec"
+            break;
+            default:
+                alert(`Error: monthInt out of range: ${monthInt}`)
+                break;
+        }
+        return month
+    }
+
+    //convert from dd-mm-yyyy to mmm dd, yyy
     convertDate(dateString){
-        //currently dateString reads as dd-mm-yyyy
+        var arr = dateString.split("-")
+        let day = arr[0].trim()
+        var month = arr[1].trim()
+        month = this.convertMonthNumberToString(parseInt(month))
+        let year = arr[2].trim()
+        var newString = month + " " + day + ", " + year
+        return newString
+        
         //we want it to read as Sep 10, 2019
-        return dateString
+        // return dateString
     }
 
     calculateTotalExpPoints(array){
@@ -162,7 +205,7 @@ class Progress extends React.Component {
         
         var moreCardsNeeded = 0;
         var cardReviewExp = 0;
-        var averageTotalExpPerDay = 0
+        var averageTotalExpPerDay = 0;
         var numberOfDaysToMastery = 0;
 
         let entry = this.props.progressLogData[0]
@@ -203,7 +246,7 @@ class Progress extends React.Component {
 
     render(){
         let percentage = Math.floor(this.props.totalPoints / 6000 * 100)
-        let { moreCardsNeeded, masteredCardsGoal, cardReviewExp, averageTotalExpPerDay, numberOfDaysToMastery } = this.state;
+        let { moreCardsNeeded, masteredCardsGoal, cardReviewExp, averageTotalExpPerDay, numberOfDaysToMastery, dateOfMastery } = this.state;
         return (
             <div className="progress">
                 Total Cards: {this.props.cards.length} <br/>
@@ -240,7 +283,7 @@ class Progress extends React.Component {
                             type="text"
                             value={numberOfDaysToMastery}
                             onChange={(event) => this.handleInputEdit("numberOfDaysToMastery", event)} />
-                        &nbsp;days.
+                        &nbsp;days{dateOfMastery}.
                     </div>
 
                     <div className="progress-log--body">

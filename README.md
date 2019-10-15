@@ -144,4 +144,5 @@ Potential future todos: <br/>
 ## Session 11
 *🗓 Tu, Oct 15, 2019* <br>
 
+#11 npm install react moment
 #11 added the estimated date of achieved fluency
