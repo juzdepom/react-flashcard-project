@@ -144,5 +144,9 @@ Potential future todos: <br/>
 ## Session 11
 *🗓 Tu, Oct 15, 2019* <br>
 
-#11 npm install react moment
-#11 added the estimated date of achieved fluency
+```#11 npm install react moment```
+```#11 moment is not working so I just wrote my own script```
+```#11 moved convertDate method to an external methods file```
+```#11 successfully displaying estimated date of mastery```
+
+<img src="/screenshots/10-15-2019--date.png" width="400" alt="10-15-2019--date">

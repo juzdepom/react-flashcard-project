@@ -1,6 +1,6 @@
 import React from 'react';
 import './Progress.scss';
-import { convertDate } from '../../../methods/methods'
+import { convertDate, returnDateString } from '../../../methods/methods'
 
 class Progress extends React.Component {
 
@@ -28,46 +28,6 @@ class Progress extends React.Component {
         this.setState({progressLogShowing: false})
         this.props.progressLogIsShowing(false)
     }
-
-    // //convert from 14-10-2019 to Oct 14, 2019
-    // convertDate(dateString){
-    //     var arr = dateString.split("-")
-    //     let day = arr[0].trim()
-    //     let year = arr[2].trim()
-    //     let monthInt = parseInt(arr[1].trim())
-    //     var month = ""
-    //     switch(monthInt){
-    //         case 1: month = "Jan"
-    //         break;
-    //         case 2: month = "Feb"
-    //         break;
-    //         case 3: month = "Mar"
-    //         break;
-    //         case 4: month = "Apr"
-    //         break;
-    //         case 5: month = "May"
-    //         break;
-    //         case 6: month = "June"
-    //         break;
-    //         case 7: month = "July"
-    //         break;
-    //         case 8: month = "Aug"
-    //         break;
-    //         case 9: month = "Sep"
-    //         break;
-    //         case 10: month = "Oct"
-    //         break;
-    //         case 11: month = "Nov"
-    //         break;
-    //         case 12: month = "Dec"
-    //         break;
-    //         default:
-    //             alert(`Error: monthInt out of range: ${monthInt}`)
-    //             break;
-    //     }
-    //     var newString = month + " " + day + ", " + year
-    //     return newString
-    // }
 
     calculateTotalExpPoints(array){
         let totalExp = array[0] + (array[1] * 2) + (array[2] * 3) + (array[3] * 4) + (array[4] * 5) + (array[5] * 6)
@@ -192,6 +152,20 @@ class Progress extends React.Component {
         }
     }
 
+    calculateDateOfMastery(numberOfDaysToMastery){
+        if(numberOfDaysToMastery === undefined) {alert("Error! numbersOfDaysToMastery is undefined!")}
+        let time = parseInt(numberOfDaysToMastery)
+        var d = new Date();
+        d.setDate(d.getDate()+numberOfDaysToMastery);
+        var dateString = returnDateString(d)
+        dateString = convertDate(dateString)
+        dateString = ` on ${dateString}`
+        return dateString
+        // alert(`date of mastery: ${d}, ${time}, ${dateString}`)
+    
+        // return d;
+    }
+
     calculatePredictions = () => {
         if(this.props.progressLogData.length === 0) {return} //if there are no entries
         if(parseInt(this.state.masteredCardsGoal) === 0) {return}
@@ -200,6 +174,7 @@ class Progress extends React.Component {
         var cardReviewExp = 0;
         var averageTotalExpPerDay = 0;
         var numberOfDaysToMastery = 0;
+        var dateOfMastery = ""
 
         let entry = this.props.progressLogData[0]
         let numberOfCards = this.calculateTotalDeckCount(entry["deckNumbers"])
@@ -225,6 +200,8 @@ class Progress extends React.Component {
 
             averageTotalExpPerDay = Math.round(difference/expArray.length)
             numberOfDaysToMastery = Math.ceil((moreCardsNeeded + cardReviewExp) / averageTotalExpPerDay)
+            // dateOfMastery = this.calculateDateOfMastery(numberOfDaysToMastery)
+            dateOfMastery = this.calculateDateOfMastery(numberOfDaysToMastery);
         } else {
             cardReviewExp = 0
         }
@@ -233,7 +210,8 @@ class Progress extends React.Component {
             moreCardsNeeded,
             cardReviewExp,
             averageTotalExpPerDay,
-            numberOfDaysToMastery
+            numberOfDaysToMastery,
+            dateOfMastery
         })
     }
 
@@ -276,7 +254,7 @@ class Progress extends React.Component {
                             type="text"
                             value={numberOfDaysToMastery}
                             onChange={(event) => this.handleInputEdit("numberOfDaysToMastery", event)} />
-                        &nbsp;days{dateOfMastery}.
+                        &nbsp;days<strong>{dateOfMastery}</strong>.
                     </div>
 
                     <div className="progress-log--body">
