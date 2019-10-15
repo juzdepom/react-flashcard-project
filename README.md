@@ -136,4 +136,12 @@ Potential future todos: <br/>
 <img src="/screenshots/10-11-2019.png" width="400" alt="10-11-2019">
 
 ## Session 10
-*🗓 Su, Oct 12, 2019* <br>
+*🗓 Su, Oct 13, 2019* <br>
+
+```Commit: #10 disabled keyboard when progress log is open```
+```Commit: #10 more Progress component work```
+
+## Session 11
+*🗓 Tu, Oct 15, 2019* <br>
+
+#11 added the estimated date of achieved fluency

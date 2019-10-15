@@ -52,13 +52,16 @@
         &--predictions{
             color: black;
             padding: 0px 40px 0px 30px;
-            font-size: 15px;
-            text-align: left;
+            font-size: 12px;
+            text-align: center;
+            & input {
+                width: 30px;
+            }
         }
 
         &--body {
             // background: #b99566;
-            height: 460px;
+            height: 360px;
             padding: 0 20px 0 20px;
             //no overflow, scrolls instead 
             overflow-y: scroll;
@@ -80,9 +83,11 @@
             }
 
             &--exp {
-                color: green;
                 font-size: 15px;
-                
+                padding-bottom: 5px;
+                & span {
+                    color: green;
+                }
             }
 
             &--deck-numbers {

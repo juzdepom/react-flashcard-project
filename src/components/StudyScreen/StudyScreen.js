@@ -200,12 +200,20 @@ class StudyScreen extends React.Component {
     //save the deck numbers
     let { five, four, three, two, one, zero } = this.state.level; 
     entry[deckNumbers] = [zero, one, two, three, four, five]
-    entry[cardsRated] = this.state.cardsRated
+    
     
     //no entry has been made today yet
     if(progressLogData[0][date] !== currentDate){
-      progressLogData.unshift(entry) // add to beginning of array
+      //cards rated begins at zero
+      this.setState({
+        cardsRated: 0,
+      }, () => {
+        entry[cardsRated] = this.state.cardsRated;
+        progressLogData.unshift(entry) // add to beginning of array
+      })
+      
     } else { //entry has already been made today
+      entry[cardsRated] = this.state.cardsRated
       progressLogData[0] = entry
     }
 

@@ -9,21 +9,17 @@ class Progress extends React.Component {
         this.state = {
             progressLogShowing: false,
             moreCardsNeeded: 0,
-            masteredCardsGoal: 0,
+            masteredCardsGoal: 1000,
             cardReviewExp: 0,
-            averageCardExpPerDay: 0,
+            averageTotalExpPerDay: 0,
             numberOfDaysToMastery: 0
         }
-
-        // this.handleInputEdit = this.handleInputEdit.bind(this);
-        // this.displayProgressLog = this.displayProgressLog.bind(this);
-        // this.closeProgressLog = this.closeProgressLog.bind(this);
     }
 
     displayProgressLog = () => {
         this.setState({progressLogShowing: true})
         this.props.progressLogIsShowing(true)
-        
+        this.calculatePredictions()
     }
 
     closeProgressLog = () => {
@@ -51,14 +47,14 @@ class Progress extends React.Component {
         return (n<0?"":"+") + n
     }
 
-    entryList(){
+    entryList = () => {
         let dateString = "date"
         let cardsRated = "cardsRated"
         let deckNumbers = "deckNumbers"
+        var numberOfCardsRated = 0
 
         let progressLogData = this.props.progressLogData
         
-
         return progressLogData.map((entry, index) => {
             var totalExpEarnedToday = "XX"
             var newCardsAdded = "XX"
@@ -77,8 +73,10 @@ class Progress extends React.Component {
             let totalExp = this.calculateTotalExpPoints(entry[deckNumbers])
 
             if(index == progressLogData.length-1){ //this was the first entry every made
-                totalExpEarnedToday = totalExp
-                newCardsAdded = numberOfCards
+                totalExpEarnedToday = "0"
+                newCardsAdded = "XX"
+                cardExpEarned = "0"
+                numberOfCardsRated = "XX"
             } else {
                 let prev = index + 1
                 let prevDeckNumbers = progressLogData[prev][deckNumbers]
@@ -87,9 +85,10 @@ class Progress extends React.Component {
                 
                 let prevNumOfCards = this.calculateTotalDeckCount(prevDeckNumbers)
                 newCardsAdded = numberOfCards - prevNumOfCards
+                cardExpEarned = totalExpEarnedToday - newCardsAdded
+                numberOfCardsRated = entry[cardsRated]
             }
-            cardExpEarned = totalExpEarnedToday - newCardsAdded
-
+            
             return  <div className="progress-log--entry">
 
                 <div className="progress-log--entry--deck-numbers">
@@ -102,32 +101,109 @@ class Progress extends React.Component {
                 </div>
 
                 <div className="progress-log--entry--info">
-                    {date}: <strong>{numberOfCards}</strong> Cards <span>({this.addPlusSignIfPositive(newCardsAdded)} Exp.)</span> / <strong>{totalExp} Exp. </strong>
+                    {date}: <strong>{numberOfCards}</strong> Cards <span>({this.addPlusSignIfPositive(newCardsAdded)} Cards)</span>
                     <br/>
+                    Cards Reviewed: {numberOfCardsRated} <span>({this.addPlusSignIfPositive(cardExpEarned)} Exp.)</span>
                 </div>
 
-                <div className="progress-log--entry--exp">{this.addPlusSignIfPositive(totalExpEarnedToday)} Total Exp.</div>
+                <div className="progress-log--entry--exp"><strong>{totalExp} Exp. </strong>&nbsp;<span>{this.addPlusSignIfPositive(totalExpEarnedToday)} Total Exp.</span></div>
                 
-                <div className="progress-log--entry--cards-reviewed">
+                {/* <div className="progress-log--entry--cards-reviewed">
                     <div>Cards Reviewed: {entry[cardsRated]} <span>({this.addPlusSignIfPositive(cardExpEarned)} Exp.)</span></div>
-                    {/* <div>New Cards Added: {this.addPlusSignIfPositive(newCardsAdded)}</div> */}
-                </div>
+                </div> */}
                
             </div>
         })
     }
 
     handleInputEdit = (text, event) => {
-        if(text==="moreCardsNeeded"){
+        let e = event.target.value
+        if(text==="masteredCardsGoal"){
             this.setState({
-                moreCardsNeeded: event.target.value
-            })
+                masteredCardsGoal: e
+            }, () => this.calculatePredictions())
+        } else if (text==="averageTotalExpPerDay"){
+            this.setState({
+                averageTotalExpPerDay: e
+            }, () => this.updateInputData("average"))
+        } else if (text==="numberOfDaysToMastery"){
+            this.setState({
+                numberOfDaysToMastery: e
+            }, () => this.updateInputData("days"))
         }
+    }
+
+    updateInputData = (t) => {
+        let entry = this.props.progressLogData[0]
+        let expEarned = this.calculateTotalExpPoints(entry["deckNumbers"])
+        let goal = this.state.masteredCardsGoal * 6
+        let expNeeded = goal - expEarned
+        if(t === "average"){
+            console.log('exp needed', expNeeded)
+            let expPerDay = this.state.averageTotalExpPerDay
+            let numberOfDaysToMastery = Math.ceil(expNeeded / expPerDay)
+            // console.log('days to amster', expNeeded)
+            this.setState({numberOfDaysToMastery})
+            // alert(`${this.state.averageTotalExpPerDay}`)
+        } else if (t === "days"){
+            let days = this.state.numberOfDaysToMastery
+
+            let averageTotalExpPerDay = Math.ceil(expNeeded / days)
+            this.setState({averageTotalExpPerDay})
+            // alert(`${this.state.numberOfDaysToMastery}`)
+        } else {
+            alert(`Error: ${t}`)
+        }
+    }
+
+    calculatePredictions = () => {
+        if(this.props.progressLogData.length === 0) {return} //if there are no entries
+        if(parseInt(this.state.masteredCardsGoal) === 0) {return}
+        
+        var moreCardsNeeded = 0;
+        var cardReviewExp = 0;
+        var averageTotalExpPerDay = 0
+        var numberOfDaysToMastery = 0;
+
+        let entry = this.props.progressLogData[0]
+        let numberOfCards = this.calculateTotalDeckCount(entry["deckNumbers"])
+        if(parseInt(this.state.masterCardsGoal) < numberOfCards){
+            //currently the calculations mess up if you are underneath your total deck count
+            //do something so you can calculate how much exp you need to get to, for example 400 mastered cards
+        }
+        
+        moreCardsNeeded = this.state.masteredCardsGoal - numberOfCards
+        if(moreCardsNeeded < 0){moreCardsNeeded = 0}//if we need a +(-100) cards, then just change to +0 cards
+
+        let latestExp = this.calculateTotalExpPoints(entry["deckNumbers"])
+        cardReviewExp = (this.state.masteredCardsGoal * 6) - moreCardsNeeded - latestExp
+       
+        if(moreCardsNeeded + cardReviewExp >= 0){
+            var array = this.props.progressLogData.slice(0)//creates a duplicate
+            var expArray = []
+            for(var i in array){
+                let totalExp = this.calculateTotalExpPoints(array[i]["deckNumbers"])
+                expArray.push(totalExp);
+            }
+            let difference = expArray[0] - expArray[expArray.length-1]
+
+            averageTotalExpPerDay = Math.round(difference/expArray.length)
+            numberOfDaysToMastery = Math.ceil((moreCardsNeeded + cardReviewExp) / averageTotalExpPerDay)
+        } else {
+            cardReviewExp = 0
+        }
+
+        this.setState({
+            moreCardsNeeded,
+            cardReviewExp,
+            averageTotalExpPerDay,
+            numberOfDaysToMastery
+        })
     }
 
     render(){
         let percentage = Math.floor(this.props.totalPoints / 6000 * 100)
-        let { moreCardsNeeded } = this.state;
+        let { moreCardsNeeded, masteredCardsGoal, cardReviewExp, averageTotalExpPerDay, numberOfDaysToMastery } = this.state;
         return (
             <div className="progress">
                 Total Cards: {this.props.cards.length} <br/>
@@ -148,11 +224,23 @@ class Progress extends React.Component {
                         </button>
                     </div>
                     <div className="progress-log--predictions">
-                        You need <input
-                                        type="text"
-                                        value={moreCardsNeeded}
-                                        onChange={(event) => this.handleInputEdit("moreCardsNeeded", event)}
-                                    /> more cards to have 1000 mastered cards. You need XX more Card review Exp and XX more new card Exp. Based off of your current Card Exp earning rate (XX per day), we are estimating you will have mastered 1000 cards in XX days.
+                        You need <strong>+{cardReviewExp + moreCardsNeeded} Exp.</strong> (+{cardReviewExp} "Card Review" Exp. and +{moreCardsNeeded} cards) to reach your goal of&nbsp;
+                        <input
+                            type="text"
+                            value={masteredCardsGoal}
+                            onChange={(event) => this.handleInputEdit("masteredCardsGoal", event)} />
+                        &nbsp;mastered cards.<br/>
+                        Based off of your current Total Exp. earning rate <br/>(&nbsp;~
+                        <input
+                            type="text"
+                            value={averageTotalExpPerDay}
+                            onChange={(event) => this.handleInputEdit("averageTotalExpPerDay", event)} />
+                        &nbsp;Exp./day), we are estimating you will have mastered {masteredCardsGoal} cards in&nbsp;
+                        <input
+                            type="text"
+                            value={numberOfDaysToMastery}
+                            onChange={(event) => this.handleInputEdit("numberOfDaysToMastery", event)} />
+                        &nbsp;days.
                     </div>
 
                     <div className="progress-log--body">
