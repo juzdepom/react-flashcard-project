@@ -52,7 +52,7 @@ New: everytime we rate 5 flashcards, update the JSON date in firebase.
 
 ## Session 4
 *🗓 Fri, Oct 4, 2019* <br>
-Last time I updated this README I mentioned that I wanted to build the React Native application. Well instead I decided to build the app in Swift and spent two days building it out on my old macbook which then crashed lol. For now will be keeping the app as a Web app.
+Last time I updated this README I mentioned that I wanted to build the <strong>React Native application</strong>. Well instead I decided to build the app in <strong>Swift</strong> and spent two days building it out on my old macbook <strong>which then crashed lol</strong>. For now will be keeping the app as a Web app.
 Figured out how to open my project through localhost on my phone so that's a handy workaround.
 
 ```Commit: "#4 added more flashcards, added a button at the bottom and added the goals text of 1000 mastered cards."```
@@ -128,25 +128,25 @@ Potential future todos: <br/>
 *🗓 S, Oct 11, 2019* <br>
 🕐 6:40AM-3:30PM
 
-``` Commit: #9 updated addflashcards component a bit```
-``` Commit: #9 convered Card.css to Card.scss```
-``` Commit: #9 when flipping card, reveals Thai characters first, then reveals pronunciation```
-``` Commit: #9 Finished Progress Component```
+``` Commit: #9 updated addflashcards component a bit```<br>
+``` Commit: #9 convered Card.css to Card.scss```<br>
+``` Commit: #9 when flipping card, reveals Thai characters first, then reveals pronunciation```<br>
+``` Commit: #9 Finished Progress Component```<br>
 
 <img src="/screenshots/10-11-2019.png" width="400" alt="10-11-2019">
 
 ## Session 10
 *🗓 Su, Oct 13, 2019* <br>
 
-```Commit: #10 disabled keyboard when progress log is open```
-```Commit: #10 more Progress component work```
+```Commit: #10 disabled keyboard when progress log is open```<br>
+```Commit: #10 more Progress component work```<br>
 
 ## Session 11
 *🗓 Tu, Oct 15, 2019* <br>
 
-```#11 npm install react moment```
-```#11 moment is not working so I just wrote my own script```
-```#11 moved convertDate method to an external methods file```
-```#11 successfully displaying estimated date of mastery```
+```#11 npm install react moment```<br>
+```#11 moment is not working so I just wrote my own script```<br>
+```#11 moved convertDate method to an external methods file```<br>
+```#11 successfully displaying estimated date of mastery```<br>
 
 <img src="/screenshots/10-15-2019--date.png" width="400" alt="10-15-2019--date">
