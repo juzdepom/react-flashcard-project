@@ -184,6 +184,7 @@ class StudyScreen extends React.Component {
     
   }
 
+  //we're saving our daily flashcard learning progress so that we can predict when we will achieve mastery
   updateProgressLog(){
     let date = "date"
     let cardsRated = "cardsRated"
@@ -223,7 +224,6 @@ class StudyScreen extends React.Component {
 
   }
 
-  
   getCurrentDate(){
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -345,7 +345,15 @@ class StudyScreen extends React.Component {
       totalPoints: 0,
     }
 
+    // var newDeck = []
+
     for (var i in currentCards){
+
+      // let id = i
+      // var card = currentCards[i]
+      // card["_id"] = id
+      // newDeck.push(card)
+
       switch(currentCards[i].rating){
         case 0: 
           level.zero += 1
@@ -376,8 +384,10 @@ class StudyScreen extends React.Component {
         default: //
       }
     }
+    // console.log(newDeck)
     this.setState({
-      level: level
+      level: level,
+      // cards: newDeck,
     })
   }
 
@@ -439,8 +449,17 @@ class StudyScreen extends React.Component {
     })
   }
 
-  addNewFlashcardsToDeck(cards){
+  addNewFlashcardsToDeck(c){
+    // let currentDeck = this.state.cards
+    let deckLength = this.state.cards.length
+    var cards = c
     let length = cards.length
+    //add unique id to each of the cards
+    for(var i in cards){
+      let id = parseInt(deckLength) + parseInt(i)
+      cards[i]["_id"] = id
+    }
+
     let newDeck = this.state.cards.concat(cards)
     this.setState({cards: newDeck}, () => {
       this.updateDisplayCardLevels();

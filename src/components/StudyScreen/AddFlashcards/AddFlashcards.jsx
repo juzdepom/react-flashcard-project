@@ -112,7 +112,7 @@ class AddFlashcards extends Component {
         }
     }
 
-    cancel(){
+    close = () => {
         this.setState({ text: "", cards: [], addingCards: false})
     }
 
@@ -124,7 +124,7 @@ class AddFlashcards extends Component {
     //this adds to the master deck
     addFlashCards(){
         this.props.addNewFlashcardsToDeck(this.state.cards);
-        this.setState({ text: ""})
+        this.close();
     }
 
 
@@ -148,28 +148,31 @@ class AddFlashcards extends Component {
                             onChange={this.updateValue.bind(this)}
                         />
                     </div>
-                    <button 
-                        className="addflashcards--button"
-                        onClick={this.cancel.bind(this)}>
-                            Cancel
-                    </button>
-                    <button 
-                        className="addflashcards--button"
-                        onClick={this.parseText.bind(this)}>
-                            Check For Errors
-                    </button>
-
+                    {(this.state.cards.length <= 0) ?
+                        <div>
+                            <button 
+                            className="addflashcards--button"
+                            onClick={this.close}>
+                                Cancel
+                            </button>
+                            <button 
+                                className="addflashcards--button"
+                                onClick={this.parseText.bind(this)}>
+                                    Check For Errors
+                            </button> 
+                        </div>
+                        : '' }
                     {/* only shows up after we submit text strings for review */}
                     { (this.state.cards.length > 0) ?
                         <div>
-                            <div className="addflashcards--text">
+                            {/* <div className="addflashcards--text">
                             Number of Cards: {this.state.cards.length}
-                            </div>
+                            </div> */}
 
                             <button 
                                 className="addflashcards--button"
                                 onClick={this.addFlashCards.bind(this)}>
-                                    Upload To Firebase
+                                    Upload {this.state.cards.length} Cards To Firebase
                             </button>
                         </div>
                     : '' }
