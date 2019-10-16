@@ -234,36 +234,53 @@ class StudyScreen extends React.Component {
     return today
   }
 
+  //used in updateFlashcards method
+  findIndexInMasterDeck = (currentCard) => {
+    var correctIndex = undefined
+    var currentCards = this.state.cards
+    for(var i in currentCards){
+      if (currentCards[i]["_id"] === currentCard["_id"]){
+        correctIndex = i
+      }
+    }
+    if (correctIndex == undefined) { alert("error!")} 
+    else { return correctIndex }
+  }
+
   //update the flashcard we just looked at, and set state to newly selected flashcard!
   updateFlashcards(newIndex, rating){
     var cardsRated = this.state.cardsRated + 1
     var currentCards = this.state.cards
-    var oldIndex = this.state.currentCardIndex
+    var currentCard = this.state.currentCard
+
+    let correctIndex = this.findIndexInMasterDeck(currentCard)
 
     //if card has been rated, update the rating
     if(rating !== undefined){
-      currentCards[oldIndex].rating = rating;
+      currentCards[correctIndex].rating = rating;
     }
 
     //logging the time this flashcard was reviewed
     var timeStamp = Math.floor(Date.now() / 1000);
     
     //some of the flashcards don't have the "lastReviewed" key
-    if(currentCards[oldIndex].lastReviewed !== undefined){
-      currentCards[oldIndex].lastReviewed.push(timeStamp)
+    if(currentCards[correctIndex].lastReviewed !== undefined){
+      currentCards[correctIndex].lastReviewed.push(timeStamp)
     } else {
-      currentCards[oldIndex]["lastReviewed"] = [timeStamp];
+      currentCards[correctIndex]["lastReviewed"] = [timeStamp];
     }
 
     let previousCard = this.state.currentCard
+    var i = (newIndex == null) ? correctIndex : newIndex
+    // if(i == null){
+    //   i = correctIndex;
+    // }
 
     this.setState({
       cards: currentCards,
       //so that we can navigate to previous card
       previousCard,
-      previousCardIndex: oldIndex,
-      currentCardIndex: newIndex,
-      currentCard: currentCards[newIndex],
+      currentCard: currentCards[i],
       cardsRated,
     }, () => {
       this.updateProgressLog()
@@ -395,8 +412,9 @@ class StudyScreen extends React.Component {
         default: //
       }
     }
-    // console.log(level.sortedDeck)
-    // console.log(newDeck)
+
+    
+
     this.setState({
       level: level,
       // cards: newDeck,
@@ -428,12 +446,12 @@ class StudyScreen extends React.Component {
   goToPreviousCard(e){
     e.stopPropagation();
     let cards = this.state.cards
-    let textOne = this.state.previousCard["textOne"]
-    var currentCardIndex = this.state.previousCardIndex
+    let id = this.state.previousCard["_id"]
+    // var currentCardIndex = this.state.previousCardIndex
     for(var i in cards){
-      if(textOne == cards[i]["textOne"]){
+      if(id == cards[i]["_id"]){
         this.setState({
-          currentCardIndex: i,
+          // currentCardIndex: i,
           currentCard: cards[i],
         })
         return;
@@ -451,8 +469,6 @@ class StudyScreen extends React.Component {
   }
 
   loadCard(card){
-    // alert('loading card!')
-    // console.log('card: ', card)
     let previousCard = this.state.currentCard
     var currentCard = card
     this.setState({
@@ -492,6 +508,10 @@ class StudyScreen extends React.Component {
     // console.log('deck index:', deckIndex)
     let deckListClassname = "decklist decklist--" + deckIndex
     let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
+    // var deckListCards = []
+    // for(var i in unsortedDeck){
+
+    // }
     // console.log("deck list cards: ", deckListCards)
     this.setState({
       deckListClassname,
@@ -505,11 +525,23 @@ class StudyScreen extends React.Component {
     this.setState({deckListDisplay: "none"})
   }
 
+  deckListSelectCard = (card) => {
+    this.closeDeckList()
+    this.loadCard(card)
+  }
+
+  deckListRatedCard = (card) => {
+    this.setState({
+      currentCard: card
+    }, () => {
+      this.updateFlashcards(null, card["rating"])
+    })
+  }
+
   progressLogIsShowing = (b) => {
     if(b===true){
       this.setState({
         progressLogIsShowing: true,
-        // deckListDisplay: "none",
       })
     } else {
       this.setState({
@@ -544,6 +576,8 @@ class StudyScreen extends React.Component {
           deckListDisplay={this.state.deckListDisplay} 
           deckListClassname={this.state.deckListClassname}
           cards={this.state.deckListCards}
+          selectCard={this.deckListSelectCard}
+          cardRated={this.deckListRatedCard}
           close={this.closeDeckList}
           />
 

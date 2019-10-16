@@ -151,3 +151,14 @@ Potential future todos: <br/>
 ```#11 retroactively added unique ids to previous flashcards and wrote code to add a new unique id to each new flashcard```<br>
 
 <img src="/screenshots/10-15-2019--date.png" width="400" alt="10-15-2019--date">
+
+## Session 12
+*🗓 W, Oct 16, 2019* <br>
+
+```#12 Making progress on DeckList component``` <br>
+```#12 version one of DeckList component is complete``` <br>
+
+<img src="/screenshots/10-16-2019--decklist-1.png" width="400" alt="">
+<img src="/screenshots/10-16-2019--decklist-2.png" width="400" alt="">
+<img src="/screenshots/10-16-2019--decklist-3.png" width="400" alt="">
+

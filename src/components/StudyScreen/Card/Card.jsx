@@ -68,14 +68,9 @@ class Card extends Component {
         var thisTime = new Date();              // now
         var diff = thisTime.getTime() - prevTime.getTime();
         var seconds = Math.floor(diff/1000)
-        // var result = this.timeConverter(seconds)
-        // var date = new Date(null)
-        // date.setSeconds(seconds);
-        // var result = date.toISOString().substr(11,8);
-        // console.log("seconds: " + seconds)
+        
         if(seconds < 60) { return seconds + " seconds ago"} else
         //3600 seconds in an hour
-        
         if(seconds < 3600) {
             var m = Math.floor(seconds/60); 
             var s = seconds % 60; 
@@ -97,13 +92,14 @@ class Card extends Component {
 
     render(props){
         var colors = ["lightgray", "#AB3B7F", "#F28945", "#FEDD33", "#7EAE2E", "#40A9D6"]
-        var {rating, textOne, textTwo, textThree, exposure, dateCreated, lastReviewed} = this.props.card;
+        var {rating, textOne, textTwo, textThree, dateCreated, lastReviewed} = this.props.card;
         var color = colors[rating]
         var time = "First Time"
-        var elapsed = ""
+        // var elapsed = ""
         var reviewCount = 0
 
         if(lastReviewed == undefined) {
+            //add an array to this
             console.log('this one is undefined: ' + textOne)
         }
         
@@ -111,7 +107,7 @@ class Card extends Component {
             reviewCount = lastReviewed.length
             lastReviewed = lastReviewed[lastReviewed.length - 1]
             time = this.calculateElapsedTime(lastReviewed)
-            elapsed = this.timeConverter(lastReviewed)
+            // elapsed = this.timeConverter(lastReviewed)
         }
         return(
             <div>

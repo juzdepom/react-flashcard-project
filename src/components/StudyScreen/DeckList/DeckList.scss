@@ -15,7 +15,7 @@
         margin: 5px;
     }
     &--body {
-        height: 410px;
+        height: 360px;
         background: rgba(0,0,0,0.3);
         width: 370px;
         position: absolute;
@@ -35,12 +35,71 @@
             margin-top: 10px;
             margin-left: auto;
             margin-right: auto;
+            display: flex;
+            &-dark {
+                background: rgba(255, 255, 255, 0.7);
+                // color: white !important;
+            }
+        }
+        &-reviewCount{
+            padding-left: 5px;
+            padding-top: 3px;
+            font-size: 12px;
+            color: gray;
         }
         &-text {
-            padding-left: 10px;
+            padding-left: 5px;
             padding-top: 10px;
+            flex: 1;
+        }
+        &-lastReview {
+            font-size: 12px;
+            color: gray;
+            padding-right: 10px;
+            padding-bottom: 2px;
+            align-self: flex-end;
+        }
+        &-select {
+            width: 20px;
+            background-color: #ff6961;
         }
         
+    }
+    &--quickrating{
+        // background: black;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+        height: 58px;
+        width: 370px;
+        margin-left: 15px;
+        display: flex;
+        // text-align: center;
+        &-title{
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        &-card-text{
+            font-weight: 700;
+            font-size: 14px;
+            // background: white;
+        }
+        &-button-container {
+            // background: black;
+            background: transparent;
+            margin-top: 5px;
+            height: 50px;
+            width: 258px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            & button {
+                font-size: 20px;
+                width: 100%;
+                border: none;
+                box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+            }
+        }
     }
     &--0 {
         background: lightgray;

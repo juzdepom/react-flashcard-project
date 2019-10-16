@@ -6,8 +6,9 @@
 
 .ratingbtns--row {
   width: 370px;
+  /* width: 100%; */
   display: flex;
-  box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.9);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.4);
 }
   
 .ratingbtn {
