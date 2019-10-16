@@ -60,6 +60,7 @@ class StudyScreen extends React.Component {
       //
       deckListDisplay: "none",
       deckListClassname: "decklist",
+      deckListCards: [],
       //
       progressLogData: [],
       cardsRated: 0,
@@ -231,7 +232,7 @@ class StudyScreen extends React.Component {
     var yyyy = today.getFullYear();
     today = dd + '-' + mm + '-' + yyyy;
     return today
-}
+  }
 
   //update the flashcard we just looked at, and set state to newly selected flashcard!
   updateFlashcards(newIndex, rating){
@@ -342,12 +343,22 @@ class StudyScreen extends React.Component {
       three: 0,
       four: 0, 
       five: 0,
+      sortedDeck: {
+        "0" : [],
+        "1" : [],
+        "2" : [],
+        "3" : [],
+        "4" : [],
+        "5" : []
+      },
       totalPoints: 0,
     }
 
     // var newDeck = []
 
     for (var i in currentCards){
+
+      level.sortedDeck[String(currentCards[i].rating)].push(currentCards[i])
 
       // let id = i
       // var card = currentCards[i]
@@ -384,6 +395,7 @@ class StudyScreen extends React.Component {
         default: //
       }
     }
+    // console.log(level.sortedDeck)
     // console.log(newDeck)
     this.setState({
       level: level,
@@ -477,12 +489,14 @@ class StudyScreen extends React.Component {
   }
 
   selectDeckButton(deckIndex){
-    console.log('deck index:', deckIndex)
-    // alert(`tapped deck: ${deckIndex}`)
+    // console.log('deck index:', deckIndex)
     let deckListClassname = "decklist decklist--" + deckIndex
+    let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
+    // console.log("deck list cards: ", deckListCards)
     this.setState({
       deckListClassname,
-      deckListDisplay: "block"
+      deckListDisplay: "block",
+      deckListCards
     })
   }
 
@@ -494,7 +508,8 @@ class StudyScreen extends React.Component {
   progressLogIsShowing = (b) => {
     if(b===true){
       this.setState({
-        progressLogIsShowing: true
+        progressLogIsShowing: true,
+        // deckListDisplay: "none",
       })
     } else {
       this.setState({
@@ -528,6 +543,7 @@ class StudyScreen extends React.Component {
         <DeckList 
           deckListDisplay={this.state.deckListDisplay} 
           deckListClassname={this.state.deckListClassname}
+          cards={this.state.deckListCards}
           close={this.closeDeckList}
           />
 

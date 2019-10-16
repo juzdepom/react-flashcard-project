@@ -14,6 +14,34 @@
         position: absolute;
         margin: 5px;
     }
+    &--body {
+        height: 410px;
+        background: rgba(0,0,0,0.3);
+        width: 370px;
+        position: absolute;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+    }
+    &--card{
+        &-body {
+            cursor: pointer;
+            background: white;
+            width: 330px;
+            height: 40px;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &-text {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+        
+    }
     &--0 {
         background: lightgray;
     }

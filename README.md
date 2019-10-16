@@ -148,5 +148,6 @@ Potential future todos: <br/>
 ```#11 moment is not working so I just wrote my own script```<br>
 ```#11 moved convertDate method to an external methods file```<br>
 ```#11 successfully displaying estimated date of mastery```<br>
+```#11 retroactively added unique ids to previous flashcards and wrote code to add a new unique id to each new flashcard```<br>
 
 <img src="/screenshots/10-15-2019--date.png" width="400" alt="10-15-2019--date">
