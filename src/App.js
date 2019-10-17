@@ -5,6 +5,7 @@ import DrawerToggleButton from './components/SideDrawer/DrawerToggleButton';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import StudyScreen from './components/StudyScreen/StudyScreen';
 import SearchScreen from './components/SearchScreen/SearchScreen';
+import TimeLogScreen from './components/TimeLogScreen/TimeLogScreen';
 
 //firebase
 import { DB_CONFIG } from './config/config';
@@ -68,6 +69,10 @@ class App extends React.Component {
           <Route 
             path="/search" 
             render={(props) => <SearchScreen {...props} cards={this.state.cards} />}
+          />
+          <Route 
+            path="/timelog" 
+            render={(props) => <TimeLogScreen/>}
           />
   
         </div>

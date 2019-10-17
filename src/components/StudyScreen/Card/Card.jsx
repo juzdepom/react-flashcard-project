@@ -38,12 +38,14 @@ class Card extends Component {
         })
     }
 
-    editMode(isOn){
+    editMode = (isOn) => {
         if(isOn){
+            this.props.cardEditModeIsOn(true)
             this.setState({
                 editMode: true,
             })
         } else {
+            this.props.cardEditModeIsOn(false)
             this.setState({
                 editMode: false,
             })

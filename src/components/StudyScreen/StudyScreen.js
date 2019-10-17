@@ -64,7 +64,9 @@ class StudyScreen extends React.Component {
       //
       progressLogData: [],
       cardsRated: 0,
-      progressLogIsShowing: false
+      progressLogIsShowing: false,
+      //
+      cardEditModeIsOn: false
     }
 
   }
@@ -119,11 +121,16 @@ class StudyScreen extends React.Component {
     })
   }
 
+  cardEditModeIsOn = (isOn) => {
+      this.setState({cardEditModeIsOn: isOn})
+  }
+
   //keyboard keys 1-5 help you rate the card; 0 flips the card;
   //SHIFT + 1-5 doesn't rate the card and picks a card from a specific deck.
   _handleKeyDown = (e) => {
 
     if(this.state.progressLogIsShowing){return}
+    if(this.state.cardEditModeIsOn){return}
 
     switch(e.keyCode) {
       case 48: //0
@@ -185,45 +192,6 @@ class StudyScreen extends React.Component {
     
   }
 
-  //we're saving our daily flashcard learning progress so that we can predict when we will achieve mastery
-  updateProgressLog(){
-    let date = "date"
-    let cardsRated = "cardsRated"
-    let deckNumbers = "deckNumbers"
-
-    //all entries
-    var progressLogData = this.state.progressLogData;
-    var entry = {}
-
-    //save the date
-    let currentDate = this.getCurrentDate()
-    entry[date] = currentDate
-
-    //save the deck numbers
-    let { five, four, three, two, one, zero } = this.state.level; 
-    entry[deckNumbers] = [zero, one, two, three, four, five]
-    
-    
-    //no entry has been made today yet
-    if(progressLogData[0][date] !== currentDate){
-      //cards rated begins at zero
-      this.setState({
-        cardsRated: 0,
-      }, () => {
-        entry[cardsRated] = this.state.cardsRated;
-        progressLogData.unshift(entry) // add to beginning of array
-      })
-      
-    } else { //entry has already been made today
-      entry[cardsRated] = this.state.cardsRated
-      progressLogData[0] = entry
-    }
-
-    this.setState({progressLogData})
-
-    firebase.database().ref('progressLog').set(progressLogData);
-
-  }
 
   getCurrentDate(){
     var today = new Date();
@@ -462,6 +430,7 @@ class StudyScreen extends React.Component {
     
   }
 
+  //save in firebase
   saveFlashcardDataInFirebase(){
     const cards = this.state.cards;
     firebase.database().ref('flashcards').set(cards);
@@ -498,12 +467,67 @@ class StudyScreen extends React.Component {
         
   }
 
+  //SideDrawer method
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
       return { sideDrawerOpen: !prevState.sideDrawerOpen }
     })
   }
 
+  //ProgressLog Methods
+  //we're saving our daily flashcard learning progress so that we can predict when we will achieve mastery
+  updateProgressLog(){
+    let date = "date"
+    let cardsRated = "cardsRated"
+    let deckNumbers = "deckNumbers"
+
+    //all entries
+    var progressLogData = this.state.progressLogData;
+    var entry = {}
+
+    //save the date
+    let currentDate = this.getCurrentDate()
+    entry[date] = currentDate
+
+    //save the deck numbers
+    let { five, four, three, two, one, zero } = this.state.level; 
+    entry[deckNumbers] = [zero, one, two, three, four, five]
+    
+    
+    //no entry has been made today yet
+    if(progressLogData[0][date] !== currentDate){
+      //cards rated begins at zero
+      this.setState({
+        cardsRated: 0,
+      }, () => {
+        entry[cardsRated] = this.state.cardsRated;
+        progressLogData.unshift(entry) // add to beginning of array
+      })
+      
+    } else { //entry has already been made today
+      entry[cardsRated] = this.state.cardsRated
+      progressLogData[0] = entry
+    }
+
+    this.setState({progressLogData})
+
+    firebase.database().ref('progressLog').set(progressLogData);
+
+  }
+
+  progressLogIsShowing = (b) => {
+    if(b===true){
+      this.setState({
+        progressLogIsShowing: true,
+      })
+    } else {
+      this.setState({
+        progressLogIsShowing: false
+      })
+    }
+  }
+
+  //DeckButton Methods
   selectDeckButton(deckIndex){
     // console.log('deck index:', deckIndex)
     let deckListClassname = "decklist decklist--" + deckIndex
@@ -520,6 +544,7 @@ class StudyScreen extends React.Component {
     })
   }
 
+  //DeckList Methods
   closeDeckList(){
     // alert('closing')
     this.setState({deckListDisplay: "none"})
@@ -538,17 +563,7 @@ class StudyScreen extends React.Component {
     })
   }
 
-  progressLogIsShowing = (b) => {
-    if(b===true){
-      this.setState({
-        progressLogIsShowing: true,
-      })
-    } else {
-      this.setState({
-        progressLogIsShowing: false
-      })
-    }
-  }
+  
 
   render() {
    
@@ -585,6 +600,7 @@ class StudyScreen extends React.Component {
           <Card
             ref = {this.cardElement}
             card = {this.state.currentCard}
+            cardEditModeIsOn = {this.cardEditModeIsOn}
             goToPreviousCard = {this.goToPreviousCard}
             handleCardEdit = {this.handleCardEdit}
           />

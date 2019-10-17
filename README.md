@@ -162,3 +162,12 @@ Potential future todos: <br/>
 <img src="/screenshots/10-16-2019--decklist-2.png" width="400" alt="">
 <img src="/screenshots/10-16-2019--decklist-3.png" width="400" alt="">
 
+## Session 13
+*🗓 Th, Oct 17, 2019* <br>
+
+```#12 created TimeLogger``` <br>
+
+<img src="/screenshots/10-17-2019--timelog.png" width="400" alt="">
+<img src="/screenshots/10-17-2019--timelog.gif" width="400" alt="">
+
+

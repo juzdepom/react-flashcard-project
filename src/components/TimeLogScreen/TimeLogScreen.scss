@@ -1,0 +1,63 @@
+$blue-1: #7491A1;
+$blue-2: #88AABD;
+$white-1: rgba(255,255,255,0.8);
+
+.timelog {
+    background: transparent;
+    width: 100vw;
+    height: 100vh; 
+    text-align: center;
+    &--container {
+        &-main {
+            background: $blue-1;
+            margin: 0 auto;
+            max-width: 600px;
+            height: 100%;
+        }
+        &-secondary {
+            background: $blue-2;
+            height: 90%;
+            width: 90%;
+            margin: 0 auto;
+        }
+        &-button-edit {
+            padding-top: 5px;
+        }
+    }
+    &--title {
+        padding-top: 5px;
+        padding-bottom: 8px;
+    }
+    &--date {
+        padding-top: 10px;
+        // padding-bottom: 5px;
+    }
+    &--todayslog {
+        background: $white-1;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+    &--button {
+        &-edit {
+            cursor: pointer;
+            background: $white-1;
+            width: 60px;
+            padding: 5px;
+            border: 2px solid $blue-1;
+            border-radius: 10px;
+            &:hover {
+                background: $blue-1;
+            }
+        }
+    }
+    &--input {
+        &-timelog{
+            padding: 8px;
+            font-size: 14px;
+            width: 90%;
+            height: 40%;
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,10 +1,11 @@
 .toggle-button {
-    background: rgba(254, 221, 51, 0.9);
+    // background: rgba(254, 221, 51, 0.9);
+    background: transparent;
     margin: 8px 8px 0 0;
     height: 40px;
     width: 40px;
     padding: 8px;
-    border-radius: 50px;
+    // border-radius: 50px;
     border: none;
     position: fixed;
     z-index: 5;

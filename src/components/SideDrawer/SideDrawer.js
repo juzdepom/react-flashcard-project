@@ -11,7 +11,7 @@ const sideDrawer = props => {
         <nav className={drawerClass}>
             <ul>
                 <li><Link to="/">Home</Link></li>
-                <li><a href="/">My Progress</a></li>
+                <li><Link to="/timelog">Time Log</Link></li>
                 <li><Link to="/search">Search</Link></li>
                 <li><a href="/">My Profile</a></li>
                 <li><a href="/">Add Cards</a></li>
