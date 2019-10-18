@@ -11,7 +11,8 @@ const sideDrawer = props => {
         <nav className={drawerClass}>
             <ul>
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/timelog">Time Log</Link></li>
+                {/* sidedrawer gets messed up when we switch with router, need to reload manually */}
+                {/* <li><Link to="/timelog">Time Log</Link></li> */}
                 {/* <li><Link to="/search">Search</Link></li> */}
                 <li><a href="/">My Profile</a></li>
                 <li><a href="/">Add Cards</a></li>

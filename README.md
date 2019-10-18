@@ -190,3 +190,4 @@ Now am relying a lot less on master deck indexes and more on IDs (although I sho
 Now when clicking on the "specific deck" button, right hand side, does not pick a random card from that deck but the card that you haven't looked at for the longest time (e.g. 2 days ago)
 
 ```#14 updated code for how cards are randomly picked```<br>
+```#14 added link to timely database in firebase on timelog screen```<br>

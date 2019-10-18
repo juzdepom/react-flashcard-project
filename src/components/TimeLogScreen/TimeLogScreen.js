@@ -122,13 +122,19 @@ class TimeLogScreen extends React.Component {
         return (
             <div className="timelog">
                 <div className="timelog--container-main">
-                    <div className="timelog--title">TIME LOGGER</div>
+                    <div className="timelog--title">
+                        <a 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            href="https://console.firebase.google.com/u/0/project/personal-data-tracking-project/database/personal-data-tracking-project/data"
+                        >TIME LOGGER</a>
+                    </div>
                     <div className="timelog--container-secondary">
                     <div className="timelog--date">Date: {formatDate(date)}</div>
                         { this.state.editModeIsOn ?  <textarea 
                             onChange={(e)=> this.updateRawEntry(e)}
-                            className="timelog--input-timelog">{this.state.timeLogEntries[0].rawEntry}</textarea>
-                            : <div className="timelog--todayslog"><p>{this.state.timeLogEntries[0].rawEntry}</p></div>
+                            className="timelog--input-timelog">{rawEntry}</textarea>
+                            : <div className="timelog--todayslog"><p>{rawEntry}</p></div>
                         }
                         
                         <div className="timelog--container-button-edit">
