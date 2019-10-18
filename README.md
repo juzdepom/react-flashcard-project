@@ -173,4 +173,9 @@ Final Version
 <img src="/screenshots/10-17-2019--timelog.png" width="400" alt="">
 <img src="/screenshots/10-17-2019--timelog.gif" width="400" alt="">
 
+## Session 14
+*🗓 F, Oct 18, 2019* <br>
 
+```#14 successfully migrated 'timelogs' data to a separate Firebase backend project.```<br>
+
+<img src="/screenshots/10-18-2019--new backend.png" width="400" alt="new backend">

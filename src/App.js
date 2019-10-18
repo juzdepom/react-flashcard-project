@@ -19,9 +19,9 @@ class App extends React.Component {
     super(props)
 
     // if you don't include the "if statement" an error might occur!
-    if (!firebase.apps.length) {
-      firebase.initializeApp(DB_CONFIG);
-  }
+    // if (!firebase.apps.length) {
+    //   firebase.initializeApp(DB_CONFIG);
+    // }
 
     this.state = {
       cards: [],
@@ -37,15 +37,15 @@ class App extends React.Component {
     // })
 
     //retrieving the data from firebase
-    const database = firebase.database()
-    database.ref('flashcards').on("value", (snapshot) => {
-      // console.log(snapshot.val())
-      const firebaseData = snapshot.val()
+    // const database = firebase.database()
+    // database.ref('flashcards').on("value", (snapshot) => {
+    //   // console.log(snapshot.val())
+    //   const firebaseData = snapshot.val()
 
-      this.setState({
-        cards: firebaseData
-      })
-    })
+    //   this.setState({
+    //     cards: firebaseData
+    //   })
+    // })
   }
 
   drawerToggleClickHandler = () => {
@@ -66,10 +66,10 @@ class App extends React.Component {
             exact 
             render={(props) => <StudyScreen {...props} cards={this.state.cards} />}
           />
-          <Route 
+          {/* <Route 
             path="/search" 
             render={(props) => <SearchScreen {...props} cards={this.state.cards} />}
-          />
+          /> */}
           <Route 
             path="/timelog" 
             render={(props) => <TimeLogScreen/>}

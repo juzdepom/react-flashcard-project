@@ -13,6 +13,7 @@
 
 #firebase access credentials
 src/config/config.js
+src/config/personalData-config.js
 
 # misc
 .DS_Store

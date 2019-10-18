@@ -57,7 +57,9 @@ class Progress extends React.Component {
             var cardExpEarned = "XX"
 
             var date = entry[dateString]
+            //from mm-dd-yyyy to mmm dd, yyyy
             date = convertDate(date);
+
             let deckZero = entry[deckNumbers][0]
             let deckOne = entry[deckNumbers][1]
             let deckTwo = entry[deckNumbers][2]
@@ -77,7 +79,9 @@ class Progress extends React.Component {
                 let prev = index + 1
                 let prevDeckNumbers = progressLogData[prev][deckNumbers]
                 let prevExp = this.calculateTotalExpPoints(prevDeckNumbers)
-                totalExpEarnedToday = totalExp - prevExp
+                //add a method to push the latest to Homepage
+                //if same date as current date, pass a method up to update the state
+                totalExpEarnedToday = this.addPlusSignIfPositive(totalExp - prevExp)
                 
                 let prevNumOfCards = this.calculateTotalDeckCount(prevDeckNumbers)
                 newCardsAdded = numberOfCards - prevNumOfCards
@@ -102,7 +106,7 @@ class Progress extends React.Component {
                     Cards Reviewed: {numberOfCardsRated} <span>({this.addPlusSignIfPositive(cardExpEarned)} Exp.)</span>
                 </div>
 
-                <div className="progress-log--entry--exp"><strong>{totalExp} Exp. </strong>&nbsp;<span>{this.addPlusSignIfPositive(totalExpEarnedToday)} Total Exp.</span></div>
+                <div className="progress-log--entry--exp"><strong>{totalExp} Exp. </strong>&nbsp;<span>{totalExpEarnedToday} Total Exp.</span></div>
                 
                 {/* <div className="progress-log--entry--cards-reviewed">
                     <div>Cards Reviewed: {entry[cardsRated]} <span>({this.addPlusSignIfPositive(cardExpEarned)} Exp.)</span></div>
@@ -161,9 +165,6 @@ class Progress extends React.Component {
         dateString = convertDate(dateString)
         dateString = ` on ${dateString}`
         return dateString
-        // alert(`date of mastery: ${d}, ${time}, ${dateString}`)
-    
-        // return d;
     }
 
     calculatePredictions = () => {

@@ -5,7 +5,7 @@ import './TimeLogScreen.scss';
 import { getCurrentDate, formatDate } from './methods/methods';
 
 //firebase
-import { DB_CONFIG } from '../../config/config';
+import { PERSONALDATA_DB_CONFIG } from '../../config/personalData-config';
 import firebase from 'firebase/app';
 import 'firebase/database'; 
 
@@ -19,7 +19,8 @@ class TimeLogScreen extends React.Component {
 
          //if you don't include the "if statement" an error might occur
         if (!firebase.apps.length) {
-            firebase.initializeApp(DB_CONFIG);
+            alert('initializing app with personal data db config!')
+            firebase.initializeApp(PERSONALDATA_DB_CONFIG);
         }
 
         this.state = {
