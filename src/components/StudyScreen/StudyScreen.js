@@ -17,7 +17,11 @@ import firebase from 'firebase/app';
 import 'firebase/database'; 
 
 //methods
-import { calculateTotalExpPoints, addPlusSignIfPositive } from './methods';
+import { 
+  calculateTotalExpPoints, 
+  addPlusSignIfPositive, 
+  sortCardsFromLastReviewed 
+} from './methods';
 
 // hard-coded data
 // import data from './data/cards.json';
@@ -41,10 +45,9 @@ class StudyScreen extends React.Component {
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
     this.saveFlashcardDataInFirebase = this.saveFlashcardDataInFirebase.bind(this);
     this.addNewFlashcardsToDeck = this.addNewFlashcardsToDeck.bind(this);
-    this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
+    this.selectCardFromSpecificDeck = this.selectCardFromSpecificDeck.bind(this);
     this.ratingClicked = this.ratingClicked.bind(this);
     this.loadCard = this.loadCard.bind(this);
-    this.selectRandomCardFromSpecificDeck = this.selectRandomCardFromSpecificDeck.bind(this);
     this.selectDeckButton = this.selectDeckButton.bind(this);
     this.closeDeckList = this.closeDeckList.bind(this);
     
@@ -149,34 +152,34 @@ class StudyScreen extends React.Component {
     switch(e.keyCode) {
       case 48: //0
         if(e.shiftKey){
-          this.selectRandomCardFromSpecificDeck(0)
+          this.selectCardFromSpecificDeck(0)
         } else {
           this.cardElement.current.flipCard();
         }
       break;
       case 49: //1
         if(e.shiftKey) {
-          this.selectRandomCardFromSpecificDeck(1)
+          this.selectCardFromSpecificDeck(1)
         } else { this.ratingClicked(1) }
         break;
       case 50: //2
       if(e.shiftKey) {
-        this.selectRandomCardFromSpecificDeck(2)
+        this.selectCardFromSpecificDeck(2)
       } else { this.ratingClicked(2) }
       break;
       case 51: //3
       if(e.shiftKey) {
-        this.selectRandomCardFromSpecificDeck(3)
+        this.selectCardFromSpecificDeck(3)
       } else { this.ratingClicked(3) }
       break;
       case 52: //4
       if(e.shiftKey) {
-        this.selectRandomCardFromSpecificDeck(4)
+        this.selectCardFromSpecificDeck(4)
       } else { this.ratingClicked(4) }
       break;
       case 53: //5
       if(e.shiftKey) {
-        this.selectRandomCardFromSpecificDeck(5)
+        this.selectCardFromSpecificDeck(5)
       } else { this.ratingClicked(5)}
       break;
       case 192: //~
@@ -276,40 +279,28 @@ class StudyScreen extends React.Component {
     }
   }
 
-  //if the user clicks on a specific key or the button
-  selectRandomCardFromSpecificDeck(rating){
+  //it's no longer random, it's now the card you haven't looked at for the longest time
+  selectCardFromSpecificDeck(rating){
 
     //make sure rating is between 1 and 5 in case I make a mistake somewhere
     if (rating < 0 || rating > 5){
       alert("A deck with this rating cannot be selected: ", rating)
       return;
     }
-    var specificDeck = []
-    let cards = this.state.cards
-    // const test = this.state.cards.filter(card => card.rating == rating)
-    for (var i in cards){
-      //create a deck with only cards with that rating
-      if(cards[i].rating === rating){
-        //we're also adding the index of the master card array so that if we select "previous card:
-        specificDeck.push({
-          "index": parseInt(i), 
-          "card": cards[i]})
-      }
-    }
 
-    if (specificDeck.length === 0 ) { return } //later one we can make the button inactive
-
-    //choose a random card from that deck with the specific rating
-    const index = Math.floor(Math.random() * specificDeck.length)
-    
-    //get the index of the card in the this.state.cards array
-    const newIndex = specificDeck[index].index;
-
-    this.updateFlashcards(newIndex)
+    let chosenDeck = this.state.level.sortedDeck[String(rating)]
+    if (chosenDeck.length === 0 ) { return } //later one we can make the button inactive
+    // chosenDeck = sortCardsFromLastReviewed(chosenDeck)
+    console.log("chosen deck: ", chosenDeck)
+    let card = chosenDeck[0]
+    let index = this.findIndexInMasterDeck(card)
+    this.updateFlashcards(index)
   }
 
   //generate random index to select random flashcard
   generateRandomIndex(currentCards){
+    // let sortedDeck = this.state.
+
     //this is a bit more complicated because I wanted to the likelihood
     //of selecting a level 1 card to be a lot higher than 
     var indexDeck = this.state.level.indexDeck
@@ -394,6 +385,16 @@ class StudyScreen extends React.Component {
         default: //
       }
     }
+
+    //card that was reviewed the longest time ago appears at index 0
+    let dict = level.sortedDeck
+    for(var key in dict){
+      if(dict[key].length > 1){
+        level.sortedDeck[key] = sortCardsFromLastReviewed(dict[key])
+      }
+    }
+
+    // level.sortedDeck["0"].length > 1
 
     
 
@@ -619,7 +620,7 @@ class StudyScreen extends React.Component {
             goToPreviousCard = {this.goToPreviousCard}
             handleCardEdit = {this.handleCardEdit}
           />
-          <SelectFromDeck selectRandomCardFromSpecificDeck = {this.selectRandomCardFromSpecificDeck} />
+          <SelectFromDeck selectRandomCardFromSpecificDeck = {this.selectCardFromSpecificDeck} />
         </div>
  
         <div className="button-row">

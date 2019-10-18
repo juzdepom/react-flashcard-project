@@ -182,10 +182,6 @@ class Progress extends React.Component {
         var dateOfMastery = ""
 
         let entry = this.props.progressLogData[0]
-        // let prevEntry = this.props.progressLogData[1]
-        // let currentExpPoints = this.calculateTotalExpPoints(entry["deckNumbers"])
-        // let prevExpPoints = this.calculateTotalExpPoints(prevEntry["deckNumbers"])
-        // let expEarnedToday = addPlusSignIfPositive(currentExpPoints - prevExpPoints)
         let numberOfCards = calculateTotalDeckCount(entry["deckNumbers"])
         if(parseInt(this.state.masterCardsGoal) < numberOfCards){
             //currently the calculations mess up if you are underneath your total deck count
@@ -228,7 +224,7 @@ class Progress extends React.Component {
     render(){
         let totalPoints = this.props.totalPoints
         let expEarnedToday = addPlusSignIfPositive(totalPoints - this.props.yesterdayTotalExpPoints);
-        console.log("total points: ", totalPoints, " yesterday points: ", this.props.yesterdayTotalExpPoints)
+        // console.log("total points: ", totalPoints, " yesterday points: ", this.props.yesterdayTotalExpPoints)
         let percentage = Math.floor(totalPoints / 6000 * 100)
         let { moreCardsNeeded, masteredCardsGoal, cardReviewExp, averageTotalExpPerDay, numberOfDaysToMastery, dateOfMastery } = this.state;
         return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import './DeckList.scss';
 import { calculateElapsedTime } from '../../../methods/methods';
+import { sortCardsFromLastReviewed } from '../methods';
 
 class DeckCard extends React.Component {
     constructor(props){
@@ -34,6 +35,7 @@ class DeckCard extends React.Component {
 
     render(){
         let card = this.props.card
+        let index = this.props.index + 1
         var {lastReviewed} = card;
         var reviewCount = 0;
         var whenWasLastReview = "No Review"
@@ -46,9 +48,9 @@ class DeckCard extends React.Component {
 
         return (
             <div className={this.state.bodyClass} onClick={() => this.switchText()}>
-                <div className="decklist--card-reviewCount">{reviewCount}</div>
+                <div className="decklist--card-reviewCount">{index}</div>
                 <div className="decklist--card-text">{card[this.state.key]}</div>
-                <div className="decklist--card-lastReview">{whenWasLastReview}</div>
+                <div className="decklist--card-lastReview">{reviewCount} 👀 | {whenWasLastReview}</div>
                 <div className={selectClass} onClick={(e)=> this.selectCard(e)}></div>
             </div>
         )
@@ -86,26 +88,17 @@ class DeckList extends React.Component {
 
     cardList = (cards) => {
         return cards.map((card, index) => {
-            return <DeckCard selectCard={this.props.selectCard} card={card} quickRatingIsOn={this.quickRatingIsOn}/>
+            return <DeckCard 
+                selectCard={this.props.selectCard} 
+                card={card} 
+                index={index}
+                quickRatingIsOn={this.quickRatingIsOn}/>
         })
     }
 
     render(){
         var cards = this.props.cards
-        //sort cards where the cards that you haven't reviewed for the longest time are on the top of the list
-        cards.sort(function(first, second){
-            var a = 1
-            var b = 0
-            if(first["lastReviewed"] != undefined && second["lastReviewed"] != undefined){
-                let lastIndexA = first["lastReviewed"].length-1
-                 a = first["lastReviewed"][lastIndexA]
-
-                let lastIndexB = second["lastReviewed"].length-1
-                b = second["lastReviewed"][lastIndexB]
-            }
-            return a - b
-        });
-        // console.log('card: ', cards)
+       
         return (
             <div className={this.props.deckListClassname} style={{display: this.props.deckListDisplay}}>
                 <button 
