@@ -16,6 +16,9 @@ import { DB_CONFIG } from '../../config/config';
 import firebase from 'firebase/app';
 import 'firebase/database'; 
 
+//methods
+import { calculateTotalExpPoints, addPlusSignIfPositive } from './methods';
+
 // hard-coded data
 // import data from './data/cards.json';
 
@@ -64,6 +67,8 @@ class StudyScreen extends React.Component {
       //
       progressLogData: [],
       cardsRated: 0,
+      // expEarnedToday: 0,
+      yesterdayTotalExpPoints: 0,
       progressLogIsShowing: false,
       //
       cardEditModeIsOn: false
@@ -106,15 +111,24 @@ class StudyScreen extends React.Component {
     
     database.ref('progressLog').on("value", (snapshot) => {
       let progressLogData = snapshot.val()
-
+      // var expEarnedToday = 0;
       var cardsRated = 0;
-      let currentDate = this.getCurrentDate()
+      let currentDate = this.getCurrentDate();
+      //get yesterday's exp points
+      let yesterdayTotalExpPoints = 0;
+      if(progressLogData.length > 1){ //need to make sure progress log has more than one entry!
+        let array = progressLogData[1]["deckNumbers"]
+        yesterdayTotalExpPoints = calculateTotalExpPoints(array)
+      }
       if(currentDate === progressLogData[0]["date"]){
         cardsRated = progressLogData[0]["cardsRated"]
+        //calculat
       } else {
         alert("today is a new day!")
+        
       }
       this.setState({
+        yesterdayTotalExpPoints,
         progressLogData,
         cardsRated,
       })
@@ -575,6 +589,7 @@ class StudyScreen extends React.Component {
           progressLogIsShowing={this.progressLogIsShowing} 
           cards={this.state.cards} 
           totalPoints={this.state.level.totalPoints} 
+          yesterdayTotalExpPoints={this.state.yesterdayTotalExpPoints}
           progressLogData={this.state.progressLogData} />
 
         <Search 

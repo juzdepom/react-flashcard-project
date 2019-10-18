@@ -178,4 +178,8 @@ Final Version
 
 ```#14 successfully migrated 'timelogs' data to a separate Firebase backend project.```<br>
 
-<img src="/screenshots/10-18-2019--new backend.png" width="400" alt="new backend">
+<img src="/screenshots/10-18-2019--new-backend.png" width="400" alt="new backend">
+
+```#14 added the total exp points earned today to main flashcard page for self motivation.```<br>
+
+<img src="/screenshots/10-18-2019--exp.png" width="400" alt="exp">
