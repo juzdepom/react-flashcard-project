@@ -38,6 +38,10 @@ class TimeLogScreen extends React.Component {
         this.state = {
             editModeIsOn: false,
             buttonText: "Edit",
+            //this are to enable/disable the forward/backward buttons
+            hasPrevEntries: false,
+            hasFutureEntries: false,
+
             timeLogEntries: [{
                 date: "Loading...",
                 rawEntry: "Loading..."
@@ -195,11 +199,14 @@ class TimeLogScreen extends React.Component {
                     <div className="timelog--container-secondary">
 
                     <div className="timelog--date">
-                        <button className="timelog--date-buttons">{chevronCircleLeft}</button>
+                        <button 
+                            disabled="true"
+                            className="timelog--date-buttons">{chevronCircleLeft}</button>
                         <span>
                             Date: {formatDate(date)}
                         </span>
-                        <button className="timelog--date-buttons">{chevronCircleRight}</button>
+                        <button 
+                            className="timelog--date-buttons">{chevronCircleRight}</button>
                     </div>
 
                         { this.state.editModeIsOn ?  <textarea 

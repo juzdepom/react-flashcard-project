@@ -106,29 +106,12 @@ export const calculateElapsedTime = (s, e) => {
     var elapsed = endTime - startTime
     
     if(elapsed <= 0){
-        alert(`Error! Elapsed time is negative: ${elapsed}!`)
+        alert(`Error! Elapsed time is negative: ${elapsed}! Start Time: ${s}/${startTime} End Time: ${e}/${endTime}`)
         return NaN
     } else {
         return convertMinutesToHoursAndMinutes(elapsed)
     }
 
-}
-
-//returns 3h20
-export const convertMinutesToHoursAndMinutes = (m) => {
-    let totalMin = parseInt(m)
-    if(totalMin === NaN) {
-        alert(`Error! Minutes are not a valid Int: ${m}`)
-        return NaN
-    } else {
-        let h = Math.floor(totalMin/60);
-        let min = totalMin % 60;
-        if(h < 1){
-            return min + "min"
-        } else {
-            return h + "h" + min;
-        }
-    }
 }
 
 export const convertMilitaryTimeToMinutes = (t) => {
@@ -171,12 +154,13 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
     }
 
     var ampm = ""
-    if(hours => 12 && hours < 24){
+    if(hours > 11 && hours < 24){
+        console.log(hours)
         ampm = "PM"
-        if(hours !== 12){
+        if(hours != 12){
             hours = hours - 12
         }
-    } else if (hours => 0 && hours <= 12){
+    } else if (hours > -1 && hours < 12){
         ampm = "AM"
         if(hours === 0){hours = 12}
     } else {
@@ -188,5 +172,22 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
     }
 
     return hours + ":" + minutes + " " + ampm
+}
+
+//returns 3h20
+export const convertMinutesToHoursAndMinutes = (m) => {
+    let totalMin = parseInt(m)
+    if(totalMin === NaN) {
+        alert(`Error! Minutes are not a valid Int: ${m}`)
+        return NaN
+    } else {
+        let h = Math.floor(totalMin/60);
+        let min = totalMin % 60;
+        if(h < 1){
+            return min + "min"
+        } else {
+            return h + "h" + min;
+        }
+    }
 }
 
