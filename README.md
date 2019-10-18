@@ -191,3 +191,8 @@ Now when clicking on the "specific deck" button, right hand side, does not pick 
 
 ```#14 updated code for how cards are randomly picked```<br>
 ```#14 added link to timely database in firebase on timelog screen```<br>
+```#14 made a lot of progress on TimeLogger; added a backup timelogger data json file to folder```<br>
+
+<img src="/screenshots/10-18-2019--timelogger.png" width="700" alt="timelogger">
+
+

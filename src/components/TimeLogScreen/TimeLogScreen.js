@@ -2,7 +2,13 @@ import React from 'react';
 import './TimeLogScreen.scss';
 
 //methods
-import { getCurrentDate, formatDate } from './methods/methods';
+import { 
+    getCurrentDate, 
+    formatDate, 
+    calculateElapsedTime,
+    turnTimeLogStringArrayIntoArrayOfDict,
+    returnBackgroundTypeBasedOnHashtag,
+    convertMilitaryTimeToTwelveHourTime } from './methods/methods';
 
 //firebase
 import { PERSONALDATA_DB_CONFIG } from '../../config/personalData-config';
@@ -19,7 +25,7 @@ class TimeLogScreen extends React.Component {
 
          //if you don't include the "if statement" an error might occur
         if (!firebase.apps.length) {
-            alert('initializing app with personal data db config!')
+            // alert('initializing app with personal data db config!')
             firebase.initializeApp(PERSONALDATA_DB_CONFIG);
         }
 
@@ -116,9 +122,60 @@ class TimeLogScreen extends React.Component {
         firebase.database().ref('timelogs').set(entries)
     }
 
+    formatEntry = (entry) => {
+        let arrayOfStrings = entry.split('\n')
+        if(arrayOfStrings.length < 2){return entry}
+
+        let arrayOfDict = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
+
+        let newText = arrayOfDict.map((item, i) => {
+            var startTime = item["startTime"]
+            var endTime = item["endTime"]
+            let elapsedTime = calculateElapsedTime(startTime, endTime)
+            let rawText = item["rawText"]
+
+            startTime = convertMilitaryTimeToTwelveHourTime(startTime)
+            endTime = convertMilitaryTimeToTwelveHourTime(endTime)
+            
+            let hashtagRegex = /#[a-z-]+/gi
+            let hashtags = rawText.match(hashtagRegex);
+            let textWithoutHashtags = rawText.replace(hashtagRegex, "");
+
+            let backgroundType = returnBackgroundTypeBasedOnHashtag(hashtags)
+            // let backgroundType = "default"
+            let className = "timelog--todayslog--entry bg-"+ backgroundType
+            // let className = "timelog--todayslog--entry bg-default"
+
+            return(
+            <div 
+                key={i} 
+                className={className}>
+                <p>
+                    <strong>{startTime} - {endTime} ({elapsedTime})</strong>
+                    <span className="timelog--todayslog--entry-hashtags">
+                    {hashtags}
+                    </span>
+                    <span className="timelog--todayslog--entry-caption">
+                    {textWithoutHashtags}
+                    </span>
+                    </p>
+                {/* <p>{textWithoutHashtags}</p> */}
+            </div>
+            );
+        })
+
+        return newText
+    }
+
+  
+
     render(){
         let date = this.state.timeLogEntries[0].date
         let rawEntry = this.state.timeLogEntries[0].rawEntry
+        var formattedEntry = rawEntry
+        if (!this.state.editModeIsOn){
+            formattedEntry = this.formatEntry(rawEntry)
+        }
         return (
             <div className="timelog">
                 <div className="timelog--container-main">
@@ -134,7 +191,7 @@ class TimeLogScreen extends React.Component {
                         { this.state.editModeIsOn ?  <textarea 
                             onChange={(e)=> this.updateRawEntry(e)}
                             className="timelog--input-timelog">{rawEntry}</textarea>
-                            : <div className="timelog--todayslog"><p>{rawEntry}</p></div>
+                            : <div className="timelog--todayslog">{formattedEntry}</div>
                         }
                         
                         <div className="timelog--container-button-edit">
