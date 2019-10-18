@@ -46,6 +46,11 @@ $pastel-yellow: #FDFD96;
     }
     &--date {
         padding-top: 10px;
+        &-buttons {
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
     }
     &--todayslog {
         width: 95%;

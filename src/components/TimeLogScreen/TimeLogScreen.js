@@ -1,5 +1,7 @@
 import React from 'react';
 import './TimeLogScreen.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 //methods
 import { 
@@ -17,6 +19,10 @@ import 'firebase/database';
 
 //button text
 let noInputDataText = "No input data yet"
+
+//fontawesome
+const chevronCircleLeft = <FontAwesomeIcon icon={faChevronCircleLeft} />
+const chevronCircleRight = <FontAwesomeIcon icon={faChevronCircleRight} />
 
 class TimeLogScreen extends React.Component {
 
@@ -187,7 +193,15 @@ class TimeLogScreen extends React.Component {
                         >TIME LOGGER</a>
                     </div>
                     <div className="timelog--container-secondary">
-                    <div className="timelog--date">Date: {formatDate(date)}</div>
+
+                    <div className="timelog--date">
+                        <button className="timelog--date-buttons">{chevronCircleLeft}</button>
+                        <span>
+                            Date: {formatDate(date)}
+                        </span>
+                        <button className="timelog--date-buttons">{chevronCircleRight}</button>
+                    </div>
+
                         { this.state.editModeIsOn ?  <textarea 
                             onChange={(e)=> this.updateRawEntry(e)}
                             className="timelog--input-timelog">{rawEntry}</textarea>

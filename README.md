@@ -195,4 +195,11 @@ Now when clicking on the "specific deck" button, right hand side, does not pick 
 
 <img src="/screenshots/10-18-2019--timelogger.png" width="700" alt="timelogger">
 
+## Session 15
+*🗓 F, Oct 18, 2019* <br>
+
+Took longer than expect but ```#15 successfully installed font-awesome into project```<br>
+
+<img src="/screenshots/10-19-2019--font-awesome.png" width="100" alt="timelogger">
+
 
