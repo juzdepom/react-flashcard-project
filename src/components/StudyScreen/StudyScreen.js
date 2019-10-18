@@ -40,7 +40,7 @@ class StudyScreen extends React.Component {
     this.cardElement = React.createRef();
 
     this.updateDisplayCardLevels = this.updateDisplayCardLevels.bind(this);
-    this.generateRandomIndex = this.generateRandomIndex.bind(this);
+    // this.generateRandomIndex = this.generateRandomIndex.bind(this);
     this.handleCardEdit = this.handleCardEdit.bind(this);
     this.goToPreviousCard = this.goToPreviousCard.bind(this);
     this.saveFlashcardDataInFirebase = this.saveFlashcardDataInFirebase.bind(this);
@@ -102,7 +102,7 @@ class StudyScreen extends React.Component {
       this.updateDisplayCardLevels();
 
       //chose a random card to display
-      var index = this.generateRandomIndex(cards)
+      var index = this.generateRandomIndex()
       
       this.setState({
         index,
@@ -202,7 +202,7 @@ class StudyScreen extends React.Component {
       flashcardsRated,
     })
   
-    var newIndex = this.generateRandomIndex(this.state.cards)
+    var newIndex = this.generateRandomIndex()
     this.updateFlashcards(newIndex, rating)
 
     this.updateDisplayCardLevels();
@@ -297,36 +297,36 @@ class StudyScreen extends React.Component {
     this.updateFlashcards(index)
   }
 
-  //generate random index to select random flashcard
-  generateRandomIndex(currentCards){
-    // let sortedDeck = this.state.
-
-    //this is a bit more complicated because I wanted to the likelihood
-    //of selecting a level 1 card to be a lot higher than 
-    var indexDeck = this.state.level.indexDeck
-    var index = 0;
-    if(indexDeck == null) {
-      if(currentCards.length < 1){
-        alert("Error! currentCards.length < 1!")
-        return;
+  findCardWithId(id){
+    var cards = this.state.cards
+    for (var i in cards){
+      if (cards[i]._id === id){
+        return cards[i]
       }
-      index = Math.floor(Math.random() * currentCards.length)
-    } else {
-      if(indexDeck.length < 1) {
-        alert("Error! indexDeck.length < 1!")
-      }
-      var i = Math.floor(Math.random() * indexDeck.length)
-      index = indexDeck[i]
     }
-    //make sure you don't choose the same card as before
-    return (index === this.state.currentCardIndex ) ? this.generateRandomIndex(currentCards) : index;
+    alert("Error! Could not find card with id: ", id)
+  }
+
+  //generate random index to select random flashcard
+  generateRandomIndex = () => {
+    var idDeck = this.state.level.idDeck
+    var index = 0;
+    if(idDeck == null) {alert("id deck is null!")} 
+    else {
+      if(idDeck.length < 1) {alert("Warning! idDeck.length < 1!")}
+      var i = Math.floor(Math.random() * idDeck.length)
+      let id = idDeck[i]
+      let card = this.findCardWithId(id)
+      index = this.findIndexInMasterDeck(card)
+    }
+    return index
   }
 
   //display the number of cards in each rating category (1-5)
   updateDisplayCardLevels(){
     const currentCards = this.state.cards;
     var level = {
-      indexDeck: [],
+      idDeck: [],
       zero: 0,
       one: 0, 
       two: 0,
@@ -346,40 +346,42 @@ class StudyScreen extends React.Component {
 
     // var newDeck = []
 
-    for (var i in currentCards){
+    for (var index in currentCards){
 
-      level.sortedDeck[String(currentCards[i].rating)].push(currentCards[i])
+      level.sortedDeck[String(currentCards[index].rating)].push(currentCards[index])
 
       // let id = i
       // var card = currentCards[i]
       // card["_id"] = id
       // newDeck.push(card)
 
-      switch(currentCards[i].rating){
+      let i = currentCards[index]._id
+      
+      switch(currentCards[index].rating){
         case 0: 
           level.zero += 1
-          level.indexDeck.push(i,i,i,i,i,i,i,i,i,i)
+          level.idDeck.push(i,i,i,i,i,i,i,i,i,i)
           level.totalPoints += 1
           break;
         case 1: 
           level.one += 1
-          level.indexDeck.push(i,i,i,i,i,i,i,i,i,i)
+          level.idDeck.push(i,i,i,i,i,i,i,i,i,i)
           level.totalPoints += 2
           break;
         case 2: level.two += 1
-          level.indexDeck.push(i,i,i,i,i,i)
+          level.idDeck.push(i,i,i,i,i,i)
           level.totalPoints += 3
           break;
         case 3: level.three += 1
-          level.indexDeck.push(i,i,i)
+          level.idDeck.push(i,i,i)
           level.totalPoints += 4
           break;
         case 4: level.four += 1
-          level.indexDeck.push(i,i)
+          level.idDeck.push(i,i)
           level.totalPoints += 5
           break;
         case 5: level.five += 1
-          level.indexDeck.push(i)
+          level.idDeck.push(i)
           level.totalPoints += 6
           break;
         default: //
