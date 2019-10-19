@@ -39,19 +39,15 @@ class TimeLogScreen extends React.Component {
             editModeIsOn: false,
             buttonText: "Edit",
             //this are to enable/disable the forward/backward buttons
-            hasPrevEntries: false,
-            hasFutureEntries: false,
-
+            entryIndex: 0,
+            doesNotHavePrevEntries: true,
+            doesNotHaveFutureEntries: true,
+            
             timeLogEntries: [{
                 date: "Loading...",
                 rawEntry: "Loading..."
             }],
-            // currentEntry: {
-            //     date: "Loading...",
-            //     rawEntry: "Loading...",
-            // }
         }
-        // this.retrieveDateFromFirebase();
         
     }
 
@@ -100,8 +96,12 @@ class TimeLogScreen extends React.Component {
                 timeLogEntries = this.state.timeLogEntries
                 timeLogEntries[0] = currentEntry;
             }
+            var doesNotHavePrevEntries = true;
+            if(timeLogEntries.length > 1){
+                doesNotHavePrevEntries = false; 
+            }
 
-            this.setState({timeLogEntries})
+            this.setState({timeLogEntries, doesNotHavePrevEntries})
         })
     }
 
@@ -177,11 +177,39 @@ class TimeLogScreen extends React.Component {
         return newText
     }
 
-  
+    changeEntries = (i) => {
+        var doesNotHavePrevEntries = this.state.doesNotHavePrevEntries
+        var doesNotHaveFutureEntries = this.state.doesNotHaveFutureEntries
+        var entryIndex = this.state.entryIndex + i
+
+        let entries = this.state.timeLogEntries
+        //we are at the last index can't go back anymore
+        if(entryIndex === entries.length - 1){
+            doesNotHavePrevEntries = true;
+        } else {
+            doesNotHavePrevEntries = false;
+        }
+        if(entryIndex === 0){
+            doesNotHaveFutureEntries = true;
+        } else {
+            if(entries.length > 1){
+                doesNotHaveFutureEntries = false;
+            }
+        }
+
+        //this shoudn't happen but just in case...
+        if(entryIndex > entries.length - 1 || entryIndex < 0){
+            entryIndex = entryIndex - i;
+            alert(`Error! changeEntries() entryIndex=${entryIndex} i=${i}`)
+        }
+
+        this.setState({entryIndex, doesNotHavePrevEntries,doesNotHaveFutureEntries})
+    }
 
     render(){
-        let date = this.state.timeLogEntries[0].date
-        let rawEntry = this.state.timeLogEntries[0].rawEntry
+        let index = this.state.entryIndex
+        let date = this.state.timeLogEntries[index].date
+        let rawEntry = this.state.timeLogEntries[index].rawEntry
         var formattedEntry = rawEntry
         if (!this.state.editModeIsOn){
             formattedEntry = this.formatEntry(rawEntry)
@@ -194,18 +222,21 @@ class TimeLogScreen extends React.Component {
                             target="_blank" 
                             rel="noopener noreferrer" 
                             href="https://console.firebase.google.com/u/0/project/personal-data-tracking-project/database/personal-data-tracking-project/data"
-                        >TIME LOGGER</a>
+                        >TIME LOGGER {this.state.entryIndex}</a>
                     </div>
                     <div className="timelog--container-secondary">
 
                     <div className="timelog--date">
                         <button 
-                            disabled="true"
+                            onClick={() => this.changeEntries(1)}
+                            disabled={this.state.doesNotHavePrevEntries}
                             className="timelog--date-buttons">{chevronCircleLeft}</button>
                         <span>
                             Date: {formatDate(date)}
                         </span>
                         <button 
+                            onClick={() => this.changeEntries(-1)}
+                            disabled={this.state.doesNotHaveFutureEntries}
                             className="timelog--date-buttons">{chevronCircleRight}</button>
                     </div>
 

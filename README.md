@@ -200,6 +200,10 @@ Now when clicking on the "specific deck" button, right hand side, does not pick 
 
 Took longer than expect but ```#15 successfully installed font-awesome into project```<br>
 
-<img src="/screenshots/10-19-2019--font-awesome.png" width="100" alt="timelogger">
+<img src="/screenshots/10-19-2019--font-awesome.png" width="100" alt="">
 
+```#15 correcting method errors in TimeLog```
 
+```#15 navigating between entries is now possible!```
+
+<img src="/screenshots/10-19-2019--nav.gif" width="500" alt="">
