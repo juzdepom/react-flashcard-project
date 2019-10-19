@@ -37,7 +37,7 @@ export const returnBackgroundTypeBasedOnHashtag = (h) => {
     
     //remove the hashtag
     let p = String(parentHashtag).substr(1)
-    if (p == "coding" || p == "clientwork"){
+    if (p == "coding" || p == "clientwork" || p == "instagram"){
         color = p;
     }
     
@@ -100,7 +100,7 @@ export const formatDate = (dateString) => {
 }
 
 //this method only works for military hours in a day (e.g. 13:10 - 14:45)
-export const calculateElapsedTime = (s, e) => {
+export const calculateElapsedTime = (s, e, onlyMinutes) => {
     var startTime  = convertMilitaryTimeToMinutes(s)
     var endTime = convertMilitaryTimeToMinutes(e)
     var elapsed = endTime - startTime
@@ -109,7 +109,12 @@ export const calculateElapsedTime = (s, e) => {
         alert(`Error! Elapsed time is negative: ${elapsed}! Start Time: ${s}/${startTime} End Time: ${e}/${endTime}`)
         return NaN
     } else {
-        return convertMinutesToHoursAndMinutes(elapsed)
+        if(onlyMinutes){
+            return elapsed;
+        } else {
+            return convertMinutesToHoursAndMinutes(elapsed)
+        }
+        
     }
 
 }

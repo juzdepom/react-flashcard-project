@@ -5,6 +5,7 @@ $white-2: rgba(255,255,255,0.9);
 $gray: rgba(0,0,0,0.6);
 $pastel-turquoise: #A4EBDB;
 $pastel-yellow: #FDFD96;
+$pastel-pink: #F8D1DC;
 
 .bg {
     &-default {
@@ -15,6 +16,9 @@ $pastel-yellow: #FDFD96;
     }
     &-clientwork {
         background: $pastel-yellow
+    }
+    &-instagram {
+        background: $pastel-pink
     }
 }
 
@@ -59,6 +63,22 @@ $pastel-yellow: #FDFD96;
         text-align: left;
         max-height: 500px;
         overflow-y: scroll;
+
+        &--hashtag-data-container {
+            // background: white;
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 5px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+
+            & span {
+                padding: 2px;
+                margin-right: 8px;
+                // background: white;
+            }
+        }
         
         &--entry {
             margin-bottom: 4px;

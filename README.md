@@ -207,3 +207,9 @@ Took longer than expect but ```#15 successfully installed font-awesome into proj
 ```#15 navigating between entries is now possible!```
 
 <img src="/screenshots/10-19-2019--nav.gif" width="500" alt="">
+
+```#15 hashtag data is now showing correctly!```
+
+<img src="/screenshots/10-19-2019--hashtag-data.png" width="400" alt="">
+
+

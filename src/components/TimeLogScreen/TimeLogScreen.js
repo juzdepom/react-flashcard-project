@@ -10,6 +10,7 @@ import {
     calculateElapsedTime,
     turnTimeLogStringArrayIntoArrayOfDict,
     returnBackgroundTypeBasedOnHashtag,
+    convertMinutesToHoursAndMinutes,
     convertMilitaryTimeToTwelveHourTime } from './methods/methods';
 
 //firebase
@@ -47,15 +48,18 @@ class TimeLogScreen extends React.Component {
                 date: "Loading...",
                 rawEntry: "Loading..."
             }],
+
+            entryData: [],
+            hashtagData: []
         }
         
     }
 
     componentWillMount(){
-        this.retrieveDateFromFirebase();
+        this.retrieveDataFromFirebase();
     }
 
-    retrieveDateFromFirebase = () => {
+    retrieveDataFromFirebase = () => {
         //will return dd-mm-yyyy format
         let currentDate = getCurrentDate()
         var currentEntry = {}
@@ -101,13 +105,44 @@ class TimeLogScreen extends React.Component {
                 doesNotHavePrevEntries = false; 
             }
 
-            this.setState({timeLogEntries, doesNotHavePrevEntries})
+            this.setState({timeLogEntries, doesNotHavePrevEntries}, () => {
+                this.parseCurrentEntryRawText()
+            })
         })
     }
 
-    componentDidMount(){
 
+    parseCurrentEntryRawText = () => {
+        let entry = this.state.timeLogEntries[this.state.entryIndex].rawEntry
+        let arrayOfStrings = entry.split('\n')
+        let entryData = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
         
+        // var hashtagEntry
+        var hashtagDataDict = {}
+        for(var i in entryData){
+            let item = entryData[i]
+            let rawText = item["rawText"]
+
+            let hashtagRegex = /#[a-z]+/gi
+            let hashtags = rawText.match(hashtagRegex);
+
+            var startTime = item["startTime"]
+            var endTime = item["endTime"]
+            let elapsedTime = calculateElapsedTime(startTime, endTime, true)
+
+            if(hashtagDataDict[hashtags] == undefined){hashtagDataDict[hashtags] = 0}
+            hashtagDataDict[hashtags] = parseInt(hashtagDataDict[hashtags]) + parseInt(elapsedTime);
+        }
+
+        var hashtagData = []
+        for(var key in hashtagDataDict){
+            var hashtagDict = {}
+            hashtagDict["hashtag"] = key
+            hashtagDict["time"] = hashtagDataDict[key]
+            hashtagData.push(hashtagDict)
+        }
+
+        this.setState({hashtagData, entryData})
     }
 
     switchEditMode = () => {
@@ -132,6 +167,7 @@ class TimeLogScreen extends React.Component {
         firebase.database().ref('timelogs').set(entries)
     }
 
+    //format timelog raw data
     formatEntry = (entry) => {
         let arrayOfStrings = entry.split('\n')
         if(arrayOfStrings.length < 2){return entry}
@@ -206,10 +242,33 @@ class TimeLogScreen extends React.Component {
         this.setState({entryIndex, doesNotHavePrevEntries,doesNotHaveFutureEntries})
     }
 
+    returnFormattedHashtagData = () => {
+        let hashtagData = this.state.hashtagData
+        var formattedHashtagData = ''
+        //hasen't parsed the data from firebase yet
+        if(hashtagData.length === 0){
+            return formattedHashtagData
+        }
+
+        formattedHashtagData = hashtagData.map((item, i) => {
+            let hashtag = item["hashtag"]
+            let time = convertMinutesToHoursAndMinutes(item["time"])
+            // console.log(item)
+            let backgroundType = returnBackgroundTypeBasedOnHashtag(hashtag)
+            let className = "bg-"+backgroundType
+            return(
+                <span className={className}>{hashtag}: {time}</span>
+            )
+            
+        })
+        return formattedHashtagData;
+    }
+
     render(){
         let index = this.state.entryIndex
         let date = this.state.timeLogEntries[index].date
         let rawEntry = this.state.timeLogEntries[index].rawEntry
+        let hashtagData = this.returnFormattedHashtagData()
         var formattedEntry = rawEntry
         if (!this.state.editModeIsOn){
             formattedEntry = this.formatEntry(rawEntry)
@@ -241,9 +300,17 @@ class TimeLogScreen extends React.Component {
                     </div>
 
                         { this.state.editModeIsOn ?  <textarea 
-                            onChange={(e)=> this.updateRawEntry(e)}
-                            className="timelog--input-timelog">{rawEntry}</textarea>
-                            : <div className="timelog--todayslog">{formattedEntry}</div>
+                                    onChange={(e)=> this.updateRawEntry(e)}
+                                    className="timelog--input-timelog">{rawEntry}
+                                </textarea>
+                            : <div>
+                                <div className="timelog--todayslog">
+                                {formattedEntry}
+                                </div>
+                                <div className="timelog--todayslog--hashtag-data-container">
+                                    {hashtagData}
+                                </div>
+                            </div>
                         }
                         
                         <div className="timelog--container-button-edit">
