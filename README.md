@@ -212,4 +212,5 @@ Took longer than expect but ```#15 successfully installed font-awesome into proj
 
 <img src="/screenshots/10-19-2019--hashtag-data.png" width="400" alt="">
 
+```#15 changed card so that thai characters appear first if card rating is 4 or 5```
 

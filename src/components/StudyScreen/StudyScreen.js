@@ -274,7 +274,7 @@ class StudyScreen extends React.Component {
     this.cardElement.current.reset();
 
     //if we have rated more 5 cards already, then save to Firebase.
-    if(this.state.flashcardsRated > 5) {
+    if(this.state.flashcardsRated > 3) {
       this.saveFlashcardDataInFirebase();
     }
   }
@@ -593,6 +593,7 @@ class StudyScreen extends React.Component {
           cards={this.state.cards} 
           totalPoints={this.state.level.totalPoints} 
           yesterdayTotalExpPoints={this.state.yesterdayTotalExpPoints}
+          cardsRated={this.state.cardsRated}
           progressLogData={this.state.progressLogData} />
 
         <Search 
@@ -644,8 +645,8 @@ class StudyScreen extends React.Component {
           <div className="row">
             <LinkButton url="https://translate.google.com/#view=home&op=translate&sl=en&tl=th" title="Google Translate" />
             <LinkButton url="https://console.firebase.google.com/u/0/project/flashcard-project-5ee54/database/flashcard-project-5ee54/data" title="Firebase" />
-            <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
             <LinkButton url="https://github.com/juzdepom/react-flashcard-project" title="See On Github" />
+            <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
           </div>
 
         </div>

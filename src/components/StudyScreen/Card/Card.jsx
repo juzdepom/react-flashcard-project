@@ -95,10 +95,19 @@ class Card extends Component {
     render(props){
         var colors = ["lightgray", "#AB3B7F", "#F28945", "#FEDD33", "#7EAE2E", "#40A9D6"]
         var {rating, textOne, textTwo, textThree, dateCreated, lastReviewed} = this.props.card;
+
+        //if card is green or blue, have textOne be 
         var color = colors[rating]
         var time = "First Time"
         // var elapsed = ""
         var reviewCount = 0
+
+        var front = textOne
+        var back = textThree
+        if(parseInt(rating) > 3){
+            front = textThree;
+            back = textOne;
+        } 
 
         if(lastReviewed == undefined) {
             //add an array to this
@@ -130,7 +139,7 @@ class Card extends Component {
                             {!this.state.editMode ?
                                 <div>
                                     <div className="card--front-text-container">
-                                        {textOne}
+                                        {front}
                                     </div>
                                     {this.state.alreadyFlipped ? 
                                         <div className="card--back-text-container">
@@ -139,7 +148,7 @@ class Card extends Component {
                                                 {textTwo}</span>
                                             <div 
                                                 className={this.state.show >= 1 ? "card--back-text-container--thai fade-in" : "card--back-text-container--thai opacity-zero"}>
-                                                {textThree}</div>
+                                                {back}</div>
                                         </div> 
                                     : ''}
                                 </div> 

@@ -234,7 +234,7 @@ class Progress extends React.Component {
                     className="progress--button" 
                     onClick={() => this.displayProgressLog()}>
                         Total Exp: {totalPoints}/6000 ({percentage}%) 
-                </button><span className="progress--expEarnedToday">{expEarnedToday}</span>
+                </button>&nbsp;{this.props.cardsRated}/<span className="progress--expEarnedToday">{expEarnedToday}</span>
 
                 {this.state.progressLogShowing ? <div className="progress-log--container fade-in">
 
