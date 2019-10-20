@@ -10,6 +10,8 @@ $pastel-navy: #779ECB;
 $pastel-purple: #B3A0DB;
 $pastel-red: #ff6961;
 $pastel-beige: #E8D1C0;
+$pastel-orange: #F8C181;
+$pastel-light-blue: #DEF5FB;
 
 .height {
     &-default { //0-15 min
@@ -42,11 +44,11 @@ $pastel-beige: #E8D1C0;
     &-clientwork {
         background: $pastel-yellow
     }
-    &-instagram {
-        background: $pastel-pink
+    &-myinstagram {
+        background: $pastel-light-blue;
     }
     &-nap {
-        background: $pastel-navy;
+        background: $pastel-pink;
     }
     &-studythai {
         background: $pastel-purple;
@@ -58,10 +60,22 @@ $pastel-beige: #E8D1C0;
         background: $pastel-red;
     }
     &-selfcare {
-        background: $pastel-beige;
+        background: $pastel-pink;
     }
     &-timelog {
-        background: $blue-1;
+        background: $pastel-pink;
+    }
+    &-food {
+        background: $pastel-pink;
+    }
+    &-badhabits {
+        background: $white-1;
+    }
+    &-rov {
+        background: $white-1;
+    }
+    &-Baow {
+        background: $pastel-pink;
     }
 
 }
@@ -79,7 +93,8 @@ $pastel-beige: #E8D1C0;
             height: 100%;
         }
         &-secondary {
-            background: $blue-2;
+            // background: $blue-2;
+            background: $white-2;
             height: 92%;
             width: 95%;
             margin: 0 auto;
@@ -94,14 +109,20 @@ $pastel-beige: #E8D1C0;
     }
     &--date {
         padding-top: 10px;
-        &-buttons {
+        & button {
+            font-size: 16px;
             cursor: pointer;
             background: transparent;
             border: none;
+            margin-right: 10px;
+            margin-left: 10px;
         }
+        
     }
     &--currentTime {
         padding: 5px 0 5px 0; 
+        // background: red;
+        height: 90%;
     }
     &--todayslog {
         width: 95%;
@@ -173,7 +194,7 @@ $pastel-beige: #E8D1C0;
             padding: 8px;
             font-size: 14px;
             width: 95%;
-            height: 40%;
+            height: 75%;
             margin-top: 10px;
         }
     }

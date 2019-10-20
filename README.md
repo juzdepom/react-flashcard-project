@@ -223,9 +223,11 @@ Took longer than expect but ```#15 successfully installed font-awesome into proj
 
 ```#16 added more data to visibly assess in timelog```
 
-<img src="/screenshots/10-20-2019--time-data.png" width="200" alt="">
+<img src="/screenshots/10-20-2019--time-data.png" width="400" alt="">
 
+#16 created version 1 of the all entries component! This will allow me to see all my time logs in one place! See GIF below
 
+<img src="/screenshots/10-20-2019--all-entries.gif" width="600" alt="">
 
 
 

@@ -7,13 +7,20 @@ export const parseEntryDataArrayIntoHashtagArray = (entryData, hashtagDataInclud
         let hashtagRegex = (hashtagDataIncludesDash) ? /#[a-z-]+/gi : /#[a-z]+/gi
         // let hashtagRegex = /#[a-z-]+/gi
         let hashtags = rawText.match(hashtagRegex);
+        // console.log(hashtag)
+        // let hashtagArray = hashtags.split(',')
 
         var startTime = item["startTime"]
         var endTime = item["endTime"]
         let elapsedTime = calculateElapsedTime(startTime, endTime, true)
-
-        if(hashtagDataDict[hashtags] == undefined){hashtagDataDict[hashtags] = 0}
-        hashtagDataDict[hashtags] = parseInt(hashtagDataDict[hashtags]) + parseInt(elapsedTime);
+        for(var i in hashtags){
+            let hashtag = hashtags[i]
+            if(hashtagDataDict[hashtag] == undefined){
+                hashtagDataDict[hashtag] = 0
+            }
+            hashtagDataDict[hashtag] = parseInt(hashtagDataDict[hashtag]) + parseInt(elapsedTime);
+        }
+        
     }
 
     var hashtagData = []
@@ -118,13 +125,17 @@ export const returnBackgroundTypeBasedOnHashtag = (h) => {
     let c = [
         "coding", 
         "clientwork", 
-        "instagram", 
+        "myinstagram", 
         "nap", 
         "studythai", 
         "muaythai", 
         "selfcare",
         "running",
         "timelog",
+        "food",
+        "badhabits",
+        "rov",
+        "Baow",
     ]
     for(var i in c){
         if(p == c[i]){

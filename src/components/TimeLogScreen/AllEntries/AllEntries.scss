@@ -1,0 +1,15 @@
+.allEntries {
+    margin-top: 5px;
+    background: white;
+    height: 90%;
+    display: flex;
+
+    &--entry {
+        width: 200px;
+        border: solid 2px black;
+        margin: 10px 0 10px 10px;
+        height: 200px;
+        overflow-y: scroll;
+        // margin-left: 10
+    }
+}

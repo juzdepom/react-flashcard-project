@@ -2,6 +2,7 @@ import React from 'react';
 import './TimeLogScreen.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+import AllEntries from './AllEntries/AllEntries';
 
 //methods
 import { 
@@ -42,8 +43,10 @@ class TimeLogScreen extends React.Component {
         }
 
         this.state = {
+            allEntriesModeIsOn: true,
             editModeIsOn: false,
             buttonText: "Edit",
+
             //this are to enable/disable the forward/backward buttons
             entryIndex: 0,
             doesNotHavePrevEntries: true,
@@ -123,6 +126,11 @@ class TimeLogScreen extends React.Component {
                 this.parseCurrentEntryRawText()
             })
         })
+    }
+
+    switchEntriesDisplayMode = () => {
+        let allEntriesModeIsOn = !(this.state.allEntriesModeIsOn)
+        this.setState({allEntriesModeIsOn})
     }
 
     switchHashtagDataStyle = () => {
@@ -284,6 +292,7 @@ class TimeLogScreen extends React.Component {
         let index = this.state.entryIndex
         let date = this.state.timeLogEntries[index].date
         let rawEntry = this.state.timeLogEntries[index].rawEntry
+        
         let hashtagData = this.returnFormattedHashtagData()
         var formattedEntry = rawEntry
         if (!this.state.editModeIsOn){
@@ -296,16 +305,16 @@ class TimeLogScreen extends React.Component {
             totalTimeLogged, 
             timeSinceFirstEntryTime,
             militaryBedTime,} = this.state
-        //returns militaryTime
-        var currentTime = getCurrentTime() //problem: this returns a static time; will only update if you reload the page
+        //small problem: this returns a static time; will only update if you reload the page
+        var currentTime = getCurrentTime() 
         var timeUntilBedtime = calculateElapsedTime(currentTime, militaryBedTime)
         currentTime = convertMilitaryTimeToTwelveHourTime(currentTime)
-       
-        
         var bedtime = convertMilitaryTimeToTwelveHourTime(militaryBedTime)
+
         return (
             <div className="timelog">
                 <div className="timelog--container-main">
+
                     <div className="timelog--title">
                         <a 
                             target="_blank" 
@@ -320,15 +329,18 @@ class TimeLogScreen extends React.Component {
                         <button 
                             onClick={() => this.changeEntries(1)}
                             disabled={this.state.doesNotHavePrevEntries}
-                            className="timelog--date-buttons">{chevronCircleLeft}</button>
-                        <span>
+                            className="timelog--date-buttons">{chevronCircleLeft}
+                        </button>
+                        <button onClick={() => this.switchEntriesDisplayMode()}>
                             Date: {formatDate(date)}
-                        </span>
+                        </button>
                         <button 
                             onClick={() => this.changeEntries(-1)}
                             disabled={this.state.doesNotHaveFutureEntries}
-                            className="timelog--date-buttons">{chevronCircleRight}</button>
+                            className="timelog--date-buttons">{chevronCircleRight}
+                        </button>
                     </div>
+                    { !this.state.allEntriesModeIsOn ?
                     <div className="timelog--currentTime">
                         Current Time: <strong>{currentTime}</strong>
                         <br/>
@@ -337,23 +349,7 @@ class TimeLogScreen extends React.Component {
                         Time available today: <strong>{totalTimeAvailableToday}</strong> ({firstEntryTime} - {bedtime})
                         <br/>
                         Total time logged: {totalTimeLogged}
-                    </div>
 
-                        { this.state.editModeIsOn ?  <textarea 
-                                    onChange={(e)=> this.updateRawEntry(e)}
-                                    className="timelog--input-timelog">{rawEntry}
-                                </textarea>
-                            : <div>
-                                <div className="timelog--todayslog">
-                                {formattedEntry}
-                                </div>
-                                <div className="timelog--todayslog--hashtag-data-container">
-                                    <button onClick={() => this.switchHashtagDataStyle()}>Switch</button>
-                                    {hashtagData}
-                                </div>
-                            </div>
-                        }
-                        
                         <div className="timelog--container-button-edit">
                             <button 
                                 onClick={() => this.switchEditMode()}
@@ -361,6 +357,25 @@ class TimeLogScreen extends React.Component {
                                 {this.state.buttonText}
                             </button>
                         </div>
+
+                        { this.state.editModeIsOn ?  <textarea 
+                                onChange={(e)=> this.updateRawEntry(e)}
+                                className="timelog--input-timelog">{rawEntry}
+                            </textarea>
+                        : <div>
+                            <div className="timelog--todayslog">
+                                {formattedEntry}
+                            </div>
+                            <div className="timelog--todayslog--hashtag-data-container">
+                                <button 
+                                    onClick={() => this.switchHashtagDataStyle()}>
+                                        Switch
+                                </button>
+                                {hashtagData}
+                            </div>
+                        </div>
+                        }
+                    </div> : <AllEntries allEntries={this.state.timeLogEntries}/> }
                     </div>
                 </div>
             </div>
