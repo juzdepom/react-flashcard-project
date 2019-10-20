@@ -196,7 +196,7 @@ Now when clicking on the "specific deck" button, right hand side, does not pick 
 <img src="/screenshots/10-18-2019--timelogger.png" width="700" alt="timelogger">
 
 ## Session 15
-*🗓 F, Oct 18, 2019* <br>
+*🗓 S, Oct 19, 2019* <br>
 
 Took longer than expect but ```#15 successfully installed font-awesome into project```<br>
 
@@ -213,4 +213,20 @@ Took longer than expect but ```#15 successfully installed font-awesome into proj
 <img src="/screenshots/10-19-2019--hashtag-data.png" width="400" alt="">
 
 ```#15 changed card so that thai characters appear first if card rating is 4 or 5```
+
+## Session 16
+*🗓 Su, Oct 20, 2019* <br>
+
+```#16 made the hashtag data display more robust```
+
+<img src="/screenshots/10-20-2019--hashtag-data.gif" width="600" alt="">
+
+```#16 added more data to visibly assess in timelog```
+
+<img src="/screenshots/10-20-2019--time-data.png" width="200" alt="">
+
+
+
+
+
 

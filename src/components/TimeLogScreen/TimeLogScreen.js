@@ -14,7 +14,8 @@ import {
     convertMinutesToHoursAndMinutes,
     parseEntryDataArrayIntoHashtagArray,
     getCurrentTime,
-    convertMilitaryTimeToTwelveHourTime, 
+    convertMilitaryTimeToTwelveHourTime,
+    calculateTotalTimeLoggedFromEntryData, 
     } from './methods/methods';
 
 //firebase
@@ -57,6 +58,13 @@ class TimeLogScreen extends React.Component {
             hashtagData: [],
 
             hashtagDataIncludesDash: false,
+
+            firstEntryTime: NaN,
+            timeSinceFirstEntryTime: NaN,
+            totalTimeAvailableToday: NaN,
+            totalTimeLogged: NaN,
+            
+            militaryBedTime: "22:00",
         }
         
     }
@@ -125,14 +133,27 @@ class TimeLogScreen extends React.Component {
     }
 
     parseCurrentEntryRawText = () => {
+        var firstEntryTime = NaN;
+        var totalTimeAvailableToday = NaN;
+        var totalTimeLogged = NaN;
+        var timeSinceFirstEntryTime = NaN;
         let entry = this.state.timeLogEntries[this.state.entryIndex].rawEntry
         let arrayOfStrings = entry.split('\n')
         
         let entryData = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
+
+        if(entryData.length > 0){
+            let currentTime = getCurrentTime()
+            totalTimeLogged = calculateTotalTimeLoggedFromEntryData(entryData)
+            firstEntryTime = entryData[entryData.length-1]["startTime"]
+            timeSinceFirstEntryTime = calculateElapsedTime(firstEntryTime, currentTime)
+            totalTimeAvailableToday = calculateElapsedTime(firstEntryTime, this.state.militaryBedTime)
+            firstEntryTime = convertMilitaryTimeToTwelveHourTime(firstEntryTime)
+        }
         
         let hashtagData = parseEntryDataArrayIntoHashtagArray(entryData, this.state.hashtagDataIncludesDash)
         
-        this.setState({hashtagData, entryData})
+        this.setState({hashtagData, entryData, firstEntryTime, totalTimeAvailableToday, totalTimeLogged, timeSinceFirstEntryTime})
     }
 
     switchEditMode = () => {
@@ -232,7 +253,9 @@ class TimeLogScreen extends React.Component {
             alert(`Error! changeEntries() entryIndex=${entryIndex} i=${i}`)
         }
 
-        this.setState({entryIndex, doesNotHavePrevEntries,doesNotHaveFutureEntries})
+        this.setState({entryIndex, doesNotHavePrevEntries,doesNotHaveFutureEntries}, () => {
+            this.parseCurrentEntryRawText()
+        })
     }
 
     returnFormattedHashtagData = () => {
@@ -266,12 +289,20 @@ class TimeLogScreen extends React.Component {
         if (!this.state.editModeIsOn){
             formattedEntry = this.formatEntry(rawEntry)
         }
+
+        let { 
+            totalTimeAvailableToday, 
+            firstEntryTime, 
+            totalTimeLogged, 
+            timeSinceFirstEntryTime,
+            militaryBedTime,} = this.state
+        //returns militaryTime
         var currentTime = getCurrentTime() //problem: this returns a static time; will only update if you reload the page
+        var timeUntilBedtime = calculateElapsedTime(currentTime, militaryBedTime)
         currentTime = convertMilitaryTimeToTwelveHourTime(currentTime)
-        var timeUntilBedtime = "XXhxx"
-        var totalTimeAvailableToday = "XXhxx"
-        var firstEntryTime = "5:33 AM"
-        var bedtime = convertMilitaryTimeToTwelveHourTime("22:00")
+       
+        
+        var bedtime = convertMilitaryTimeToTwelveHourTime(militaryBedTime)
         return (
             <div className="timelog">
                 <div className="timelog--container-main">
@@ -280,7 +311,7 @@ class TimeLogScreen extends React.Component {
                             target="_blank" 
                             rel="noopener noreferrer" 
                             href="https://console.firebase.google.com/u/0/project/personal-data-tracking-project/database/personal-data-tracking-project/data"
-                        >TIME LOGGER {this.state.entryIndex}</a>
+                        >TIME LOGGER</a> {this.state.entryIndex}&nbsp;
                         <button>VISION BOARD</button>
                     </div>
                     <div className="timelog--container-secondary">
@@ -300,10 +331,12 @@ class TimeLogScreen extends React.Component {
                     </div>
                     <div className="timelog--currentTime">
                         Current Time: <strong>{currentTime}</strong>
-                        &nbsp;({timeUntilBedtime} until {bedtime})<br/>
-                        Total time available today: {totalTimeAvailableToday} ({firstEntryTime} - {bedtime})
                         <br/>
-                        Total time logged: XX
+                       (<strong>{timeUntilBedtime}</strong> until {bedtime}/&nbsp;{timeSinceFirstEntryTime} since {firstEntryTime})
+                       <br/>
+                        Time available today: <strong>{totalTimeAvailableToday}</strong> ({firstEntryTime} - {bedtime})
+                        <br/>
+                        Total time logged: {totalTimeLogged}
                     </div>
 
                         { this.state.editModeIsOn ?  <textarea 

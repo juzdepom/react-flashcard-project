@@ -29,6 +29,23 @@ export const parseEntryDataArrayIntoHashtagArray = (entryData, hashtagDataInclud
     return hashtagData
 }
 
+export const calculateTotalTimeLoggedFromEntryData = (entryData, onlyMinutes) => {
+    var totalTime = 0
+    for(var i in entryData){
+        let startTime = entryData[i]["startTime"]
+        let endTime = entryData[i]["endTime"]
+        let elapsed = calculateElapsedTime(startTime, endTime, true)
+        totalTime = totalTime + elapsed
+    }
+    if(onlyMinutes){ 
+        return totalTime 
+    } else { 
+        totalTime = convertMinutesToHoursAndMinutes(totalTime)
+        return totalTime
+    }
+    
+}
+
 export const turnTimeLogStringArrayIntoArrayOfDict = (arrayOfStrings) => {
     var arrayOfDict = []
     var activity = {}
@@ -235,7 +252,7 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
         alert(error)
         return error;
     }
-
+   
     var ampm = ""
     if(hours > 11 && hours < 24){
         // console.log(hours)
@@ -250,11 +267,13 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
         alert(`Error! ${t} is not a valid military time!`)
         return NaN
     }
+
     if(minutes < 10){
+        // alert('this is called!')
         minutes = "0" + minutes
     }
-
-    return hours + ":" + minutes + " " + ampm
+    let twelveHourTime = hours + ":" + minutes + " " + ampm
+    return twelveHourTime
 }
 
 //returns 3h20
@@ -265,10 +284,11 @@ export const convertMinutesToHoursAndMinutes = (m) => {
         return NaN
     } else {
         let h = Math.floor(totalMin/60);
-        let min = totalMin % 60;
+        var min = totalMin % 60;
         if(h < 1){
-            return min + "min"
+            return min + "m"
         } else {
+            if(min < 10){ min = "0" + min}
             return h + "h" + min;
         }
     }
