@@ -6,6 +6,31 @@ $gray: rgba(0,0,0,0.6);
 $pastel-turquoise: #A4EBDB;
 $pastel-yellow: #FDFD96;
 $pastel-pink: #F8D1DC;
+$pastel-navy: #779ECB;
+$pastel-purple: #B3A0DB;
+$pastel-red: #ff6961;
+$pastel-beige: #E8D1C0;
+
+.height {
+    &-default { //0-15 min
+        min-height: 17px;
+    }
+    &-15-30 {
+        min-height: 25px;
+    }
+    &-30-60 {
+        min-height: 40px;
+    }
+    &-60-120 {
+        min-height: 60px;
+    }
+    &-120-240 {
+        min-height: 80px;
+    }
+    &-240 {
+        min-height: 100px;
+    }
+}
 
 .bg {
     &-default {
@@ -20,6 +45,25 @@ $pastel-pink: #F8D1DC;
     &-instagram {
         background: $pastel-pink
     }
+    &-nap {
+        background: $pastel-navy;
+    }
+    &-studythai {
+        background: $pastel-purple;
+    }
+    &-running {
+        background: $pastel-red;
+    }
+    &-muaythai {
+        background: $pastel-red;
+    }
+    &-selfcare {
+        background: $pastel-beige;
+    }
+    &-timelog {
+        background: $blue-1;
+    }
+
 }
 
 .timelog {
@@ -36,7 +80,7 @@ $pastel-pink: #F8D1DC;
         }
         &-secondary {
             background: $blue-2;
-            height: 90%;
+            height: 92%;
             width: 95%;
             margin: 0 auto;
         }
@@ -56,12 +100,15 @@ $pastel-pink: #F8D1DC;
             border: none;
         }
     }
+    &--currentTime {
+        padding: 5px 0 5px 0; 
+    }
     &--todayslog {
         width: 95%;
         margin: 0 auto;
         margin-top: 5px;
         text-align: left;
-        max-height: 500px;
+        max-height: 700px;
         overflow-y: scroll;
 
         &--hashtag-data-container {
@@ -72,11 +119,20 @@ $pastel-pink: #F8D1DC;
             text-align: left;
             font-weight: 600;
             font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
 
-            & span {
+            & button {
+                background: transparent;
+                border: none;
+                height: 20px
+            }
+
+            & div {
                 padding: 2px;
+                height: 20px;
                 margin-right: 8px;
-                // background: white;
+                margin-bottom: 8px;
             }
         }
         

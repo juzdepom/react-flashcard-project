@@ -205,7 +205,7 @@ class StudyScreen extends React.Component {
     var newIndex = this.generateRandomIndex()
     this.updateFlashcards(newIndex, rating)
 
-    this.updateDisplayCardLevels();
+    // this.updateDisplayCardLevels();
     
   }
 
@@ -254,6 +254,7 @@ class StudyScreen extends React.Component {
     } else {
       currentCards[correctIndex]["lastReviewed"] = [timeStamp];
     }
+    // console.log(currentCards[correctIndex])
 
     let previousCard = this.state.currentCard
     var i = (newIndex == null) ? correctIndex : newIndex
@@ -263,11 +264,11 @@ class StudyScreen extends React.Component {
 
     this.setState({
       cards: currentCards,
-      //so that we can navigate to previous card
       previousCard,
       currentCard: currentCards[i],
       cardsRated,
     }, () => {
+      this.updateDisplayCardLevels()
       this.updateProgressLog()
     })
     
@@ -281,7 +282,7 @@ class StudyScreen extends React.Component {
 
   //it's no longer random, it's now the card you haven't looked at for the longest time
   selectCardFromSpecificDeck(rating){
-
+    // this.updateDisplayCardLevels()
     //make sure rating is between 1 and 5 in case I make a mistake somewhere
     if (rating < 0 || rating > 5){
       alert("A deck with this rating cannot be selected: ", rating)
@@ -291,8 +292,13 @@ class StudyScreen extends React.Component {
     let chosenDeck = this.state.level.sortedDeck[String(rating)]
     if (chosenDeck.length === 0 ) { return } //later one we can make the button inactive
     // chosenDeck = sortCardsFromLastReviewed(chosenDeck)
-    console.log("chosen deck: ", chosenDeck)
-    let card = chosenDeck[0]
+    // console.log("chosen deck: ", chosenDeck)
+    var card = chosenDeck[0]
+    //we get an error if we press on a specific deck button two times in a row
+    //this is a temporary work around
+    if(this.state.currentCard === card){
+      card = chosenDeck[1]
+    }
     let index = this.findIndexInMasterDeck(card)
     this.updateFlashcards(index)
   }

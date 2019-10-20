@@ -1,3 +1,34 @@
+export const parseEntryDataArrayIntoHashtagArray = (entryData, hashtagDataIncludesDash) => {
+    var hashtagDataDict = {}
+    for(var i in entryData){
+        let item = entryData[i]
+        let rawText = item["rawText"]
+
+        let hashtagRegex = (hashtagDataIncludesDash) ? /#[a-z-]+/gi : /#[a-z]+/gi
+        // let hashtagRegex = /#[a-z-]+/gi
+        let hashtags = rawText.match(hashtagRegex);
+
+        var startTime = item["startTime"]
+        var endTime = item["endTime"]
+        let elapsedTime = calculateElapsedTime(startTime, endTime, true)
+
+        if(hashtagDataDict[hashtags] == undefined){hashtagDataDict[hashtags] = 0}
+        hashtagDataDict[hashtags] = parseInt(hashtagDataDict[hashtags]) + parseInt(elapsedTime);
+    }
+
+    var hashtagData = []
+    for(var key in hashtagDataDict){
+        var hashtagDict = {}
+        hashtagDict["hashtag"] = key
+        hashtagDict["time"] = hashtagDataDict[key]
+        hashtagData.push(hashtagDict)
+    }
+
+        // console.log(hashtagData)
+    hashtagData = sortHashtagsFromLengthOfTime(hashtagData)
+    return hashtagData
+}
+
 export const turnTimeLogStringArrayIntoArrayOfDict = (arrayOfStrings) => {
     var arrayOfDict = []
     var activity = {}
@@ -9,16 +40,19 @@ export const turnTimeLogStringArrayIntoArrayOfDict = (arrayOfStrings) => {
 
         //if line begins with a digit, it is a time entry. e.g. 17:30
         if(line.match(/^\d/) && counter === 0){
-            activity["startTime"] = line
+            // activity["startTime"] = line
+            activity["endTime"] = line
             counter = counter + 1
 
         } else if (line.match(/^\d/) && counter === 1) {
-            activity["endTime"] = line
+            // activity["endTime"] = line
+            activity["startTime"] = line
             arrayOfDict.push(activity)
             //clear the dict
             activity = {}
             //create new activity entry
-            activity["startTime"] = line
+            activity["endTime"] = line
+            // activity["startTIme"] = line
             activity["rawText"] = ""
             
         } else { // this is raw text
@@ -26,6 +60,33 @@ export const turnTimeLogStringArrayIntoArrayOfDict = (arrayOfStrings) => {
         }
     }
     return arrayOfDict
+}
+
+//hashtags that are the longest appear first
+export const sortHashtagsFromLengthOfTime = (hashtagArray) => {
+    hashtagArray.sort(function(first, second){
+        var a = 1
+        var b = 0
+        
+        if(first["time"] != undefined && second["time"] != undefined){
+            a = first["time"]
+            b = second["time"]
+        }
+        return b - a
+});
+
+return hashtagArray
+}
+
+export const returnHeightTypeBasedOnTime = (time) => {
+    switch(true){
+        case (time > 15 && time < 30): return "15-30";
+        case (time > 30 && time < 60): return "30-60";
+        case (time > 60 && time < 120): return "60-120";
+        case (time > 120 && time < 240): return "120-240";
+        case (time > 240): return "240"
+    }
+    return "default"
 }
 
 export const returnBackgroundTypeBasedOnHashtag = (h) => {
@@ -37,15 +98,32 @@ export const returnBackgroundTypeBasedOnHashtag = (h) => {
     
     //remove the hashtag
     let p = String(parentHashtag).substr(1)
-    if (p == "coding" || p == "clientwork" || p == "instagram"){
-        color = p;
+    let c = [
+        "coding", 
+        "clientwork", 
+        "instagram", 
+        "nap", 
+        "studythai", 
+        "muaythai", 
+        "selfcare",
+        "running",
+        "timelog",
+    ]
+    for(var i in c){
+        if(p == c[i]){
+            color = p;
+        }
     }
     
     return color
 }
 
-export const getHashtagsFromRawText = (rawText) => {
-
+export const getCurrentTime = () => {
+    let date =  new Date();
+    let hours = date.getHours()
+    let min = date.getMinutes()
+    let militaryTime = hours + ":" + min
+    return militaryTime
 }
 
 export const getCurrentDate = () => {
@@ -160,7 +238,7 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
 
     var ampm = ""
     if(hours > 11 && hours < 24){
-        console.log(hours)
+        // console.log(hours)
         ampm = "PM"
         if(hours != 12){
             hours = hours - 12
