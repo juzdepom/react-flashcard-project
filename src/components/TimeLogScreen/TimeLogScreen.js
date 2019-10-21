@@ -86,17 +86,22 @@ class EditTextContainer extends React.Component {
 
 class ButtonContainer extends React.Component {
     render(props){
+        let editButtonDisabled = (this.props.goalsForTheDayButtonText === "Save") ? true : false
+        let goalsButtonDisabled = (this.props.switchEditButtonText === "Save") ? true : false
         return (
+            
             <div className="timelog--container-buttons">
                 <button 
+                    disabled={editButtonDisabled}
                     onClick={() => this.props.switchEditMode()}
                     className="timelog--button-edit">
-                    {this.props.buttonText}
+                    {this.props.switchEditButtonText}
                 </button>
                 <button 
+                    disabled={goalsButtonDisabled}
                     onClick={() => this.props.switchObjectivesMode()}
                     className="timelog--button-edit">
-                    Objectives for the day
+                    {this.props.goalsForTheDayButtonText}
                 </button>
             </div>
         );
@@ -118,7 +123,8 @@ class TimeLogScreen extends React.Component {
             allEntriesModeIsOn: false,
             editModeIsOn: false,
             objectivesAreShowing: false,
-            buttonText: "Edit",
+            switchEditButtonText: "Edit",
+            goalsForTheDayButtonText: "Goals For The Day",
 
             //this are to enable/disable the forward/backward buttons
             entryIndex: 0,
@@ -242,7 +248,8 @@ class TimeLogScreen extends React.Component {
 
     switchObjectivesMode = () => {
         let objectivesAreShowing = !this.state.objectivesAreShowing
-        this.setState({objectivesAreShowing})
+        let goalsForTheDayButtonText = (objectivesAreShowing) ? "Save" : "Goals For The Day"
+        this.setState({objectivesAreShowing, goalsForTheDayButtonText})
         if(!objectivesAreShowing){
             console.log('saving entries in firebase')
             this.saveTimeLogEntriesInFirebase()
@@ -251,8 +258,8 @@ class TimeLogScreen extends React.Component {
 
     switchEditMode = () => {
         let editModeIsOn = !this.state.editModeIsOn
-        let buttonText = (editModeIsOn) ? "Save" : "Edit"
-        this.setState({editModeIsOn, buttonText})
+        let switchEditButtonText = (editModeIsOn) ? "Save" : "Edit"
+        this.setState({editModeIsOn, switchEditButtonText})
         //edit mode has just been turned off, which means we are saving
         if (!editModeIsOn) {
             this.saveTimeLogEntriesInFirebase()
@@ -455,7 +462,8 @@ class TimeLogScreen extends React.Component {
                         <ButtonContainer 
                             switchEditMode={this.switchEditMode}
                             switchObjectivesMode={this.switchObjectivesMode}
-                            buttonText={this.state.buttonText}/>
+                            goalsForTheDayButtonText={this.state.goalsForTheDayButtonText}
+                            switchEditButtonText={this.state.switchEditButtonText}/>
                         { !this.state.objectivesAreShowing ? 
                             <div>
                                 { this.state.editModeIsOn ?  
