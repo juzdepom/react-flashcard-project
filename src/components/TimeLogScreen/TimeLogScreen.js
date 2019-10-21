@@ -31,6 +31,78 @@ let noInputDataText = "No input data yet"
 const chevronCircleLeft = <FontAwesomeIcon icon={faChevronCircleLeft} />
 const chevronCircleRight = <FontAwesomeIcon icon={faChevronCircleRight} />
 
+class TimeCalculations extends React.Component {
+    render(props){
+        let { currentTime, timeUntilBedtime, bedtime, timeSinceFirstEntryTime, firstEntryTime, totalTimeAvailableToday, totalTimeLogged } = this.props
+        return (
+            <div>
+                Current Time: <strong>{currentTime}</strong>
+                <br/>
+                (<strong>{timeUntilBedtime}</strong> until {bedtime}/&nbsp;{timeSinceFirstEntryTime} since {firstEntryTime})
+                <br/>
+                Time available today: <strong>{totalTimeAvailableToday}</strong> ({firstEntryTime} - {bedtime})
+                <br/>
+                Total time logged: {totalTimeLogged}
+            </div>
+        );
+    }
+}
+
+class EntryDisplay extends React.Component {
+    render(prosp){
+        return (
+            <div className="timelog--todayslog">
+                {this.props.formattedEntry}
+            </div>
+        );
+    }
+}
+
+class HashtagDataDisplay extends React.Component {
+    render(props){
+        return (
+            <div className="timelog--todayslog--hashtag-data-container">
+                <button 
+                    onClick={() => this.props.switchHashtagDataStyle()}>
+                        Switch
+                </button>
+                {this.props.hashtagData}
+            </div>
+        );
+    }
+}
+
+class EditTextContainer extends React.Component {
+    render(props){
+        return (
+            <textarea 
+                onChange={(e)=> this.props.update(e)}
+                className="timelog--input-timelog">
+                {this.props.text}
+            </textarea>
+        );
+    }
+}
+
+class ButtonContainer extends React.Component {
+    render(props){
+        return (
+            <div className="timelog--container-buttons">
+                <button 
+                    onClick={() => this.props.switchEditMode()}
+                    className="timelog--button-edit">
+                    {this.props.buttonText}
+                </button>
+                <button 
+                    onClick={() => this.props.switchObjectivesMode()}
+                    className="timelog--button-edit">
+                    Objectives for the day
+                </button>
+            </div>
+        );
+    }
+}
+
 class TimeLogScreen extends React.Component {
 
     constructor(props){
@@ -43,8 +115,9 @@ class TimeLogScreen extends React.Component {
         }
 
         this.state = {
-            allEntriesModeIsOn: true,
+            allEntriesModeIsOn: false,
             editModeIsOn: false,
+            objectivesAreShowing: false,
             buttonText: "Edit",
 
             //this are to enable/disable the forward/backward buttons
@@ -54,7 +127,8 @@ class TimeLogScreen extends React.Component {
             
             timeLogEntries: [{
                 date: "Loading...",
-                rawEntry: "Loading..."
+                rawEntry: "Loading...",
+                objectives: "Loading...",
             }],
 
             entryData: [],
@@ -103,7 +177,8 @@ class TimeLogScreen extends React.Component {
                         alert('today is a new day!')
                         currentEntry = {
                             date: currentDate,
-                            rawEntry: noInputDataText
+                            rawEntry: noInputDataText,
+                            objectives: "No objectives written yet"
                         }
                         timeLogEntries.unshift(currentEntry)
                     }
@@ -112,7 +187,8 @@ class TimeLogScreen extends React.Component {
                 alert("time log entries from firebase is null")
                 currentEntry = {
                     date: currentDate,
-                    rawEntry: noInputDataText
+                    rawEntry: noInputDataText,
+                    objectives: "No objectives written yet",
                 }
                 timeLogEntries = this.state.timeLogEntries
                 timeLogEntries[0] = currentEntry;
@@ -164,6 +240,15 @@ class TimeLogScreen extends React.Component {
         this.setState({hashtagData, entryData, firstEntryTime, totalTimeAvailableToday, totalTimeLogged, timeSinceFirstEntryTime})
     }
 
+    switchObjectivesMode = () => {
+        let objectivesAreShowing = !this.state.objectivesAreShowing
+        this.setState({objectivesAreShowing})
+        if(!objectivesAreShowing){
+            console.log('saving entries in firebase')
+            this.saveTimeLogEntriesInFirebase()
+        }
+    }
+
     switchEditMode = () => {
         let editModeIsOn = !this.state.editModeIsOn
         let buttonText = (editModeIsOn) ? "Save" : "Edit"
@@ -181,9 +266,51 @@ class TimeLogScreen extends React.Component {
         this.setState({timeLogEntries})
     }
 
+    updateObjectives = (e) => {
+        let text = e.target.value
+        var timeLogEntries = this.state.timeLogEntries
+        //might be good to combines updateObjectives and updateRawEntry in the future
+        timeLogEntries[this.state.entryIndex].objectives = text
+        this.setState({timeLogEntries})
+        // console.log('updating objectives: ', this.state.timeLogEntries)
+
+    }
+
     saveTimeLogEntriesInFirebase = () => {
         var entries = this.state.timeLogEntries
         firebase.database().ref('timelogs').set(entries)
+    }
+
+    //navigate between entry date
+    changeEntries = (i) => {
+        var doesNotHavePrevEntries = this.state.doesNotHavePrevEntries
+        var doesNotHaveFutureEntries = this.state.doesNotHaveFutureEntries
+        var entryIndex = this.state.entryIndex + i
+
+        let entries = this.state.timeLogEntries
+        //we are at the last index can't go back anymore
+        if(entryIndex === entries.length - 1){
+            doesNotHavePrevEntries = true;
+        } else {
+            doesNotHavePrevEntries = false;
+        }
+        if(entryIndex === 0){
+            doesNotHaveFutureEntries = true;
+        } else {
+            if(entries.length > 1){
+                doesNotHaveFutureEntries = false;
+            }
+        }
+
+        //this shoudn't happen but just in case...
+        if(entryIndex > entries.length - 1 || entryIndex < 0){
+            entryIndex = entryIndex - i;
+            alert(`Error! changeEntries() entryIndex=${entryIndex} i=${i}`)
+        }
+
+        this.setState({entryIndex, doesNotHavePrevEntries,doesNotHaveFutureEntries}, () => {
+            this.parseCurrentEntryRawText()
+        })
     }
 
     //format timelog raw data
@@ -235,37 +362,6 @@ class TimeLogScreen extends React.Component {
         return newText
     }
 
-    changeEntries = (i) => {
-        var doesNotHavePrevEntries = this.state.doesNotHavePrevEntries
-        var doesNotHaveFutureEntries = this.state.doesNotHaveFutureEntries
-        var entryIndex = this.state.entryIndex + i
-
-        let entries = this.state.timeLogEntries
-        //we are at the last index can't go back anymore
-        if(entryIndex === entries.length - 1){
-            doesNotHavePrevEntries = true;
-        } else {
-            doesNotHavePrevEntries = false;
-        }
-        if(entryIndex === 0){
-            doesNotHaveFutureEntries = true;
-        } else {
-            if(entries.length > 1){
-                doesNotHaveFutureEntries = false;
-            }
-        }
-
-        //this shoudn't happen but just in case...
-        if(entryIndex > entries.length - 1 || entryIndex < 0){
-            entryIndex = entryIndex - i;
-            alert(`Error! changeEntries() entryIndex=${entryIndex} i=${i}`)
-        }
-
-        this.setState({entryIndex, doesNotHavePrevEntries,doesNotHaveFutureEntries}, () => {
-            this.parseCurrentEntryRawText()
-        })
-    }
-
     returnFormattedHashtagData = () => {
         let hashtagData = this.state.hashtagData
         var formattedHashtagData = ''
@@ -292,6 +388,8 @@ class TimeLogScreen extends React.Component {
         let index = this.state.entryIndex
         let date = this.state.timeLogEntries[index].date
         let rawEntry = this.state.timeLogEntries[index].rawEntry
+        var objectives = this.state.timeLogEntries[index].objectives
+        if(objectives == undefined){ objectives = "No objectives written for today yet"}
         
         let hashtagData = this.returnFormattedHashtagData()
         var formattedEntry = rawEntry
@@ -340,42 +438,49 @@ class TimeLogScreen extends React.Component {
                             className="timelog--date-buttons">{chevronCircleRight}
                         </button>
                     </div>
+                    
                     { !this.state.allEntriesModeIsOn ?
-                    <div className="timelog--currentTime">
-                        Current Time: <strong>{currentTime}</strong>
-                        <br/>
-                       (<strong>{timeUntilBedtime}</strong> until {bedtime}/&nbsp;{timeSinceFirstEntryTime} since {firstEntryTime})
-                       <br/>
-                        Time available today: <strong>{totalTimeAvailableToday}</strong> ({firstEntryTime} - {bedtime})
-                        <br/>
-                        Total time logged: {totalTimeLogged}
+                    
+                    <div className="timelog--entry">
+                        <TimeCalculations 
+                            currentTime = {currentTime}
+                            timeUntilBedtime = {timeUntilBedtime} 
+                            bedtime = {bedtime}
+                            timeSinceFirstEntryTime = {timeSinceFirstEntryTime}
+                            firstEntryTime = {firstEntryTime}
+                            totalTimeAvailableToday = {totalTimeAvailableToday}
+                            totalTimeLogged = {totalTimeLogged}
+                        />
 
-                        <div className="timelog--container-button-edit">
-                            <button 
-                                onClick={() => this.switchEditMode()}
-                                className="timelog--button-edit">
-                                {this.state.buttonText}
-                            </button>
-                        </div>
+                        <ButtonContainer 
+                            switchEditMode={this.switchEditMode}
+                            switchObjectivesMode={this.switchObjectivesMode}
+                            buttonText={this.state.buttonText}/>
+                        { !this.state.objectivesAreShowing ? 
+                            <div>
+                                { this.state.editModeIsOn ?  
+                                    <EditTextContainer
+                                        update = {this.updateRawEntry}
+                                        text = {rawEntry} />
+                                : //we are not editting the current entry
+                                    <div> 
+                                        <EntryDisplay 
+                                            formattedEntry = {formattedEntry} />
+                                        <HashtagDataDisplay
+                                            switchHashtagDataStyle = { this.switchHashtagDataStyle}
+                                            hashtagData = {hashtagData} />
+                                    </div>
+                                }
+                            </div> : //display objectives
+                         <EditTextContainer
+                                update={this.updateObjectives}
+                                text={objectives}
+                            /> }
+                    
+                    </div> : // display all entries
+                    <AllEntries 
+                        allEntries={this.state.timeLogEntries}/> }
 
-                        { this.state.editModeIsOn ?  <textarea 
-                                onChange={(e)=> this.updateRawEntry(e)}
-                                className="timelog--input-timelog">{rawEntry}
-                            </textarea>
-                        : <div>
-                            <div className="timelog--todayslog">
-                                {formattedEntry}
-                            </div>
-                            <div className="timelog--todayslog--hashtag-data-container">
-                                <button 
-                                    onClick={() => this.switchHashtagDataStyle()}>
-                                        Switch
-                                </button>
-                                {hashtagData}
-                            </div>
-                        </div>
-                        }
-                    </div> : <AllEntries allEntries={this.state.timeLogEntries}/> }
                     </div>
                 </div>
             </div>

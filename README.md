@@ -229,6 +229,13 @@ Took longer than expect but ```#15 successfully installed font-awesome into proj
 
 <img src="/screenshots/10-20-2019--all-entries.gif" width="600" alt="">
 
+## Session 17
+*🗓 M, Oct 21, 2019* <br>
+
+#16 added objectives of the day to Timelogs! See GIF below
+
+<img src="/screenshots/10-21-2019--objectives.gif" width="600" alt="">
+
 
 
 

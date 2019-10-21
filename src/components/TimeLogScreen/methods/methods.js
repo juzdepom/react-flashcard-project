@@ -212,7 +212,8 @@ export const calculateElapsedTime = (s, e, onlyMinutes) => {
     var elapsed = endTime - startTime
     
     if(elapsed <= 0){
-        alert(`Error! Elapsed time is negative: ${elapsed}! Start Time: ${s}/${startTime} End Time: ${e}/${endTime}`)
+        console.log(`Error! Elapsed time is negative: ${elapsed}! Start Time: ${s}/${startTime} End Time: ${e}/${endTime}`)
+        // alert(`Error! Elapsed time is negative: ${elapsed}! Start Time: ${s}/${startTime} End Time: ${e}/${endTime}`)
         return NaN
     } else {
         if(onlyMinutes){

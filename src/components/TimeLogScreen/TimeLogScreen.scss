@@ -99,8 +99,9 @@ $pastel-light-blue: #DEF5FB;
             width: 95%;
             margin: 0 auto;
         }
-        &-button-edit {
+        &-buttons {
             padding-top: 5px;
+            // background: black;
         }
     }
     &--title {
@@ -119,7 +120,7 @@ $pastel-light-blue: #DEF5FB;
         }
         
     }
-    &--currentTime {
+    &--entry {
         padding: 5px 0 5px 0; 
         // background: red;
         height: 90%;
@@ -180,8 +181,9 @@ $pastel-light-blue: #DEF5FB;
         &-edit {
             cursor: pointer;
             background: $white-1;
-            width: 60px;
-            padding: 5px;
+            // width: 60px;
+            padding: 5px 10px 5px 10px;
+            margin: 10px 10px 5px 0; 
             border: 2px solid $blue-1;
             border-radius: 10px;
             &:hover {
