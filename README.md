@@ -232,10 +232,17 @@ Took longer than expect but ```#15 successfully installed font-awesome into proj
 ## Session 17
 *🗓 M, Oct 21, 2019* <br>
 
-#16 added objectives of the day to Timelogs! See GIF below
+#17 added objectives of the day to Timelogs! See GIF below
 
 <img src="/screenshots/10-21-2019--objectives.gif" width="600" alt="">
 
+#17 fixed the textinput which was having some height issues and added some small improvements to the timelog buttons!
+
+## Session 18
+*🗓 Th, Oct 24, 2019* <br>
+Feeling a little bit frustrated. For some reason, my firebase database is no longer saving the most recent version of my flashcard studying data. My whole study session so far was deleted today!
+
+#18 added a delayed method that resets the decklistcard key state.
 
 
 

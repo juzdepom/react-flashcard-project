@@ -7,6 +7,8 @@ class DeckCard extends React.Component {
     constructor(props){
         super(props)
 
+        // this.setWrapperRef = this.setWrapperRef.bind(this);
+
         this.state = {
             key: "textOne",
             bodyClass: "decklist--card-body",
@@ -14,18 +16,40 @@ class DeckCard extends React.Component {
         }
     }
 
-    switchText = () => {
+    componentDidMount(){
+        console.log('adding event listener mousedown')
+        document.addEventListener('mousedown', this.handClickOutside);
+    }
+
+    componentWillUnmount(){
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+    setWrapperRef = (node) => {
+        this.wrapperRef = node;
+    }
+
+    handleClickOutside = (event) => {
+        console.log('handle click outside')
+        if(this.wrapperRef && !this.wrapperRef.contains(event.target)){
+            alert('you clicked outside of me')
+        }
+    }
+
+    clickCard = () => {
         if(this.state.key === "textOne" && !this.state.selected){
             this.props.quickRatingIsOn(true, this.props.card)
-            // this.setState({selected: true, bodyClass: "decklist--card-body decklist--card-body-dark"})
             this.setState({selected: true, key: "textThree"})
         } else if (this.state.key === "textThree"){
             this.setState({key: "textTwo"})
         } else if (this.state.key === "textTwo"){
-            // this.props.quickRatingIsOn(false)
-            // this.setState({key: "textOne", bodyClass: "decklist--card-body", selected: false})
             this.setState({key: "textOne", selected: false})
         }
+
+        setTimeout(() => {
+            this.setState({key: "textOne"})
+        }, 2000);
+
     }
 
     selectCard(e){
@@ -47,7 +71,7 @@ class DeckCard extends React.Component {
         var selectClass = `decklist--card-select decklist--0`
 
         return (
-            <div className={this.state.bodyClass} onClick={() => this.switchText()}>
+            <div ref={this.setWRapperRef} className={this.state.bodyClass} onClick={() => this.clickCard()}>
                 <div className="decklist--card-reviewCount">{index}</div>
                 <div className="decklist--card-text">{card[this.state.key]}</div>
                 <div className="decklist--card-lastReview">{reviewCount} 👀 | {whenWasLastReview}</div>
@@ -82,18 +106,22 @@ class DeckList extends React.Component {
         var card = this.state.card
         card["rating"] = rating;
         this.props.cardRated(card)
-        // this.props.close()
-        // alert(`rating clicked! ${rating}`)
     }
 
     cardList = (cards) => {
         return cards.map((card, index) => {
             return <DeckCard 
+                // clickCard={this.clickCard}
                 selectCard={this.props.selectCard} 
                 card={card} 
                 index={index}
                 quickRatingIsOn={this.quickRatingIsOn}/>
         })
+    }
+
+    close = () => {
+        // this.cardList(this.props.cards)
+        this.props.close()
     }
 
     render(){
@@ -103,7 +131,7 @@ class DeckList extends React.Component {
             <div className={this.props.deckListClassname} style={{display: this.props.deckListDisplay}}>
                 <button 
                     className="decklist--close-button"
-                    onClick={()=> this.props.close()}>
+                    onClick={()=> this.close()}>
                     Close
                 </button>
                 <div className="decklist--body">

@@ -92,6 +92,7 @@ class StudyScreen extends React.Component {
       // console.log(snapshot.val())
       const firebaseData = snapshot.val()
 
+      //go through firebase data and check for flashcards have duplicate titles and duplicate ids because this can prove and issue
       this.setState({
         cards: firebaseData
       })
@@ -196,7 +197,6 @@ class StudyScreen extends React.Component {
 
     //number of flashcards that haven't been uploaded to FB yet
     var flashcardsRated = this.state.flashcardsRated + 1
-    //total cards rated during a session
    
     this.setState({
       flashcardsRated,
@@ -282,7 +282,7 @@ class StudyScreen extends React.Component {
 
   //it's no longer random, it's now the card you haven't looked at for the longest time
   selectCardFromSpecificDeck(rating){
-    // this.updateDisplayCardLevels()
+    this.updateDisplayCardLevels()
     //make sure rating is between 1 and 5 in case I make a mistake somewhere
     if (rating < 0 || rating > 5){
       alert("A deck with this rating cannot be selected: ", rating)
@@ -291,8 +291,7 @@ class StudyScreen extends React.Component {
 
     let chosenDeck = this.state.level.sortedDeck[String(rating)]
     if (chosenDeck.length === 0 ) { return } //later one we can make the button inactive
-    // chosenDeck = sortCardsFromLastReviewed(chosenDeck)
-    // console.log("chosen deck: ", chosenDeck)
+    console.log("chosen deck: ", chosenDeck)
     var card = chosenDeck[0]
     //we get an error if we press on a specific deck button two times in a row
     //this is a temporary work around
@@ -552,14 +551,8 @@ class StudyScreen extends React.Component {
 
   //DeckButton Methods
   selectDeckButton(deckIndex){
-    // console.log('deck index:', deckIndex)
     let deckListClassname = "decklist decklist--" + deckIndex
     let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
-    // var deckListCards = []
-    // for(var i in unsortedDeck){
-
-    // }
-    // console.log("deck list cards: ", deckListCards)
     this.setState({
       deckListClassname,
       deckListDisplay: "block",
