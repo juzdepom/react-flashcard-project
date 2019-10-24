@@ -254,7 +254,6 @@ class StudyScreen extends React.Component {
     } else {
       currentCards[correctIndex]["lastReviewed"] = [timeStamp];
     }
-    // console.log(currentCards[correctIndex])
 
     let previousCard = this.state.currentCard
     var i = (newIndex == null) ? correctIndex : newIndex

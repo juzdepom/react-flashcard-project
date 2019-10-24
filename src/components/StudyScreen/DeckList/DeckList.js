@@ -16,25 +16,6 @@ class DeckCard extends React.Component {
         }
     }
 
-    componentDidMount(){
-        console.log('adding event listener mousedown')
-        document.addEventListener('mousedown', this.handClickOutside);
-    }
-
-    componentWillUnmount(){
-        document.removeEventListener('mousedown', this.handleClickOutside);
-    }
-
-    setWrapperRef = (node) => {
-        this.wrapperRef = node;
-    }
-
-    handleClickOutside = (event) => {
-        console.log('handle click outside')
-        if(this.wrapperRef && !this.wrapperRef.contains(event.target)){
-            alert('you clicked outside of me')
-        }
-    }
 
     clickCard = () => {
         if(this.state.key === "textOne" && !this.state.selected){
@@ -47,7 +28,7 @@ class DeckCard extends React.Component {
         }
 
         setTimeout(() => {
-            this.setState({key: "textOne"})
+            this.setState({key: "textOne", selected: false})
         }, 2000);
 
     }
