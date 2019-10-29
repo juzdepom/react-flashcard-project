@@ -9,13 +9,27 @@ class DeckCard extends React.Component {
 
         this.state = {
             key: "textOne",
-            bodyClass: "decklist--card-body",
+            // bodyClass: "decklist--card-body",
         }
     }
 
+    //when component gets updated
+    componentDidUpdate(prevProps, prevState){
+        //the props have changed, meaning we have probably switched deck
+        if(prevProps.card !== this.props.card){
+            if(this.props.card.rating > 3){
+                this.setState({key: 'textThree'})
+            } else {
+                this.setState({key: 'textOne'})
+            }
+        }
+    }
+
+    //when component first mounts
     componentDidMount = () => {
         //if card is level 4 or 5, show the Thai characters first
         if(this.props.card.rating > 3){
+            // console.log('card is level 4 or 5: ', this.props.card)
             this.setState({
                 key: "textThree"
             })
@@ -65,14 +79,18 @@ class DeckCard extends React.Component {
             var latestReview = lastReviewed[lastReviewed.length - 1]
             whenWasLastReview = calculateElapsedTime(latestReview)
         }
-        var selectClass = `decklist--card-select decklist--0`
 
         return (
-            <div ref={this.setWRapperRef} className={this.state.bodyClass} onClick={() => this.clickCard()}>
+            <div 
+                ref={this.setWRapperRef} 
+                className="decklist--card-body" 
+                onClick={() => this.clickCard()}>
+
                 <div className="decklist--card-reviewCount">{index}</div>
                 <div className="decklist--card-text">{card[this.state.key]}</div>
-                <div className="decklist--card-lastReview">{reviewCount} <span role="img" aria-label="eyes">👀</span> | {whenWasLastReview}</div>
-                <div className={selectClass} onClick={(e)=> this.selectCard(e)}></div>
+                <div className="decklist--card-lastReview">{card.rating} | {reviewCount} <span role="img" aria-label="eyes">👀</span> | {whenWasLastReview}</div>
+                <div className="decklist--card-select decklist--0" onClick={(e)=> this.selectCard(e)}></div>
+
             </div>
         )
     }

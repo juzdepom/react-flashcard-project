@@ -571,7 +571,11 @@ class StudyScreen extends React.Component {
   }
 
   deckListRatedCard = (card) => {
+    //number of flashcards that haven't been uploaded to firebase yet
+    var flashcardsRated = this.state.flashcardsRated + 1
+   
     this.setState({
+      flashcardsRated,
       currentCard: card
     }, () => {
       this.updateFlashcards(null, card["rating"])

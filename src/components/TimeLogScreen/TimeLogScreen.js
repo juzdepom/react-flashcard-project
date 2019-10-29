@@ -77,8 +77,9 @@ class EditTextContainer extends React.Component {
         return (
             <textarea 
                 onChange={(e)=> this.props.update(e)}
+                value={this.props.text}
                 className="timelog--input-timelog">
-                {this.props.text}
+                {/* {this.props.text} */}
             </textarea>
         );
     }
@@ -120,7 +121,7 @@ class TimeLogScreen extends React.Component {
         }
 
         this.state = {
-            allEntriesModeIsOn: true,
+            allEntriesModeIsOn: false,
             editModeIsOn: false,
             objectivesAreShowing: false,
             switchEditButtonText: "Edit",
@@ -152,7 +153,7 @@ class TimeLogScreen extends React.Component {
         
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.retrieveDataFromFirebase();
     }
 

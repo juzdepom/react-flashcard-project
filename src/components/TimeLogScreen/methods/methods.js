@@ -9,14 +9,16 @@ export const parseEntryDataArrayIntoHashtagArray = (entryData, hashtagDataInclud
         var startTime = item["startTime"]
         var endTime = item["endTime"]
         let elapsedTime = calculateElapsedTime(startTime, endTime, true)
-
-        hashtags.forEach((hashtag) => {
-            // let hashtag = hashtags[i]
-            if(hashtagDataDict[hashtag] === undefined){
-                hashtagDataDict[hashtag] = 0
-            }
-            hashtagDataDict[hashtag] = parseInt(hashtagDataDict[hashtag]) + parseInt(elapsedTime);
-        })
+        if(hashtags !== null){
+            hashtags.forEach((hashtag) => {
+                // let hashtag = hashtags[i]
+                if(hashtagDataDict[hashtag] === undefined){
+                    hashtagDataDict[hashtag] = 0
+                }
+                hashtagDataDict[hashtag] = parseInt(hashtagDataDict[hashtag]) + parseInt(elapsedTime);
+            })
+        }
+        
     })
     // for(var i in entryData){
     //     let item = entryData[i]
@@ -122,11 +124,11 @@ return hashtagArray
 
 export const returnHeightTypeBasedOnTime = (time) => {
     switch(true){
-        case (time > 15 && time < 30): return "15-30";
-        case (time > 30 && time < 60): return "30-60";
-        case (time > 60 && time < 120): return "60-120";
-        case (time > 120 && time < 240): return "120-240";
-        case (time > 240): return "240";
+        case (time > 0 && time < 30): return "15-30";
+        case (time > 29 && time < 60): return "30-60";
+        case (time > 59 && time < 120): return "60-120";
+        case (time > 119 && time < 240): return "120-240";
+        case (time > 239): return "240";
         default: 
             console.error(`time entry is not valid: ${time}`)
             return "";
@@ -267,7 +269,7 @@ export const convertMilitaryTimeToMinutes = (t) => {
     var hours = parseInt(time[0])
     var minutes = parseInt(time[1])
 
-    if (hours.isNaN() || minutes.isNaN()){
+    if (hours === NaN || minutes === NaN){
         alert(error)
         return error;
     }
@@ -289,7 +291,7 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
     var hours = parseInt(time[0])
     var minutes = parseInt(time[1])
 
-    if (hours.isNaN() || minutes.isNaN()){
+    if (hours === NaN || minutes === NaN){
         alert(error)
         return error;
     }
@@ -320,7 +322,7 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
 //returns 3h20
 export const convertMinutesToHoursAndMinutes = (m) => {
     let totalMin = parseInt(m)
-    if(totalMin.isNaN()) {
+    if(totalMin === NaN) {
         alert(`Error! Minutes are not a valid Int: ${m}`)
         return NaN
     } else {

@@ -95,7 +95,7 @@ class Progress extends React.Component {
                 numberOfCardsRated = entry[cardsRated]
             }
             
-            return  <div className="progress-log--entry">
+            return  <div key={index} className="progress-log--entry">
 
                 <div className="progress-log--entry--deck-numbers">
                     <span className="rating-0">{deckZero}</span>

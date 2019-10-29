@@ -51,7 +51,7 @@ class Entry extends React.Component {
             let backgroundType = returnBackgroundTypeBasedOnHashtag(hashtag)
             let className = "bg-"+backgroundType
             return(
-                <div className={className}>
+                <div key={i} className={className}>
                     <button 
                         onClick={() => this.showDetailsForHashtag(hashtag)}>
                         {hashtag}: {time}
