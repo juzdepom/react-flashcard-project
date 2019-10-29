@@ -19,7 +19,7 @@ import 'firebase/database';
 //methods
 import { 
   calculateTotalExpPoints, 
-  addPlusSignIfPositive, 
+  // addPlusSignIfPositive, 
   sortCardsFromLastReviewed 
 } from './methods';
 
@@ -228,7 +228,7 @@ class StudyScreen extends React.Component {
         correctIndex = i
       }
     }
-    if (correctIndex == undefined) { alert("error!")} 
+    if (correctIndex === undefined) { alert("error!")} 
     else { return correctIndex }
   }
 
@@ -256,7 +256,7 @@ class StudyScreen extends React.Component {
     }
 
     let previousCard = this.state.currentCard
-    var i = (newIndex == null) ? correctIndex : newIndex
+    var i = (newIndex === null) ? correctIndex : newIndex
     // if(i == null){
     //   i = correctIndex;
     // }
@@ -315,7 +315,7 @@ class StudyScreen extends React.Component {
   generateRandomIndex = () => {
     var idDeck = this.state.level.idDeck
     var index = 0;
-    if(idDeck == null) {alert("id deck is null!")} 
+    if(idDeck === null) {alert("id deck is null!")} 
     else {
       if(idDeck.length < 1) {alert("Warning! idDeck.length < 1!")}
       var i = Math.floor(Math.random() * idDeck.length)
@@ -438,7 +438,7 @@ class StudyScreen extends React.Component {
     let id = this.state.previousCard["_id"]
     // var currentCardIndex = this.state.previousCardIndex
     for(var i in cards){
-      if(id == cards[i]["_id"]){
+      if(id === cards[i]["_id"]){
         this.setState({
           // currentCardIndex: i,
           currentCard: cards[i],

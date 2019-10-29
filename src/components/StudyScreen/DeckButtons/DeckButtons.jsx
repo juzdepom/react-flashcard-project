@@ -3,10 +3,10 @@ import './DeckButtons.css';
 
 class DeckButtons extends Component {
 
-    constructor(props){
-        super(props);
+    // constructor(props){
+    //     super(props);
 
-    }
+    // }
 
     deckButtons = () => {
         let { five, four, three, two, one, zero } = this.props.level; 
@@ -14,9 +14,10 @@ class DeckButtons extends Component {
         let colors = ["gray", "purple", "orange", "yellow", "green", "blue"];
         let indexArray = [0, 1, 2, 3, 4, 5]
         
-        return indexArray.map(i => {
+        return indexArray.map((i, index) => {
             let classname = "deckbutton " + colors[i];
             return <button 
+                key={index}
                 className={classname} 
                 onClick={() => this.props.selectDeckButton(i)}>
             {deckCountArray[i]}

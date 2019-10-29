@@ -56,19 +56,20 @@ export const calculateElapsedTime = (timestamp) => {
     
     if(seconds < 60) { return "> " + seconds + " seconds"} else
     //3600 seconds in an hour
+    var d, h, m, s = ''
     if(seconds < 3600) {
-        var m = Math.floor(seconds/60); 
-        var s = seconds % 60; 
+        m = Math.floor(seconds/60); 
+        s = seconds % 60; 
         return "> " + m + " min " + s + " sec";
     } //86400 seconds in 24 hours
     else if (seconds < 86400){
-        var h = Math.floor(seconds/3600);
-        var m = seconds % 3600 //seconds left
+        h = Math.floor(seconds/3600);
+        m = seconds % 3600 //seconds left
         m = Math.floor(m/60)
         return "> " + h + " hr " + m + " min";
     } else {
-        var d = Math.floor(seconds/86400);
-        var h = seconds % 86400; // seconds left
+        d = Math.floor(seconds/86400);
+        h = seconds % 86400; // seconds left
         h = Math.floor(h/3600)
         return "> " + d + " day " + h + " hr";
     }

@@ -1,27 +1,45 @@
 export const parseEntryDataArrayIntoHashtagArray = (entryData, hashtagDataIncludesDash) => {
     var hashtagDataDict = {}
-    for(var i in entryData){
-        let item = entryData[i]
+    entryData.forEach((item) => {
         let rawText = item["rawText"]
 
         let hashtagRegex = (hashtagDataIncludesDash) ? /#[a-z-]+/gi : /#[a-z]+/gi
-        // let hashtagRegex = /#[a-z-]+/gi
         let hashtags = rawText.match(hashtagRegex);
-        // console.log(hashtag)
-        // let hashtagArray = hashtags.split(',')
 
         var startTime = item["startTime"]
         var endTime = item["endTime"]
         let elapsedTime = calculateElapsedTime(startTime, endTime, true)
-        for(var i in hashtags){
-            let hashtag = hashtags[i]
-            if(hashtagDataDict[hashtag] == undefined){
+
+        hashtags.forEach((hashtag) => {
+            // let hashtag = hashtags[i]
+            if(hashtagDataDict[hashtag] === undefined){
                 hashtagDataDict[hashtag] = 0
             }
             hashtagDataDict[hashtag] = parseInt(hashtagDataDict[hashtag]) + parseInt(elapsedTime);
-        }
+        })
+    })
+    // for(var i in entryData){
+    //     let item = entryData[i]
+    //     let rawText = item["rawText"]
+
+    //     let hashtagRegex = (hashtagDataIncludesDash) ? /#[a-z-]+/gi : /#[a-z]+/gi
+    //     // let hashtagRegex = /#[a-z-]+/gi
+    //     let hashtags = rawText.match(hashtagRegex);
+    //     // console.log(hashtag)
+    //     // let hashtagArray = hashtags.split(',')
+
+    //     var startTime = item["startTime"]
+    //     var endTime = item["endTime"]
+    //     let elapsedTime = calculateElapsedTime(startTime, endTime, true)
+    //     for(var i in hashtags){
+    //         let hashtag = hashtags[i]
+    //         if(hashtagDataDict[hashtag] == undefined){
+    //             hashtagDataDict[hashtag] = 0
+    //         }
+    //         hashtagDataDict[hashtag] = parseInt(hashtagDataDict[hashtag]) + parseInt(elapsedTime);
+    //     }
         
-    }
+    // }
 
     var hashtagData = []
     for(var key in hashtagDataDict){
@@ -92,7 +110,7 @@ export const sortHashtagsFromLengthOfTime = (hashtagArray) => {
         var a = 1
         var b = 0
         
-        if(first["time"] != undefined && second["time"] != undefined){
+        if(first["time"] !== undefined && second["time"] !== undefined){
             a = first["time"]
             b = second["time"]
         }
@@ -108,9 +126,11 @@ export const returnHeightTypeBasedOnTime = (time) => {
         case (time > 30 && time < 60): return "30-60";
         case (time > 60 && time < 120): return "60-120";
         case (time > 120 && time < 240): return "120-240";
-        case (time > 240): return "240"
+        case (time > 240): return "240";
+        default: 
+            console.error(`time entry is not valid: ${time}`)
+            return "";
     }
-    return "default"
 }
 
 export const returnBackgroundTypeBasedOnHashtag = (h) => {
@@ -138,7 +158,7 @@ export const returnBackgroundTypeBasedOnHashtag = (h) => {
         "Baow",
     ]
     for(var i in c){
-        if(p == c[i]){
+        if(p === c[i]){
             color = p;
         }
     }
@@ -235,7 +255,7 @@ export const calculateElapsedTime = (s, e, onlyMinutes) => {
 }
 
 export const convertMilitaryTimeToMinutes = (t) => {
-    if (t == undefined){ return t}
+    if (t === undefined){ return t}
     let time  = t.split(":")
 
     let error = `Error! This is not a valid time entry: ${t}`
@@ -247,7 +267,7 @@ export const convertMilitaryTimeToMinutes = (t) => {
     var hours = parseInt(time[0])
     var minutes = parseInt(time[1])
 
-    if (hours === NaN || minutes === NaN){
+    if (hours.isNaN() || minutes.isNaN()){
         alert(error)
         return error;
     }
@@ -269,7 +289,7 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
     var hours = parseInt(time[0])
     var minutes = parseInt(time[1])
 
-    if (hours === NaN || minutes === NaN){
+    if (hours.isNaN() || minutes.isNaN()){
         alert(error)
         return error;
     }
@@ -278,7 +298,7 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
     if(hours > 11 && hours < 24){
         // console.log(hours)
         ampm = "PM"
-        if(hours != 12){
+        if(hours !== 12){
             hours = hours - 12
         }
     } else if (hours > -1 && hours < 12){
@@ -300,7 +320,7 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
 //returns 3h20
 export const convertMinutesToHoursAndMinutes = (m) => {
     let totalMin = parseInt(m)
-    if(totalMin === NaN) {
+    if(totalMin.isNaN()) {
         alert(`Error! Minutes are not a valid Int: ${m}`)
         return NaN
     } else {

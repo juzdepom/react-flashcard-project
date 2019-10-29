@@ -74,7 +74,7 @@ class Progress extends React.Component {
 
             
 
-            if(index == progressLogData.length-1){ //this was the first entry every made
+            if(index === progressLogData.length-1){ //this was the first entry every made
                 totalExpEarnedToday = "0"
                 newCardsAdded = "XX"
                 cardExpEarned = "0"
@@ -162,7 +162,7 @@ class Progress extends React.Component {
     //will return a date like Nov 16, 2019
     calculateDateOfMastery(numberOfDaysToMastery){
         if(numberOfDaysToMastery === undefined) {alert("Error! numbersOfDaysToMastery is undefined!")}
-        let time = parseInt(numberOfDaysToMastery)
+        // let time = parseInt(numberOfDaysToMastery)
         var d = new Date();
         d.setDate(d.getDate()+numberOfDaysToMastery);
         var dateString = returnDateString(d)

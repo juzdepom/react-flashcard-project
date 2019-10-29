@@ -71,21 +71,22 @@ class Card extends Component {
         var diff = thisTime.getTime() - prevTime.getTime();
         var seconds = Math.floor(diff/1000)
         
+        var d, h, m, s = ''
         if(seconds < 60) { return seconds + " seconds ago"} else
         //3600 seconds in an hour
         if(seconds < 3600) {
-            var m = Math.floor(seconds/60); 
-            var s = seconds % 60; 
+            m = Math.floor(seconds/60); 
+            s = seconds % 60; 
             return m + " min " + s + " sec ago";
         } //86400 seconds in 24 hours
         else if (seconds < 86400){
-            var h = Math.floor(seconds/3600);
-            var m = seconds % 3600 //seconds left
+            h = Math.floor(seconds/3600);
+            m = seconds % 3600 //seconds left
             m = Math.floor(m/60)
             return h + " hr " + m + " min ago";
         } else {
-            var d = Math.floor(seconds/86400);
-            var h = seconds % 86400; // seconds left
+            d = Math.floor(seconds/86400);
+            h = seconds % 86400; // seconds left
             h = Math.floor(h/3600)
             return d + " day " + h + " hr ago";
         }
@@ -96,10 +97,8 @@ class Card extends Component {
         var colors = ["lightgray", "#AB3B7F", "#F28945", "#FEDD33", "#7EAE2E", "#40A9D6"]
         var {rating, textOne, textTwo, textThree, dateCreated, lastReviewed} = this.props.card;
 
-        //if card is green or blue, have textOne be 
         var color = colors[rating]
         var time = "First Time"
-        // var elapsed = ""
         var reviewCount = 0
 
         var front = textOne
@@ -109,16 +108,14 @@ class Card extends Component {
             back = textOne;
         } 
 
-        if(lastReviewed == undefined) {
-            //add an array to this
-            console.log('this one is undefined: ' + textOne)
+        if(lastReviewed === undefined) {
+            // console.log('this ones lastReviewed is undefined: ' + textOne)
         }
         
-        if(lastReviewed != undefined && lastReviewed.length != 0){
+        if(lastReviewed !== undefined && lastReviewed.length !== 0){
             reviewCount = lastReviewed.length
             lastReviewed = lastReviewed[lastReviewed.length - 1]
             time = this.calculateElapsedTime(lastReviewed)
-            // elapsed = this.timeConverter(lastReviewed)
         }
         return(
             <div>

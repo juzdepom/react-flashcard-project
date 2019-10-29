@@ -1,7 +1,7 @@
 import React from 'react';
 import './DeckList.scss';
 import { calculateElapsedTime } from '../../../methods/methods';
-import { sortCardsFromLastReviewed } from '../methods';
+// import { sortCardsFromLastReviewed } from '../methods';
 
 class DeckCard extends React.Component {
     constructor(props){
@@ -60,7 +60,7 @@ class DeckCard extends React.Component {
         var {lastReviewed} = card;
         var reviewCount = 0;
         var whenWasLastReview = "No Review"
-        if(lastReviewed != undefined && lastReviewed.length != 0){
+        if(lastReviewed !== undefined && lastReviewed.length !== 0){
             reviewCount = lastReviewed.length
             var latestReview = lastReviewed[lastReviewed.length - 1]
             whenWasLastReview = calculateElapsedTime(latestReview)
@@ -71,7 +71,7 @@ class DeckCard extends React.Component {
             <div ref={this.setWRapperRef} className={this.state.bodyClass} onClick={() => this.clickCard()}>
                 <div className="decklist--card-reviewCount">{index}</div>
                 <div className="decklist--card-text">{card[this.state.key]}</div>
-                <div className="decklist--card-lastReview">{reviewCount} 👀 | {whenWasLastReview}</div>
+                <div className="decklist--card-lastReview">{reviewCount} <span role="img" aria-label="eyes">👀</span> | {whenWasLastReview}</div>
                 <div className={selectClass} onClick={(e)=> this.selectCard(e)}></div>
             </div>
         )

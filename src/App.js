@@ -4,13 +4,13 @@ import './App.css';
 import DrawerToggleButton from './components/SideDrawer/DrawerToggleButton';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import StudyScreen from './components/StudyScreen/StudyScreen';
-import SearchScreen from './components/SearchScreen/SearchScreen';
+// import SearchScreen from './components/SearchScreen/SearchScreen';
 import TimeLogScreen from './components/TimeLogScreen/TimeLogScreen';
 
 //firebase
-import { DB_CONFIG } from './config/config';
-import firebase from 'firebase/app';
-import 'firebase/database'; 
+// import { DB_CONFIG } from './config/config';
+// import firebase from 'firebase/app';
+// import 'firebase/database'; 
 
 
 class App extends React.Component {

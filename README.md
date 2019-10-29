@@ -245,5 +245,6 @@ Feeling a little bit frustrated. For some reason, my firebase database is no lon
 #18 added a delayed method that resets the decklistcard key state.
 #18 backing up flashcard data
 
-
-
+## Session 19
+*🗓 Tu, Oct 29, 2019* <br>
+Cleaned up all of the errors that were showing up in the console!

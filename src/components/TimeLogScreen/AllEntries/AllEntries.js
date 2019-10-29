@@ -14,12 +14,12 @@ import {
 } from '../methods/methods';
 
 class Entry extends React.Component {
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
 
     parseRawTextForHashtagData = (rawText) => {
-        if(rawText == undefined){ return [] }
+        if(rawText === undefined){ return [] }
         let arrayOfStrings = rawText.split('\n')
         let entryData = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
         let hashtagData = parseEntryDataArrayIntoHashtagArray(entryData)

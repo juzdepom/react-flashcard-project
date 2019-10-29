@@ -173,7 +173,7 @@ class TimeLogScreen extends React.Component {
                     //loop through entries to see if we already have an entry for today
                     var entryForThisTodayDoesNotExist = true;
                     for(var i in timeLogEntries){
-                        if(timeLogEntries[i].date == currentDate){
+                        if(timeLogEntries[i].date === currentDate){
                             //entry for today already exists
                             currentEntry = timeLogEntries[i]
                             entryForThisTodayDoesNotExist = false
@@ -393,7 +393,7 @@ class TimeLogScreen extends React.Component {
         let date = this.state.timeLogEntries[index].date
         let rawEntry = this.state.timeLogEntries[index].rawEntry
         var objectives = this.state.timeLogEntries[index].objectives
-        if(objectives == undefined){ objectives = "No objectives written for today yet"}
+        if(objectives === undefined){ objectives = "No objectives written for today yet"}
         
         let hashtagData = this.returnFormattedHashtagData()
         var formattedEntry = rawEntry

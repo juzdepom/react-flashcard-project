@@ -64,25 +64,26 @@ class ClientWorkContainer extends React.Component {
                     let arrayOfStrings = text.split('\n')
                     let timeEntryArray = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
                     
-                    var clientWorkEntries = []
-                    timeEntryArray.forEach((entry, index) => {
+                    let clientWorkEntries = []
+
+                    timeEntryArray.forEach((entry) => {
 
                         if(entry.rawText.includes('#clientwork')){
-                            var clientWorkEntry = this.formatClientWorkEntry(entry)
+                            let clientWorkEntry = this.formatClientWorkEntry(entry)
                             clientWorkEntries.push(clientWorkEntry)
                         }
                     })
+
                     clientworkEntry.clientWorkEntries = clientWorkEntries
 
-                    var projects = []
+                    let projects = []
                     
-                    clientWorkEntries.forEach((entry, index) => {
+                    clientWorkEntries.forEach((entry) => {
                         //make this pull from firebase
                         let validProjects = this.state.validProjects
                         if(!validProjects.includes(entry.project)){
                             console.error(`doesn't match list of valid projects: ${entry.project} -> ${date}`)
                         }
-                        // if()
                         var project = {}
                         if(projects.length > 0 ){
                             var projectAlreadyExists = false
@@ -116,7 +117,7 @@ class ClientWorkContainer extends React.Component {
                     })
                     //calculate total time logged per project
                     clientworkEntry.projects = projects
-                    var totalMinutesLogged = 0
+                    let totalMinutesLogged = 0
                     projects.forEach((project) => {
                         totalMinutesLogged += project.minutesLogged
                     });
@@ -172,7 +173,7 @@ class ClientWorkContainer extends React.Component {
             var totalProjectTimesArray = []
             monthArray.forEach((month) => {
                 month.dailyEntries.forEach((day) => {
-                    let date = day.date
+                    // let date = day.date
                     let projects = day.projects
                     projects.forEach((project) => {
                         if(totalProjectTimesArray.length > 0){

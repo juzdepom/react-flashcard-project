@@ -84,7 +84,7 @@ class AddFlashcards extends Component {
         dict["lastReviewed"] = []
         dict["dateCreated"] = this.getCurrentDate()
 
-        if(textOne == "" || textTwo == "" || textThree == ""){
+        if(textOne === "" || textTwo === "" || textThree === ""){
             alert("Warning! This line will have an empty text field: ", dict)
         }
         return dict
@@ -102,14 +102,27 @@ class AddFlashcards extends Component {
 
     checkForDuplicatesWithOriginalDeck(cards){
         let originalDeck = this.props.originalDeck
-        for (var i in cards){
-            let textOne = cards[i]["textOne"]
-            for (var i in originalDeck){
-                if(textOne === originalDeck[i]["textOne"]){
-                    alert(`Error! You already have this flashcard in your deck, line ${i}: ${textOne} `)
+        cards.forEach((card) => {
+            let textOne = card.textOne
+            originalDeck.forEach((card) => {
+                if(textOne === card.textOne){
+                    alert(`Error! You already have this flashcard in your deck: ${textOne} `)
                 }
-            }
-        }
+            })
+            // for (var i in originalDeck){
+            //     if(textOne === originalDeck[i]["textOne"]){
+            //         alert(`Error! You already have this flashcard in your deck, line ${i}: ${textOne} `)
+            //     }
+            // }
+        })
+        // for (var i in cards){
+        //     let textOne = cards[i]["textOne"]
+        //     for (var i in originalDeck){
+        //         if(textOne === originalDeck[i]["textOne"]){
+        //             alert(`Error! You already have this flashcard in your deck, line ${i}: ${textOne} `)
+        //         }
+        //     }
+        // }
     }
 
     close = () => {
@@ -132,7 +145,7 @@ class AddFlashcards extends Component {
     render(props){
        
         return(
-            <div class="addflashcards">
+            <div className="addflashcards">
                 { !this.state.addingCards ? <button 
                     className="addflashcards--button"
                     onClick={this.addNewCards.bind(this)}>

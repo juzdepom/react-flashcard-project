@@ -16,7 +16,7 @@ export const sortCardsFromLastReviewed = (cards) => {
     cards.sort(function(first, second){
             var a = 1
             var b = 0
-            if(first["lastReviewed"] != undefined && second["lastReviewed"] != undefined){
+            if(first["lastReviewed"] !== undefined && second["lastReviewed"] !== undefined){
                 let lastIndexA = first["lastReviewed"].length-1
                  a = first["lastReviewed"][lastIndexA]
 
