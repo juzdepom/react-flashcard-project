@@ -7,28 +7,43 @@ class DeckCard extends React.Component {
     constructor(props){
         super(props)
 
-        // this.setWrapperRef = this.setWrapperRef.bind(this);
-
         this.state = {
             key: "textOne",
             bodyClass: "decklist--card-body",
-            selected: false
+        }
+    }
+
+    componentDidMount = () => {
+        //if card is level 4 or 5, show the Thai characters first
+        if(this.props.card.rating > 3){
+            this.setState({
+                key: "textThree"
+            })
         }
     }
 
 
     clickCard = () => {
-        if(this.state.key === "textOne" && !this.state.selected){
-            this.props.quickRatingIsOn(true, this.props.card)
-            this.setState({selected: true, key: "textThree"})
+        //default
+        var key = "textOne"
+        if(this.state.key === "textOne"){
+            key = "textThree"
         } else if (this.state.key === "textThree"){
-            this.setState({key: "textTwo"})
+            //have to set selected to true for the level 4 and 5 cards
+            key = "textTwo"
         } else if (this.state.key === "textTwo"){
-            this.setState({key: "textOne", selected: false})
+            key = "textOne"
         }
 
+        this.setState({key})
+        this.props.quickRatingIsOn(true, this.props.card)
+
         setTimeout(() => {
-            this.setState({key: "textOne", selected: false})
+            if (this.props.card.rating > 3){
+                this.setState({key: "textThree"})
+            } else {
+                this.setState({key: "textOne"})
+            }
         }, 2000);
 
     }
@@ -41,6 +56,7 @@ class DeckCard extends React.Component {
     render(){
         let card = this.props.card
         let index = this.props.index + 1
+        //get the last reviewed information
         var {lastReviewed} = card;
         var reviewCount = 0;
         var whenWasLastReview = "No Review"
@@ -92,7 +108,7 @@ class DeckList extends React.Component {
     cardList = (cards) => {
         return cards.map((card, index) => {
             return <DeckCard 
-                // clickCard={this.clickCard}
+                key={index}
                 selectCard={this.props.selectCard} 
                 card={card} 
                 index={index}

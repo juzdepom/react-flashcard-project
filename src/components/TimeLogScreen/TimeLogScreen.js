@@ -120,7 +120,7 @@ class TimeLogScreen extends React.Component {
         }
 
         this.state = {
-            allEntriesModeIsOn: false,
+            allEntriesModeIsOn: true,
             editModeIsOn: false,
             objectivesAreShowing: false,
             switchEditButtonText: "Edit",
@@ -323,9 +323,6 @@ class TimeLogScreen extends React.Component {
     //format timelog raw data
     formatEntry = (entry) => {
         let arrayOfStrings = entry.split('\n')
-        // var reversed = arrayOfStrings
-        // reversed.reverse()
-        // console.log(reversed)
         if(arrayOfStrings.length < 2){return entry}
 
         let arrayOfDict = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
@@ -384,7 +381,7 @@ class TimeLogScreen extends React.Component {
             let backgroundType = returnBackgroundTypeBasedOnHashtag(hashtag)
             let className = "bg-"+backgroundType
             return(
-                <div className={className}>{hashtag}: {time}</div>
+                <div key={i} className={className}>{hashtag}: {time}</div>
             )
             
         })

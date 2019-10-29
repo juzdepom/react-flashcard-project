@@ -126,13 +126,13 @@ export const returnBackgroundTypeBasedOnHashtag = (h) => {
         "coding", 
         "clientwork", 
         "myinstagram", 
-        "nap", 
+        // "nap", 
         "studythai", 
         "muaythai", 
-        "selfcare",
+        // "selfcare",
         "running",
-        "timelog",
-        "food",
+        // "timelog",
+        // "food",
         "badhabits",
         "rov",
         "Baow",
@@ -164,14 +164,21 @@ export const getCurrentDate = () => {
 }
 
 //convert from 14-10-2019 to Oct 14, 2019
-export const formatDate = (dateString) => {
+export const formatDate = (dateString, includeWeekday) => {
+    let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     if(dateString==null){return "Loading..."}
     var arr = dateString.split("-")
     if(arr.length <= 2){return "Loading..."}
     let day = arr[0].trim()
     let year = arr[2].trim()
     let monthInt = parseInt(arr[1].trim())
+    //iso format is YYYY-MM-DD
+    let ISODateString = year + "-" + monthInt + "-" + day
+    let date = new Date(ISODateString)
+    var days = date.getDay()
+    days = weekdays[(days)]
     var month = ""
+    
     switch(monthInt){
         case 1: month = "Jan"
         break;
@@ -201,7 +208,8 @@ export const formatDate = (dateString) => {
             alert(`Error: monthInt out of range: ${monthInt}`)
             break;
     }
-    var newString = month + " " + day + ", " + year
+    var newString = (includeWeekday) ? days + ", " : ""
+    newString = newString + month + " " + day + ", " + year
     return newString
 }
 
@@ -227,6 +235,7 @@ export const calculateElapsedTime = (s, e, onlyMinutes) => {
 }
 
 export const convertMilitaryTimeToMinutes = (t) => {
+    if (t == undefined){ return t}
     let time  = t.split(":")
 
     let error = `Error! This is not a valid time entry: ${t}`

@@ -243,6 +243,7 @@ Took longer than expect but ```#15 successfully installed font-awesome into proj
 Feeling a little bit frustrated. For some reason, my firebase database is no longer saving the most recent version of my flashcard studying data. My whole study session so far was deleted today!
 
 #18 added a delayed method that resets the decklistcard key state.
+#18 backing up flashcard data
 
 
 

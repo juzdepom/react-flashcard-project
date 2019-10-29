@@ -1,8 +1,13 @@
+$pastel-yellow: #FDFD96;
+
 .allEntries {
     margin-top: 5px;
     background: white;
-    height: 90%;
+    height: 95%;
     display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: scroll;
 
     &--entry {
         width: 200px;
@@ -10,6 +15,39 @@
         margin: 10px 0 10px 10px;
         height: 200px;
         overflow-y: scroll;
-        // margin-left: 10
+        &-title {
+            font-size: 13px;
+        }
+        & button {
+            font-size: 13px;
+            background: transparent;
+            border: none;
+        }
     }
 }
+
+// .clientwork {
+//     &--container {
+
+//         &--main {
+//             position: absolute;
+//             background: $pastel-yellow;
+//             width: 80%;
+//             height: 80%;
+//             margin-left: auto;
+//             margin-right: auto;
+//             left: 0;
+//             right: 0;
+//         }
+        
+//         &--title {
+//             margin-top: 5px;
+//             display: flex;
+//             justify-content: space-between;
+//         }
+
+//         &--body {
+//             margin-top: 10px;
+//         }
+//     }
+// }
