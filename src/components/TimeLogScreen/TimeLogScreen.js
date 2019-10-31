@@ -2,6 +2,7 @@ import React from 'react';
 import './TimeLogScreen.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { parseAllEntriesForHabits } from './methods/habitsmethods'
 import AllEntries from './AllEntries/AllEntries';
 
 //methods
@@ -207,7 +208,8 @@ class TimeLogScreen extends React.Component {
 
             this.setState({timeLogEntries, doesNotHavePrevEntries}, () => {
                 this.parseCurrentEntryRawText()
-                this.parseAllEntriesForHabits()
+                parseAllEntriesForHabits(this.state.timeLogEntries)
+                // this.parseAllEntriesForHabits()
             })
         })
     }
@@ -221,96 +223,6 @@ class TimeLogScreen extends React.Component {
         let hashtagDataIncludesDash = !(this.state.hashtagDataIncludesDash)
         this.setState({hashtagDataIncludesDash}, () => {
             this.parseCurrentEntryRawText()
-        })
-    }
-
-    parseAllEntriesForHabits = () => {
-        let habits = []
-        let entries = this.state.timeLogEntries
-        entries.forEach((entry) => {
-            let date = entry.date
-            let rawEntry = entry.rawEntry
-            let lines = rawEntry.split('\n')
-            lines.forEach((line, index) => {
-                //found a habit!
-                if(line.includes('h&') && line.includes('&h')){
-                    let endTime = lines[index-1]
-                    let startTime = lines[index+1]
-                    let rawEntry = line
-                    //get out the habit
-                    var habitTitle = line.substring(
-                        line.lastIndexOf("h&") + 2,
-                        line.lastIndexOf("&h")
-                    );
-                    
-                    if(habits.length > 0) {
-                        var habitDoesNotExist = true
-                        habits.forEach((habit) => {
-                            //check if the habit already exists in the habits array
-                            if(habit.title == habitTitle){
-                                //habit exists
-                                habitDoesNotExist = false;
-                                let entry = {
-                                    title: habitTitle,
-                                    date,
-                                    entry: {
-                                        startTime,
-                                        endTime,
-                                        rawEntry, 
-                                        date,
-                                    }
-                                }
-                                habit.entries.push(entry)
-                            }
-                        })
-                        if(habitDoesNotExist){
-                            let newEntry = {
-                                title: habitTitle,
-                                entries: [
-                                    {
-                                        title: habitTitle,
-                                        date,
-                                        entry: {
-                                            startTime,
-                                            endTime,
-                                            rawEntry, 
-                                            date,
-                                        }
-                                    }
-                                ]
-                                
-                            }
-                            habits.push(newEntry)
-                        }
-                    } else {
-                        //if there is nothing in habits array, this will be the first entry
-                        let newEntry = {
-                            title: habitTitle,
-                            entries: [
-                                {
-                                    title: habitTitle,
-                                    date,
-                                    entry: {
-                                        startTime,
-                                        endTime,
-                                        rawEntry, 
-                                        date,
-                                    }
-                                }
-                            ]
-                            
-                        }
-                        habits.push(newEntry)
-                    }
-                    console.log('habits h& xx &h : ', habits)
-                    // console.log(habit)
-                    // console.log(startTime)
-                    // console.log(endTime)
-                    // let regex = '[`([^`]]*)'
-                    // let regex = /[`(.*)/
-                }
-            })
-            //if length is longer than 1
         })
     }
 

@@ -248,3 +248,7 @@ Feeling a little bit frustrated. For some reason, my firebase database is no lon
 ## Session 19
 *🗓 Tu, Oct 29, 2019* <br>
 Cleaned up all of the errors that were showing up in the console!
+
+## Session 20
+*🗓 Tu, Oct 30, 2019* <br>
+Added a habits parser to the timelogs project!

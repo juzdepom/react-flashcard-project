@@ -16,7 +16,7 @@ class ClientWorkContainer extends React.Component {
         
         this.state = {
             //pull this later on from firebase
-            validProjects: ["liviawebsite", "asfamous", "dmt", "asfamouswebsite"]
+            validProjects: ["liviawebsite", "asfamous", "dmt", "asfamouswebsite", "elephantenglishlearning", "elephantenglish"]
         }
     }
 

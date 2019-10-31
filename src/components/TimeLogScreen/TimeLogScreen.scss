@@ -122,7 +122,6 @@ $pastel-light-blue: #DEF5FB;
     }
     &--entry {
         padding: 5px 0 5px 0; 
-        // background: red;
         height: 90%;
     }
     &--todayslog {
@@ -130,7 +129,8 @@ $pastel-light-blue: #DEF5FB;
         margin: 0 auto;
         margin-top: 5px;
         text-align: left;
-        max-height: 500px;
+        // max-height: 500px;
+        height: 400px;
         overflow-y: scroll;
 
         &--hashtag-data-container {
@@ -196,7 +196,8 @@ $pastel-light-blue: #DEF5FB;
             padding: 8px;
             font-size: 14px;
             width: 95%;
-            min-height: 500px;
+            // min-height: 500px;
+            height: 400px;
             margin-top: 10px;
         }
     }

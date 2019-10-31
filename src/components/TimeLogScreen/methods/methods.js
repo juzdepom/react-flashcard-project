@@ -262,7 +262,8 @@ export const convertMilitaryTimeToMinutes = (t) => {
 
     let error = `Error! This is not a valid time entry: ${t}`
     if(time.length < 2 || time.length > 2){ 
-        alert(error)
+        console.error(error)
+        // alert(error)
         return error;
     }
 
@@ -270,7 +271,8 @@ export const convertMilitaryTimeToMinutes = (t) => {
     var minutes = parseInt(time[1])
 
     if (hours === NaN || minutes === NaN){
-        alert(error)
+        console.error(error)
+        // alert(error)
         return error;
     }
 
@@ -284,7 +286,8 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
     
     let error = `Error! This is not a valid time entry: ${t}`
     if(time.length < 2 || time.length > 2){ 
-        alert(error)
+        // alert(error)
+        console.error(error)
         return error;
     }
 
@@ -307,7 +310,8 @@ export const convertMilitaryTimeToTwelveHourTime = t => {
         ampm = "AM"
         if(hours === 0){hours = 12}
     } else {
-        alert(`Error! ${t} is not a valid military time!`)
+        console.error(`Error! ${t} is not a valid military time!`)
+        // alert(`Error! ${t} is not a valid military time!`)
         return NaN
     }
 
