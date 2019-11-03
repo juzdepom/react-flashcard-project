@@ -1,11 +1,21 @@
 import React from 'react';
+//sass
 import './TimeLogScreen.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
-import { parseAllEntriesForHabits } from './methods/habitsmethods'
-import AllEntries from './AllEntries/AllEntries';
-
+//components
+import { 
+    AllEntries,
+    TimeCalculations,
+    EditTextContainer, 
+    EntryDisplay, 
+    ButtonContainer,
+    HashtagDataDisplay } from './components'
 //methods
+import { 
+    // parseAllEntriesForHabits, 
+    // parseAllEntriesForFoodEntries, 
+    // parseAllEntriesForExpenses,
+    parseAllEntriesForRelevantData,
+} from './methods/parseTextMethods'
 import { 
     getCurrentDate, 
     formatDate, 
@@ -19,96 +29,17 @@ import {
     convertMilitaryTimeToTwelveHourTime,
     calculateTotalTimeLoggedFromEntryData, 
     } from './methods/methods';
-
 //firebase
 import { PERSONALDATA_DB_CONFIG } from '../../config/personalData-config';
 import firebase from 'firebase/app';
 import 'firebase/database'; 
-
-//button text
-let noInputDataText = "No input data yet"
-
 //fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 const chevronCircleLeft = <FontAwesomeIcon icon={faChevronCircleLeft} />
 const chevronCircleRight = <FontAwesomeIcon icon={faChevronCircleRight} />
-
-class TimeCalculations extends React.Component {
-    render(props){
-        let { currentTime, timeUntilBedtime, bedtime, timeSinceFirstEntryTime, firstEntryTime, totalTimeAvailableToday, totalTimeLogged } = this.props
-        return (
-            <div>
-                Current Time: <strong>{currentTime}</strong>
-                <br/>
-                (<strong>{timeUntilBedtime}</strong> until {bedtime}/&nbsp;{timeSinceFirstEntryTime} since {firstEntryTime})
-                <br/>
-                Time available today: <strong>{totalTimeAvailableToday}</strong> ({firstEntryTime} - {bedtime})
-                <br/>
-                Total time logged: {totalTimeLogged}
-            </div>
-        );
-    }
-}
-
-class EntryDisplay extends React.Component {
-    render(prosp){
-        return (
-            <div className="timelog--todayslog">
-                {this.props.formattedEntry}
-            </div>
-        );
-    }
-}
-
-class HashtagDataDisplay extends React.Component {
-    render(props){
-        return (
-            <div className="timelog--todayslog--hashtag-data-container">
-                <button 
-                    onClick={() => this.props.switchHashtagDataStyle()}>
-                        Switch
-                </button>
-                {this.props.hashtagData}
-            </div>
-        );
-    }
-}
-
-class EditTextContainer extends React.Component {
-    render(props){
-        return (
-            <textarea 
-                onChange={(e)=> this.props.update(e)}
-                value={this.props.text}
-                className="timelog--input-timelog">
-                {/* {this.props.text} */}
-            </textarea>
-        );
-    }
-}
-
-class ButtonContainer extends React.Component {
-    render(props){
-        let editButtonDisabled = (this.props.goalsForTheDayButtonText === "Save") ? true : false
-        let goalsButtonDisabled = (this.props.switchEditButtonText === "Save") ? true : false
-        return (
-            
-            <div className="timelog--container-buttons">
-                <button 
-                    disabled={editButtonDisabled}
-                    onClick={() => this.props.switchEditMode()}
-                    className="timelog--button-edit">
-                    {this.props.switchEditButtonText}
-                </button>
-                <button 
-                    disabled={goalsButtonDisabled}
-                    onClick={() => this.props.switchObjectivesMode()}
-                    className="timelog--button-edit">
-                    {this.props.goalsForTheDayButtonText}
-                </button>
-            </div>
-        );
-    }
-}
+//button text
+let noInputDataText = "No input data yet"
 
 class TimeLogScreen extends React.Component {
 
@@ -122,7 +53,7 @@ class TimeLogScreen extends React.Component {
         }
 
         this.state = {
-            allEntriesModeIsOn: false,
+            allEntriesModeIsOn: true,
             editModeIsOn: false,
             objectivesAreShowing: false,
             switchEditButtonText: "Edit",
@@ -207,9 +138,11 @@ class TimeLogScreen extends React.Component {
             }
 
             this.setState({timeLogEntries, doesNotHavePrevEntries}, () => {
+                //get such information as hashtag data, first entry time data, and more...
                 this.parseCurrentEntryRawText()
-                parseAllEntriesForHabits(this.state.timeLogEntries)
-                // this.parseAllEntriesForHabits()
+                //search the entries raw text for habit logs, food logs, expense logs, etc..
+                //for the moment we are just logging to console
+                parseAllEntriesForRelevantData(this.state.timeLogEntries)
             })
         })
     }
@@ -226,6 +159,7 @@ class TimeLogScreen extends React.Component {
         })
     }
 
+    //get the hashtagData, entryData, firstEntryTime, totalTimeAvailableToday, totalTimeLogged, timeSinceFirstEntryTime...
     parseCurrentEntryRawText = () => {
         var firstEntryTime = NaN;
         var totalTimeAvailableToday = NaN;
@@ -332,21 +266,39 @@ class TimeLogScreen extends React.Component {
         let arrayOfDict = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
 
         let newText = arrayOfDict.map((item, i) => {
+            //format the time
             var startTime = item["startTime"]
             var endTime = item["endTime"]
             let e = calculateElapsedTime(startTime, endTime, true)
             let elapsedTime = convertMinutesToHoursAndMinutes(e)
-            let rawText = item["rawText"]
-
             startTime = convertMilitaryTimeToTwelveHourTime(startTime)
             endTime = convertMilitaryTimeToTwelveHourTime(endTime)
             
+            //extract the raw text
+            let rawText = item["rawText"]
+
+            //parse out the hashtags including the text in the raw entry
             let hashtagRegex = /#[a-z-]+/gi
             let hashtags = rawText.match(hashtagRegex);
-            let textWithoutHashtags = rawText.replace(hashtagRegex, "");
 
+            //take out the hashtags
+            var textWithoutHashtags = rawText.replace(hashtagRegex, "");
+
+            //replace the special characters with emojis for slightly better visuals
+            textWithoutHashtags = textWithoutHashtags.replace("f&", "🍴")
+            textWithoutHashtags = textWithoutHashtags.replace("&f", "🍴")
+            textWithoutHashtags = textWithoutHashtags.replace("$&", "💵")
+            textWithoutHashtags = textWithoutHashtags.replace("&$", "💵")
+            textWithoutHashtags = textWithoutHashtags.replace("h&", "✅")
+            textWithoutHashtags = textWithoutHashtags.replace("&h", "✅")
+
+            //return the background color based on the hashtag
             let backgroundType = returnBackgroundTypeBasedOnHashtag(hashtags)
+
+            //e.g. an entry that is longer than 
             let height = returnHeightTypeBasedOnTime(e)
+
+            //customize the height based off of this data
             let className = `timelog--todayslog--entry bg-${backgroundType} height-${height}`
 
             return(
@@ -356,13 +308,12 @@ class TimeLogScreen extends React.Component {
                 <p>
                     <strong>{startTime} - {endTime} ({elapsedTime})</strong>
                     <span className="timelog--todayslog--entry-hashtags">
-                    {hashtags}
+                        {hashtags}
                     </span>
                     <span className="timelog--todayslog--entry-caption">
-                    {textWithoutHashtags}
+                        {textWithoutHashtags}
                     </span>
-                    </p>
-                {/* <p>{textWithoutHashtags}</p> */}
+                </p>
             </div>
             );
         })

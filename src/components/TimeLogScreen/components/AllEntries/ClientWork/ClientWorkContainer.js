@@ -6,7 +6,8 @@ import {
     turnTimeLogStringArrayIntoArrayOfDict,
     calculateElapsedTime, 
     convertMinutesToHoursAndMinutes,
-} from '../../methods/methods';
+    formatDate,
+} from '../../../methods/methods';
 
 
 class ClientWorkContainer extends React.Component {
@@ -26,17 +27,22 @@ class ClientWorkContainer extends React.Component {
 
     formatClientWorkEntry = (e) => {
         var entry = e;
+        //remove the clientwork hashtags from the raw text
         var rawText = entry.rawText
         let hashtagRegex = /#[a-z-]+/gi
         let hashtags = rawText.match(hashtagRegex);
         rawText = rawText.replace(hashtagRegex, '')
         entry.rawText = rawText.trim()
 
+        //we should only have only one hashtag
         if(hashtags.length > 1){console.error('warning! clientwork hashtags lenghth is > 1 which might break your code ')}
         entry.hashtag = hashtags[0]
-
+        
+        //e.g. remove #clientwork from "#clientwork--dmt" string
         var project = hashtags[0].replace(/#clientwork/, '')
+        //e.g. remove -- from "--dmt" string
         project = project.replace(/-/g, '')
+        //e.g. dmt
         entry.project = project
 
         let elapsedInMinutes = calculateElapsedTime(entry.startTime, entry.endTime, true)
@@ -79,7 +85,7 @@ class ClientWorkContainer extends React.Component {
                     let projects = []
                     
                     clientWorkEntries.forEach((entry) => {
-                        //make this pull from firebase
+                        //make this eventually pull from firebase
                         let validProjects = this.state.validProjects
                         if(!validProjects.includes(entry.project)){
                             console.error(`doesn't match list of valid projects: ${entry.project} -> ${date}`)
@@ -121,7 +127,6 @@ class ClientWorkContainer extends React.Component {
                     projects.forEach((project) => {
                         totalMinutesLogged += project.minutesLogged
                     });
-                    
                     clientworkEntry.totalMinutesLogged = totalMinutesLogged;
                     clientworkEntry.totalTimeLogged = convertMinutesToHoursAndMinutes(totalMinutesLogged)
 
@@ -129,8 +134,9 @@ class ClientWorkContainer extends React.Component {
                 clientWorkDays.push(clientworkEntry)
                 
             }
-            console.log('clientworkdays: ', clientWorkDays)
+            
             var monthArray = []
+
             clientWorkDays.forEach((day) => {
                 //pull the month from the date value e.g. 10-21-2019
                 let date = day.date
@@ -166,24 +172,48 @@ class ClientWorkContainer extends React.Component {
                     }
                 }
             })
-            console.log('monthArray: ', monthArray)
+            
             //sort them by month. For now we only have entries for October.
 
             //calculate the total time you have spent on each project
-            var totalProjectTimesArray = []
-            monthArray.forEach((month) => {
+            
+            monthArray.forEach((month, index) => {
+                var monthlyTotalProjectTimesArray = []
                 month.dailyEntries.forEach((day) => {
-                    // let date = day.date
+                    let date = day.date
+                    let formattedDate = formatDate(date, true)
                     let projects = day.projects
+                    //parse through each client work entry for the day to see what category it is
                     projects.forEach((project) => {
-                        if(totalProjectTimesArray.length > 0){
+                        var totalTimeMinutes = 0
+                        var totalTime = "H:h"
+                        var compiledText = ""
+                        //loop through each entry
+                        project.entries.forEach((entry) => {
+                            totalTimeMinutes = totalTimeMinutes + entry.elapsed.minutes
+                            compiledText = compiledText + `(${entry.startTime}-${entry.endTime}) ${entry.rawText}; `
+                        })
+                        totalTime = convertMinutesToHoursAndMinutes(totalTimeMinutes)
+                        //
+                        let dailyEntry = {
+                            totalTimeMinutes, 
+                            totalTime, 
+                            compiledText,
+                            date,
+                            formattedDate,
+                            entries: project.entries
+                        }
+                        //parse through the object entries 
+                        if(monthlyTotalProjectTimesArray.length > 0){
                             var alreadyExists = false
-                            totalProjectTimesArray.forEach((tpj) => {
+                            monthlyTotalProjectTimesArray.forEach((tpj) => {
                                 //project type already exists
                                 if(tpj.title === project.title){
                                     alreadyExists = true
                                     tpj.minutesLogged += project.minutesLogged
-                                    tpj.dailyEntries.push(project.entries)
+                                    tpj.dailyEntries.push(
+                                        dailyEntry
+                                    )
                                 }
                             })
                             if(!alreadyExists){
@@ -191,69 +221,51 @@ class ClientWorkContainer extends React.Component {
                                 let p = {
                                     title: project.title,
                                     minutesLogged: project.minutesLogged,
-                                    dailyEntries: [project.entries]
+                                    dailyEntries: [dailyEntry]
+                                    // dailyEntries: [project.entries]
                                     // dailyEntries: dailyEntries
                                 }
-                                totalProjectTimesArray.push(p)
+                                monthlyTotalProjectTimesArray.push(p)
                             }
                         } else {
                             //this is the first item in the array
                             var p = {
                                 title: project.title,
                                 minutesLogged: project.minutesLogged,
-                                dailyEntries: [project.entries]
+                                dailyEntries: [dailyEntry]
+                                // dailyEntries: [project.entries]
                                 // dailyEntries: dailyEntries
                             }
-                            totalProjectTimesArray.push(p)
+                            monthlyTotalProjectTimesArray.push(p)
                         }
                     })
                 })
-                totalProjectTimesArray.forEach((t) => {
+                monthlyTotalProjectTimesArray.forEach((t) => {
                     let min = t.minutesLogged
                     t.timeLogged = convertMinutesToHoursAndMinutes(min)
                 })
-                month.totalProjectTimes = totalProjectTimesArray;
+                //parse through each project a
+                month.projects = monthlyTotalProjectTimesArray;
             })
-            // clientWorkDays.forEach((day) => {
-            //     let projects = day.projects
-            //     projects.forEach((project) => {
-            //         if(totalProjectTimesArray.length > 0){
-            //             var alreadyExists = false
-            //             totalProjectTimesArray.forEach((tpj) => {
-            //                 if(tpj.title === project.title){
-            //                     alreadyExists = true
-            //                     tpj.minutesLogged += project.minutesLogged
-            //                 }
-            //             })
-            //             if(!alreadyExists){
-            //                 let p = {
-            //                     title: project.title,
-            //                     minutesLogged: project.minutesLogged
-            //                 }
-            //                 totalProjectTimesArray.push(p)
-            //             }
-            //         } else {
-            //             var p = {
-            //                 title: project.title,
-            //                 minutesLogged: project.minutesLogged
-            //             }
-            //             totalProjectTimesArray.push(p)
-            //         }
-            //     })
-            // })
-            // totalProjectTimesArray.forEach((t) => {
-            //     let min = t.minutesLogged
-            //     t.timeLogged = convertMinutesToHoursAndMinutes(min)
-            // })
-            // console.log('totalProjectTimesArray: ', totalProjectTimesArray)
 
-            
+            // these console.logs are pretty valuable
+            // console.log('clientworkdays: ', clientWorkDays)
+            // console.log('monthArray: ', monthArray)
+
+            let relevantData = {
+                monthArray,
+            }
+            return relevantData
 
         }
     }
     
     render(props){
-        this.parseAllEntries();
+        //temporary placeholder while props is null
+        // var relevantData = { monthArray: [] }
+
+        //will return a dict with only a 'monthArray' key for now
+        var relevantData = this.parseAllEntries();
         return (
             <div className="clientwork--container--main">
                 <div className="clientwork--container--title">
@@ -265,7 +277,7 @@ class ClientWorkContainer extends React.Component {
                     </button>
                 </div>
                 <div className="clientwork--container--body">
-                    <ClientWorkDetails/>
+                    <ClientWorkDetails monthArray={relevantData.monthArray}/>
                 </div>
                 
             </div>

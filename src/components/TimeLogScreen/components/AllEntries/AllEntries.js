@@ -11,7 +11,7 @@ import {
     calculateTotalTimeLoggedFromEntryData,
     convertMilitaryTimeToTwelveHourTime,
     formatDate,
-} from '../methods/methods';
+} from '../../methods/methods';
 
 class Entry extends React.Component {
     // constructor(props){
