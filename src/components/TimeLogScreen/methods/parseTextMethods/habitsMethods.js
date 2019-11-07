@@ -1,9 +1,10 @@
 export const parseAllEntriesForHabits = (timeLogEntries) => {
     let habits = []
+    let today = []
     let entries = timeLogEntries
 
     //loop through entries
-    entries.forEach((entry) => {
+    entries.forEach((entry, entryIndex) => {
         //extract the date
         let date = entry.date
         //extract the rawEntry text
@@ -44,8 +45,6 @@ export const parseAllEntriesForHabits = (timeLogEntries) => {
                     }
                     //regex to pull out the number
                     //if you were parsing 8min detail.match(/\d+/) will return sth like this ["8", index: 0, input: "8min", groups: undefined] 
-                    
-
                 }
 
                 //create the entry
@@ -61,21 +60,50 @@ export const parseAllEntriesForHabits = (timeLogEntries) => {
                         date,
                     }
                 }
+
+                //if the entryIndex is zero, that means we are on our most recent entry
+                //populate the today array
+                if(entryIndex === 0){
+                    if(today.length === 0){
+                        let newHabit = {
+                            title: habitTitle,
+                            entries: [entry]
+                        }
+                        today.push(newHabit)
+                    } else {
+                        var habitDoesNotExist = true
+                        today.forEach((habit) => {
+                            if(habit.title === habitTitle){
+                                //habit type exists
+                                habitDoesNotExist = false;
+                                today.entries.push(entry)
+                            }
+                        })
+                        if(habitDoesNotExist){
+                            let newHabit = {
+                                title: habitTitle,
+                                entries: [entry]
+                            }
+                            today.push(newHabit)
+                        }
+                    }
+                }
                 
                 //check if the length of our master habits array is 0
+                //populate the habits array
                 if(habits.length > 0) {
-                    var habitDoesNotExist = true
+                    var habitDoesntExist = true
                     //if not, loop through each habit
                     habits.forEach((habit) => {
                         //check if the habit already exists in the habits array
                         if(habit.title === habitTitle){
                             //habit exists!
-                            habitDoesNotExist = false;
+                            habitDoesntExist = false;
                             habit.entries.push(entry)
                         }
                     })
                     //habit doesn't exist yet
-                    if(habitDoesNotExist){
+                    if(habitDoesntExist){
                         //create a new habit
                         let newHabit = {
                             title: habitTitle,
@@ -92,8 +120,53 @@ export const parseAllEntriesForHabits = (timeLogEntries) => {
                     }
                     habits.push(newHabit)
                 }
-                console.log('habits: ', habits)
             }
         })
     })
+
+    let numberOfHabitTypes = habits.length
+    //format the entry text
+    var formattedText = ''
+    today.forEach((habit) => {
+        //loop through each habit type
+        var habitText = habit.title
+        //check to get how many entries have already been made of this title
+        var numberOfHabitEntriesOfThisType = 0
+        habits.forEach((h) => {
+            if(h.title === habit.title){
+                numberOfHabitEntriesOfThisType = h.entries.length
+            }
+        })
+        //add the number of entries
+        habitText = `(${numberOfHabitEntriesOfThisType}) ${habitText} `
+        //TO DO: calculate the consecutive streak you are currently on
+        habit.entries.forEach((e) => {
+            let entry = e.entry
+            // var { startTime, endTime, details } = entry
+            let { details } = entry
+            //TO DO: save this data in firebase
+            //add a little achievement symbol if you reached 7km 🏅
+            if(habit.title === "run"){
+                //have to get the total
+            }
+            //formatting the string
+            if(details !== undefined){ habitText = `${habitText}: ${details}` }
+            // let string = `(${startTime}-${endTime}) ${habitText}`
+            // tried including the times, but it's not actually that important
+            let string = `${habitText}`
+            formattedText = string + "; " + formattedText 
+        });
+    })
+
+
+    let data = {
+        numberOfEntries: numberOfHabitTypes,
+        formattedText,
+        todaysEntries: today,
+        allHabits: habits
+    }
+    
+    // console.log('number of habits: ', numberOfHabits)
+    // console.log('habits: ', data)
+    return data
 }

@@ -1,0 +1,50 @@
+$blue-1: #7491A1;
+$white-1: rgba(255,255,255,0.6);
+
+.button {
+    cursor: pointer;
+    background: $white-1;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 10px 5px 0; 
+    border: 2px solid $blue-1;
+    border-radius: 10px;
+    &:hover {
+        background: $blue-1;
+    }
+}
+
+.closeButton {
+    cursor: pointer;
+    border: none;
+    font-size: 25px;
+    &:hover {
+        color: red;
+    }
+}
+
+.parsedTextDetails {
+    &--background {
+        
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        top: 0;
+        height: 150%;
+        width: 100%;
+        background: rgba(0,0,0,0.25);;
+    }
+    &--container {
+        margin: 0 auto;
+        margin-top: 400px;
+        height: 600px;
+        max-width: 800px;
+        background: white;
+    }
+    &--header {
+        display: flex;
+        justify-content: space-between;
+        &-title {
+            padding:10px;
+        }
+    }
+}

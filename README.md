@@ -259,3 +259,7 @@ Added a habits parser to the timelogs project!
 ## Session 22
 *🗓 Su, Nov 3, 2019* <br>
 Oops, it's been a while since I committed. Anyways, made a ton of progress on the #clientwork analysis portion of my timelogs. Really like the concept of putting all the logic in one component, displaying all the data in a separate component 
+
+## Session 23
+*🗓 Th, Nov 7, 2019* <br>
+For the time logger project, created a bunch of text parser components.

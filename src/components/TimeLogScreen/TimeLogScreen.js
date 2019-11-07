@@ -9,11 +9,19 @@ import {
     EntryDisplay, 
     ButtonContainer,
     HashtagDataDisplay } from './components'
+import {
+    Weight,
+    LearnedSthNew,
+    Expenses,
+    FoodLogs,
+    Gratitude,
+    Habits,
+    IGFollowers,
+    NewPeople, 
+    ParsedTextDetails,
+} from './components/TextParserDisplay'
 //methods
 import { 
-    // parseAllEntriesForHabits, 
-    // parseAllEntriesForFoodEntries, 
-    // parseAllEntriesForExpenses,
     parseAllEntriesForRelevantData,
 } from './methods/parseTextMethods'
 import { 
@@ -53,9 +61,11 @@ class TimeLogScreen extends React.Component {
         }
 
         this.state = {
-            allEntriesModeIsOn: true,
+            allEntriesModeIsOn: false,
             editModeIsOn: false,
+            parsedTextDetailsIsOn: false,
             objectivesAreShowing: false,
+            parsedTextDetails: {},
             switchEditButtonText: "Edit",
             goalsForTheDayButtonText: "Goals For The Day",
 
@@ -142,7 +152,7 @@ class TimeLogScreen extends React.Component {
                 this.parseCurrentEntryRawText()
                 //search the entries raw text for habit logs, food logs, expense logs, etc..
                 //for the moment we are just logging to console
-                parseAllEntriesForRelevantData(this.state.timeLogEntries)
+                // parseAllEntriesForRelevantData(this.state.timeLogEntries)
             })
         })
     }
@@ -209,6 +219,10 @@ class TimeLogScreen extends React.Component {
         var timeLogEntries = this.state.timeLogEntries
         timeLogEntries[this.state.entryIndex].rawEntry = text
         this.setState({timeLogEntries})
+
+        //search the entries raw text for habit logs, food logs, expense logs, etc..
+        //for the moment we are just logging to console
+        // parseAllEntriesForRelevantData(this.state.timeLogEntries)
     }
 
     updateObjectives = (e) => {
@@ -263,6 +277,7 @@ class TimeLogScreen extends React.Component {
         let arrayOfStrings = entry.split('\n')
         if(arrayOfStrings.length < 2){return entry}
 
+        //have already ensured that the array of strings is longer than 1
         let arrayOfDict = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
 
         let newText = arrayOfDict.map((item, i) => {
@@ -270,7 +285,9 @@ class TimeLogScreen extends React.Component {
             var startTime = item["startTime"]
             var endTime = item["endTime"]
             let e = calculateElapsedTime(startTime, endTime, true)
+            //e.g. 78 -> 1h18
             let elapsedTime = convertMinutesToHoursAndMinutes(e)
+            //e.g. 18:00 -> 6:00 PM
             startTime = convertMilitaryTimeToTwelveHourTime(startTime)
             endTime = convertMilitaryTimeToTwelveHourTime(endTime)
             
@@ -291,6 +308,12 @@ class TimeLogScreen extends React.Component {
             textWithoutHashtags = textWithoutHashtags.replace("&$", "💵")
             textWithoutHashtags = textWithoutHashtags.replace("h&", "✅")
             textWithoutHashtags = textWithoutHashtags.replace("&h", "✅")
+            textWithoutHashtags = textWithoutHashtags.replace("w&", "⚖️")
+            textWithoutHashtags = textWithoutHashtags.replace("&w", "⚖️")
+            textWithoutHashtags = textWithoutHashtags.replace("g&", "🙏")
+            textWithoutHashtags = textWithoutHashtags.replace("&g", "🙏")
+            textWithoutHashtags = textWithoutHashtags.replace("lsn&", "👩🏻‍🏫")
+            textWithoutHashtags = textWithoutHashtags.replace("&lsn", "👩🏻‍🏫")
 
             //return the background color based on the hashtag
             let backgroundType = returnBackgroundTypeBasedOnHashtag(hashtags)
@@ -343,6 +366,17 @@ class TimeLogScreen extends React.Component {
         return formattedHashtagData;
     }
 
+    openParsedTextDetails = (title) => {
+        let parsedTextDetails = {title}
+        this.setState({parsedTextDetailsIsOn: true, parsedTextDetails})
+        // alert(`opening ${title}`)
+    }
+
+    closeParsedTextDetails = () => {
+        let parsedTextDetails = {}
+        this.setState({parsedTextDetailsIsOn: false, parsedTextDetails})
+    }
+
     render(){
         let index = this.state.entryIndex
         let date = this.state.timeLogEntries[index].date
@@ -355,6 +389,20 @@ class TimeLogScreen extends React.Component {
         if (!this.state.editModeIsOn){
             formattedEntry = this.formatEntry(rawEntry)
         }
+
+        //gather the data for our TextParserDisplay components!
+        if(!this.state.editModeIsOn){
+            var { habits, 
+                gratitude,
+                foodlogs,
+                expenses,
+                learned,
+                newpeople,
+                igfollowers,
+                weight,
+             } = parseAllEntriesForRelevantData(this.state.timeLogEntries)
+        } 
+        
 
         let { 
             totalTimeAvailableToday, 
@@ -411,8 +459,7 @@ class TimeLogScreen extends React.Component {
                             totalTimeLogged = {totalTimeLogged}
                         />
 
-                        <ButtonContainer 
-                            switchEditMode={this.switchEditMode}
+                        <ButtonContainer switchEditMode={this.switchEditMode}
                             switchObjectivesMode={this.switchObjectivesMode}
                             goalsForTheDayButtonText={this.state.goalsForTheDayButtonText}
                             switchEditButtonText={this.state.switchEditButtonText}/>
@@ -436,11 +483,24 @@ class TimeLogScreen extends React.Component {
                                 update={this.updateObjectives}
                                 text={objectives}
                             /> }
-                    
+                        { !this.state.editModeIsOn &&
+                            <div className="timelog--textparserdisplay">
+                            <Habits open={this.openParsedTextDetails} data={habits}/>
+                            <Gratitude open={this.openParsedTextDetails} data={gratitude}/>
+                            <FoodLogs open={this.openParsedTextDetails} data={foodlogs}/>
+                            <Expenses open={this.openParsedTextDetails} data={expenses}/>
+                            <LearnedSthNew open={this.openParsedTextDetails} data={learned}/>
+                            <NewPeople open={this.openParsedTextDetails} data={newpeople}/>
+                            <IGFollowers open={this.openParsedTextDetails} data={igfollowers}/>
+                            <Weight open={this.openParsedTextDetails} data={weight}/>
+                            {
+                                this.state.parsedTextDetailsIsOn && <ParsedTextDetails close={this.closeParsedTextDetails} data={this.state.parsedTextDetails}/>
+                            }
+                        </div>
+                        }
                     </div> : // display all entries
                     <AllEntries 
                         allEntries={this.state.timeLogEntries}/> }
-
                     </div>
                 </div>
             </div>

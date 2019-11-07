@@ -81,13 +81,13 @@ $pastel-light-blue: #DEF5FB;
 }
 
 .timelog {
-    background: transparent;
+    background: white;
     width: 100vw;
-    height: 100vh; 
+    height: 100%; 
     text-align: center;
     &--container {
         &-main {
-            background: $blue-1;
+            // background: $blue-1;
             margin: 0 auto;
             max-width: 1200px;
             height: 100%;
@@ -95,7 +95,7 @@ $pastel-light-blue: #DEF5FB;
         &-secondary {
             // background: $blue-2;
             background: $white-2;
-            height: 92%;
+            height: 100%;
             width: 95%;
             margin: 0 auto;
         }
@@ -176,6 +176,11 @@ $pastel-light-blue: #DEF5FB;
                 // font-style: italic;
             }
         }
+    }
+    &--textparserdisplay {
+        margin-left: 20px;
+        text-align: left; 
+        margin-bottom: 30px;
     }
     &--button {
         &-edit {
