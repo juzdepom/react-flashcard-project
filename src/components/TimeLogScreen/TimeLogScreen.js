@@ -302,18 +302,20 @@ class TimeLogScreen extends React.Component {
             var textWithoutHashtags = rawText.replace(hashtagRegex, "");
 
             //replace the special characters with emojis for slightly better visuals
-            textWithoutHashtags = textWithoutHashtags.replace("f&", "🍴")
+            textWithoutHashtags = textWithoutHashtags.replace("f&", "🍴") //foodlog
             textWithoutHashtags = textWithoutHashtags.replace("&f", "🍴")
-            textWithoutHashtags = textWithoutHashtags.replace("$&", "💵")
+            textWithoutHashtags = textWithoutHashtags.replace("$&", "💵") //expenses
             textWithoutHashtags = textWithoutHashtags.replace("&$", "💵")
-            textWithoutHashtags = textWithoutHashtags.replace("h&", "✅")
+            textWithoutHashtags = textWithoutHashtags.replace("h&", "✅") //habits
             textWithoutHashtags = textWithoutHashtags.replace("&h", "✅")
-            textWithoutHashtags = textWithoutHashtags.replace("w&", "⚖️")
+            textWithoutHashtags = textWithoutHashtags.replace("w&", "⚖️") //weight
             textWithoutHashtags = textWithoutHashtags.replace("&w", "⚖️")
-            textWithoutHashtags = textWithoutHashtags.replace("g&", "🙏")
+            textWithoutHashtags = textWithoutHashtags.replace("g&", "🙏") //gratitude
             textWithoutHashtags = textWithoutHashtags.replace("&g", "🙏")
-            textWithoutHashtags = textWithoutHashtags.replace("lsn&", "👩🏻‍🏫")
-            textWithoutHashtags = textWithoutHashtags.replace("&lsn", "👩🏻‍🏫")
+            textWithoutHashtags = textWithoutHashtags.replace("l&", "👩🏻‍🏫") //learned something new
+            textWithoutHashtags = textWithoutHashtags.replace("&l", "👩🏻‍🏫")
+            textWithoutHashtags = textWithoutHashtags.replace("igf&", "👨‍👩‍👧‍👦") //igfollowers
+            textWithoutHashtags = textWithoutHashtags.replace("&igf", "👨‍👩‍👧‍👦")
 
             //return the background color based on the hashtag
             let backgroundType = returnBackgroundTypeBasedOnHashtag(hashtags)
