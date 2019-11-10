@@ -8,7 +8,7 @@ class Habits extends React.Component {
         var title = `Habits`
          //before firebase has loaded, this.props.data will be empty; numberOfEntries will return undefined
         if(this.props.data !== undefined){
-            var title = `${title} (${this.props.data.numberOfEntries}`
+            var title = `${title} (${this.props.data.numberOfEntries})`
         }
         return (
             <div>

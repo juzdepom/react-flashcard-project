@@ -8,6 +8,7 @@ import {
     EditTextContainer, 
     EntryDisplay, 
     ButtonContainer,
+    VisionBoard,
     HashtagDataDisplay } from './components'
 import {
     Weight,
@@ -35,7 +36,8 @@ import {
     parseEntryDataArrayIntoHashtagArray,
     getCurrentTime,
     convertMilitaryTimeToTwelveHourTime,
-    calculateTotalTimeLoggedFromEntryData, 
+    calculateTotalTimeLoggedFromEntryData,
+    replaceSpecialCharactersWithEmojis, 
     } from './methods/methods';
 //firebase
 import { PERSONALDATA_DB_CONFIG } from '../../config/personalData-config';
@@ -61,6 +63,7 @@ class TimeLogScreen extends React.Component {
         }
 
         this.state = {
+            visionBoardIsOpen: false,
             allEntriesModeIsOn: false,
             editModeIsOn: false,
             parsedTextDetailsIsOn: false,
@@ -302,20 +305,15 @@ class TimeLogScreen extends React.Component {
             var textWithoutHashtags = rawText.replace(hashtagRegex, "");
 
             //replace the special characters with emojis for slightly better visuals
-            textWithoutHashtags = textWithoutHashtags.replace("f&", "🍴") //foodlog
-            textWithoutHashtags = textWithoutHashtags.replace("&f", "🍴")
-            textWithoutHashtags = textWithoutHashtags.replace("$&", "💵") //expenses
-            textWithoutHashtags = textWithoutHashtags.replace("&$", "💵")
-            textWithoutHashtags = textWithoutHashtags.replace("h&", "✅") //habits
-            textWithoutHashtags = textWithoutHashtags.replace("&h", "✅")
-            textWithoutHashtags = textWithoutHashtags.replace("w&", "⚖️") //weight
-            textWithoutHashtags = textWithoutHashtags.replace("&w", "⚖️")
-            textWithoutHashtags = textWithoutHashtags.replace("g&", "🙏") //gratitude
-            textWithoutHashtags = textWithoutHashtags.replace("&g", "🙏")
-            textWithoutHashtags = textWithoutHashtags.replace("l&", "👩🏻‍🏫") //learned something new
-            textWithoutHashtags = textWithoutHashtags.replace("&l", "👩🏻‍🏫")
-            textWithoutHashtags = textWithoutHashtags.replace("igf&", "👨‍👩‍👧‍👦") //igfollowers
-            textWithoutHashtags = textWithoutHashtags.replace("&igf", "👨‍👩‍👧‍👦")
+            // let specialChar =
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'ig', "👨‍👩‍👧‍👦")
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'f',"🍴")
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags,'$',"💵")
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'h', "✅")
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'g', "🙏")
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'w', "⚖️")
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'l', "👩🏻‍🏫")
+            
 
             //return the background color based on the hashtag
             let backgroundType = returnBackgroundTypeBasedOnHashtag(hashtags)
@@ -379,9 +377,18 @@ class TimeLogScreen extends React.Component {
         this.setState({parsedTextDetailsIsOn: false, parsedTextDetails})
     }
 
+    openVisionBoard = () => {
+        this.setState({visionBoardIsOpen: true})
+    }
+
+    closeVisionBoard = () => {
+        this.setState({visionBoardIsOpen: false})
+    }
+
     render(){
         let index = this.state.entryIndex
         let date = this.state.timeLogEntries[index].date
+        let formattedDate = formatDate(date) //10-11-2019 european style
         let rawEntry = this.state.timeLogEntries[index].rawEntry
         var objectives = this.state.timeLogEntries[index].objectives
         if(objectives === undefined){ objectives = "No objectives written for today yet"}
@@ -428,7 +435,7 @@ class TimeLogScreen extends React.Component {
                             rel="noopener noreferrer" 
                             href="https://console.firebase.google.com/u/0/project/personal-data-tracking-project/database/personal-data-tracking-project/data"
                         >TIME LOGGER</a> {this.state.entryIndex}&nbsp;
-                        <button>VISION BOARD</button>
+                        <button onClick={()=>this.openVisionBoard()}>VISION BOARD</button>
                     </div>
                     <div className="timelog--container-secondary">
 
@@ -439,7 +446,7 @@ class TimeLogScreen extends React.Component {
                             className="timelog--date-buttons">{chevronCircleLeft}
                         </button>
                         <button onClick={() => this.switchEntriesDisplayMode()}>
-                            Date: {formatDate(date)}
+                            Date: {formattedDate}
                         </button>
                         <button 
                             onClick={() => this.changeEntries(-1)}
@@ -447,6 +454,8 @@ class TimeLogScreen extends React.Component {
                             className="timelog--date-buttons">{chevronCircleRight}
                         </button>
                     </div>
+
+                    { this.state.visionBoardIsOpen && <VisionBoard title="vision board" close={this.closeVisionBoard}/>}
                     
                     { !this.state.allEntriesModeIsOn ?
                     
@@ -486,15 +495,17 @@ class TimeLogScreen extends React.Component {
                                 text={objectives}
                             /> }
                         { !this.state.editModeIsOn &&
+                            //could probably figure out a way to make this into one single component
                             <div className="timelog--textparserdisplay">
-                            <Habits open={this.openParsedTextDetails} data={habits}/>
-                            <Gratitude open={this.openParsedTextDetails} data={gratitude}/>
-                            <FoodLogs open={this.openParsedTextDetails} data={foodlogs}/>
-                            <Expenses open={this.openParsedTextDetails} data={expenses}/>
-                            <LearnedSthNew open={this.openParsedTextDetails} data={learned}/>
-                            <NewPeople open={this.openParsedTextDetails} data={newpeople}/>
-                            <IGFollowers open={this.openParsedTextDetails} data={igfollowers}/>
-                            <Weight open={this.openParsedTextDetails} data={weight}/>
+                            <Habits date={date} open={this.openParsedTextDetails} data={habits}/> /
+                            <Gratitude date={date} open={this.openParsedTextDetails} data={gratitude}/>
+                            <FoodLogs date={date} open={this.openParsedTextDetails} data={foodlogs}/>
+                            <Weight date={date} open={this.openParsedTextDetails} data={weight}/>
+                            <LearnedSthNew date={date} open={this.openParsedTextDetails} data={learned}/>
+                            <Expenses date={date} open={this.openParsedTextDetails} data={expenses}/>
+                            <NewPeople date={date} open={this.openParsedTextDetails} data={newpeople}/>
+                            <IGFollowers date={date} open={this.openParsedTextDetails} data={igfollowers}/>
+                            
                             {
                                 this.state.parsedTextDetailsIsOn && <ParsedTextDetails close={this.closeParsedTextDetails} data={this.state.parsedTextDetails}/>
                             }

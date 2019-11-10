@@ -632,7 +632,7 @@ class StudyScreen extends React.Component {
           <RatingButtons ratingClicked = {this.ratingClicked}/>
 
           {/* TODO: create a component for this */}
-          <div className="row" style={{color: 'white'}}>
+          <div className="row" style={{color: 'black'}}>
               <div>Number of flashcards rated: {this.state.flashcardsRated} | {this.state.cardsRated}</div>
               <button className="button" onClick={this.saveFlashcardDataInFirebase}>Save Data in Firebase!</button>
           </div>
@@ -663,7 +663,7 @@ export default StudyScreen;
 const LinkButton = props => (
   <div style={{margin: "10px"}}>
       <a 
-        style={{color: 'white'}}
+        style={{color: 'black'}}
         target="_blank" 
         rel="noopener noreferrer" 
         href={props.url}>

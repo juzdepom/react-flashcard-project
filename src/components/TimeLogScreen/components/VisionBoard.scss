@@ -1,0 +1,25 @@
+.visionBoard {
+    &--background {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        top: 0;
+        height: 150%;
+        width: 100%;
+        background: rgba(0,0,0,0.25);;
+    }
+    &--container {
+        margin: 0 auto;
+        margin-top: 50px;
+        height: 600px;
+        max-width: 900px;
+        background: white;
+    }
+    &--header {
+        display: flex;
+        justify-content: space-between;
+        &-title {
+            padding:10px;
+        }
+    }
+}

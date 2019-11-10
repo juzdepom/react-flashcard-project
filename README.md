@@ -263,3 +263,19 @@ Oops, it's been a while since I committed. Anyways, made a ton of progress on th
 ## Session 23
 *🗓 Th, Nov 7, 2019* <br>
 For the time logger project, created a bunch of text parser components.
+
+## Session 24
+*🗓 Sat, Nov 9, 2019* <br>
+Timelog, reformatted entries replace l&&l and igf&&igf with emojies
+
+## Session 25
+*🗓 Sat, Nov 9, 2019* <br>
+Created initial versions of the text parser.
+
+## Session 26
+*🗓 Su, Nov 10, 2019* <br>
+Made progress on the text parsers!
+Created an initial version of the vision board!
+
+It's been awhile since we've done an update gif so here it is!
+<img src="/screenshots/10-11-2019--progress.gif" width="600" alt="">

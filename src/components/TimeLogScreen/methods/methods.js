@@ -1,3 +1,11 @@
+export const replaceSpecialCharactersWithEmojis = (text, specialChar, emoji) => {
+    let openingTag = specialChar + '&'
+    let closingTag = '&' + specialChar
+    var newText = text.replace(new RegExp(openingTag, 'g'), emoji)
+    newText = newText.replace(new RegExp(closingTag, 'g'), emoji)
+    return newText
+}
+
 export const parseEntryDataArrayIntoHashtagArray = (entryData, hashtagDataIncludesDash) => {
     var hashtagDataDict = {}
     entryData.forEach((item) => {
