@@ -5,7 +5,7 @@ class LearnedSthNew extends React.Component {
 
     render(){
         var title=`Learned`
-        var formattedText='empty'
+        var formattedText=''
         var numberOfThingsLearned=''
         //before firebase has loaded, this.props.data will be empty; numberOfEntries will return undefined
         if(this.props.data !== undefined){

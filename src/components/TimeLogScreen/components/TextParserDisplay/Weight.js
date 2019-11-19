@@ -5,7 +5,7 @@ class Weight extends React.Component {
 
     render(){
         var title =`Weight`
-        var formattedText = 'empty'
+        var formattedText = ''
          //before firebase has loaded, this.props.data will be empty; numberOfEntries will return undefined
         if(this.props.data !== undefined){
             //we want to count by the number of days where you entered weight entries

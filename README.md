@@ -279,3 +279,7 @@ Created an initial version of the vision board!
 
 It's been awhile since we've done an update gif so here it is!
 <img src="/screenshots/10-11-2019--progress.gif" width="600" alt="">
+
+## Session 27
+*🗓 Mon, Nov 11, 2019* <br>
+Some small updates to the text parser components

@@ -473,10 +473,10 @@ class StudyScreen extends React.Component {
     var cards = c
     let length = cards.length
     //add unique id to each of the cards
-    for(var i in cards){
-      let id = parseInt(deckLength) + parseInt(i)
-      cards[i]["_id"] = id
-    }
+    // for(var i in cards){
+    //   let id = parseInt(deckLength) + parseInt(i)
+    //   cards[i]["_id"] = id
+    // }
 
     let newDeck = this.state.cards.concat(cards)
     this.setState({cards: newDeck}, () => {

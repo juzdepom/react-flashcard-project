@@ -95,7 +95,7 @@ class Card extends Component {
 
     render(props){
         var colors = ["lightgray", "#AB3B7F", "#F28945", "#FEDD33", "#7EAE2E", "#40A9D6"]
-        var {rating, textOne, textTwo, textThree, dateCreated, lastReviewed} = this.props.card;
+        var {rating, textOne, textTwo, textThree, dateCreated, lastReviewed, _id} = this.props.card;
 
         var color = colors[rating]
         var time = "First Time"
@@ -151,6 +151,7 @@ class Card extends Component {
                                 </div> 
                             : <div className="card--edit-mode-container">
                                 {/* Edit Mode */}
+                                <div className="card--edit-mode-container--id">ID: {_id} </div>
                                 <div>
                                     <input
                                         type="text"

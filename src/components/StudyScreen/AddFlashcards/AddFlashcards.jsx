@@ -83,6 +83,8 @@ class AddFlashcards extends Component {
         dict["rating"] = 0 // TODO create a new rating for new cards.
         dict["lastReviewed"] = []
         dict["dateCreated"] = this.getCurrentDate()
+        //add uniqueish id
+        dict["_id"] = dict["dateCreated"] + "-" + dict["textOne"]
 
         if(textOne === "" || textTwo === "" || textThree === ""){
             alert("Warning! This line will have an empty text field: ", dict)
@@ -109,20 +111,7 @@ class AddFlashcards extends Component {
                     alert(`Error! You already have this flashcard in your deck: ${textOne} `)
                 }
             })
-            // for (var i in originalDeck){
-            //     if(textOne === originalDeck[i]["textOne"]){
-            //         alert(`Error! You already have this flashcard in your deck, line ${i}: ${textOne} `)
-            //     }
-            // }
         })
-        // for (var i in cards){
-        //     let textOne = cards[i]["textOne"]
-        //     for (var i in originalDeck){
-        //         if(textOne === originalDeck[i]["textOne"]){
-        //             alert(`Error! You already have this flashcard in your deck, line ${i}: ${textOne} `)
-        //         }
-        //     }
-        // }
     }
 
     close = () => {
