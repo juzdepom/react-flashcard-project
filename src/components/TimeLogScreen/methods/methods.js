@@ -155,7 +155,9 @@ export const returnBackgroundTypeBasedOnHashtag = (h) => {
     let c = [
         "coding", 
         "clientwork", 
-        "myinstagram", 
+        "myinstagram",
+        "numbingout", 
+        "todo",
         // "nap", 
         "studythai", 
         "muaythai", 

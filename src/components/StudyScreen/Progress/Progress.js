@@ -258,7 +258,7 @@ class Progress extends React.Component {
                             type="text"
                             value={averageTotalExpPerDay}
                             onChange={(event) => this.handleInputEdit("averageTotalExpPerDay", event)} />
-                        &nbsp;Exp./day), we are estimating you will have mastered {masteredCardsGoal} cards in&nbsp;
+                        &nbsp;Exp./session), we are estimating you will have mastered {masteredCardsGoal} cards in&nbsp;
                         <input
                             type="text"
                             value={numberOfDaysToMastery}

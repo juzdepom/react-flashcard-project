@@ -167,15 +167,18 @@ class AddFlashcards extends Component {
                     {/* only shows up after we submit text strings for review */}
                     { (this.state.cards.length > 0) ?
                         <div>
-                            {/* <div className="addflashcards--text">
-                            Number of Cards: {this.state.cards.length}
-                            </div> */}
+                            <button 
+                                className="addflashcards--button"
+                                onClick={this.close}>
+                                Cancel
+                            </button>
 
                             <button 
                                 className="addflashcards--button"
                                 onClick={this.addFlashCards.bind(this)}>
                                     Upload {this.state.cards.length} Cards To Firebase
                             </button>
+                            
                         </div>
                     : '' }
                 </div> : '' }

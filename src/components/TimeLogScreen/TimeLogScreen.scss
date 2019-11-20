@@ -5,13 +5,17 @@ $white-2: rgba(255,255,255,0.9);
 $gray: rgba(0,0,0,0.6);
 $pastel-turquoise: #A4EBDB;
 $pastel-yellow: #FDFD96;
-$pastel-pink: #F8D1DC;
+$pastel-yellow-2: rgba(255, 248, 187, 0.7);
+$pastel-dark-pink: #F4A9A9;
+$pastel-light-pink: rgb(248, 207, 207);
 $pastel-navy: #779ECB;
 $pastel-purple: #B3A0DB;
 $pastel-red: #ff6961;
 $pastel-beige: #E8D1C0;
 $pastel-orange: #F8C181;
-$pastel-light-blue: #DEF5FB;
+$pastel-blue-0: rgb(242, 249, 250);
+$pastel-blue-1: rgb(199, 237, 246);
+$pastel-blue-2: rgb(149, 220, 238);
 
 .height {
     &-default { //0-15 min
@@ -36,7 +40,7 @@ $pastel-light-blue: #DEF5FB;
 
 .bg {
     &-default {
-        background: $white-2;
+        background: $pastel-blue-0;
     }
     &-coding {
         background: $pastel-turquoise
@@ -45,16 +49,22 @@ $pastel-light-blue: #DEF5FB;
         background: $pastel-yellow
     }
     &-myinstagram {
-        background: $pastel-light-blue;
+        background: $pastel-blue-1;
+    }
+    &-todo {
+        background: $pastel-yellow-2; 
     }
     &-nap {
         // background: $pastel-pink;
+    }
+    &-numbingout {
+        background: gray;
     }
     &-studythai {
         background: $pastel-purple;
     }
     &-running {
-        background: $pastel-red;
+        background: $pastel-blue-2;
     }
     &-muaythai {
         background: $pastel-red;
@@ -74,8 +84,8 @@ $pastel-light-blue: #DEF5FB;
     &-rov {
         background: $white-1;
     }
-    &-Baow {
-        background: $pastel-pink;
+    &-baow {
+        background: $pastel-light-pink;
     }
 
 }

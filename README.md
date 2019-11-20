@@ -283,3 +283,8 @@ It's been awhile since we've done an update gif so here it is!
 ## Session 27
 *🗓 Mon, Nov 11, 2019* <br>
 Some small updates to the text parser components
+
+
+## Session 28
+*🗓 Tu, Nov 19, 2019* <br>
+Some small updates to the text parser components

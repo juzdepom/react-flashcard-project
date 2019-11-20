@@ -310,8 +310,8 @@ class TimeLogScreen extends React.Component {
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'f',"🍴")
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags,'$',"💵")
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'h', "✅")
-            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'g', "🙏")
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'w', "⚖️")
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'g', "🙏")
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'l', "👩🏻‍🏫")
             
 
@@ -497,7 +497,7 @@ class TimeLogScreen extends React.Component {
                         { !this.state.editModeIsOn &&
                             //could probably figure out a way to make this into one single component
                             <div className="timelog--textparserdisplay">
-                            <Habits date={date} open={this.openParsedTextDetails} data={habits}/> /
+                            <Habits date={date} open={this.openParsedTextDetails} data={habits}/>
                             <Gratitude date={date} open={this.openParsedTextDetails} data={gratitude}/>
                             <FoodLogs date={date} open={this.openParsedTextDetails} data={foodlogs}/>
                             <Weight date={date} open={this.openParsedTextDetails} data={weight}/>
