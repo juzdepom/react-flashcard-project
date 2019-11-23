@@ -49,7 +49,7 @@ import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-sol
 const chevronCircleLeft = <FontAwesomeIcon icon={faChevronCircleLeft} />
 const chevronCircleRight = <FontAwesomeIcon icon={faChevronCircleRight} />
 //button text
-let noInputDataText = "No input data yet"
+let noInputDataText = "Did you resist complaining today? \n What are you excited about today? \n ====="
 
 class TimeLogScreen extends React.Component {
 
@@ -71,6 +71,7 @@ class TimeLogScreen extends React.Component {
             parsedTextDetails: {},
             switchEditButtonText: "Edit",
             goalsForTheDayButtonText: "Goals For The Day",
+
 
             //this are to enable/disable the forward/backward buttons
             entryIndex: 0,
@@ -277,7 +278,19 @@ class TimeLogScreen extends React.Component {
 
     //format timelog raw data
     formatEntry = (entry) => {
-        let arrayOfStrings = entry.split('\n')
+        var e = entry
+        if(entry.includes('=====')){
+            let array = entry.split('=====')
+            if(array.length > 2){
+                let error = `Error! There is more than one ===== in this rawEntry for the date ${entry.date}, which can potentially lead to errors `
+                alert(error)
+                console.error(error)
+            }
+            let questions = array[0]
+            //do something to display questions
+            e = array[1]
+        }
+        let arrayOfStrings = e.split('\n')
         if(arrayOfStrings.length < 2){return entry}
 
         //have already ensured that the array of strings is longer than 1

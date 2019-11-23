@@ -293,9 +293,9 @@ Some small updates to the text parser components
 *🗓 Th, Nov 21, 2019* <br>
 #29 changes to vision board and to cell colors
 
-## Session 29
+## Session 30
 *🗓 Su, Nov 24, 2019* <br>
 <strong>Working on the Timelog project</strong>
---> hide a portion of the current time component and only make it appear when the time component is tapped. Currently it is taking too much space
---> add a did you complain button toggle and figure out how to incorporate into firebase.
+#30 hide a portion of the current time component and only make it appear when the time component is tapped. Currently it is taking too much space
+#30 figured out how to incorporate a "did you complain" in a way that meshes well with the project aka 'interactive self development journal' (ISDJ?) -> a new temporary name over the old name 'timelog'
 --> make progress on the ParsedTextDetailsComponent.
