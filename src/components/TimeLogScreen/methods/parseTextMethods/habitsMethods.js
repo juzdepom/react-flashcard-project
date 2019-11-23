@@ -23,6 +23,7 @@ export const parseAllEntriesForHabits = (timeLogEntries) => {
                     line.lastIndexOf("h&") + 2,
                     line.lastIndexOf("&h")
                 );
+                // console.log(`date ${date} : ${habitTitle}`)
 
                 //these will go into the entry variable below
                 var details, number = null
@@ -60,6 +61,8 @@ export const parseAllEntriesForHabits = (timeLogEntries) => {
                         date,
                     }
                 }
+
+                // console.log('entry: ', entry)
 
                 //if the entryIndex is zero, that means we are on our most recent entry
                 //populate the today array
@@ -120,9 +123,12 @@ export const parseAllEntriesForHabits = (timeLogEntries) => {
                     }
                     habits.push(newHabit)
                 }
+                
             }
         })
     })
+
+    // console.log('habits: ', habits)
 
     let numberOfHabitTypes = habits.length
     //format the entry text
@@ -158,7 +164,7 @@ export const parseAllEntriesForHabits = (timeLogEntries) => {
         });
     })
 
-
+    console.error('TODO: currently the habits method code is formatted so that it only shows the habits for the current day')
     let data = {
         numberOfEntries: numberOfHabitTypes,
         formattedText,

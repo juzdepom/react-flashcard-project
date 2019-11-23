@@ -60,12 +60,14 @@ class VisionBoard extends React.Component {
                             I weigh 63 kg.<br/>
                             <br/>
                             Not measurable goals:<br/>
+                            I am gentle and kind. It makes me happy to help others.<br/>
                             My programming skills are really good because I love coding and practice it everyday. I'm at a senior developer level.
                             I am in in control of my emotions and can return to a calm neutral state at a moment's notice.<br/>
                             I wake up everyday mentally strong and healthy.<br/>
                             I am an artist/creator/programmer.<br/>
                             <br/>
                             Meditations:<br/>
+                            Gentle and kind smiling to mirror. <br/>
                             I am intentional.<br/>
                             I am courageous.<br/>
                         </div>

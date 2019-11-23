@@ -3,8 +3,8 @@ export const parseAllEntriesFor = (entries, o, c) => {
     let closingTag = '&' + c
     var data = []
     //this array is made up of the date and the raw text for the entire day
-    //console.log(entries) if you start to get confused
     entries.forEach((entry) => {
+        
         let date = entry.date
         var formattedText = ''
         var entries = []

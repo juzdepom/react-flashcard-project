@@ -288,3 +288,14 @@ Some small updates to the text parser components
 ## Session 28
 *🗓 Tu, Nov 19, 2019* <br>
 Some small updates to the text parser components
+
+## Session 29
+*🗓 Th, Nov 21, 2019* <br>
+#29 changes to vision board and to cell colors
+
+## Session 29
+*🗓 Su, Nov 24, 2019* <br>
+<strong>Working on the Timelog project</strong>
+--> hide a portion of the current time component and only make it appear when the time component is tapped. Currently it is taking too much space
+--> add a did you complain button toggle and figure out how to incorporate into firebase.
+--> make progress on the ParsedTextDetailsComponent.

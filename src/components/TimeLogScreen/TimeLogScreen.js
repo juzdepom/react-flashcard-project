@@ -126,7 +126,7 @@ class TimeLogScreen extends React.Component {
                         }
                     }
                     if(entryForThisTodayDoesNotExist){
-                        alert('today is a new day!')
+                        // alert('today is a new day!')
                         currentEntry = {
                             date: currentDate,
                             rawEntry: noInputDataText,
@@ -308,7 +308,7 @@ class TimeLogScreen extends React.Component {
             // let specialChar =
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'ig', "👨‍👩‍👧‍👦")
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'f',"🍴")
-            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags,'$',"💵")
+            textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags,'e',"💵")
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'h', "✅")
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'w', "⚖️")
             textWithoutHashtags = replaceSpecialCharactersWithEmojis(textWithoutHashtags, 'g', "🙏")
