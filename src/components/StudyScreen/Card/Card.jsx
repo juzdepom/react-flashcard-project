@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Card.scss';
 
+
 class Card extends Component {
 
     constructor(props){
@@ -93,7 +94,9 @@ class Card extends Component {
         
     }
 
+
     render(props){
+        
         var colors = ["lightgray", "#AB3B7F", "#F28945", "#FEDD33", "#7EAE2E", "#40A9D6"]
         var {rating, textOne, textTwo, textThree, dateCreated, lastReviewed, _id} = this.props.card;
 
@@ -103,10 +106,11 @@ class Card extends Component {
 
         var front = textOne
         var back = textThree
-        if(parseInt(rating) > 3){
-            front = textThree;
-            back = textOne;
-        } 
+        //show the thai character first
+        // if(parseInt(rating) > 3){
+        //     front = textThree;
+        //     back = textOne;
+        // } 
 
         if(lastReviewed === undefined) {
             // console.log('this ones lastReviewed is undefined: ' + textOne)
@@ -146,6 +150,10 @@ class Card extends Component {
                                             <div 
                                                 className={this.state.show >= 1 ? "card--back-text-container--thai fade-in" : "card--back-text-container--thai opacity-zero"}>
                                                 {back}</div>
+                                                {/* SPEAK THAI BUTTON */}
+                                                <div className={this.state.show >= 1 ?"card--back-text-container--thai fade-in" : "card--back-text-container--thai opacity-zero" }>
+                                                    <button onClick={() => this.props.speakThai({back})}>listen</button>
+                                                </div>
                                         </div> 
                                     : ''}
                                 </div> 

@@ -1,4 +1,5 @@
 import React from 'react';
+import BlueOutlineButton from './Buttons/BlueOutlineButton';
 
 class ButtonContainer extends React.Component {
     render(props){
@@ -7,18 +8,29 @@ class ButtonContainer extends React.Component {
         return (
             
             <div className="timelog--container-buttons">
-                <button 
+                <BlueOutlineButton
+                    disabled={editButtonDisabled}
+                    click={() => this.props.switchEditMode()}
+                    text={this.props.switchEditButtonText}
+                />
+                <BlueOutlineButton
+                    disabled={goalsButtonDisabled}
+                    click={() => this.props.switchObjectivesMode()}
+                    text={this.props.goalsForTheDayButtonText}
+                />
+                {/* DELETE BELOW */}
+                {/* <button 
                     disabled={editButtonDisabled}
                     onClick={() => this.props.switchEditMode()}
                     className="timelog--button-edit">
                     {this.props.switchEditButtonText}
-                </button>
-                <button 
+                </button> */}
+                {/* <button 
                     disabled={goalsButtonDisabled}
                     onClick={() => this.props.switchObjectivesMode()}
                     className="timelog--button-edit">
                     {this.props.goalsForTheDayButtonText}
-                </button>
+                </button> */}
             </div>
         );
     }

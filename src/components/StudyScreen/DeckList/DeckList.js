@@ -16,24 +16,24 @@ class DeckCard extends React.Component {
     //when component gets updated
     componentDidUpdate(prevProps, prevState){
         //the props have changed, meaning we have probably switched deck
-        if(prevProps.card !== this.props.card){
-            if(this.props.card.rating > 3){
-                this.setState({key: 'textThree'})
-            } else {
-                this.setState({key: 'textOne'})
-            }
-        }
+        // if(prevProps.card !== this.props.card){
+        //     if(this.props.card.rating > 3){
+        //         this.setState({key: 'textThree'})
+        //     } else {
+        //         this.setState({key: 'textOne'})
+        //     }
+        // }
     }
 
     //when component first mounts
     componentDidMount = () => {
         //if card is level 4 or 5, show the Thai characters first
-        if(this.props.card.rating > 3){
-            // console.log('card is level 4 or 5: ', this.props.card)
-            this.setState({
-                key: "textThree"
-            })
-        }
+        // if(this.props.card.rating > 3){
+        //     // console.log('card is level 4 or 5: ', this.props.card)
+        //     this.setState({
+        //         key: "textThree"
+        //     })
+        // }
     }
 
 
@@ -104,14 +104,18 @@ class DeckList extends React.Component {
         this.state = {
             quickRatingIsOn: false,
             card: {},
-            cardText: ""
+            cardText: "",
+            pronunciation: "",
+            thai: "",
         }
     }
 
     quickRatingIsOn = (isOn, card) => {
         if(isOn){
             let cardText = card["textOne"]
-            this.setState({quickRatingIsOn: true, card, cardText})
+            let pronunciation = card["textTwo"]
+            let thai = card["textThree"]
+            this.setState({quickRatingIsOn: true, card, cardText, pronunciation, thai})
         } else {
             this.setState({quickRatingIsOn: false})
         }
@@ -144,11 +148,11 @@ class DeckList extends React.Component {
        
         return (
             <div className={this.props.deckListClassname} style={{display: this.props.deckListDisplay}}>
-                <button 
-                    className="decklist--close-button"
-                    onClick={()=> this.close()}>
-                    Close
-                </button>
+                    <button 
+                        className="decklist--close-button"
+                        onClick={()=> this.close()}>
+                        Close
+                    </button>
                 <div className="decklist--body">
                     {
                         this.cardList(cards)
@@ -156,8 +160,9 @@ class DeckList extends React.Component {
                 </div>
                 { this.state.quickRatingIsOn ? <div className="decklist--quickrating">
                     <div>
-                        <div className="decklist--quickrating-title">Quick Rating</div>
-                        <div className="decklist--quickrating-card-text">{this.state.cardText}</div>
+                        <div className="decklist--quickrating-title">Listen&nbsp;<button onClick={() => this.props.speakThai(this.state.thai)}>🔈</button></div>
+                        
+                        <div className="decklist--quickrating-card-text">{this.state.pronunciation}</div>
                     </div>
                     <div className="decklist--quickrating-button-container">
                         <button onClick={() => this.ratingClicked(1)} className="purple">1</button>
@@ -167,6 +172,7 @@ class DeckList extends React.Component {
                         <button onClick={() => this.ratingClicked(5)} className="blue">5</button>
                     </div>
                 </div> 
+                
                 : '' }
                 
             </div>

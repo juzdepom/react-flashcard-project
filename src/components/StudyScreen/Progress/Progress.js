@@ -97,6 +97,16 @@ class Progress extends React.Component {
             
             return  <div key={index} className="progress-log--entry">
 
+               
+
+                <div className="progress-log--entry--info">
+                    {date}: <strong>{numberOfCards}</strong> Cards <span>({addPlusSignIfPositive(newCardsAdded)} Cards)</span>
+                    <br/>
+                    Cards Reviewed: {numberOfCardsRated} {/*<span>({addPlusSignIfPositive(cardExpEarned)} Exp.)</span>*/}
+                </div>
+
+                {/* <div className="progress-log--entry--exp"><strong>{totalExp} Exp. </strong>&nbsp;<span>{totalExpEarnedToday} Total Exp.</span></div> */}
+               
                 <div className="progress-log--entry--deck-numbers">
                     <span className="rating-0">{deckZero}</span>
                     <span className="rating-1">{deckOne}</span>
@@ -105,15 +115,6 @@ class Progress extends React.Component {
                     <span className="rating-4">{deckFour}</span>
                     <span className="rating-5">{deckFive}</span>
                 </div>
-
-                <div className="progress-log--entry--info">
-                    {date}: <strong>{numberOfCards}</strong> Cards <span>({addPlusSignIfPositive(newCardsAdded)} Cards)</span>
-                    <br/>
-                    Cards Reviewed: {numberOfCardsRated} <span>({addPlusSignIfPositive(cardExpEarned)} Exp.)</span>
-                </div>
-
-                <div className="progress-log--entry--exp"><strong>{totalExp} Exp. </strong>&nbsp;<span>{totalExpEarnedToday} Total Exp.</span></div>
-               
             </div>
         })
     }

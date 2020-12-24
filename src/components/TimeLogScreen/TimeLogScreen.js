@@ -49,7 +49,7 @@ import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-sol
 const chevronCircleLeft = <FontAwesomeIcon icon={faChevronCircleLeft} />
 const chevronCircleRight = <FontAwesomeIcon icon={faChevronCircleRight} />
 //button text
-let noInputDataText = "Did you resist complaining today? \n What are you excited about today? \n ====="
+let noInputDataText = "What are you feeling excited about today?\nWhat do you feel proud of today?\nWhat do you feel grateful for today?\nWhat are you committed to today?\n=====\nentries here"
 
 class TimeLogScreen extends React.Component {
 
@@ -280,6 +280,7 @@ class TimeLogScreen extends React.Component {
     formatEntry = (entry) => {
         var e = entry
         if(entry.includes('=====')){
+            console.log('includes =====')
             let array = entry.split('=====')
             if(array.length > 2){
                 let error = `Error! There is more than one ===== in this rawEntry for the date ${entry.date}, which can potentially lead to errors `
@@ -303,9 +304,15 @@ class TimeLogScreen extends React.Component {
             let e = calculateElapsedTime(startTime, endTime, true)
             //e.g. 78 -> 1h18
             let elapsedTime = convertMinutesToHoursAndMinutes(e)
+            //get the current time
+            let currentTime = getCurrentTime()
+            var hasNotHappenedYet = calculateElapsedTime(startTime, currentTime)
+            hasNotHappenedYet = (hasNotHappenedYet === "--") ? true : false
             //e.g. 18:00 -> 6:00 PM
             startTime = convertMilitaryTimeToTwelveHourTime(startTime)
             endTime = convertMilitaryTimeToTwelveHourTime(endTime)
+
+        
             
             //extract the raw text
             let rawText = item["rawText"]
@@ -336,6 +343,10 @@ class TimeLogScreen extends React.Component {
 
             //customize the height based off of this data
             let className = `timelog--todayslog--entry bg-${backgroundType} height-${height}`
+
+            if(hasNotHappenedYet){
+                className = className + ' transparent'
+            }
 
             return(
             <div 

@@ -142,6 +142,7 @@ class AddFlashcards extends Component {
                 </button> : '' } 
                 { this.state.addingCards ? <div>
                     <div>
+                        <p>English == pronunciation > Thai </p>
                         <textarea
                             className="addflashcards--input"
                             placeholder="Add new cards..."

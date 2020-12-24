@@ -1,0 +1,2 @@
+type "npm run build" into the terminal
+then type "firebase deploy"

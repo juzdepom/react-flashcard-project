@@ -1,7 +1,9 @@
 import React from 'react';
+//styling
 import './AllEntries.scss';
-
+//components
 import ClientWorkContainer from './ClientWork/ClientWorkContainer';
+import BlueOutlineButton from '../Buttons/BlueOutlineButton';
 
 import {
     convertMinutesToHoursAndMinutes,
@@ -13,10 +15,8 @@ import {
     formatDate,
 } from '../../methods/methods';
 
+//ENTRY COMPONENT
 class Entry extends React.Component {
-    // constructor(props){
-    //     super(props)
-    // }
 
     parseRawTextForHashtagData = (rawText) => {
         if(rawText === undefined){ return [] }
@@ -64,14 +64,33 @@ class Entry extends React.Component {
     }
 
     returnTotalTimeLogged = (rawEntry) => {
-        let arrayOfStrings = rawEntry.split('\n')
+        var preparedEntry = ''
+        if(rawEntry.includes('=====')){
+            preparedEntry = rawEntry.split('=====')[1]
+        } else {
+            preparedEntry = rawEntry
+        }
+        
+        let arrayOfStrings = preparedEntry.split('\n')
         if(arrayOfStrings.length < 2){return rawEntry}
+        //turn raw text into readable data
         let entry = turnTimeLogStringArrayIntoArrayOfDict(arrayOfStrings)
+
         let totalTimeLogged = calculateTotalTimeLoggedFromEntryData(entry)
-        var firstEntryTime = entry[entry.length-1]["startTime"]
-        firstEntryTime = convertMilitaryTimeToTwelveHourTime(firstEntryTime)
+
+        console.error('TODO: currently if the timelog page loads on all entries, it crashes in total time logged')
+
+        //the first entry time will be the last element in the array
+        //if we haven't logged anything yet today, the first entry time will be undefined
+        var firstEntryTime = (entry[entry.length-1] === undefined) ? NaN : entry[entry.length-1]["startTime"]
+        //e.g. 18:00 to 6:00 PM
+        if(firstEntryTime.includes(':')) {
+            firstEntryTime = convertMilitaryTimeToTwelveHourTime(firstEntryTime)}
+        //first element in the array
         var lastEntryTime = entry[0]["endTime"]
-        lastEntryTime = convertMilitaryTimeToTwelveHourTime(lastEntryTime)
+        if(lastEntryTime.includes(':')){
+        lastEntryTime = convertMilitaryTimeToTwelveHourTime(lastEntryTime)}
+        //return formatted string
         return `${firstEntryTime} - ${lastEntryTime} (${totalTimeLogged})`
     }
 
@@ -101,35 +120,71 @@ class Entry extends React.Component {
 
 }
 
+//ALL ENTRIES COMPONENT
 class AllEntries extends React.Component {
     constructor(props){
         super(props)
 
         this.state = {
-            clientWorkComponentIsShowing: true,
+            dailyDisplayIsShowing: true,
+            weeklyDisplayIsShowing: false,
+            monthlyDisplayIsShowing: false,
+            clientWorkComponentIsShowing: false,
         }
     }
 
+    //shows this components when the #clientwork is clicked on any specific day
     showClientWorkComponent = () => {
         this.setState({clientWorkComponentIsShowing: true})
     }
 
+    //close the container when the close button is pressed. This will be passed as props into the component
     closeClientWorkContainer = () => {
         this.setState({clientWorkComponentIsShowing: false})
     }
 
+    //pass data into the Entry componenent and render
     renderEntries = () => {
         return this.props.allEntries.map((item, index) => {
             return <Entry key={index} showClientWorkComponent={this.showClientWorkComponent} day={item}/>
         });
     }
 
+    //methods that toggle which displays are showing: daily, weekly or monthly
+    toggleDisplay = (displayType) => {
+        var dailyDisplayIsShowing = false, weeklyDisplayIsShowing = false,  monthlyDisplayIsShowing = false;
+
+        switch(displayType){
+            case "day": dailyDisplayIsShowing = true
+            break;
+            case "week": weeklyDisplayIsShowing = true
+            break;
+            case "month" : monthlyDisplayIsShowing = true;
+            default: console.error(`displayType ${displayType} is invalid. Check for typos`)
+        }
+
+        this.setState({dailyDisplayIsShowing, weeklyDisplayIsShowing, monthlyDisplayIsShowing})
+    }
+
+
+
     render(props) {
-        // if(this.props.allEntries !== undefined){console.log(this.props.allEntries)}
         return (
             <div className="allEntries">
+                
+                <div>
+                    <BlueOutlineButton
+                        disabled={this.state.dailyDisplayIsShowing}
+                        click={() => this.toggleDisplay("week")}
+                        text="DAY"
+                    />
 
-                {this.renderEntries()}
+                </div>
+                
+                <div className="allEntries--display">
+                    {this.renderEntries()}
+                </div>
+                
 
                 { this.state.clientWorkComponentIsShowing &&
                  <ClientWorkContainer 
@@ -143,5 +198,9 @@ class AllEntries extends React.Component {
         );
     }
 }
+
+
+
+
 
 export default AllEntries;

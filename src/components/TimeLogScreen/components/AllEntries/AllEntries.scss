@@ -4,11 +4,13 @@ $pastel-yellow: #FDFD96;
     margin-top: 5px;
     background: white;
     height: 95%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    overflow-y: scroll;
-
+    
+    &--display {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        overflow-y: scroll;
+    }
     &--entry {
         width: 200px;
         border: solid 2px black;

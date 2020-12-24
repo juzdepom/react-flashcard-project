@@ -13,10 +13,12 @@ $pastel-purple: #B3A0DB;
 $pastel-red: #ff6961;
 $pastel-beige: #E8D1C0;
 $pastel-orange: #F8C181;
+$pastel-green: #B1D8AC;
 $pastel-blue-0: rgb(242, 249, 250);
 $pastel-blue-1: rgb(199, 237, 246);
 $pastel-blue-2: rgb(149, 220, 238);
 
+//in the timelog day page, height of timelog section will depend on how long the specific time entry is
 .height {
     &-default { //0-15 min
         min-height: 17px;
@@ -38,45 +40,71 @@ $pastel-blue-2: rgb(149, 220, 238);
     }
 }
 
+//time entry background color depends on the type of associated hashtag
 .bg {
     &-default {
         background: $pastel-blue-0;
     }
+    //TURQUOISE
     &-coding {
         background: $pastel-turquoise
     }
-    &-clientwork {
-        background: $pastel-yellow
+   //PURPLE
+    &-personalbrand {
+        background: $pastel-purple;
     }
-    &-myinstagram {
-        background: $pastel-blue-1;
+    &-studythai {
+        background: $pastel-purple;
     }
     &-todo {
         background: $pastel-yellow-2; 
     }
-    &-nap {
-        // background: $pastel-pink;
+    //YELLOW
+    &-productivity {
+        background: $pastel-yellow;
     }
-    &-numbingout {
-        background: gray;
+    &-clientwork {
+        background: $pastel-yellow
     }
-    &-studythai {
-        background: $pastel-purple;
+    &-communications {
+        background: $pastel-yellow;
+    }
+    &-myinstagram {
+        background: $pastel-yellow;
+    }
+    //GREEN
+    &-social {
+        background: $pastel-green;
+    }
+    &-baow {
+        background: $pastel-green;
+    }
+    //BLUE
+    &-fillingthecup {
+        background: $pastel-blue-1;
     }
     &-running {
         background: $pastel-blue-2;
     }
     &-muaythai {
-        background: $pastel-red;
+        background: $pastel-blue-2;
     }
-    &-selfcare {
-        // background: $pastel-pink;
+    &-exercise {
+        background: $pastel-blue-2;
     }
-    &-timelog {
-        // background: $pastel-pink;
+     //GRAY
+     &-fightwithbaow {
+        background: gray;
     }
-    &-food {
-        // background: $pastel-pink;
+    &-negative {
+        background: gray;
+    }
+    &-numbingout {
+        background: gray;
+    }
+    //MISC
+    &-nap {
+        background: $blue-1;
     }
     &-badhabits {
         background: $white-1;
@@ -84,10 +112,11 @@ $pastel-blue-2: rgb(149, 220, 238);
     &-rov {
         background: $white-1;
     }
-    &-baow {
-        background: $pastel-light-pink;
-    }
+}
 
+//this class if for time entries that haven't happened yet, but have been set for the future. 
+.transparent {
+    opacity: 0.5
 }
 
 .timelog {

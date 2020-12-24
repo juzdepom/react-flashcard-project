@@ -6,6 +6,7 @@ import Progress from './Progress/Progress';
 import Search from './Search/Search';
 import DeckList from './DeckList/DeckList';
 import Card from './Card/Card';
+import Notes from './Notes/Notes';
 import AddFlashcards from './AddFlashcards/AddFlashcards';
 import SelectFromDeck from './SelectFromDeck/SelectFromDeck';
 import DeckButtons from './DeckButtons/DeckButtons';
@@ -25,6 +26,18 @@ import {
 
 // hard-coded data
 // import data from './data/cards.json';
+
+//SPEECH SYNTHESIS
+//Traversy Tutorial --> https://www.youtube.com/watch?v=ZORXxxP49G8
+const synth = window.speechSynthesis;
+let voices = [];
+const getVoices = () => {
+  voices = synth.getVoices();
+};
+getVoices();
+if (synth.onvoiceschanged !== undefined) {
+    synth.onvoiceschanged = getVoices;
+}
 
 class StudyScreen extends React.Component {
 
@@ -74,12 +87,15 @@ class StudyScreen extends React.Component {
       yesterdayTotalExpPoints: 0,
       progressLogIsShowing: false,
       //
-      cardEditModeIsOn: false
+      cardEditModeIsOn: false,
+      //
+      originalNotes: ""
     }
 
   }
 
   componentDidMount(){
+
 
     //uncomment below to to set data to hardcoded JSON data
     // this.setState({
@@ -88,6 +104,20 @@ class StudyScreen extends React.Component {
 
     // retrieving the data from firebase
     const database = firebase.database()
+
+    //retrieve original notes
+    database.ref('notes').on("value", (snapshot) => {
+      // console.log(snapshot.val())
+      // alert('calling notes method')
+      const firebaseData = snapshot.val()
+
+      this.setState({
+        originalNotes: firebaseData
+      })
+      // alert(this.state.originalNotes)
+    })
+    
+    //retreive flashcards
     database.ref('flashcards').on("value", (snapshot) => {
       // console.log(snapshot.val())
       const firebaseData = snapshot.val()
@@ -582,6 +612,45 @@ class StudyScreen extends React.Component {
     })
   }
 
+  saveNotesToFirebase(notes){
+    // alert(notes)
+    firebase.database().ref('notes').set(notes);
+  }
+  
+ 
+
+  speakThai(e){
+    var text = ""
+    if(typeof e === 'string' || e instanceof String){
+      text = e
+    } else {
+      //when coming from Card.jsx, returns a dictionary
+      text = e.back;
+    }
+    
+   
+    if (synth.speaking) {
+      console.error('Already speaking...');
+      return;
+    }
+
+    // Get speak text
+    const speakText = new SpeechSynthesisUtterance(text);
+
+    voices.forEach(voice => {
+        if (voice.name === "Kanya") {
+          // console.log(voice)
+          speakText.voice = voice;
+        }
+      });
+
+    speakText.rate = 0.75;
+    speakText.pitch = 1;
+    synth.speak(speakText);
+    
+    
+  }
+
   
 
   render() {
@@ -612,6 +681,7 @@ class StudyScreen extends React.Component {
           deckListDisplay={this.state.deckListDisplay} 
           deckListClassname={this.state.deckListClassname}
           cards={this.state.deckListCards}
+          speakThai={this.speakThai}
           selectCard={this.deckListSelectCard}
           cardRated={this.deckListRatedCard}
           close={this.closeDeckList}
@@ -621,6 +691,7 @@ class StudyScreen extends React.Component {
           <Card
             ref = {this.cardElement}
             card = {this.state.currentCard}
+            speakThai = {this.speakThai}
             cardEditModeIsOn = {this.cardEditModeIsOn}
             goToPreviousCard = {this.goToPreviousCard}
             handleCardEdit = {this.handleCardEdit}
@@ -638,10 +709,17 @@ class StudyScreen extends React.Component {
           </div>
 
           <div className="row">
+            
             <AddFlashcards 
               originalDeck={this.state.cards}
               addNewFlashcardsToDeck={this.addNewFlashcardsToDeck}
               />
+
+            <Notes
+              originalNotes={this.state.originalNotes} 
+              saveNotesToFirebase={this.saveNotesToFirebase}
+            />
+
           </div>
 
           <div className="row">

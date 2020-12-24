@@ -150,32 +150,38 @@ export const returnBackgroundTypeBasedOnHashtag = (h) => {
 
     var parentHashtag = hashtag.match(hashtagRegex);
     
-    //remove the hashtag
+    //remove the hashtag symbol
     let p = String(parentHashtag).substr(1)
-    let c = [
-        "coding", 
-        "clientwork", 
-        "myinstagram",
-        "numbingout", 
-        "todo",
-        // "nap", 
-        "studythai", 
-        "muaythai", 
-        // "selfcare",
-        "running",
-        // "timelog",
-        // "food",
-        "badhabits",
-        "rov",
-        "Baow",
-    ]
-    for(var i in c){
-        if(p === c[i]){
-            color = p;
-        }
-    }
+    // let c = [
+    //     "baow",
+    //     "badhabits",
+    //     "coding", 
+    //     "clientwork", 
+    //     "exercise",
+    //     "myinstagram",
+    //     "nap",
+    //     "numbingout", 
+    //     "todo",
+    //     "personalbrand",
+    //     "fightwithbaow",
+    //     "negative",
+    //     "communications",
+    //     "social",
+    //     "studythai", 
+    //     "muaythai", 
+    //     "running",
+    //     "fillingthecup",
+    //     "rov",
+
+        
+    // ]
+    // for(var i in c){
+    //     if(p === c[i]){
+    //         color = p;
+    //     }
+    // }
     
-    return color
+    return p
 }
 
 export const getCurrentTime = () => {
@@ -253,8 +259,7 @@ export const calculateElapsedTime = (s, e, onlyMinutes) => {
     
     if(elapsed <= 0){
         console.log(`Error! Elapsed time is negative: ${elapsed}! Start Time: ${s}/${startTime} End Time: ${e}/${endTime}`)
-        // alert(`Error! Elapsed time is negative: ${elapsed}! Start Time: ${s}/${startTime} End Time: ${e}/${endTime}`)
-        return NaN
+        return "--"
     } else {
         if(onlyMinutes){
             return elapsed;
