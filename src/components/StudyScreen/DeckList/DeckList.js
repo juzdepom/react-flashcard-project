@@ -15,30 +15,17 @@ class DeckCard extends React.Component {
 
     //when component gets updated
     componentDidUpdate(prevProps, prevState){
-        //the props have changed, meaning we have probably switched deck
-        // if(prevProps.card !== this.props.card){
-        //     if(this.props.card.rating > 3){
-        //         this.setState({key: 'textThree'})
-        //     } else {
-        //         this.setState({key: 'textOne'})
-        //     }
-        // }
     }
 
     //when component first mounts
     componentDidMount = () => {
-        //if card is level 4 or 5, show the Thai characters first
-        // if(this.props.card.rating > 3){
-        //     // console.log('card is level 4 or 5: ', this.props.card)
-        //     this.setState({
-        //         key: "textThree"
-        //     })
-        // }
     }
 
 
     clickCard = () => {
+        let thai = this.props.card["textThree"]
         //default
+        this.props.speakThai(thai)
         var key = "textOne"
         if(this.state.key === "textOne"){
             key = "textThree"
@@ -134,6 +121,7 @@ class DeckList extends React.Component {
                 selectCard={this.props.selectCard} 
                 card={card} 
                 index={index}
+                speakThai={this.props.speakThai}
                 quickRatingIsOn={this.quickRatingIsOn}/>
         })
     }
