@@ -115,7 +115,7 @@ class DeckList extends React.Component {
     }
 
     cardList = (cards) => {
-        return cards.map((card, index) => {
+        return cards.reverse().map((card, index) => {
             return <DeckCard 
                 key={index}
                 selectCard={this.props.selectCard} 
