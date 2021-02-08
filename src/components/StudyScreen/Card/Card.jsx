@@ -12,7 +12,7 @@ class Card extends Component {
             //we need "alreadyFlipped" so that the first time the card appears, the back of the card doesn't fade out
             alreadyFlipped: false,
             editMode: false,
-            color: "#xx"
+            color: "#xx",
         }
 
         this.flipCard = this.flipCard.bind(this)
@@ -181,8 +181,10 @@ class Card extends Component {
                                         onChange={(event) => this.props.handleCardEdit("textThree", event)}
                                     />
                                 </div>
-                                <div>
-                                    <button onClick={() => this.editMode(false)}>Close</button>
+                                <div className="card--edit-mode-container--buttons">
+                                    {/* both buttons just close edit mode */}
+                                    <button onClick={() => this.editMode(false)}>Cancel</button>
+                                    <button onClick={() => this.editMode(false)}>Save</button>
                                 </div>
                             </div> }
                             <div className="card--bottom-container">

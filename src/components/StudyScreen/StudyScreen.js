@@ -455,6 +455,7 @@ class StudyScreen extends React.Component {
     }
     
     cards[this.state.currentCardIndex] = currentCard;
+   
     this.setState({
       currentCard,
       cards,
@@ -483,10 +484,23 @@ class StudyScreen extends React.Component {
 
   //save in firebase
   saveFlashcardDataInFirebase(){
+    
+    // const cards = this.checkFlashcardsForDuplicates(this.state.cards)
+    
     const cards = this.state.cards;
+    // let newCards = this.checkFlashcardsForDuplicates(cards)
+    //for some reason, I can't seem to save newCards because "because first argument contains undefined?"
+    // console.log(newCards)
     firebase.database().ref('flashcards').set(cards);
     this.setState({flashcardsRated: 0})
   }
+
+  // checkFlashcardsForDuplicates(cards){
+  //   console.log('checking for duplicates...')
+  //   let setOfCards = new Set(cards)
+  //   let array = Array.from(setOfCards);
+  //   return array
+  // }
 
   loadCard(card){
     let previousCard = this.state.currentCard
