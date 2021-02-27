@@ -31,7 +31,11 @@ class DeckButtons extends Component {
                 <div className="deckbuttons--row">
                     {
                         this.deckButtons()
+                        
                     }
+                    <button onClick={() => this.props.selectDeckButton("starred")}>
+                            ⭐️
+                    </button>
                 </div>
             </div>
             

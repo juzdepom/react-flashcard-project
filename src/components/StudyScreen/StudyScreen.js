@@ -605,13 +605,18 @@ class StudyScreen extends React.Component {
 
   //DeckButton Methods
   selectDeckButton(deckIndex){
-    let deckListClassname = "decklist decklist--" + deckIndex
-    let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
-    this.setState({
-      deckListClassname,
-      deckListDisplay: "block",
-      deckListCards
-    })
+    if(deckIndex == "starred"){
+      alert("work in progress!")
+    } else {
+      let deckListClassname = "decklist decklist--" + deckIndex
+      let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
+      this.setState({
+        deckListClassname,
+        deckListDisplay: "block",
+        deckListCards
+      })
+    }
+    
   }
 
   //DeckList Methods

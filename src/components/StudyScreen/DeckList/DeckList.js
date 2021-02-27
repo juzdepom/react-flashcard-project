@@ -108,7 +108,7 @@ class DeckCard extends React.Component {
                 <div className="decklist--card-leftSection">
                     <div className="decklist--card-reviewCount">{index}</div>
                     <Star 
-                        card={this.props.card}
+                        card={card}
                         changeStarredState={this.props.changeStarredState}/>
                 </div>
                 <div className="decklist--card-text" onClick={() => this.clickCard()}>{card[this.state.key]}</div>
