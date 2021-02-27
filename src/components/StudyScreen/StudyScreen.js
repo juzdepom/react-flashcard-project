@@ -274,6 +274,7 @@ class StudyScreen extends React.Component {
     if(starred !== undefined){
       currentCards[correctIndex].starred = starred;
       this.setState({cards: currentCards})
+      this.saveFlashcardDataInFirebase()
     } else {
         //if card has been rated, update the rating
       if(rating !== undefined){
@@ -306,11 +307,10 @@ class StudyScreen extends React.Component {
       })
       
       this.cardElement.current.reset();
-    }
-
-    //if we have rated more 5 cards already, then save to Firebase.
-    if(this.state.flashcardsRated > 3) {
-      this.saveFlashcardDataInFirebase();
+      //if we have rated more 5 cards already, then save to Firebase.
+      if(this.state.flashcardsRated > 3) {
+        this.saveFlashcardDataInFirebase();
+      }
     }
   }
 

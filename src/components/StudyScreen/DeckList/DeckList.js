@@ -57,6 +57,7 @@ class DeckCard extends React.Component {
 
     clickCard = () => {
         let thai = this.props.card["textThree"]
+        console.log(this.props.card)
         //default
         this.props.speakThai(thai)
         var key = "textOne"
