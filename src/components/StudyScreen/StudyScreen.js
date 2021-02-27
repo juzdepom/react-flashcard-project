@@ -378,16 +378,23 @@ class StudyScreen extends React.Component {
         "2" : [],
         "3" : [],
         "4" : [],
-        "5" : []
+        "5" : [],
+        "starred": [],
       },
       totalPoints: 0,
     }
 
     // var newDeck = []
 
+    //loop through each card while drawing out index
     for (var index in currentCards){
 
       level.sortedDeck[String(currentCards[index].rating)].push(currentCards[index])
+
+      //loop through cards and pick out ones that are starred
+      if(currentCards[index].starred == true){
+        level.sortedDeck["starred"].push(currentCards[index])
+      }
 
       // let id = i
       // var card = currentCards[i]
@@ -605,8 +612,19 @@ class StudyScreen extends React.Component {
 
   //DeckButton Methods
   selectDeckButton(deckIndex){
+
+    // if selected the "starred cards" deck button
     if(deckIndex == "starred"){
-      alert("work in progress!")
+      //chosing the gray look for now
+      let deckListClassname = "decklist decklist--starred"
+      let deckListCards = this.state.level.sortedDeck["starred"]
+      this.setState({
+        deckListClassname,
+        deckListDisplay: "block",
+        deckListCards
+      })
+      // console.log( this.state.level.sortedDeck["starred"])
+      // alert("work in progress!")
     } else {
       let deckListClassname = "decklist decklist--" + deckIndex
       let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
@@ -616,6 +634,7 @@ class StudyScreen extends React.Component {
         deckListCards
       })
     }
+    
     
   }
 

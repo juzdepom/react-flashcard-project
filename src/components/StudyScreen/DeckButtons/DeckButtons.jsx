@@ -33,7 +33,10 @@ class DeckButtons extends Component {
                         this.deckButtons()
                         
                     }
-                    <button onClick={() => this.props.selectDeckButton("starred")}>
+                    {/* STARRED BUTTON */}
+                    <button 
+                    className="deckbutton near-white"
+                    onClick={() => this.props.selectDeckButton("starred")}>
                             ⭐️
                     </button>
                 </div>
