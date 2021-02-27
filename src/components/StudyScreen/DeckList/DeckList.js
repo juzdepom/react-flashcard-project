@@ -76,7 +76,7 @@ class DeckCard extends React.Component {
             } else {
                 this.setState({key: "textOne"})
             }
-        }, 2000);
+        }, 5000);
 
     }
 
