@@ -16,8 +16,10 @@ class Star extends React.Component {
         //set the star state to opposite
         let starred = !this.state.starred
         this.setState({starred})
+        let card = this.props.card
         //call props to change star State.
 
+        this.props.changeStarredState(card, starred)
         // this.props.changeStarredState()
     }
 
@@ -104,7 +106,9 @@ class DeckCard extends React.Component {
                 className="decklist--card-body">
                 <div className="decklist--card-leftSection">
                     <div className="decklist--card-reviewCount">{index}</div>
-                    <Star/>
+                    <Star 
+                        card={this.props.card}
+                        changeStarredState={this.props.changeStarredState}/>
                 </div>
                 <div className="decklist--card-text" onClick={() => this.clickCard()}>{card[this.state.key]}</div>
                 <div className="decklist--card-lastReview">{card.rating} | {reviewCount} <span role="img" aria-label="eyes">👀</span> | {whenWasLastReview}</div>
@@ -154,6 +158,7 @@ class DeckList extends React.Component {
                 selectCard={this.props.selectCard} 
                 card={card} 
                 index={index}
+                changeStarredState={this.props.changeStarredState}
                 speakThai={this.props.speakThai}
                 quickRatingIsOn={this.quickRatingIsOn}/>
         })

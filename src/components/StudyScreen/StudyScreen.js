@@ -626,6 +626,12 @@ class StudyScreen extends React.Component {
     })
   }
 
+  //starred a card
+  changeStarredState = (card, starred) => {
+  // changeStarredState = (card, starred) => {
+    alert('changed state: ' + card["textOne"] + " " + starred)
+  }
+
   saveNotesToFirebase(notes){
     // alert(notes)
     firebase.database().ref('notes').set(notes);
@@ -696,6 +702,7 @@ class StudyScreen extends React.Component {
           deckListClassname={this.state.deckListClassname}
           cards={this.state.deckListCards}
           speakThai={this.speakThai}
+          changeStarredState={this.changeStarredState}
           selectCard={this.deckListSelectCard}
           cardRated={this.deckListRatedCard}
           close={this.closeDeckList}
