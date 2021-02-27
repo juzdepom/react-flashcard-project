@@ -263,45 +263,50 @@ class StudyScreen extends React.Component {
   }
 
   //update the flashcard we just looked at, and set state to newly selected flashcard!
-  updateFlashcards(newIndex, rating){
+  updateFlashcards(newIndex, rating, starred){
     var cardsRated = this.state.cardsRated + 1
     var currentCards = this.state.cards
     var currentCard = this.state.currentCard
 
     let correctIndex = this.findIndexInMasterDeck(currentCard)
 
-    //if card has been rated, update the rating
-    if(rating !== undefined){
-      currentCards[correctIndex].rating = rating;
-    }
-
-    //logging the time this flashcard was reviewed
-    var timeStamp = Math.floor(Date.now() / 1000);
-    
-    //some of the flashcards don't have the "lastReviewed" key
-    if(currentCards[correctIndex].lastReviewed !== undefined){
-      currentCards[correctIndex].lastReviewed.push(timeStamp)
+    //starred status of a card has been changed
+    if(starred !== undefined){
+      currentCards[correctIndex].starred = starred;
+      this.setState({cards: currentCards})
     } else {
-      currentCards[correctIndex]["lastReviewed"] = [timeStamp];
+        //if card has been rated, update the rating
+      if(rating !== undefined){
+        currentCards[correctIndex].rating = rating;
+      }
+      //logging the time this flashcard was reviewed
+      var timeStamp = Math.floor(Date.now() / 1000);
+      
+      //some of the flashcards don't have the "lastReviewed" key
+      if(currentCards[correctIndex].lastReviewed !== undefined){
+        currentCards[correctIndex].lastReviewed.push(timeStamp)
+      } else {
+        currentCards[correctIndex]["lastReviewed"] = [timeStamp];
+      }
+
+      let previousCard = this.state.currentCard
+      var i = (newIndex === null) ? correctIndex : newIndex
+      // if(i == null){
+      //   i = correctIndex;
+      // }
+
+      this.setState({
+        cards: currentCards,
+        previousCard,
+        currentCard: currentCards[i],
+        cardsRated,
+      }, () => {
+        this.updateDisplayCardLevels()
+        this.updateProgressLog()
+      })
+      
+      this.cardElement.current.reset();
     }
-
-    let previousCard = this.state.currentCard
-    var i = (newIndex === null) ? correctIndex : newIndex
-    // if(i == null){
-    //   i = correctIndex;
-    // }
-
-    this.setState({
-      cards: currentCards,
-      previousCard,
-      currentCard: currentCards[i],
-      cardsRated,
-    }, () => {
-      this.updateDisplayCardLevels()
-      this.updateProgressLog()
-    })
-    
-    this.cardElement.current.reset();
 
     //if we have rated more 5 cards already, then save to Firebase.
     if(this.state.flashcardsRated > 3) {
@@ -486,9 +491,9 @@ class StudyScreen extends React.Component {
   saveFlashcardDataInFirebase(){
     
     // const cards = this.checkFlashcardsForDuplicates(this.state.cards)
-    
+    const cards = this.state.cards;
+
     //JUST ADDED "starred" ATTRIBUTE TO EACH CARD
-    // const cards = this.state.cards;
     // cards.forEach(card => {
     //   card.starred = false;
     //   console.log(card)
@@ -634,8 +639,13 @@ class StudyScreen extends React.Component {
 
   //starred a card
   changeStarredState = (card, starred) => {
-  // changeStarredState = (card, starred) => {
-    alert('changed state: ' + card["textOne"] + " " + starred)
+    this.setState({
+      currentCard: card
+    }, () => {
+      this.updateFlashcards(null, null, starred)
+    })
+    // alert('changed state: ' + card["textOne"] + " " + starred)
+    
   }
 
   saveNotesToFirebase(notes){

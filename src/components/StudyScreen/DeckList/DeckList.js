@@ -8,7 +8,7 @@ class Star extends React.Component {
         super(props)
 
         this.state = {
-            starred: false,
+            starred: this.props.card.starred,
         }
     }
 
