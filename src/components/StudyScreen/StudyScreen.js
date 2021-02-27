@@ -487,7 +487,13 @@ class StudyScreen extends React.Component {
     
     // const cards = this.checkFlashcardsForDuplicates(this.state.cards)
     
-    const cards = this.state.cards;
+    //JUST ADDED "starred" ATTRIBUTE TO EACH CARD
+    // const cards = this.state.cards;
+    // cards.forEach(card => {
+    //   card.starred = false;
+    //   console.log(card)
+    // })
+
     // let newCards = this.checkFlashcardsForDuplicates(cards)
     //for some reason, I can't seem to save newCards because "because first argument contains undefined?"
     // console.log(newCards)
