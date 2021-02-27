@@ -3,6 +3,37 @@ import './DeckList.scss';
 import { calculateElapsedTime } from '../../../methods/methods';
 // import { sortCardsFromLastReviewed } from '../methods';
 
+class Star extends React.Component {
+    constructor(props){
+        super(props)
+
+        this.state = {
+            starred: false,
+        }
+    }
+
+    clickStar = () => {
+        //set the star state to opposite
+        let starred = !this.state.starred
+        this.setState({starred})
+        //call props to change star State.
+
+        // this.props.changeStarredState()
+    }
+
+    render(){
+        return (
+            <div
+                onClick={() => this.clickStar()}>
+                    {this.state.starred ? 
+                        <span role="img" aria-label="filled star">⭐️</span>
+                        : <span role="img" aria-label="empty star">☆</span>
+                    }
+            </div>
+        )
+    }
+}
+
 class DeckCard extends React.Component {
     constructor(props){
         super(props)
@@ -70,11 +101,12 @@ class DeckCard extends React.Component {
         return (
             <div 
                 ref={this.setWRapperRef} 
-                className="decklist--card-body" 
-                onClick={() => this.clickCard()}>
-
-                <div className="decklist--card-reviewCount">{index}</div>
-                <div className="decklist--card-text">{card[this.state.key]}</div>
+                className="decklist--card-body">
+                <div className="decklist--card-leftSection">
+                    <div className="decklist--card-reviewCount">{index}</div>
+                    <Star/>
+                </div>
+                <div className="decklist--card-text" onClick={() => this.clickCard()}>{card[this.state.key]}</div>
                 <div className="decklist--card-lastReview">{card.rating} | {reviewCount} <span role="img" aria-label="eyes">👀</span> | {whenWasLastReview}</div>
                 <div className="decklist--card-select decklist--0" onClick={(e)=> this.selectCard(e)}></div>
 
@@ -115,7 +147,8 @@ class DeckList extends React.Component {
     }
 
     cardList = (cards) => {
-        return cards.reverse().map((card, index) => {
+        // return cards.reverse().map((card, index) => {
+        return cards.map((card, index) => {
             return <DeckCard 
                 key={index}
                 selectCard={this.props.selectCard} 
