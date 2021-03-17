@@ -1,6 +1,39 @@
 import React, { Component } from 'react';
 import './Card.scss';
 
+class Star extends React.Component {
+    constructor(props){
+        super(props)
+
+        this.state = {
+            starred: this.props.card.starred,
+        }
+    }
+
+    clickStar = (e) => {
+        //set the star state to opposite
+        let starred = !this.state.starred
+        this.setState({starred})
+        let card = this.props.card
+        //call props to change star State.
+
+        this.props.changeStarredState(card, starred)
+        // this.props.changeStarredState()
+    }
+
+    render(){
+        return (
+            <div
+                onClick={() => this.clickStar()}>
+                    {this.state.starred ? 
+                        <span role="img" aria-label="filled star">⭐️</span>
+                        : <span role="img" aria-label="empty star">☆</span>
+                    }
+            </div>
+        )
+    }
+}
+
 
 class Card extends Component {
 
@@ -98,7 +131,8 @@ class Card extends Component {
     render(props){
         
         var colors = ["lightgray", "#AB3B7F", "#F28945", "#FEDD33", "#7EAE2E", "#40A9D6"]
-        var {rating, textOne, textTwo, textThree, dateCreated, lastReviewed, _id, starred} = this.props.card;
+        var card = this.props.card;
+        var {rating, textOne, textTwo, textThree, dateCreated, lastReviewed, _id, starred} = card;
 
         var color = colors[rating]
         var time = "First Time"
@@ -137,11 +171,18 @@ class Card extends Component {
                                     👁{reviewCount}
                                 </div>
                             </div>
+                            {/* Edit Mode Is Off */}
                             {!this.state.editMode ?
                                 <div>
+                                     {/* star option */}
+                                     <Star 
+                                        card={card}
+                                        changeStarredState={this.props.changeStarredState}/>
+                                    {/* English Text */}
                                     <div className="card--front-text-container">
                                         {front}
                                     </div>
+                                    {/* Reveal the back of the card: Thai + Pronunciation */}
                                     {this.state.alreadyFlipped ? 
                                         <div className="card--back-text-container">
                                             <span 
@@ -158,9 +199,9 @@ class Card extends Component {
                                     : ''}
                                 </div> 
                             : <div className="card--edit-mode-container">
-                                {/* Edit Mode */}
+                                {/* Edit Mode Is On */}
                                 <div className="card--edit-mode-container--id">ID: {_id} </div>
-                                <div>Starred: {starred} </div>
+                                <div>Starred: {starred ? "yes" : "no"} </div>
                                 <div>
                                     <input
                                         type="text"

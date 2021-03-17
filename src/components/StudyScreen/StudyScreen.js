@@ -677,8 +677,6 @@ class StudyScreen extends React.Component {
     firebase.database().ref('notes').set(notes);
   }
   
- 
-
   speakThai(e){
     var text = ""
     if(typeof e === 'string' || e instanceof String){
@@ -710,8 +708,6 @@ class StudyScreen extends React.Component {
     
     
   }
-
-  
 
   render() {
    
@@ -752,6 +748,7 @@ class StudyScreen extends React.Component {
           <Card
             ref = {this.cardElement}
             card = {this.state.currentCard}
+            changeStarredState = {this.changeStarredState}
             speakThai = {this.speakThai}
             cardEditModeIsOn = {this.cardEditModeIsOn}
             goToPreviousCard = {this.goToPreviousCard}
