@@ -709,6 +709,10 @@ class StudyScreen extends React.Component {
     
   }
 
+  testUsersPronunciation(e){
+    alert('work in progress!')
+  }
+
   render() {
    
     return (
@@ -737,6 +741,7 @@ class StudyScreen extends React.Component {
           deckListDisplay={this.state.deckListDisplay} 
           deckListClassname={this.state.deckListClassname}
           cards={this.state.deckListCards}
+          testUsersPronunciation={this.testUsersPronunciation}
           speakThai={this.speakThai}
           changeStarredState={this.changeStarredState}
           selectCard={this.deckListSelectCard}

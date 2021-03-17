@@ -175,11 +175,22 @@ class DeckList extends React.Component {
        
         return (
             <div className={this.props.deckListClassname} style={{display: this.props.deckListDisplay}}>
+                {/* HEADER */}
+                <div className="decklist--header">
+                    {/* only show speak button if quick rating is on  */}
+                    { this.state.quickRatingIsOn ?
+                    <div className="decklist--speak-button">
+                        <button onClick={() => this.props.testUsersPronunciation(this.state.thai)}>🗣</button>
+                    </div>
+                    : '' }
+                    {/* close button */}
                     <button 
                         className="decklist--close-button"
                         onClick={()=> this.close()}>
                         Close
                     </button>
+                </div>
+                {/* BODY */}
                 <div className="decklist--body">
                     {
                         this.cardList(cards)
