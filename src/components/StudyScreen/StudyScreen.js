@@ -7,10 +7,12 @@ import Search from './Search/Search';
 import DeckList from './DeckList/DeckList';
 import Card from './Card/Card';
 import Notes from './Notes/Notes';
+import CodeIdeas from './CodeIdeas/CodeIdeas';
 import AddFlashcards from './AddFlashcards/AddFlashcards';
 import SelectFromDeck from './SelectFromDeck/SelectFromDeck';
 import DeckButtons from './DeckButtons/DeckButtons';
 import RatingButtons from './RatingButtons/RatingButtons';
+
 
 //firebase
 import { DB_CONFIG } from '../../config/config';
@@ -89,7 +91,8 @@ class StudyScreen extends React.Component {
       //
       cardEditModeIsOn: false,
       //
-      originalNotes: ""
+      originalNotes: "",
+      originalCodeIdeas: ""
     }
 
   }
@@ -113,6 +116,18 @@ class StudyScreen extends React.Component {
 
       this.setState({
         originalNotes: firebaseData
+      })
+      // alert(this.state.originalNotes)
+    })
+
+    //retrieve original code ideas
+    database.ref('code_ideas').on("value", (snapshot) => {
+      // console.log(snapshot.val())
+      // alert('calling notes method')
+      const firebaseData = snapshot.val()
+
+      this.setState({
+        originalCodeIdeas: firebaseData
       })
       // alert(this.state.originalNotes)
     })
@@ -676,6 +691,11 @@ class StudyScreen extends React.Component {
     // alert(notes)
     firebase.database().ref('notes').set(notes);
   }
+
+  saveCodeIdeasToFirebase(ideas){
+    // alert(ideas)
+    firebase.database().ref('code_ideas').set(ideas);
+  }
   
   speakThai(e){
     var text = ""
@@ -781,6 +801,11 @@ class StudyScreen extends React.Component {
             <Notes
               originalNotes={this.state.originalNotes} 
               saveNotesToFirebase={this.saveNotesToFirebase}
+            />
+
+            <CodeIdeas
+              originalCodeIdeas={this.state.originalCodeIdeas} 
+              saveCodeIdeasToFirebase={this.saveCodeIdeasToFirebase}
             />
 
           </div>
