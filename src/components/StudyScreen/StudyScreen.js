@@ -387,6 +387,7 @@ class StudyScreen extends React.Component {
       three: 0,
       four: 0, 
       five: 0,
+      starred: 0,
       sortedDeck: {
         "0" : [],
         "1" : [],
@@ -408,6 +409,7 @@ class StudyScreen extends React.Component {
 
       //loop through cards and pick out ones that are starred
       if(currentCards[index].starred == true){
+        level.starred += 1
         level.sortedDeck["starred"].push(currentCards[index])
       }
 
@@ -633,6 +635,7 @@ class StudyScreen extends React.Component {
       //chosing the gray look for now
       let deckListClassname = "decklist decklist--starred"
       let deckListCards = this.state.level.sortedDeck["starred"]
+      // console.log(deckListCards.length)
       this.setState({
         deckListClassname,
         deckListDisplay: "block",
