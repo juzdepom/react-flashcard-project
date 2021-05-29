@@ -114,6 +114,8 @@
         }
     }
     &--starred{
+        /* go to https://cssgradient.io/ to customize*/
+        /* #fea614, 0 | #fee758, 35 | #fffbc0, 100 */
         background: rgb(254,166,20);
         background: linear-gradient(0deg, rgba(254,166,20,1) 0%, rgba(254,231,88,1) 35%, rgba(255,251,192,1) 100%);
     }

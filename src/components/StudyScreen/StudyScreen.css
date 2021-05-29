@@ -38,7 +38,6 @@
   }
 
   .light-yellow-gradient {
-    /* background: #FFFBC0 */
     /* went to https://cssgradient.io/ to generate this gradient*/
     /* #fea614, 0 | #fee758, 35 | #fffbc0, 100 */
     background: rgb(254,166,20);

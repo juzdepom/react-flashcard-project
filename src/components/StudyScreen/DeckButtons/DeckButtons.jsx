@@ -9,11 +9,7 @@ class DeckButtons extends Component {
     // }
 
     deckButtons = () => {
-        //how to add starred
         let { five, four, three, two, one, zero } = this.props.level; 
-        // console.log(starred)
-        // let starredDeckCount = this.props.level.sortedDeck["starred"].length
-        // console.log(starredDeckCount)
         let deckCountArray = [zero, one, two, three, four, five ]
         let colors = ["gray", "purple", "orange", "yellow", "green", "blue"];
         let indexArray = [0, 1, 2, 3, 4, 5]
@@ -38,7 +34,6 @@ class DeckButtons extends Component {
                 <div className="deckbuttons--row">
                     {
                         this.deckButtons()
-                        
                     }
                     {/* STARRED BUTTON */}
                     <button 
