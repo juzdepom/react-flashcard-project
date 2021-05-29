@@ -78,7 +78,7 @@ class StudyScreen extends React.Component {
       newDeck: [],
       //
       sideDrawerOpen: false,
-      //
+      // set display to "none" if you don't want DeckList to display
       deckListDisplay: "none",
       deckListClassname: "decklist",
       deckListCards: [],
@@ -734,7 +734,6 @@ class StudyScreen extends React.Component {
   }
 
   render() {
-   
     return (
       <div className="StudyScreen">
         {/* TO DO: add a loading screen: Loading Cards from Database... */}

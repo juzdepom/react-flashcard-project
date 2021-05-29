@@ -57,7 +57,7 @@ class DeckCard extends React.Component {
 
     clickCard = () => {
         let thai = this.props.card["textThree"]
-        console.log(this.props.card)
+        // console.log(this.props.card)
         //default
         this.props.speakThai(thai)
         var key = "textOne"
@@ -73,13 +73,14 @@ class DeckCard extends React.Component {
         this.setState({key})
         this.props.quickRatingIsOn(true, this.props.card)
 
+        //determining how long the Thai will stay on the card (10 seconds)
         setTimeout(() => {
             if (this.props.card.rating > 3){
                 this.setState({key: "textThree"})
             } else {
                 this.setState({key: "textOne"})
             }
-        }, 5000);
+        }, 10000);
 
     }
 
