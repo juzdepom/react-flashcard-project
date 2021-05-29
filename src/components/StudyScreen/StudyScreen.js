@@ -635,14 +635,11 @@ class StudyScreen extends React.Component {
       //chosing the gray look for now
       let deckListClassname = "decklist decklist--starred"
       let deckListCards = this.state.level.sortedDeck["starred"]
-      // console.log(deckListCards.length)
       this.setState({
         deckListClassname,
         deckListDisplay: "block",
         deckListCards
       })
-      // console.log( this.state.level.sortedDeck["starred"])
-      // alert("work in progress!")
     } else {
       let deckListClassname = "decklist decklist--" + deckIndex
       let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
