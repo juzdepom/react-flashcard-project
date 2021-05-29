@@ -741,6 +741,19 @@ class StudyScreen extends React.Component {
     return (
       <div className="StudyScreen">
         {/* TO DO: add a loading screen: Loading Cards from Database... */}
+
+          {/* TODO: create a component for this */}
+          <div className="row" style={{color: 'black'}}>
+            <div>
+              <span>Rated: {this.state.flashcardsRated} | {this.state.cardsRated}</span>
+              <button 
+                style={{marginLeft: '10px'}} 
+                className="button" 
+                onClick={this.saveFlashcardDataInFirebase}>
+                  💾
+              </button>
+            </div>
+          </div>
         
         <Progress 
           progressLogIsShowing={this.progressLogIsShowing} 
@@ -787,12 +800,6 @@ class StudyScreen extends React.Component {
  
         <div className="button-row">
           <RatingButtons ratingClicked = {this.ratingClicked}/>
-
-          {/* TODO: create a component for this */}
-          <div className="row" style={{color: 'black'}}>
-              <div>Number of flashcards rated: {this.state.flashcardsRated} | {this.state.cardsRated}</div>
-              <button className="button" onClick={this.saveFlashcardDataInFirebase}>Save Data in Firebase!</button>
-          </div>
 
           <div className="row">
             
