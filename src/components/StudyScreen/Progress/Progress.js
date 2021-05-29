@@ -146,15 +146,12 @@ class Progress extends React.Component {
             console.log('exp needed', expNeeded)
             let expPerDay = this.state.averageTotalExpPerDay
             let numberOfDaysToMastery = Math.ceil(expNeeded / expPerDay)
-            // console.log('days to amster', expNeeded)
             this.setState({numberOfDaysToMastery})
-            // alert(`${this.state.averageTotalExpPerDay}`)
         } else if (t === "days"){
             let days = this.state.numberOfDaysToMastery
 
             let averageTotalExpPerDay = Math.ceil(expNeeded / days)
             this.setState({averageTotalExpPerDay})
-            // alert(`${this.state.numberOfDaysToMastery}`)
         } else {
             alert(`Error: ${t}`)
         }
@@ -163,7 +160,6 @@ class Progress extends React.Component {
     //will return a date like Nov 16, 2019
     calculateDateOfMastery(numberOfDaysToMastery){
         if(numberOfDaysToMastery === undefined) {alert("Error! numbersOfDaysToMastery is undefined!")}
-        // let time = parseInt(numberOfDaysToMastery)
         var d = new Date();
         d.setDate(d.getDate()+numberOfDaysToMastery);
         var dateString = returnDateString(d)
@@ -230,12 +226,22 @@ class Progress extends React.Component {
         let { moreCardsNeeded, masteredCardsGoal, cardReviewExp, averageTotalExpPerDay, numberOfDaysToMastery, dateOfMastery } = this.state;
         return (
             <div className="progress">
-                Total Cards: {this.props.cards.length} <br/>
                 <button
                     className="progress--button" 
                     onClick={() => this.displayProgressLog()}>
+                    Total Cards: {this.props.cards.length} | <span className="progress--expEarnedToday">{expEarnedToday}</span> | Rated: {this.props.cardsRated}
+                </button>
+                <button 
+                    style={{marginLeft: '10px'}} 
+                    className="button" 
+                    onClick={this.props.saveFlashcardDataInFirebase}>
+                    💾 {this.props.flashcardsRated}
+                </button>
+                {/* <button
+                    className="progress--button" 
+                    onClick={() => this.displayProgressLog()}>
                         Total Exp: {totalPoints}/6000 ({percentage}%) 
-                </button>&nbsp;{this.props.cardsRated}/<span className="progress--expEarnedToday">{expEarnedToday}</span>
+                </button>&nbsp;{this.props.cardsRated}/<span className="progress--expEarnedToday">{expEarnedToday}</span> */}
 
                 {this.state.progressLogShowing ? <div className="progress-log--container fade-in">
 
@@ -247,7 +253,8 @@ class Progress extends React.Component {
                             X
                         </button>
                     </div>
-                    <div className="progress-log--predictions">
+                    {/* PUTTING THIS TO THE SIDE FOR NOW. DON'T DELETE CODE */}
+                    {/* <div className="progress-log--predictions">
                         You need <strong>+{cardReviewExp + moreCardsNeeded} Exp.</strong> (+{cardReviewExp} "Card Review" Exp. and +{moreCardsNeeded} cards) to reach your goal of&nbsp;
                         <input
                             type="text"
@@ -265,7 +272,7 @@ class Progress extends React.Component {
                             value={numberOfDaysToMastery}
                             onChange={(event) => this.handleInputEdit("numberOfDaysToMastery", event)} />
                         &nbsp;days<strong>{dateOfMastery}</strong>.
-                    </div>
+                    </div> */}
 
                     <div className="progress-log--body">
                         {

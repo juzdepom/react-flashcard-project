@@ -741,27 +741,17 @@ class StudyScreen extends React.Component {
     return (
       <div className="StudyScreen">
         {/* TO DO: add a loading screen: Loading Cards from Database... */}
-
-          {/* TODO: create a component for this */}
-          <div className="row" style={{color: 'black'}}>
-            <div>
-              <span>Rated: {this.state.flashcardsRated} | {this.state.cardsRated}</span>
-              <button 
-                style={{marginLeft: '10px'}} 
-                className="button" 
-                onClick={this.saveFlashcardDataInFirebase}>
-                  💾
-              </button>
-            </div>
-          </div>
-        
+    
         <Progress 
           progressLogIsShowing={this.progressLogIsShowing} 
           cards={this.state.cards} 
           totalPoints={this.state.level.totalPoints} 
           yesterdayTotalExpPoints={this.state.yesterdayTotalExpPoints}
           cardsRated={this.state.cardsRated}
-          progressLogData={this.state.progressLogData} />
+          progressLogData={this.state.progressLogData}
+          flashcardsRated={this.state.flashcardsRated}
+          saveFlashcardDataInFirebase={this.state.saveFlashcardDataInFirebase}
+           />
 
         <Search 
           cards={this.state.cards} 
