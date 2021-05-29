@@ -1,2 +1,4 @@
+how to deploy to server in firebase
+
 type "npm run build" into the terminal
 then type "firebase deploy"
