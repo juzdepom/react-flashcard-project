@@ -1,0 +1,5 @@
+// create the new page
+// create a new route with new page login
+// on the App.js you will need to check if the curent session is loged in or not
+// if logged in you redirect to the / route if not to the /login route
+// add a button connect with google and use firebase methd to initiate login
