@@ -66,6 +66,13 @@ class App extends React.Component {
               // <StudyScreen {...props} cards={this.state.cards} />
             )}
           />
+          <Route
+            path="/app"
+            exact
+            render={(props) => (
+              <StudyScreen {...props} cards={this.state.cards} />
+            )}
+          />
           {/* <Route 
             path="/search" 
             render={(props) => <SearchScreen {...props} cards={this.state.cards} />}
