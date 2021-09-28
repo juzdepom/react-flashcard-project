@@ -4,6 +4,7 @@ import './App.css'
 import DrawerToggleButton from './components/SideDrawer/DrawerToggleButton'
 import SideDrawer from './components/SideDrawer/SideDrawer'
 import StudyScreen from './components/StudyScreen/StudyScreen'
+import LoginScreen from './components/StudyScreen/LoginScreen'
 // import SearchScreen from './components/SearchScreen/SearchScreen';
 import TimeLogScreen from './components/TimeLogScreen/TimeLogScreen'
 // import LOGIN SCREEN
@@ -61,7 +62,8 @@ class App extends React.Component {
             path="/"
             exact
             render={(props) => (
-              <StudyScreen {...props} cards={this.state.cards} />
+              <LoginScreen />
+              // <StudyScreen {...props} cards={this.state.cards} />
             )}
           />
           {/* <Route 
