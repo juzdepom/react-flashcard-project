@@ -159,6 +159,7 @@ class StudyScreen extends React.Component {
     })
     
     database.ref('progressLog').on("value", (snapshot) => {
+      console.log(firebase.auth().currentUser)
       let progressLogData = snapshot.val()
       // var expEarnedToday = 0;
       var cardsRated = 0;
@@ -171,8 +172,10 @@ class StudyScreen extends React.Component {
       }
       if(currentDate === progressLogData[0]["date"]){
         cardsRated = progressLogData[0]["cardsRated"]
-        //calculat
+        //calculate
       } else {
+        // FIREBASE
+        // console.log(firebase.auth().currentUser)
         alert("today is a new day!")
         
       }
@@ -734,9 +737,19 @@ class StudyScreen extends React.Component {
   }
 
   render() {
+    let displayName = "Loading user..."
+    const user = firebase.auth().currentUser
+    if (user != null){
+      displayName = "Hello, " + user.displayName
+    }
+ 
     return (
       <div className="StudyScreen">
         {/* TO DO: add a loading screen: Loading Cards from Database... */}
+
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <p style={{margin: '0', paddingTop: '10px'}}>{displayName}</p>
+        </div>
     
         <Progress 
           progressLogIsShowing={this.progressLogIsShowing} 
