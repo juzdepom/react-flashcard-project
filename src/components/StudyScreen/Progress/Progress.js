@@ -225,7 +225,7 @@ class Progress extends React.Component {
         let percentage = Math.floor(totalPoints / 6000 * 100)
         let { moreCardsNeeded, masteredCardsGoal, cardReviewExp, averageTotalExpPerDay, numberOfDaysToMastery, dateOfMastery } = this.state;
         return (
-            <div className="progress">
+            <div className="progress" style={{paddingTop: '0'}}>
                 <button
                     className="progress--button" 
                     onClick={() => this.displayProgressLog()}>

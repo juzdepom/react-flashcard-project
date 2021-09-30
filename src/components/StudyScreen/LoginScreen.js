@@ -12,7 +12,6 @@ class LoginScreen extends React.Component {
         this.state = {
             redirect: false,
         }
-
     }
 
     //FOLLOWED THIS TUTORIAL
@@ -29,7 +28,7 @@ class LoginScreen extends React.Component {
         //if redirect is true return redirect component
         if (this.state.redirect)
             {
-                return <Redirect to='/app'/>;
+                return <Redirect to='/app'/>; //REDIRECTS TO StudyScreen PAGE
             }
         else  {
             return (
@@ -42,12 +41,7 @@ class LoginScreen extends React.Component {
                     </button>
                 </div>
             );
-        }
-        // {
-        //     //return ROUTER FOR THE APP
-        //     <Redirect to='/app'/>
-        // }
-        
+        }        
     }
 
 }
