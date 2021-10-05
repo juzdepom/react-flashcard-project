@@ -643,6 +643,9 @@ class StudyScreen extends React.Component {
         deckListDisplay: "block",
         deckListCards
       })
+      if(deckIndex == "search"){
+        let deckListClassname = "decklist decklist--search"
+      }
     } else {
       let deckListClassname = "decklist decklist--" + deckIndex
       let deckListCards = this.state.level.sortedDeck[String(deckIndex)]

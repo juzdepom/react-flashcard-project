@@ -28,6 +28,7 @@ class DeckButtons extends Component {
     render(props){
         //starred cards count
         let {starred } = this.props.level;
+        let searchDeck = []
         return(
             //regular deck cards 
             <div className="deckbuttons--container">
@@ -40,6 +41,12 @@ class DeckButtons extends Component {
                     className="deckbutton light-yellow-gradient"
                     onClick={() => this.props.selectDeckButton("starred")}>
                             {starred}
+                    </button>
+                    {/* SEARCH BUTTON */}
+                    <button 
+                    className="deckbutton dark-grey"
+                    onClick={() => this.props.selectDeckButton("search")}>
+                            {/* SEARCH CARDS GO HERE */}
                     </button>
                 </div>
             </div>

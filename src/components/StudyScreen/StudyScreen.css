@@ -43,6 +43,15 @@
     background: rgb(254,166,20);
     background: linear-gradient(0deg, rgba(254,166,20,1) 0%, rgba(254,231,88,1) 35%, rgba(255,251,192,1) 100%);
   }
+
+  .dark-grey {
+    background: rgba(126,126,126,1)
+  }
+
+  .black-grey-gradient {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(126,126,126,1) 33%, rgba(126,126,126,1) 100%);
+  }
   
   .gray {
     background: lightgray;
