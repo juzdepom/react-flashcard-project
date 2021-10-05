@@ -742,15 +742,17 @@ class StudyScreen extends React.Component {
     if (user != null){
       displayName = "Hello, " + user.displayName
     }
- 
+    console.log(this.state.cards)
     return (
       <div className="StudyScreen">
         {/* TO DO: add a loading screen: Loading Cards from Database... */}
 
+        {/* LOADING USER NAME */}
         <div style={{display: 'flex', justifyContent: 'center'}}>
           <p style={{margin: '0', paddingTop: '10px'}}>{displayName}</p>
         </div>
     
+
         <Progress 
           progressLogIsShowing={this.progressLogIsShowing} 
           cards={this.state.cards} 
