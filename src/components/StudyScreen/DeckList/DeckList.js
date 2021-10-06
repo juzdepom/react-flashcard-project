@@ -101,8 +101,15 @@ class DeckCard extends React.Component {
             var latestReview = lastReviewed[lastReviewed.length - 1]
             whenWasLastReview = calculateElapsedTime(latestReview)
         }
-
+        // check if the card object has the hashtag node
+        var hashtag = ""
+        if(card.hashtag != undefined){
+            hashtag = card.hashtag
+        }
+        // console.log(card)
+        // console.log(card.hashtag)
         return (
+            
             <div 
                 ref={this.setWRapperRef} 
                 className="decklist--card-body">
@@ -113,8 +120,14 @@ class DeckCard extends React.Component {
                         changeStarredState={this.props.changeStarredState}/>
                 </div>
                 <div className="decklist--card-text" onClick={() => this.clickCard()}>{card[this.state.key]}</div>
-                <div className="decklist--card-lastReview">{card.rating} | {reviewCount} <span role="img" aria-label="eyes">👀</span> | {whenWasLastReview}</div>
-                <div className="decklist--card-select decklist--0" onClick={(e)=> this.selectCard(e)}></div>
+           
+                <div className="decklist--card-rightSection">
+                    <div className="decklist--card-hashtags">{hashtag}</div>
+                    <div className="decklist--card-lastReview">{card.rating} | {reviewCount} <span role="img" aria-label="eyes">👀</span> | {whenWasLastReview}</div>
+                </div>
+                
+               <div className="decklist--card-select decklist--0" onClick={(e)=> this.selectCard(e)}></div>
+                
 
             </div>
         )
