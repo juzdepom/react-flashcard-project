@@ -44,13 +44,27 @@ class Search extends React.Component {
         }
         let cards = this.props.cards
         var foundCards = []
-        //loop through the card deck
-        cards.forEach((card) => {
-            if(card.textOne.toLowerCase().includes(e.toLowerCase())){
-                //found a card with "textOne" value including search text value
-                foundCards.push(card)
-            }
-        })
+        //check if we are searching for a tag
+        if(e.includes('#')){
+            //looking for cards with this hashtag
+            cards.forEach((card) => {
+                if(card.hashtag == undefined){
+                    return;
+                }
+                if(card.hashtag.toLowerCase().includes(e.toLowerCase())){
+                    foundCards.push(card)
+                }
+            })
+        } else {
+            //loop through the card deck and search according to card deck
+            cards.forEach((card) => {
+                if(card.textOne.toLowerCase().includes(e.toLowerCase())){
+                    //found a card with "textOne" value including search text value
+                    foundCards.push(card)
+                }
+            })
+        }
+        
         //could not find card
         if (foundCards.length === 0){
             alert(`Could not find card: "${e}"`)
