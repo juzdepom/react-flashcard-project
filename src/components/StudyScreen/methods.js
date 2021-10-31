@@ -23,7 +23,8 @@ export const sortCardsFromLastReviewed = (cards) => {
                 let lastIndexB = second["lastReviewed"].length-1
                 b = second["lastReviewed"][lastIndexB]
             }
-            return a - b
+            // return a - b
+            return b - a 
     });
     return cards
 }

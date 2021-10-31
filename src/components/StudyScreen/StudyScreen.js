@@ -414,6 +414,8 @@ class StudyScreen extends React.Component {
       if(currentCards[index].starred == true){
         level.starred += 1
         level.sortedDeck["starred"].push(currentCards[index])
+
+        
       }
 
       // let id = i
@@ -457,8 +459,11 @@ class StudyScreen extends React.Component {
     //card that was reviewed the longest time ago appears at index 0
     let dict = level.sortedDeck
     for(var key in dict){
-      if(dict[key].length > 1){
+    
+      if(dict[key].length > 1){ //as long as there are cards in this deck
+        //TO DO: edit this so that it's sorted first from rating, then from last reviewed.
         level.sortedDeck[key] = sortCardsFromLastReviewed(dict[key])
+        //TODO: if dict[key] is starred then sort according to rating as well.
       }
     }
 
@@ -639,7 +644,6 @@ class StudyScreen extends React.Component {
       }
       // alert('selected search')
       let deckListClassname = "decklist decklist--search"
-      // let deckListCards = this.state.level.sortedDeck["starred"]
       let deckListCards = searchCards
       this.setState({
         deckListClassname,
