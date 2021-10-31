@@ -631,12 +631,16 @@ class StudyScreen extends React.Component {
   }
 
   //DeckButton Methods
-  selectDeckButton(deckIndex){
+  selectDeckButton(deckIndex, searchCards){ // note: the searchCards will only return an object when this method is called by Search.js
     //if selected the "search" deck button
     if(deckIndex == "search"){
-      alert('selected search')
+      if(searchCards == undefined){
+        return
+      }
+      // alert('selected search')
       let deckListClassname = "decklist decklist--search"
-      let deckListCards = this.state.level.sortedDeck["starred"]
+      // let deckListCards = this.state.level.sortedDeck["starred"]
+      let deckListCards = searchCards
       this.setState({
         deckListClassname,
         deckListDisplay: "block",
@@ -777,6 +781,7 @@ class StudyScreen extends React.Component {
         <Search 
           cards={this.state.cards} 
           loadCard={this.loadCard}
+          selectDeckButton={this.selectDeckButton}
         />
 
         <DeckButtons 
