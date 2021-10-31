@@ -48,9 +48,11 @@ class Search extends React.Component {
         if(e.includes('#')){
             //looking for cards with this hashtag
             cards.forEach((card) => {
+                //some of the cards will not have hashtag node and will return undefined. Skip over these
                 if(card.hashtag == undefined){
                     return;
                 }
+                //for the cards with the hashtag node, find the card with the hashtag that matches the search entry
                 if(card.hashtag.toLowerCase().includes(e.toLowerCase())){
                     foundCards.push(card)
                 }

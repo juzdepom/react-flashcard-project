@@ -44,8 +44,9 @@ class DeckButtons extends Component {
                     </button>
                     {/* SEARCH BUTTON */}
                     <button 
-                    className="deckbutton dark-grey"
+                    className="deckbutton light-brown"
                     onClick={() => this.props.selectDeckButton("search")}>
+                        🔍
                             {/* SEARCH CARDS GO HERE */}
                     </button>
                 </div>

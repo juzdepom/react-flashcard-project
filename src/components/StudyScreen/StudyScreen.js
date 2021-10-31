@@ -632,9 +632,19 @@ class StudyScreen extends React.Component {
 
   //DeckButton Methods
   selectDeckButton(deckIndex){
-
-    // if selected the "starred cards" deck button
-    if(deckIndex == "starred"){
+    //if selected the "search" deck button
+    if(deckIndex == "search"){
+      alert('selected search')
+      let deckListClassname = "decklist decklist--search"
+      let deckListCards = this.state.level.sortedDeck["starred"]
+      this.setState({
+        deckListClassname,
+        deckListDisplay: "block",
+        deckListCards
+      })
+      return
+    }
+    if (deckIndex == "starred"){ // if selected the "starred cards" deck button
       //chosing the gray look for now
       let deckListClassname = "decklist decklist--starred"
       let deckListCards = this.state.level.sortedDeck["starred"]
@@ -643,19 +653,16 @@ class StudyScreen extends React.Component {
         deckListDisplay: "block",
         deckListCards
       })
-      if(deckIndex == "search"){
-        let deckListClassname = "decklist decklist--search"
-      }
-    } else {
-      let deckListClassname = "decklist decklist--" + deckIndex
-      let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
-      this.setState({
-        deckListClassname,
-        deckListDisplay: "block",
-        deckListCards
-      })
-    }
-    
+      return
+    } 
+    //if selected one of the rated card decks
+    let deckListClassname = "decklist decklist--" + deckIndex
+    let deckListCards = this.state.level.sortedDeck[String(deckIndex)]
+    this.setState({
+      deckListClassname,
+      deckListDisplay: "block",
+      deckListCards
+    })
     
   }
 
