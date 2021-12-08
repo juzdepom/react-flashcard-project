@@ -67,6 +67,7 @@ class StudyScreen extends React.Component {
     this.loadCard = this.loadCard.bind(this);
     this.selectDeckButton = this.selectDeckButton.bind(this);
     this.closeDeckList = this.closeDeckList.bind(this);
+    this.signOut = this.signOut.bind(this);
     
     this.state = {
       cards: this.props.cards,
@@ -94,7 +95,9 @@ class StudyScreen extends React.Component {
       cardEditModeIsOn: false,
       //
       originalNotes: "",
-      originalCodeIdeas: ""
+      originalCodeIdeas: "",
+      //
+      loggedIn: true
     }
 
   }
@@ -757,10 +760,17 @@ class StudyScreen extends React.Component {
     alert('work in progress!')
   }
 
+
+
   signOut(){
     alert('logging out')
-    firebase.auth().signOut().then(() => {
-      return <Redirect to='/'/>;
+    // const setState = this.setState
+    this.setState({
+      loggedIn : false
+    });
+    firebase.auth().signOut().then(function() {
+      // setState({ loggedIn: false })
+      // return <Redirect to='/'/>;
     })
 
   }
@@ -772,96 +782,103 @@ class StudyScreen extends React.Component {
       displayName = "Hello, " + user.displayName
     }
     console.log(this.state.cards)
-    return (
-      <div className="StudyScreen">
-        {/* TO DO: add a loading screen: Loading Cards from Database... */}
-
-        {/* LOADING USER NAME */}
-        <div style={{display: 'flex', justifyContent: 'center'}}>
-          <p style={{margin: '0', paddingTop: '10px'}}>{displayName}</p>
-          <button onClick={this.signOut}>Logout</button>
-        </div>
-    
-
-        <Progress 
-          progressLogIsShowing={this.progressLogIsShowing} 
-          cards={this.state.cards} 
-          totalPoints={this.state.level.totalPoints} 
-          yesterdayTotalExpPoints={this.state.yesterdayTotalExpPoints}
-          cardsRated={this.state.cardsRated}
-          progressLogData={this.state.progressLogData}
-          flashcardsRated={this.state.flashcardsRated}
-          saveFlashcardDataInFirebase={this.state.saveFlashcardDataInFirebase}
-           />
-
-        <Search 
-          cards={this.state.cards} 
-          loadCard={this.loadCard}
-          selectDeckButton={this.selectDeckButton}
-        />
-
-        <DeckButtons 
-          level={this.state.level} 
-          selectDeckButton={this.selectDeckButton}
-        />
-
-        <DeckList 
-          deckListDisplay={this.state.deckListDisplay} 
-          deckListClassname={this.state.deckListClassname}
-          cards={this.state.deckListCards}
-          testUsersPronunciation={this.testUsersPronunciation}
-          speakThai={this.speakThai}
-          changeStarredState={this.changeStarredState}
-          selectCard={this.deckListSelectCard}
-          cardRated={this.deckListRatedCard}
-          close={this.closeDeckList}
+    if(this.state.loggedIn){
+      return (
+      
+        <div className="StudyScreen">
+          {/* TO DO: add a loading screen: Loading Cards from Database... */}
+  
+          {/* LOADING USER NAME */}
+          <div style={{display: 'flex', justifyContent: 'center'}}>
+            <p style={{margin: '0', paddingTop: '10px'}}>{displayName}</p>
+            <button onClick={this.signOut}>Logout</button>
+          </div>
+      
+  
+          <Progress 
+            progressLogIsShowing={this.progressLogIsShowing} 
+            cards={this.state.cards} 
+            totalPoints={this.state.level.totalPoints} 
+            yesterdayTotalExpPoints={this.state.yesterdayTotalExpPoints}
+            cardsRated={this.state.cardsRated}
+            progressLogData={this.state.progressLogData}
+            flashcardsRated={this.state.flashcardsRated}
+            saveFlashcardDataInFirebase={this.state.saveFlashcardDataInFirebase}
+             />
+  
+          <Search 
+            cards={this.state.cards} 
+            loadCard={this.loadCard}
+            selectDeckButton={this.selectDeckButton}
           />
-
-        <div className="card-row">
-          <Card
-            ref = {this.cardElement}
-            card = {this.state.currentCard}
-            changeStarredState = {this.changeStarredState}
-            speakThai = {this.speakThai}
-            cardEditModeIsOn = {this.cardEditModeIsOn}
-            goToPreviousCard = {this.goToPreviousCard}
-            handleCardEdit = {this.handleCardEdit}
+  
+          <DeckButtons 
+            level={this.state.level} 
+            selectDeckButton={this.selectDeckButton}
           />
-          <SelectFromDeck selectRandomCardFromSpecificDeck = {this.selectCardFromSpecificDeck} />
-        </div>
- 
-        <div className="button-row">
-          <RatingButtons ratingClicked = {this.ratingClicked}/>
-
-          <div className="row">
-            
-            <AddFlashcards 
-              originalDeck={this.state.cards}
-              addNewFlashcardsToDeck={this.addNewFlashcardsToDeck}
+  
+          <DeckList 
+            deckListDisplay={this.state.deckListDisplay} 
+            deckListClassname={this.state.deckListClassname}
+            cards={this.state.deckListCards}
+            testUsersPronunciation={this.testUsersPronunciation}
+            speakThai={this.speakThai}
+            changeStarredState={this.changeStarredState}
+            selectCard={this.deckListSelectCard}
+            cardRated={this.deckListRatedCard}
+            close={this.closeDeckList}
+            />
+  
+          <div className="card-row">
+            <Card
+              ref = {this.cardElement}
+              card = {this.state.currentCard}
+              changeStarredState = {this.changeStarredState}
+              speakThai = {this.speakThai}
+              cardEditModeIsOn = {this.cardEditModeIsOn}
+              goToPreviousCard = {this.goToPreviousCard}
+              handleCardEdit = {this.handleCardEdit}
+            />
+            <SelectFromDeck selectRandomCardFromSpecificDeck = {this.selectCardFromSpecificDeck} />
+          </div>
+   
+          <div className="button-row">
+            <RatingButtons ratingClicked = {this.ratingClicked}/>
+  
+            <div className="row">
+              
+              <AddFlashcards 
+                originalDeck={this.state.cards}
+                addNewFlashcardsToDeck={this.addNewFlashcardsToDeck}
+                />
+  
+              <Notes
+                originalNotes={this.state.originalNotes} 
+                saveNotesToFirebase={this.saveNotesToFirebase}
               />
-
-            <Notes
-              originalNotes={this.state.originalNotes} 
-              saveNotesToFirebase={this.saveNotesToFirebase}
-            />
-
-            <CodeIdeas
-              originalCodeIdeas={this.state.originalCodeIdeas} 
-              saveCodeIdeasToFirebase={this.saveCodeIdeasToFirebase}
-            />
-
+  
+              <CodeIdeas
+                originalCodeIdeas={this.state.originalCodeIdeas} 
+                saveCodeIdeasToFirebase={this.saveCodeIdeasToFirebase}
+              />
+  
+            </div>
+  
+            <div className="row">
+              <LinkButton url="https://translate.google.com/#view=home&op=translate&sl=en&tl=th" title="Google Translate" />
+              <LinkButton url="https://console.firebase.google.com/u/0/project/flashcard-project-5ee54/database/flashcard-project-5ee54/data" title="Firebase" />
+              <LinkButton url="https://github.com/juzdepom/react-flashcard-project" title="See On Github" />
+              <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
+            </div>
+  
           </div>
-
-          <div className="row">
-            <LinkButton url="https://translate.google.com/#view=home&op=translate&sl=en&tl=th" title="Google Translate" />
-            <LinkButton url="https://console.firebase.google.com/u/0/project/flashcard-project-5ee54/database/flashcard-project-5ee54/data" title="Firebase" />
-            <LinkButton url="https://github.com/juzdepom/react-flashcard-project" title="See On Github" />
-            <LinkButton url="https://jsonformatter.curiousconcept.com/" title="JSON Formatter" />
-          </div>
-
         </div>
-      </div>
-    );
+  
+      );
+    } else {
+      return <Redirect to='/'/>;
+    }
+   
   };
   
 }
