@@ -62,8 +62,8 @@ class App extends React.Component {
             path="/"
             exact
             render={(props) => (
-              // <LoginScreen />
-              <StudyScreen {...props} cards={this.state.cards} />
+              <LoginScreen />
+              // <StudyScreen {...props} cards={this.state.cards} />
             )}
           />
           <Route

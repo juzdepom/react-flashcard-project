@@ -19,6 +19,8 @@ import { DB_CONFIG } from '../../config/config';
 import firebase from 'firebase/app';
 import 'firebase/database'; 
 
+import { Redirect } from 'react-router';
+
 //methods
 import { 
   calculateTotalExpPoints, 
@@ -461,6 +463,7 @@ class StudyScreen extends React.Component {
     for(var key in dict){
     
       if(dict[key].length > 1){ //as long as there are cards in this deck
+        //if()
         //TO DO: edit this so that it's sorted first from rating, then from last reviewed.
         level.sortedDeck[key] = sortCardsFromLastReviewed(dict[key])
         //TODO: if dict[key] is starred then sort according to rating as well.
@@ -754,6 +757,14 @@ class StudyScreen extends React.Component {
     alert('work in progress!')
   }
 
+  signOut(){
+    alert('logging out')
+    firebase.auth().signOut().then(() => {
+      return <Redirect to='/'/>;
+    })
+
+  }
+
   render() {
     let displayName = "Loading user..."
     const user = firebase.auth().currentUser
@@ -768,6 +779,7 @@ class StudyScreen extends React.Component {
         {/* LOADING USER NAME */}
         <div style={{display: 'flex', justifyContent: 'center'}}>
           <p style={{margin: '0', paddingTop: '10px'}}>{displayName}</p>
+          <button onClick={this.signOut}>Logout</button>
         </div>
     
 
