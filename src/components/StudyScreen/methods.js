@@ -28,3 +28,17 @@ export const sortCardsFromLastReviewed = (cards) => {
     });
     return cards
 }
+
+export const sortCardsByRating = (cards) => {
+    cards.sort(function(first, second){
+        let a = 1
+        let b = 0
+        if(first["rating"] !== undefined && second["rating"] !== undefined){
+            a = first["rating"]
+            b = second["rating"]
+        }
+        return a - b
+        // return b - a 
+    });
+    return cards
+}

@@ -25,7 +25,8 @@ import { Redirect } from 'react-router';
 import { 
   calculateTotalExpPoints, 
   // addPlusSignIfPositive, 
-  sortCardsFromLastReviewed 
+  sortCardsFromLastReviewed, 
+  sortCardsByRating
 } from './methods';
 
 // hard-coded data
@@ -423,11 +424,6 @@ class StudyScreen extends React.Component {
         
       }
 
-      // let id = i
-      // var card = currentCards[i]
-      // card["_id"] = id
-      // newDeck.push(card)
-
       let i = currentCards[index]._id
       
       switch(currentCards[index].rating){
@@ -461,21 +457,19 @@ class StudyScreen extends React.Component {
       }
     }
 
-    //card that was reviewed the longest time ago appears at index 0
+    //SORT THE CARDS IN THE DECK LIST
     let dict = level.sortedDeck
     for(var key in dict){
     
       if(dict[key].length > 1){ //as long as there are cards in this deck
-        //if()
-        //TO DO: edit this so that it's sorted first from rating, then from last reviewed.
+        
+        //card that was reviewed the longest time ago appears at index 0
         level.sortedDeck[key] = sortCardsFromLastReviewed(dict[key])
-        //TODO: if dict[key] is starred then sort according to rating as well.
+        if(key === "starred"){ //if we are on the starred deck then we will sort cards by rating
+          level.sortedDeck[key] = sortCardsByRating(dict[key])
+        } 
       }
     }
-
-    // level.sortedDeck["0"].length > 1
-
-    
 
     this.setState({
       level: level,
