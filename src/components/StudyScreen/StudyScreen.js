@@ -69,6 +69,7 @@ class StudyScreen extends React.Component {
     this.selectDeckButton = this.selectDeckButton.bind(this);
     this.closeDeckList = this.closeDeckList.bind(this);
     this.signOut = this.signOut.bind(this);
+    this.navigateToMyDecks = this.navigateToMyDecks.bind(this);
     
     this.state = {
       cards: this.props.cards,
@@ -98,7 +99,8 @@ class StudyScreen extends React.Component {
       originalNotes: "",
       originalCodeIdeas: "",
       //
-      loggedIn: true
+      loggedIn: true,
+      navigateToMyDecks: false
     }
 
   }
@@ -766,7 +768,12 @@ class StudyScreen extends React.Component {
       // setState({ loggedIn: false })
       // return <Redirect to='/'/>;
     })
+  }
 
+  navigateToMyDecks(){
+    this.setState({
+      navigateToMyDecks : true
+    });
   }
 
   render() {
@@ -776,6 +783,9 @@ class StudyScreen extends React.Component {
       displayName = "Hello, " + user.displayName
     }
     console.log(this.state.cards)
+    if(this.state.navigateToMyDecks){
+      return <Redirect to='/decks'/>;
+    }
     if(this.state.loggedIn){
       return (
       
@@ -784,6 +794,7 @@ class StudyScreen extends React.Component {
   
           {/* LOADING USER NAME */}
           <div style={{display: 'flex', justifyContent: 'center'}}>
+            <button onClick={this.navigateToMyDecks}>My Decks</button>
             <p style={{margin: '0', paddingTop: '10px'}}>{displayName}</p>
             <button onClick={this.signOut}>Logout</button>
           </div>

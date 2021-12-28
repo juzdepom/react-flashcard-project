@@ -6,7 +6,8 @@ import SideDrawer from './components/SideDrawer/SideDrawer'
 import StudyScreen from './components/StudyScreen/StudyScreen'
 import LoginScreen from './components/StudyScreen/LoginScreen'
 // import SearchScreen from './components/SearchScreen/SearchScreen';
-import TimeLogScreen from './components/TimeLogScreen/TimeLogScreen'
+import TimeLogScreen from './components/TimeLogScreen/TimeLogScreen';
+import MyDecksScreen from './components/StudyScreen/MyDecksScreen';
 // import LOGIN SCREEN
 
 //firebase
@@ -30,19 +31,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    //uncomment below to to set data to hardcoded JSON data
-    // this.setState({
-    //   cards: data["flashcards"],
-    // })
-    //retrieving the data from firebase
-    // const database = firebase.database()
-    // database.ref('flashcards').on("value", (snapshot) => {
-    //   // console.log(snapshot.val())
-    //   const firebaseData = snapshot.val()
-    //   this.setState({
-    //     cards: firebaseData
-    //   })
-    // })
   }
 
   drawerToggleClickHandler = () => {
@@ -73,11 +61,15 @@ class App extends React.Component {
               <StudyScreen {...props} cards={this.state.cards} />
             )}
           />
-          {/* <Route 
-            path="/search" 
-            render={(props) => <SearchScreen {...props} cards={this.state.cards} />}
-          /> */}
-          <Route path="/timelog" render={(props) => <TimeLogScreen />} />
+          <Route
+            path="/decks"
+            exact
+            render={(props) => (
+              <MyDecksScreen />
+            )}
+          />
+        
+          {/* <Route path="/timelog" render={(props) => <TimeLogScreen />} /> */}
         </div>
       </Router>
     )
