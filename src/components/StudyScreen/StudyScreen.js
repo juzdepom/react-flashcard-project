@@ -13,12 +13,12 @@ import SelectFromDeck from './SelectFromDeck/SelectFromDeck';
 import DeckButtons from './DeckButtons/DeckButtons';
 import RatingButtons from './RatingButtons/RatingButtons';
 
-
 //firebase
 import { DB_CONFIG } from '../../config/config';
 import firebase from 'firebase/app';
 import 'firebase/database'; 
 
+//router
 import { Redirect } from 'react-router';
 
 //methods
@@ -117,6 +117,7 @@ class StudyScreen extends React.Component {
     const database = firebase.database()
 
     //retrieve original notes
+    //will want to switch the json data this eventually to uid > decks > cards or something liek that
     database.ref('notes').on("value", (snapshot) => {
       // console.log(snapshot.val())
       // alert('calling notes method')

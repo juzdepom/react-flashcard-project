@@ -23,6 +23,12 @@ class LoginScreen extends React.Component {
         //redirect to LoggedIn page
     }
 
+    //putting this in temporarily so that I don't have to login everytime
+    //also there seems to be an error when I try to login via my phone (think I need to change something in the firebase configurations)
+    navigateStraightToFlashcards(){
+        this.setState({ redirect: true })
+    }
+
     render(){
         
         //if redirect is true return redirect component
@@ -38,6 +44,12 @@ class LoginScreen extends React.Component {
                         onClick={() => this.handleOnClick(googleProvider)}
                         className="login-btn">
                             Login with Google
+                    </button>
+                    <button
+                        type="button"
+                        onClick={() => this.navigateStraightToFlashcards()}
+                        className="navigate-btn">
+                            Navigate straight to Flashcards
                     </button>
                 </div>
             );
