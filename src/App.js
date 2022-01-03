@@ -1,14 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
-import DrawerToggleButton from './components/SideDrawer/DrawerToggleButton'
-import SideDrawer from './components/SideDrawer/SideDrawer'
 import StudyScreen from './components/StudyScreen/StudyScreen'
 import LoginScreen from './components/StudyScreen/LoginScreen'
-// import SearchScreen from './components/SearchScreen/SearchScreen';
 import TimeLogScreen from './components/TimeLogScreen/TimeLogScreen';
 import MyDecksScreen from './components/StudyScreen/MyDecksScreen';
-// import LOGIN SCREEN
 
 //firebase
 // import { DB_CONFIG } from './config/config';
@@ -26,7 +22,7 @@ class App extends React.Component {
 
     this.state = {
       cards: [],
-      sideDrawerOpen: false,
+      // sideDrawerOpen: false,
     }
   }
 
@@ -43,8 +39,6 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
-          <DrawerToggleButton click={this.drawerToggleClickHandler} />
-          <SideDrawer show={this.state.sideDrawerOpen} />
 
           <Route
             path="/"
